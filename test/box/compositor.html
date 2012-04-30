@@ -1,0 +1,88 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head><title>compositor filter 
+</title>
+</head>
+<body>
+<b> compositor function:</b> 
+<select id=funcsel onchange="reset(
+    this.options(selectedIndex).value)">
+     <option value=0>0: clear both sets of input.</option>
+    <option value=1>1: show the minimum color from both sets of input.</option>
+    <option value=2>2: show the maximum color from both sets of input.</option>
+    <option value=3>3: show input a only.</option>
+    <option value=4>4: show input a over input b.</option>
+    <option value=5>5: only show input a inside the input b render area.</option>
+    <option value=6>6: only show input a outside the input b render area.</option>
+    <option value=7>7: only show input a and b inside input b render area.</option>
+    <option value=8>8: show input a minus input b.</option>
+    <option value=9>9: show input a plus input b.</option>
+    <option value=10>10: show input a and clear wherever the input intersects.</option>
+    <option value=19>19: show input b only.</option>
+    <option value=20 selected>20: show input b over input a.</option>
+    <option value=21>21: only show input b inside the input a render area.</option>
+    <option value=22>22: only show input b outside the input a render area.</option>
+    <option value=23>23: only show input a and b inside the input a render area.</option>
+    <option value=24>24: show input b minus input a.</option>
+    <option value=25>25: show input b plus input a.</option>
+</select>
+
+<style>
+html.body{width:100%}
+	.source{
+		border:10px solid red;
+		width:320px;
+		height:320px;
+		background:green;
+	}
+	.mask{
+		border:10px dashed blue;
+		border-top:40px solod blue;
+		width:20%;
+		height:120px;
+		margin:20px;
+		/*background:#FFFFFF;*/
+	}
+	body{
+		background:#DDD;
+	}
+</style>
+<!-- test area -->
+<p style="cursor:pointer" contentEditable="true">aaaaa</p>
+<div id="D1" class="teststyle1" style="
+    width:90%; height:475; border:3px solid black;
+    ">
+    <div class="source" id="source">
+     <input/><a href="#dddd">dddd</a><p style="cursor:pointer" contentEditable="true">aaaaa</p></div> 
+    </div>
+</div> 
+
+<!-- end test area -->
+<textarea id="hiddendiv" style="display:none">
+	
+</textarea> 
+
+<script type="text/javascript">
+function reset(i){
+	D1.style.filter = "progid:DXImageTransform.Microsoft.Compositor(function="+i+", duration=7)"
+	var filter = D1.filters.item(0);
+	
+	
+	source.style.display = 'none';
+	var mask = document.createElement('div');D1.appendChild(mask);
+	mask.className='mask';
+	mask.innerHTML = '<div><input type="checkbox"/>bbbbb</div>'
+	
+    filter.apply();
+    source.style.display = 'block';
+	D1.removeChild(mask);
+	filter.play();
+	//D1.style.filter = "progid:DXImageTransform.Microsoft.Compositor(function="+i+", duration=7)"
+}
+reset(21)
+   
+   
+</script>
+
+</body>
+</html>

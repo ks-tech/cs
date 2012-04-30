@@ -1,0 +1,7 @@
+.box-radius{
+	border-radius:32px;
+	border:12px solid red;
+	width:100px;
+	height:100px;
+	padding:12px;
+}

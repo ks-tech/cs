@@ -1,0 +1,149 @@
+<!doctype>
+<html>
+<meta charset='utf-8'>
+<!--
+ <v:shape
+   style="position:relative;top:4000;left:1;width:400;height:400"
+   path = "m 1,1 l 1,200, 200,200, 200,1 x e">
+   <v:fill type=gradient color="blue" color2="yellow"/>
+   </v:shape>
+  <v:shape
+   style="position:absolute;top:1px;left:1px;width:400px;height:400px"
+   path = "m 1,1 l 1,2000, 2000,2000, 2000,1 x e">
+   <v:fill type=gradient color="blue" color2="yellow"/>
+   </v:shape>
+<div style="top:50px;left:100px;position:relative;">
+	<v:RoundRect style="position:absolute;width:100px;height:50px;filter:progid:DXImageTransform.Microsoft.Blur(pixelradius=5);"
+		arcsize="10%"
+	>
+		<v:stroke weight="5pt" color="red" linestyle="ThickBetweenThin" dashstyle="ShortDashDot"/>
+		<v:shadow2 on="T" type="single" color="#b3b3b3" offset="5px,5px"/>
+	</v:RoundRect> 
+</div>
+<div style="top:220px;left:0px;width:100px;height:300px;position:absolute;border:1px solid red">
+	<v:shape  style="position:absolute;top:0;left:0;width:100px;height:100px;" StrokeColor="red"
+	 Path2="m 0,500  qx 1000,1000 l 0,0 x e"
+	 path = " al304,304,302,274,8847225,-2949075 l816,30 ae816,24,-6,-6,5898150,
+-2949075 ae816,24,24,24,2949075,2949075 l304,0 ae304,304,304,304,5898150,2949075 e"
+	 ></v:shape>
+
+-->
+<script>
+document.namespaces.add('v', 'urn:schemas-microsoft-com:vml', '#default#VML');
+</script>
+
+
+<script>
+
+/* ============= impl util =============== */
+function buildRoundRect(x,y,w,h,
+			tlh,tlv,trh,trv,brh,brv,blh,blv){
+	var buf = ['m',x,',',y+tlv];
+	if(tlh){//&&tlv
+		buf.push('qy',x+tlh,',',y);
+	}
+	buf.push('l',x+w-trh,',',y);
+	if(trh){//&&trv
+		buf.push('qx',x+w,',',y+trv);
+	}
+	buf.push('l',x+w,',',y+h-trv);
+	if(brh){//&&brv
+		buf.push('qy',x+w-brh,',',y+h);
+	}
+	buf.push('l',x+blh,',',y+h);
+	if(blh){//&&brv
+		buf.push('qx',x,',',y+h-blv);
+	}
+	buf.push('x');
+	return buf.join('')
+}
+function buildInnerArgs(box,border){
+//x,y,w,h,
+	var nb = box.concat();
+	nb[0] +=border[3];///2
+	nb[1] +=border[0];
+	nb[2] -=(border[1]+border[3]);
+	nb[3] -=(border[0]+border[2]);
+/// tlh,tlv,trh,trv, 
+	nb[4] -= Math.min(border[3],nb[4]);
+	nb[5] -= Math.min(border[0],nb[5]);
+	nb[6] -= Math.min(border[1],nb[6]);
+	nb[7] -= Math.min(border[0],nb[7]);
+//brh,brv,blh,blv
+	nb[8] -= Math.min(border[1],nb[8]);
+	nb[9] -= Math.min(border[2],nb[9]);
+	nb[10]-= Math.min(border[3],nb[10]);
+	nb[11]-= Math.min(border[2],nb[11]);
+//	*/
+	return nb;
+}
+var outerBoxArgs = [10,10,200,200,	32,32,33,33,33,33,33,33]//30,18,30,18,30,18,10,13
+var border = [64,64,64,64];
+var innerBoxArgs = buildInnerArgs(outerBoxArgs,border)
+
+var fillArea= buildRoundRect.apply(this,innerBoxArgs) 
+	+buildRoundRect.apply(this,outerBoxArgs)
+
+var fillLine = buildInnerArgs(innerBoxArgs,[21,21,21,21]);
+console.log(fillLine)
+fillLine = buildRoundRect.apply(this,fillLine)
+
+
+var buf = [];
+buf.push('<v:group style="position:absolute;top:100px;left:100px;width:100px;height:100px;filter:Alpha(opacity=56);"  coordsize="100 100">');
+buf.push('<v:shape fillcolor="red" style="width:100px;height:100px;" StrokeColor="none"');
+buf.push(' path="',fillArea,'e">');
+buf.push('<v:fill method="linear sigma" angle="-135" type="gradient"  colors="0 red,50% #FF0000, 50% green, 100% green"/>');
+buf.push('</v:shape>');
+buf.push('<v:shape fill="false" fillcolor="none" style="left:-1px;width:100px;height:100px;filter:Alpha(opacity=50)" ');
+buf.push(' path="',fillLine,'">');
+buf.push('<v:stroke joinstyle="bevel" miterlimit="0" weight="1px" color="yellow"  dashstyle="solid"/>');
+buf.push('</v:shape>');
+buf.push('</v:group>');
+//document.write(buf.join(''));<v:fill method="linear sigma" angle="-90" type="gradient" />
+
+</script>
+<script>
+function onload(){
+/*
+var group = document.createElement('v:group');
+//document.body.firstChild.insertAdjacentHTML( 'afterEnd', buf.join(''))
+group.innerHTML = buf.join('')
+document.body.appendChild(group);
+group.outerHTML = group.outerHTML
+*/
+document.body.innerHTML = buf.join('');
+var h = document.body.innerHTML;
+//alert(h)
+}
+</script>
+<style>
+div{
+width:500px;
+height:500px;
+border:20px groove red;
+border-left:0px groove red;
+border-right:20px none red;
+border-radius:40%;
+}
+</style>
+<body onload='onload()'><hr/>
+
+
+
+
+<?import namespace = v urn = "urn:schemas-microsoft-com:vml" implementation = "#default#VML" declareNamespace /><v:group style="POSITION: absolute; FILTER: Alpha(opacity=56); WIDTH: 100px; HEIGHT: 100px; TOP: 100px; LEFT: 100px" coordsize = "100,100">
+
+
+<v:shape style="WIDTH: 100px; HEIGHT: 100px" coordsize = "100,100" fillcolor = "red" strokecolor = "white"><v:fill type = "gradient" angle = "-135" method = "linear sigma" colors = "0 red;.5 red;.5 green;1 green"></v:fill></v:shape><v:shape style="FILTER: Alpha(opacity=50); WIDTH: 100px; HEIGHT: 100px; LEFT: -1px" fill="false" coordsize = "100,100" fillcolor = "white" strokecolor = "yellow" strokeweight = "48pt"><v:stroke miterlimit = "0" joinstyle = "bevel" dashstyle = "solid"></v:stroke></v:shape></v:group>
+
+
+
+
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,305 @@
+<!doctype>
+<html>
+<head>
+
+<style>
+body{
+userdefined:1px;
+}
+</style>
+</head>
+<body>
+<textarea id="output" style="width:100%;height:700px;font-size:11px;" ondblclick="printInfo()"></textarea>
+<li id="pre" class="pre">aa</li>
+<script>
+var inc = 1;
+var afterCountMap = {};
+var totalCountMap = {};
+var end = false;
+var show = true;
+function clear(el,key){
+	var end = arguments.length;
+	
+	for(var i=2;i<end;i++){
+	var value = arguments[i];
+	try{
+		el.style[key] = value;	
+	}catch(e){show && (show = confirm(key))
+	}
+	try{
+		el.runtimeStyle[key] = value;	
+	}catch(e){show && (show = confirm(key))
+	}
+	}
+}
+var defaultMap = {}
+function test(el,k){
+	var key = k.replace(/\-(\w)/g,function(a,c){return c.toUpperCase()});
+	
+	if(inc%100 == 0){
+		document.title = "#"+el.tagName+(inc)
+	}
+	defaultMap[key]=[value]
+try{
+	var value = el.currentStyle[key] ||  el.parentNode.currentStyle[key];
+	//el.style[key]=value;
+	value && (el.runtimeStyle[key]=value);
+}catch(e){
+				show && (show = confirm(["!",key,value,e.message].join('/')))
+			}
+	//setTimeout(function(){
+		var v = totalCountMap[key];
+		if(!v){
+			v = totalCountMap[key] = 1;
+			try{
+				
+				if(value == undefined)
+				{
+				try{
+					//el.runtimeStyle.setExpression('color','"blue"')
+					//alert(defaultMap[key]+key)
+					//defaultMap[key]=el.style.getExpression(k)
+					}catch(e){//alert([e.message,key])
+}
+				}
+				//el.style[key] = value;	
+				//defaultMap[key].push(el.style[key])
+				if(key.indexOf('Kashida')>0){
+					//alert([key,value])
+				}
+			}catch(e){
+				//show && (show = confirm("!"+key+e.message))
+			}
+			//clear(el,key ,'inherit');
+			//,''
+			//,'none','default','ih','repeat','inherit'
+			//)
+		}
+	//},1);
+	if(inc<1000){
+		inc++;
+		return el.parentNode.currentStyle[key];
+	}
+	if(inc++>5000){
+		//if(end){return}end  = true;
+		//printInfo()
+		//return;
+	}
+	var v = totalCountMap[key];
+	totalCountMap[key] = v &&( v+1) ||1;
+	
+	var v = afterCountMap[key];
+	if(inc>1000){
+		afterCountMap[key] = v &&( v+1) ||1;
+	}
+	return '';//el.parentNode.currentStyle[key];
+}
+function printInfo(){
+var buf = [];
+		for(var n in totalCountMap){
+			buf.push([afterCountMap[n]||0,totalCountMap[n],n,defaultMap[n]]);
+		}
+		try{
+		buf.sort(function(a,b){
+			return a[0]-b[0];
+		});
+		}catch(e){alert(e.message)}
+		var value = buf.join('\r\n;').replace(/^(.{1,50})[\r\n]+(.*)/gm,'$1$2')
+		prompt(buf.join(''),value)
+}
+var list = [
+"text-kashida",
+"text-underline-position",
+"page-break-after", 
+"page-break-before", 
+"text-kashida-space",
+"text-justify"
+];
+var list2 = [
+ 
+/*
+'a','b','c','de',
+"text",
+"text-underline",
+"text-kashida",
+"ime","layout",
+"letter","line","min","ruby",
+"unicode","vertical","white","word","writing",
+"scrollbar",
+"table","page","page-break",
+"scrollbar-3dlight",
+"scrollbar-arrow",
+"scrollbar-base",
+"scrollbar-darkshadow",
+"scrollbar-face",
+"scrollbar-highlight",
+"scrollbar-shadow",
+"z",
+"pagex",
+"layout",
+"behavior",
+"direction",
+"direction", 
+/*
+"font", 
+"font-family", 
+"font-size", 
+"font-style", 
+"font-variant", 
+"font-weight", 
+"ime-mode",
+"min-height",
+"line-height", 
+"ruby-align",
+"ruby-overhang",
+"ruby-position",
+*/
+"layout-grid",
+"layout-grid-char",
+"layout-grid-line",
+"layout-grid-mode",
+"layout-grid-type",
+"letter-spacing", 
+"line-break",
+
+"text-underline-position",
+"unicode-bidi", 
+"white-space",
+"word-break",
+"word-spacing", 
+"word-wrap",
+"writing-mode",
+"text-autospace",
+/*
+
+"text-align", 
+"text-decoration", 
+"text-indent", 
+"text-overflow", 
+"text-transform", 
+"vertical-align", 
+
+"background-attachment", 
+"background-color", 
+"background-image", 
+"background-position", 
+"background-position-x",
+"background-position-y",
+"background-repeat", 
+"color", 
+"border", 
+"border-bottom", 
+"border-bottom-color", 
+"border-bottom-style", 
+"border-bottom-width", 
+"border-collapse",
+"border-color", 
+"border-left", 
+"border-left-color", 
+"border-left-style", 
+"border-left-width", 
+"border-right", 
+"border-right-color", 
+"border-right-style", 
+"border-right-width", 
+"border-style", 
+"border-top", 
+"border-top-color", 
+"border-top-style", 
+"border-top-width", 
+"border-width", 
+"clear", 
+"float", 
+"margin", 
+"margin-bottom", 
+"margin-left", 
+"margin-right", 
+"margin-top", 
+"padding", 
+"padding-bottom", 
+"padding-left", 
+"padding-right", 
+"padding-top", 
+"zoom",
+"display", 
+"list-style", 
+"list-style-image", 
+"list-style-position", 
+"list-style-type", 
+"bottom",
+"clip", 
+"height", 
+"left", 
+"overflow", 
+"overflow-x",
+"overflow-y",
+"position", 
+"right",
+"top", 
+"visibility", 
+"width", 
+"z-index", 
+"filter",
+"cursor", 
+*/
+"layout-flow",
+"scrollbar-3dlight-color",
+"scrollbar-arrow-color",
+"scrollbar-base-color",
+"scrollbar-darkshadow-color",
+"scrollbar-face-color",
+"scrollbar-highlight-color",
+"scrollbar-shadow-color",
+"table-layout",
+
+"page",
+"page-break-after", 
+"page-break-before", 
+"text-kashida-space",
+"text-justify"
+ ]
+ 
+var list = [];
+for(var n in document.body.style){
+	list.push(n.replace(/[A-Z]/g,'-$&').toLowerCase())
+}
+list.sort();
+document.write(list)
+/**
+var list = [];
+for(var i=9;i<1000;i++){
+	var a = i.toString(32);
+	a = a.replace(/\d/g,'');
+	if(a && !list[a]){
+		list[a] = 1;
+		list.push('-'+a);
+	}
+}
+alert(list)
+//*/
+var styles = ['<style>'];
+var htmls = [];
+for(var i = 0;i < list.length;i++){
+	var p = list[i];
+	//styles.push('.c',i,'{',p,':expression(test(this,"',p,'"));color:red}');
+	styles.push('.c',i,',.c',i+1,'{',p,':expression(test(this,"',p,'"));color:red}');
+	htmls.push('<div class="c',i,'">',i,'</div>');
+	htmls.push('<div class="c',i,'">',i,'</div>');
+	htmls.push('<div class="c',i,'">',i,'</div>');
+}
+
+styles.push('</style>')
+document.write(styles.join(''))
+
+document.write(htmls.join(''))
+//alert(document.body.innerHTML)
+//alert(styles.join(''))
+//alert(htmls.join(''))
+</script>
+111
+<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+<h1 style="font-weight:100;">123</h1>
+
+</body>
+</html>

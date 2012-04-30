@@ -1,0 +1,43 @@
+{
+    "name": "cs",
+    "version": "0.1.0",
+    "description": "Colored Stone : A CSS3 extension for IE6/7/8",
+    "keywords": [
+      "css3",
+      "IE"
+    ],
+    "maintainers": [{
+      "name": "jindw",
+      "email": "jindw@xidea.org",
+      "url": "http://www.xidea.org"
+    }],
+    "contributors": [
+    ],
+    "bugs": {
+        "email": "jindw@xidea.org",
+        "url": "https://github.com/jindw/cs/issues"
+    },
+    "licenses": [
+        {
+            "type": "LGPL",
+            "url": "http://www.gnu.org/licenses/lgpl.html"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "svn",
+            "url": "git@github.com:jindw/cs.git"
+        }
+    ],
+    "implements": [
+    ],
+    "dependencies": {
+    	"cssom":"*",
+    	"rbs":"*"
+    },
+    "engines" : { "node" : ">=0.1" },
+    "directories": {
+        "lib": "./lib"
+    },
+    "main": "./lib/index.js"
+}

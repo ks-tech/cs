@@ -1,0 +1,74 @@
+<!doctype>
+<html>
+<body>
+<style>
+.radius{
+	border:5px red dashed;
+	width:200px;
+	height:200px;
+	cursor:pointer;
+}
+</style>
+
+
+	<div class="radius" id="radius">
+		AAAA
+		<input/>
+		<a href="#test">test</a>
+	</div>
+	
+	
+	<textarea id="text" cols="25" rows="5">
+	<div style="background:yellow;
+		border:10px solid blue;
+		width:120px;height:220px">
+	</div>
+	</textarea>
+    <SELECT onchange="setRadius(this.options(this.selectedIndex).value)">
+         <OPTION value=0>0: Clear both sets of input.</OPTION>
+        <OPTION value=1>1: Show the minimum color from both sets of input.</OPTION>
+        <OPTION value=2>2: Show the maximum color from both sets of input.</OPTION>
+        <OPTION value=3>3: Show Input A only.</OPTION>
+        <OPTION value=4>4: Show Input A over Input B.</OPTION>
+        <OPTION value=5>5: Only show Input A inside the Input B render area.</OPTION>
+        <OPTION value=6>6: Only show Input A outside the Input B render area.</OPTION>
+        <OPTION value=7>7: Only show Input A and B inside Input B render area.</OPTION>
+        <OPTION value=8>8: Show Input A minus Input B.</OPTION>
+        <OPTION value=9>9: Show Input A plus Input B.</OPTION>
+        <OPTION value=10>10: Show Input A and clear wherever the input intersects.</OPTION>
+        <OPTION value=19>19: Show Input B only.</OPTION>
+        <OPTION value=20 selected>20: Show Input B over Input A.</OPTION>
+        <OPTION value=21>21: Only show Input B inside the Input A render area.</OPTION>
+        <OPTION value=22>22: Only show Input B outside the Input A render area.</OPTION>
+        <OPTION value=23>23: Only show Input A and B inside the Input A render area.</OPTION>
+        <OPTION value=24>24: Show Input B minus Input A.</OPTION>
+        <OPTION value=25>25: Show Input B plus Input A.</OPTION>
+        
+    </SELECT>
+	
+	<script>
+var source = document.getElementById('text');
+var dest = document.getElementById('text');
+function setRadius(fn){
+try{
+   dest.style.filter = "filter: progid:DXImageTransform.Microsoft.Compositor(function="+fn+", duration=7); "
+   console.log(1)
+   dest.filters.item(0).Apply();
+   console.log(2)
+   dest.innerHTML = source.value;
+   console.log(3)
+   dest.filters.item(0).Play();
+   console.log(4)
+   }catch(e){
+   console.error(e)
+   }
+}
+/**
+
+D1.filters.item(
+        'DXImageTransform.Microsoft.Compositor').Function =
+         this.options(selectedIndex).value;"
+*/
+	</script>
+</body>
+</html>

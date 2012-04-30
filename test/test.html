@@ -1,0 +1,142 @@
+﻿<!doctype>
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<link rel="stylesheet" type="text/css" href="test.css" />
+<script src="/static/boot.js"></script>
+
+</head>
+<body id='xx'>
+
+<a href="javascript:console.show()">logview</a>
+<ul>
+	<li class="menu"><span>menu1</span>
+		<ul>
+			<li class="submenu"><span>sub menu1</span></li>
+			<li class="submenu"><span>sub menu2</span></li>
+			<li class="submenu"><span>sub menu3</span></li>
+			<li class="submenu"><span>sub menu4</span></li>
+			<li class="submenu"><span>sub menu5</span></li>
+			<li class="submenu"><span>sub menu6</span></li>
+			<li class="submenu"><span>sub menu7</span></li>
+		</ul>
+	</li>
+	<li class="menu"><span>menu2</span>
+		<ul>
+			<li class="submenu"><span>sub menu1</span></li>
+			<li class="submenu"><span>sub menu2</span></li>
+			<li class="submenu"><span>sub menu3</span></li>
+			<li class="submenu"><span>sub menu4</span></li>
+			<li class="submenu"><span>sub menu5</span></li>
+			<li class="submenu"><span>sub menu6</span></li>
+			<li class="submenu"><span>sub menu7</span></li>
+		</ul>
+	</li>
+</ul>
+<hr/>
+
+<ul class="tab-group">
+	<li class="tab"><span>menu1</span>
+		<ul>
+			<p>content1</p>
+		</ul>
+	</li>
+	<li class="tab"><span>menu2</span>
+		<ul>
+			<p>content2</p>
+		</ul>
+	</li>
+	<li class="tab"><span>menu3</span>
+		<ul>
+			<p>content3</p>
+		</ul>
+	</li>
+	<li class="tab"><span>menu3</span>
+		<ul>
+			<p>content3</p>
+		</ul>
+	</li>
+	<li class="tab"><span>menu3</span>
+		<ul>
+			<p>content3</p>
+		</ul>
+	</li>
+	<li class="tab"><span>menu3</span>
+		<ul>
+			<p>content3</p>
+		</ul>
+	</li>
+	<li class="tab"><span>menu3</span>
+		<ul>
+			<p>content3</p>
+		</ul>
+	</li>
+</ul>
+<br/><br/><br/><hr/>
+<div>
+	<div id="radius" class="box-radius">
+		这里是文本
+	</div>
+</div>
+
+<div style="top:50px;left:100px;position:relative;">
+
+<script>
+function buildSimpleRQ(w,h,tlh,tlv,trh,trv,brh,brv,blh,blv){
+	return 'm 0,'+tlv+
+			'qy '+tlh+',0'+
+			'l'+(w-trh)+',0 qx '+
+			w+','+trv+
+			' l '+w+','+(h-brv)+
+			' qy '+(w-brh)+','+h+
+			' l '+blh+','+h+
+			' qx 0,'+(h-blv)+
+			' x e';
+}
+/*
+var buf = [];
+buf.push('<v:shape style="position:absolute;top:0;left:0;width:100px;height:100px;" StrokeColor="red"');
+buf.push(' path="',buildSimpleRQ(1000,1000,300,80,300,80,300,80,100,30),'">');
+//buf.push('<v:stroke weight="5px" color="red" linestyle="ThickThin"/>');
+buf.push('<v:shape>');
+document.write(buf.join(''))
+*/
+
+var shape = document.createElement('v:shape');
+shape.setAttribute("style","position:absolute;top:0;left:100;width:100px;height:100px;");
+shape.setAttribute("StrokeColor","red");
+shape.setAttribute("path",buildSimpleRQ(1000,1000,300,80,300,80,300,80,100,30));
+document.body.appendChild(shape)
+</script>
+
+<form>
+	<div><input type="checkbox" id='checkbox'/> checkbox input 蓝色背景</div>
+	<div><input type="radio" name='r1' id='radio'/>
+	<input type="radio" name='r1' /> radio box 选中为红色</div>
+	<a class="input" href="#">a1</a>
+	<a class="input" href="#">a3</a>
+	<div class="input" href="#">a3</div>
+	<input name="test" class="input" value="456"/>
+	<input name="test" class="input" value="123"/>
+	<textarea class="input" id='output' cols="10" rows='5'></textarea>
+</form>
+<script>
+
+/* *
+//runtimeStyle,currentStyle 读取效率很高：10000 此读取100毫秒(包括空值),先写后读需要450毫秒左右
+//如果是有效属性（如height,width）,IE6 大概需要2000毫秒
+var k = 0;
+var key = 'height';
+//document.body.runtimeStyle[key] = 800
+
+var d = new Date
+for(var i=0;i<1000;i++){
+document.body.runtimeStyle[key] = i
+k = document.body.runtimeStyle[key] 
+//k = document.body.currentStyle[key] 
+}
+alert([new Date - d,document.body.runtimeStyle['cs-attr2']])
+/* */
+</script>
+</body>
+
+</html>
