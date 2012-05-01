@@ -1,0 +1,24 @@
+html{
+	text-align:center;
+	font-size:12px;
+	background:#666;
+	padding:20px;
+	margin:0px;
+}
+body{
+    width:650px;
+    min-height:400px;
+    text-align:left;
+    margin:auto;
+    padding:8px;
+    background:#fefefe;
+    border:3px double #DDD;
+}
+.code {
+    background-color: #EEEEEE;
+    border-radius: 6px 6px 6px 6px;
+}
+.code .cm-tag{
+	background:#ddd;
+	font-style:italic;
+}

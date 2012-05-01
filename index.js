@@ -3,4 +3,3 @@ require('./lib/transition');
 require('./lib/nth');
 require('./lib/box');
 exports.CS = require('./lib/core').CS
-console.log(exports.CS)

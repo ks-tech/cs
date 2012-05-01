@@ -1,0 +1,99 @@
+﻿<!doctype>
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<link rel="stylesheet" type="text/css" href="test.css" />
+<script src="/static/boot.js"></script>
+
+</head>
+<body id='xx'>
+<h1>示例与selector完全一致，只是增加了渐变动画</h1>
+<h3>纯CSS菜单，展示hover效果，结构选择器（首位和单双行定制样式）</h3>
+<ul>
+	<li class="menu"><span>menu1</span>
+		<ul>
+			<li class="submenu"><span>sub menu1</span></li>
+			<li class="submenu"><span>sub menu2</span></li>
+			<li class="submenu"><span>sub menu3</span></li>
+			<li class="submenu"><span>sub menu4</span></li>
+			<li class="submenu"><span>sub menu5</span></li>
+			<li class="submenu"><span>sub menu6</span></li>
+			<li class="submenu"><span>sub menu7</span></li>
+		</ul>
+	</li>
+	<li class="menu"><span>menu2</span>
+		<ul>
+			<li class="submenu"><span>sub menu1</span></li>
+			<li class="submenu"><span>sub menu2</span></li>
+			<li class="submenu"><span>sub menu3</span></li>
+			<li class="submenu"><span>sub menu4</span></li>
+			<li class="submenu"><span>sub menu5</span></li>
+			<li class="submenu"><span>sub menu6</span></li>
+			<li class="submenu"><span>sub menu7</span></li>
+		</ul>
+	</li>
+</ul>
+
+<hr/>
+
+<h3>纯CSS菜单Tab控件，展示hover效果，结构选择器（首位和单双行定制样式）</h3>
+<ul class="tab-group">
+	<li class="tab"><span>menu1</span>
+		<ul>
+			<p>content1</p>
+		</ul>
+	</li>
+	<li class="tab"><span>menu2</span>
+		<ul>
+			<p>content2</p>
+		</ul>
+	</li>
+	<li class="tab"><span>menu3</span>
+		<ul>
+			<p>content3</p>
+		</ul>
+	</li>
+	<li class="tab"><span>menu3</span>
+		<ul>
+			<p>content3</p>
+		</ul>
+	</li>
+	<li class="tab"><span>menu3</span>
+		<ul>
+			<p>content3</p>
+		</ul>
+	</li>
+	<li class="tab"><span>menu3</span>
+		<ul>
+			<p>content3</p>
+		</ul>
+	</li>
+	<li class="tab"><span>menu3</span>
+		<ul>
+			<p>content3</p>
+		</ul>
+	</li>
+</ul>
+<br/><br/>
+
+
+<h3>表单交互，展示active，focus 效果</h3>
+<form>
+	<label for="input1">focus1:<input id="input1" name="test" class="input" value="456"/></label>
+	<label for="input2">focus2:<input id="input2" name="test" class="input" value="123"/></label>
+	<hr>
+	<textarea class="input" id='output' cols="70" rows='5'></textarea>
+	连接active效果:
+	<div>
+		<a class="input" href="#">a1</a>
+		<a class="input" href="#">a3</a>
+		<div class="input" href="#">a3</div>
+	</div>
+	
+	条件选择器
+	<div><input type="checkbox" id='checkbox'/> checkbox input 蓝色背景</div>
+	<div><input type="radio" name='r1' id='radio'/>
+	<input type="radio" name='r1' /> radio box 选中为红色</div>
+	
+</form>
+</body>
+</html>

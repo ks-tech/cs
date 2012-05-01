@@ -1,6 +1,7 @@
 .box-radius{
-	border-radius:32px;
+	border-radius:62px 12px 0px 0px;
 	border:12px solid red;
+	border-bottom:0px;
 	width:100px;
 	height:100px;
 	padding:12px;
