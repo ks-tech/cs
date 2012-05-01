@@ -1,18 +1,19 @@
-Introduction
-JavaScript Static Service
+Color Stone
+	A CSS enhancement for IE/6/7/8 and CSS different code generator for all popular browser
 
 Functions
- * CommonJS1.0 compatible JavaScript loader [ require.js]
-   Rewriting of the original [JSI2](http://www.xidea.org/project/jsi) boot.js, give up the original specification, former JSI2 tool set is being reconstructed, later on
- * generate browser script wrapper
-   In order to make the scripts installed by NPM can be "require"d in the browser environment , it adds an automatic processor, the script into similar AMD model.
- * IE6 CSS3 enhancement
-   you can use css3 selector and some other features in ie6.
- * generate different code for different agent (browser)
+ * CSS3 Selector
+   you can use css3 selector and some related features in ie6.
+ * animation
+ 	transition is supported
+ * box and radius
+ 	radius is supported
+ * some others
+ 	min-height/max-height(width),alpha,png24,position:fix...
 		
 Install:
-	npm install jsi
+	npm install cs
 Example:
-	var jsi = require('jsi/test/run');
+	node -e "require('cs/test/run');"
 
 
