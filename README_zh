@@ -1,0 +1,86 @@
+开始
+	安装 ：npm install cs
+	运行：node -e "require('cs/test/run')"
+
+解决问题
+	Hack 书写五花八门这么办？
+		标准化差异化 hack
+		标准化功能hack
+	标准层次不一致怎么办？
+		线下兼容 vs 向上拔高
+		差异化代码（不得以而为之）
+	
+内容与实现思路
+	基本思路： 
+			自动编译＋差异化代码
+			自动初始化＋动态DOM友好＋性能优化控制（cs-alive:true）
+			
+	
+	差异化Hack规范
+		晦涩不规范的浏览器hack
+			-moz-opacity
+			-webkit-opacity
+			==>
+				-width
+				-ie-width
+				-ie6-width
+				
+	功能hack规范 
+		能不用吗？ 交给自动增强去处理。
+		opacity?  png loader,  还有谁？
+		
+	重头戏：CSS 自动增强 
+	
+		交互效果相关
+			hover,focus,active
+			原理：	CSS 初始化时，自动绑定事件
+
+		高级选择器
+			属性选择
+				a[href^=http://www.baike.com]{
+					background:url(baike.gif) no-repeat
+				}
+			结构选择
+				- 干掉为样式而生的for循环的index判断？	{%if(for.index %2) == 1%}
+				- 干掉为图形而生的first-last class。  <div class="buttom"><div class="buttom-first">
+				:first,last,odd,even,nth-child,nth-last-child,nth-of-type,nth-of-last-type
+			状态选择
+				hash->target,:checked:enabled
+			选择器组合
+				.classA.AndClassB
+				.parent>.child
+				.previous+.next
+				.previous~.nexts
+				.match:not(.unmatch)
+				
+			原理：	生成样式。
+					按需动态监听样式/属性变化（主要用于控制IE6  样式组合的自动化）。
+					CSS 初始华时，自动添加生成的与样式
+		终端自适应：
+			MediaQuery	支持
+			原理：	初始化,resize等触发样式禁用和样式更改
+			
+		圆角阴影边框背景类
+					
+			圆角边框：border-radius
+			渐变背景：liner-gradient...
+			边框图形：border-image
+			阴影：box-shadow,text-shadow
+			
+			原理：	方案A: Filter管理/滤镜+VML
+					方案B: 自动生成背景图
+			
+		变换/动画
+			transform	大小，旋转，比例，位移等
+			transition	简单样式渐变
+			animation	逐帧动画
+			
+			原理：	监听class变化、监听document＋轮询。
+					CSS 初始华时，自动添加生成的与样式
+			
+		其他高价值的增强需求
+			max-height,max-width,min-height,min-width;
+			alpha,png32 alpha
+			position:fix
+			
+			原理：	Filter管理/滤镜/轮询 事件监听
