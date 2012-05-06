@@ -1,0 +1,7 @@
+.fix{
+	width:100px;
+	height:10px;
+	bottom:100px;
+	background:yellow;
+	position:fixed;
+}

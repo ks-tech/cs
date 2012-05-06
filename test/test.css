@@ -1,4 +1,8 @@
 .transform{
 	background:linear-gradient(30deg,red,blue);
 }
-
+.test[checked=checked]{
+	background:red;
+	margin:100px;
+	padding:100px;
+}
