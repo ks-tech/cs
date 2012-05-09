@@ -1,8 +1,24 @@
-.transform{
+/*.transform{
 	background:linear-gradient(30deg,red,blue);
 }
-.test[checked=checked]{
+.test[checked="checked"]:hover:focus{
 	background:red;
 	margin:100px;
 	padding:100px;
+}*/
+.menu{
+border:1px solid blue;
 }
+.body{color:red}
+.menu:first-child{
+	border-right:0;
+}
+
+/*
+
+body .menu:nth-child(even):hover{
+	background:red;
+}.menu:nth-child(3){
+	background:red;
+}
+*/

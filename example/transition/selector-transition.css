@@ -70,7 +70,7 @@
 	width:60px;
 	height:24px;
 	margin:0px;
-	padding:0px;;
+	padding:0px;
 	font-size:14px;
 	padding:4px;
 	margin-top:2px;
@@ -135,8 +135,6 @@ body.c1.c2{
 input[type='checkbox']{
 	background:blue;
 }
-input[type='radio'][checked='checked']{
+input[type='radio']:checked{
 	background:red;
 }
-
-

@@ -22,7 +22,7 @@
 	width:140px;
 	overflow:hidden;
 }
-.menu .submenu{
+body .menu .submenu{
 	border:4px dashed blue;
 	border-top:0;
 	height:35px;
@@ -127,7 +127,7 @@ body.c1.c2{
 input[type='checkbox']{
 	background:blue;
 }
-input[type='radio'][checked='checked']{
+input[type='radio']:checked{
 	background:red;
 }
 
