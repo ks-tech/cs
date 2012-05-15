@@ -6,13 +6,13 @@
 	margin:100px;
 	padding:100px;
 }*/
-.menu{
-border:1px solid blue;
+body .menu .submenu{
+	width:35px;
+	border:4px dashed blue;
+	border-top:0px;
+	height:35px;
 }
-.body{color:red}
-.menu:first-child{
-	border-right:0;
-}
+
 
 /*
 

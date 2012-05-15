@@ -22,7 +22,7 @@
 	width:140px;
 	overflow:hidden;
 }
-body .menu .submenu{
+.menu .submenu{
 	border:4px dashed blue;
 	border-top:0;
 	height:35px;
