@@ -1,3 +1,17 @@
+body{
+	background:#eee;
+}
+body div{
+	background:red;
+	padding:10px;
+	margin:20px;
+}
+.opacity2{
+	opacity:0.2;
+}
+.opacity8{
+	opacity:0.8;
+}
 .linear-gradient{
 	background:linear-gradient(0deg,white,blue);
 }

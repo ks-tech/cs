@@ -1,0 +1,71 @@
+﻿<!doctype>
+<html>
+<head>
+</head>
+<body onload="(writeEnd = Math.max(new Date,writeEnd));document.body.className='test1';">
+<p>expression eval later</p>
+<p>el1 ，不能用于终止el2的行为</p>
+<style>
+body.test1 a{
+text-kashida:expression(test1(this));
+color:red;
+user-defined:1;
+}
+
+.test1 a{
+text-kashida-space:expression(test2(this));
+background:blue;
+user-defined:2;
+}
+</style>
+<script>
+var inc = 0;
+var expStart;
+var expEnd;
+var buf = []
+function empty(){}
+function test1(a){
+	if(!inc++){
+		expStart = new Date
+	}else{
+		expEnd = new Date
+	}
+	a.runtimeStyle.textKashida = '0pt';
+	a.runtimeStyle.textKashidaSpace = '0pt';
+	a.attachEvent('onmouseenter',Function.prototype);
+	var s = a.currentStyle;
+	buf.push(["<br>\n",a.uniqueID,s.color,s.backgroundColor,s['user-defined']]);
+}
+
+function test2(a){
+	if(!inc++){
+		expStart = new Date
+	}else{
+		expEnd = new Date
+	}
+	a.runtimeStyle.textKashidaSpace = '0pt';
+	a.runtimeStyle.textKashida = '0pt';
+	a.attachEvent('onmouseleave',Function.prototype);
+	var s = a.currentStyle;
+	buf.push(["<br>\n",a.uniqueID,s.color,s.backgroundColor,s['user-defined']]);
+}
+function writeResult(){
+	document.getElementById('result').innerHTML = [
+	"html 渲染："+(writeEnd - writeStart),
+	"事件初始化次数数："+(inc),
+	"事件初始化时间："+(expEnd - expStart),
+	buf
+	].join('<br/>')
+}
+setTimeout(writeResult,3000);
+var as = new Array(1001).join('<a>.</a>');
+var writeStart = new Date;
+//document.write(as)
+var writeEnd = new Date
+
+</script>
+<a>123</a>
+<a>456</a>
+<div id="result"></div>
+</body>
+</html>

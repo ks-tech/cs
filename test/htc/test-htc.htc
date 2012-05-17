@@ -1,0 +1,26 @@
+<PUBLIC:COMPONENT URN="urn:msdn-microsoft-com:workshop" >
+   <PUBLIC:ATTACH EVENT="onmouseover" ONEVENT="Hilite()" />
+   <PUBLIC:ATTACH EVENT="onmouseout"  ONEVENT="Restore()"  />
+
+   <SCRIPT LANGUAGE="JScript">
+
+   var normalColor, normalSpacing;
+ 
+   function Hilite()
+   {
+     normalColor  = currentStyle.color;  
+     normalSpacing= currentStyle.letterSpacing;
+ 
+     runtimeStyle.color  = "red";
+     runtimeStyle.letterSpacing = 2;
+   }
+
+   function Restore()
+   {
+     runtimeStyle.color  = normalColor;
+     runtimeStyle.letterSpacing = normalSpacing;
+   }
+
+   </SCRIPT>
+</PUBLIC:COMPONENT>
+

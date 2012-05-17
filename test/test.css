@@ -1,24 +1,22 @@
-/*.transform{
-	background:linear-gradient(30deg,red,blue);
+.linear{
+	background:-ie-linear-gradient(30deg,red,blue);
 }
-.test[checked="checked"]:hover:focus{
-	background:red;
-	margin:100px;
-	padding:100px;
-}*/
-body .menu .submenu{
-	width:35px;
-	border:4px dashed blue;
-	border-top:0px;
-	height:35px;
+
+.box-radius{
+	border-radius:62px 12px 0px 0px;
+	border:12px solid red;
+	border-bottom:0px;
+	width:100px;
+	height:100px;
+	padding:12px;
+	user-defined:123;
 }
 
 
-/*
-
-body .menu:nth-child(even):hover{
-	background:red;
-}.menu:nth-child(3){
+body .test:nth-child(0):hover{
 	background:red;
 }
-*/
+
+.test[title='123']{
+color:blue;
+}

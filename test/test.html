@@ -5,38 +5,9 @@
 <script src="/static/boot.js"></script>
 
 </head>
-<body id='xx'>
-<div style="border:1px solid red;width:100px;height:100px"></div>
-<div style="border:1px solid blue;width:100px;height:100px" class="transform"></div>
-<input class="test" type="checkbox" checked="true">
-<div>
-<div class="menu">1</div>
-<div class="menu">2</div>
-<div class="menu">2</div>
-<div class="menu">2</div>
-<div class="menu">2</div>
-<div class="menu">2</div>
-
-</div>
-
-<script>
-
-/* *
-//runtimeStyle,currentStyle 读取效率很高：10000 此读取100毫秒(包括空值),先写后读需要450毫秒左右
-//如果是有效属性（如height,width）,IE6 大概需要2000毫秒
-var k = 0;
-var key = 'height';
-//document.body.runtimeStyle[key] = 800
-
-var d = new Date
-for(var i=0;i<1000;i++){
-document.body.runtimeStyle[key] = i
-k = document.body.runtimeStyle[key] 
-//k = document.body.currentStyle[key] 
-}
-alert([new Date - d,document.body.runtimeStyle['cs-attr2']])
-/* */
-</script>
+<body>
+<div class="test">first</div>
+<div class="test" title="123">last</div>
 </body>
 
 </html>

@@ -1,0 +1,74 @@
+﻿<!doctype>
+<html>
+<head>
+</head>
+<body onload="(writeEnd = Math.max(new Date,writeEnd));document.body.className='test2';">
+<p>生成1千个a节点，初始化其mouseenter，mouseleave事件耗时测试</p>
+<p>1000 个元素 2000 个初始化， ie6/7 都大约100ms, 平均每毫秒初始化20个，其中时间理论上还包含css与js之间的调度空闲（cpu占用不高）</p>
+<p>初始化之后，页面操作，无明显变化</p>
+<style>
+body.test1 a{
+color:red;
+text-kashida:expression(testAttach(this));
+text-kashida-space:expression(testAttach2(this));
+}
+
+.test1 a{
+color:red;
+text-kashida:expression(testAttach(this));
+text-kashida-space:expression(testAttach2(this));
+}
+body.test2 a{
+color:red;
+text-kashida:expression(testAttach(this));
+text-kashida-space:expression(testAttach2(this));
+}
+.test2 a{
+color:red;
+text-kashida:expression(testAttach(this));
+text-kashida-space:expression(testAttach2(this));
+}
+</style>
+<script>
+var inc = 0;
+var expStart;
+var expEnd;
+function empty(){}
+function testAttach(a){
+	if(!inc++){
+		expStart = new Date
+	}else{
+		expEnd = new Date
+	}
+	a.runtimeStyle.textKashida = '0pt';
+	a.attachEvent('onmouseenter',Function.prototype);
+}
+
+function testAttach2(a){
+	if(!inc++){
+		expStart = new Date
+	}else{
+		expEnd = new Date
+	}
+	a.runtimeStyle.textKashidaSpace = '0pt';
+	a.attachEvent('onmouseleave',Function.prototype);
+}
+function writeResult(){
+	document.getElementById('result').innerHTML = [
+	"html 渲染："+(writeEnd - writeStart),
+	"事件初始化次数数："+(inc),
+	"事件初始化时间："+(expEnd - expStart),
+	]
+}
+setTimeout(writeResult,3000);
+var as = new Array(1001).join('<a>.</a>');
+var writeStart = new Date;
+document.write(as)
+var writeEnd = new Date
+
+</script>
+
+<div id="result"></div>
+</body>
+
+</html>

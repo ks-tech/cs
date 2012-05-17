@@ -1,0 +1,49 @@
+﻿<!doctype>
+<html>
+<head>
+</head>
+<body id='xx'>
+
+<p>runtimeStyle,currentStyle 读取效率很高：<br>
+读currentStyle cs-width属性10000次耗时 16ms<br>
+写后读runtimeStyle width属性10000次耗时78 ms<br>
+写/删runtimeStyle后，临时取currentStyle,读其 width属性10000次耗时234(ms)
+
+<br>
+</p>
+<p>如果是有效属性（如height,width）,IE6 1万次大概需要200毫秒</p>
+<script>
+function testStyleGet(style,key,writable){
+	var tmp = 0;
+	var key = 'height';
+	var d = new Date
+	for(var i=0;i<10000;i++){
+		//var style = isRuntime?el.runtimeStyle:el.currentStyle;
+		if(writable){
+			style[key] = i;
+		}
+		tmp = style[key] 
+	}
+	return new Date - d;
+}
+function testStyleGet2(el,key){
+	var tmp = 0;
+	var key = 'height';
+	var d = new Date
+	for(var i=0;i<10000;i++){
+		el.runtimeStyle[key] = i%2 ?i:'';
+		var style = el.currentStyle;
+		tmp = style[key] 
+	}
+	return new Date - d;
+}
+
+document.write('<pre>'+testStyleGet+'</pre>')
+
+document.write('<h2>读currentStyle  cs-width属性10000次耗时(ms)</h2><p>'+testStyleGet(document.body.currentStyle,'cs-width',false)+'</p>');
+document.write('<h2>写后读runtimeStyle  width属性10000次耗时(ms)</h2><p>'+testStyleGet(document.body.runtimeStyle,'width',true)+'</p>');
+document.write('<h2>临时取style,写/删runtimeStyle后读currentStyle width属性10000次耗时(ms)</h2><p>'+testStyleGet2(document.body,'width')+'</p>');
+</script>
+</body>
+
+</html>

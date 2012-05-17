@@ -1,24 +1,49 @@
-require('./lib/ie6-only');
-require('./lib/transition');
-require('./lib/nth');
-require('./lib/box');
-require('./lib/matrix');
-exports.CS = require('./lib/core').CS
+var CS = require('./lib/runtime/core').CS;
 
-var FilterHelper = require('./filter').FilterHelper
-var vistTransition = require('./lib/runtime/transition').vistTransition
-var pollMap = CS.pollMap;
-pollMap.opacity = function(el,opacity,config){
-	FilterUtil(el).setOpacity(transform).update();
-}
-pollMap.transform = function(el,transform,config){
-	FilterHelper(el).setTransform(transform).update();
-}
-pollMap["cs-linear-gradient"]=function(el,gradient,config){
-	FilterHelper(el).setLinearGradient(gradient).update();
-}
-pollMap["box"]=function(el,mw){
-	
-}
+var mutiClassPlugin = require("./lib/runtime/plugin-ie6-muti-class").mutiClassPlugin
+var dynamicClassPlugin = require("./lib/runtime/plugin-ie6-dynamic-class").dynamicClassPlugin
+var attributePlugin = require("./lib/runtime/plugin-ie6-attr").attributePlugin
 
-pollMap.transition = vistTransition
+
+
+var nthPlugin = require("./lib/runtime/updater-nth").nthPlugin
+var boxPlugin = require("./lib/runtime/updater-box").boxPlugin
+var relationPlugin = require("./lib/runtime/updater-relation").relationPlugin
+var transitionPlugin = require('./lib/runtime/updater-transition').transitionPlugin
+
+var FilterManager = require('./lib/runtime/filter').FilterManager
+
+
+CS.addPlugin(mutiClassPlugin);
+CS.addPlugin(dynamicClassPlugin);
+CS.addPlugin(attributePlugin);
+
+//CS.addPlugin('child',childPlugin);//需要轮询
+
+
+
+CS.addPlugin(nthPlugin,'onexist','cs-update-nth')
+CS.addPlugin(boxPlugin,'onexist',"border-radius")
+
+
+//CS.addPlugin(relationPlugin,'onexist',"cs-update-relation")
+
+CS.addPlugin({
+	id:'update-opacity',
+	update:function(el,config,opacity){
+		FilterManager(el).setOpacity(opacity).update();
+	}
+},'onchange','opacity')
+CS.addPlugin({id:'update-cs-linear-gradient',
+	update:function(el,config,gradient){
+		FilterManager(el).setLinearGradient(gradient).update();
+	}
+},'onchange','cs-linear-gradient')
+
+//CS.addPlugin({id:'update-transform',
+//	update: function(el,transform,config){
+//		FilterManager(el).setTransform(transform).update();
+//	}
+//},'onexist','transform')
+
+exports.CS = CS;

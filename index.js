@@ -1,1 +1,1 @@
-exports.CS = require('./lib/core').CS
+exports.CS = require('./lib/runtime/core').CS
