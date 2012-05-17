@@ -40,10 +40,11 @@ CS.addPlugin({id:'update-cs-linear-gradient',
 	}
 },'onchange','cs-linear-gradient')
 
-//CS.addPlugin({id:'update-transform',
-//	update: function(el,transform,config){
-//		FilterManager(el).setTransform(transform).update();
-//	}
-//},'onexist','transform')
+CS.addPlugin({id:'update-transform',
+	update: function(el,config,transform){
+		FilterManager(el).setTransform(transform).update();
+	}
+},'onchange','transform')
 
+CS.addPlugin(transitionPlugin,'onexist','transition-property')
 exports.CS = CS;
