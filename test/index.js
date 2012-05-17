@@ -1,7 +1,7 @@
 var Path = require('path')
 process.chdir(Path.dirname(__dirname))
 
-var rbs = require('jsi/test/run').rbs
+var rbs = require('jsi/test').rbs
 var setupCS = require('../lib/compiler/cs-filter').setupCS;
 setupCS(rbs,'/');
 
