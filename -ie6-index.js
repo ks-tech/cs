@@ -8,7 +8,7 @@ var attributePlugin = require("./lib/runtime/plugin-ie6-attr").attributePlugin
 
 var nthPlugin = require("./lib/runtime/updater-nth").nthPlugin
 var boxPlugin = require("./lib/runtime/updater-box").boxPlugin
-var relationPlugin = require("./lib/runtime/updater-relation").relationPlugin
+var refPlugin = require("./lib/runtime/updater-ref").refPlugin
 var transitionPlugin = require('./lib/runtime/updater-transition').transitionPlugin
 
 var FilterManager = require('./lib/runtime/filter').FilterManager
@@ -24,6 +24,8 @@ CS.addPlugin(attributePlugin);
 
 CS.addPlugin(nthPlugin,'onexist','cs-update-nth')
 CS.addPlugin(boxPlugin,'onexist',"border-radius")
+CS.addPlugin(refPlugin,'onexist',"cs-ref")
+CS.addPlugin(transitionPlugin,'onexist','transition-property')
 
 
 //CS.addPlugin(relationPlugin,'onexist',"cs-update-relation")
@@ -46,5 +48,5 @@ CS.addPlugin({id:'update-transform',
 	}
 },'onchange','transform')
 
-CS.addPlugin(transitionPlugin,'onexist','transition-property')
+
 exports.CS = CS;

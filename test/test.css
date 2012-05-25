@@ -1,22 +1,20 @@
-.linear{
-	background:-ie-linear-gradient(30deg,red,blue);
+body>div{
+	border:4px solid yellow;
+}
+div{
+	background-color:#ddd;
+}
+.parent>div{
+	background-color:red;
+	border:1px solid blue;
+}
+.parent{
+	background-color:yellow;
 }
 
-.box-radius{
-	border-radius:62px 12px 0px 0px;
-	border:12px solid red;
-	border-bottom:0px;
-	width:100px;
-	height:100px;
-	padding:12px;
-	user-defined:123;
+h3~p{
+	border-top:1px solid red;
 }
-
-
-body .test:nth-child(0):hover{
-	background:red;
-}
-
-.test[title='123']{
-color:blue;
+h3+p{
+	border-top:12px solid red;
 }
