@@ -1,0 +1,12 @@
+li {
+background:blue;
+	behavior: url(about:text/x-component,<PUBLIC%3ACOMPONENT><SCRIPT>console.log(0)<%2FSCRIPT><%2FPUBLIC%3ACOMPONENT>);
+}
+
+li .class:hover:focus.classB:active[a="b"]:aaa{
+background:blue;
+	behavior: url(about:text/x-component,<PUBLIC%3ACOMPONENT><SCRIPT>console.log(0)<%2FSCRIPT><%2FPUBLIC%3ACOMPONENT>);
+}
+input:focus{
+	border:2px solid red;
+}

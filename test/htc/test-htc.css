@@ -1,4 +1,8 @@
 LI {
 background:yellow;
-	behavior: url(http://news.163.com:2012/test/htc/test-htc.htc);
+	behavior: url(/test/htc/test-htc.htc);
+	color:red;
+	background:yellow;
+	font-size:12px;
+	border:1px solid red;
 }

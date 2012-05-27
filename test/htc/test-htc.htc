@@ -1,9 +1,12 @@
 <PUBLIC:COMPONENT URN="urn:msdn-microsoft-com:workshop" >
-   <PUBLIC:ATTACH EVENT="onmouseover" ONEVENT="Hilite()" />
-   <PUBLIC:ATTACH EVENT="onmouseout"  ONEVENT="Restore()"  />
+	<PUBLIC:ATTACH EVENT="onmouseover" ONEVENT="Hilite()" />
+	<PUBLIC:ATTACH EVENT="onmouseout"  ONEVENT="Restore()"  />
 
+	<PUBLIC:ATTACH EVENT="ondocumentready" ONEVENT="console.log('dom')"/>
+	<PUBLIC:ATTACH EVENT="ondetach" ONEVENT="cleanup(this)" />
+	
    <SCRIPT LANGUAGE="JScript">
-
+	console.log('script',this.tagName,this.uniqueID,this.currentStyle.color)
    var normalColor, normalSpacing;
  
    function Hilite()
@@ -19,6 +22,9 @@
    {
      runtimeStyle.color  = normalColor;
      runtimeStyle.letterSpacing = normalSpacing;
+   }
+   function cleanup(thiz){
+   	console.log('cleanup'+(thiz.parentNode.tagName))
    }
 
    </SCRIPT>
