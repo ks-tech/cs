@@ -18,17 +18,10 @@ CS.addPlugin(mutiClassPlugin);
 CS.addPlugin(dynamicClassPlugin);
 CS.addPlugin(attributePlugin);
 
-//CS.addPlugin('child',childPlugin);//需要轮询
-
-
-
 CS.addPlugin(nthPlugin,'onexist','cs-update-nth')
 CS.addPlugin(boxPlugin,'onexist',"border-radius")
 CS.addPlugin(refPlugin,'onexist',"cs-ref")
 CS.addPlugin(transitionPlugin,'onexist','transition-property')
-
-
-//CS.addPlugin(relationPlugin,'onexist',"cs-update-relation")
 
 CS.addPlugin({
 	id:'update-opacity',
@@ -36,17 +29,18 @@ CS.addPlugin({
 		FilterManager(el).setOpacity(opacity).update();
 	}
 },'onchange','opacity')
-CS.addPlugin({id:'update-cs-linear-gradient',
-	update:function(el,config,gradient){
-		FilterManager(el).setLinearGradient(gradient).update();
-	}
-},'onchange','cs-linear-gradient')
 
 CS.addPlugin({id:'update-transform',
 	update: function(el,config,transform){
 		FilterManager(el).setTransform(transform).update();
 	}
 },'onchange','transform')
+
+CS.addPlugin({id:'update-cs-linear-gradient',
+	update:function(el,config,gradient){
+		FilterManager(el).setLinearGradient(gradient).update();
+	}
+},'onchange','cs-linear-gradient')
 
 
 exports.CS = CS;
