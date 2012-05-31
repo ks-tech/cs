@@ -1,0 +1,193 @@
+<!doctype>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="../default.css" />
+<title>选择器语法增强</title>
+</head>
+<body>
+<h2>选择器语法增强</h2>
+<p>图例:		<b class="stable">IEn</b>稳定支持
+			<b class="sandbox">IEn</b>正在开发
+			<b class="planning">IEn</b>有支持计划
+			<b class="none">IEn</b>不支持
+</p>
+<p>选择器支持相对完善，css3常用选择器基本支持。</p>
+<div class="detail">
+例外细节
+	<div>
+	<p>需求因素不计划支持的有: <br/>
+	<a class="ms-ref" href='http://msdn.microsoft.com/library/ff974080.aspx' title='ns|E'>namespace</a>,
+	<a class="ms-ref" href='http://msdn.microsoft.com/library/ff974108.aspx'>:root</a>,
+	<a class="ms-ref" href='http://msdn.microsoft.com/library/cc848867.aspx'>:lang()</a>,
+	<a class="ms-ref" href='http://msdn.microsoft.com/library/ms530841.aspx'>@page :first |:right|:first	</a>,
+	</p>
+	<p>技术因素无法支持的有:<br/>
+	<a href=''>:before</a>,
+	<a href=''>:after</a>,
+	<a href=''>::before</a>,
+	<a href=''>::after</a>,
+	<a href=''>::first-letter</a>,
+	<a href=''>::first-line</a>,
+	<a href=''>::selection</a>,
+	<a href=''>::value</a>,
+	<a href=''>::choices</a>,
+	<a href=''>::repeat-item</a>,
+	<a href=''>::repeat-index</a>,
+	<a href=''>::first</a>
+	</p>
+	<p style="display:none">时间因素尚未支持的有:<br/>
+	<a class="ms-ref" href='http://msdn.microsoft.com/library/ff974110.aspx'>:target</a>,
+	<a class="ms-ref" href='http://msdn.microsoft.com/library/ff974101.aspx'>:not(s)</a>,
+	<a class="ms-ref" href='http://msdn.microsoft.com/library/ff974098.aspx'>:indeterminate</a>,
+	<a href=''>:default</a>,
+	<a href=''>:valid</a>,
+	<a href=''>:invalid</a>,
+	<a href=''>:in-range</a>,
+	<a href=''>:out-of-range</a>,
+	<a href=''>:required</a>,
+	<a href=''>:optional</a>,
+	<a href=''>:read-only</a>,
+	<a href=''>:read-write</a>
+	</p>
+	</div>
+</div>
+<h3>状态选择器</h3>
+<ul>
+	<h4>交互状态</h4>
+	<p>一系列CSS3伪属性的支持，<strong>适当使用对提高交互体验作用明显</strong>，也可以配合动画功能制作CSS3动画。</p>
+	<p>对<strong>效率的影响</strong>主要体现在可以通过简单的CSS申明完成以前需要多浏览器平台兼容的复杂脚本。
+	</p>
+	<ul>
+		<li>鼠标悬浮效果:(<a class="ms-ref" href="http://msdn.microsoft.com/library/ms530766.aspx">:hover</a>)
+			<b class="stable">IE6</b>
+			<p class="native-version">IE7开始原生支持。</p>
+			<p>可用于下拉菜单，富文本提示信息，选项卡(Tab)/翻页组件等。也可用于CSS3动画的触发。</p></li>
+		<li>焦点效果:(<a class="ms-ref" href='http://msdn.microsoft.com/library/cc304080.aspx'>:focus</a>)
+			<b class="stable">IE6</b>
+			<b class="stable">IE7</b>
+			<p class="native-version">IE8开始原生支持。</p>
+			<p>定制焦点效果，增强输入控件和具有tabIndex属性的元素的互体验。也可用于触发CSS3动画。</p></li>
+		<li>激活效果:(<a class="ms-ref" href="http://msdn.microsoft.com/library/ms530714.aspx">:active</a>)
+			<b class="stable">IE6</b>
+			<b class="stable">IE7</b>
+			<p class="native-version">IE8开始原生支持。</p>
+			<p>定制活动元素效果，改善交互体验。也可用于辅助制作选项卡(Tab)/翻页组件，也可触发CSS3动画。</p></li>
+		<p class="example">示例：<a href="dynamic.html">dynamic.html</a></p>
+	</ul>
+	<h4>UI/Hash状态</h4>
+	<ul>
+		<li>UI状态：(<a class="ms-ref" href='http://msdn.microsoft.com/library/ff974093.aspx'>:checked</a>/<a class="ms-ref" href='http://msdn.microsoft.com/library/ff974094.aspx'>disabled</a>/<a class="ms-ref" href='http://msdn.microsoft.com/library/ff974096.aspx'>enabled</a>)
+			<b class="stable">IE6</b>
+			<b class="stable">IE7</b>
+			<b class="planning">IE8</b>
+			<p class="native-version">IE9开始原生支持。</p>
+			<p>控制元素在选中(用于：checkbox/radio)/禁用(disabled="disabled")时的样式控制。</p></li>
+		<li>Hash状态样式：(<a class="ms-ref" href="http://msdn.microsoft.com/library/ff974110.aspx">:target</a>)
+			<b class="planning">IE6</b>
+			<b class="planning">IE7</b>
+			<b class="planning">IE8</b>
+			<p class="native-version">IE9开始原生支持。</p>
+			<p>页内跳转的样式定制(#id)。</p></li>
+		<p class="example">示例：<a href="status.html">status.html</a></p>
+	</ul>
+</ul>
+<h4>属性选择器</h4>
+<ul>
+	<li>按属性值显示样式
+		<b class="planning">IE6</b>
+		<p class="native-version">IE6开始原生支持。</p>
+		<p>如，根据url连接显示不同的样式（站外的连接，百科类的连接，提问式的连接，不同的input控件（checkbox,select(multi?)...））</p>
+	</li>
+	<p class="example">示例：<a href="attr.html">attr.html</a></p>
+</ul>
+<h4>结构选择器</h4>
+<p>用于对DOM树中位置的自省，可取代部分模板逻辑和冗余的结构代码（如，nav-first,nav-last 等吃力的废话）</p>
+<ul>
+	<li>首位元素(<a class="ms-ref" href="http://msdn.microsoft.com/library/ms530712.aspx">:first-child</a>)
+		<b class="stable">IE6</b>
+		<p class="native-version">IE7开始原生支持。</p>
+		<p>常用于菜单，按钮等ui组合的首尾显示元素匹配，您大可不必在模板中一堆繁琐的判断，其实CSS3一个伪属性搞定。</p>
+	</li>
+	<li>末位元素(<a class="ms-ref" href="http://msdn.microsoft.com/library/ff974102.aspx">:last-child</a>)
+		<b class="stable">IE6</b>
+		<b class="stable">IE7</b>
+		<b class="stable">IE8</b>
+		<p class="native-version">IE9开始原生支持。</p>
+		<p>常用于菜单，按钮等ui组合的首尾显示元素匹配，您大可不必在模板中一堆繁琐的判断，其实CSS3一个伪属性搞定。</p>
+	</li>
+	<li>单双行差异(<a class="ms-ref" href="http://msdn.microsoft.com/library/ff974102.aspx">:nth-child(odd),:nth-child(even)</a>)
+		<b class="stable">IE6</b>
+		<b class="stable">IE7</b>
+		<b class="stable">IE8</b>
+		<p class="native-version">IE9开始原生支持。</p>
+		<p>常用于信息列表的隔行差异化显示</p>
+	</li>
+	<li>位置表达式：(<a class="ms-ref" href="http://msdn.microsoft.com/library/ff974102.aspx">nth-child(n)</a>,<a class="ms-ref" href="http://msdn.microsoft.com/library/ff974103.aspx">nth-last-child(n)</a>
+		<b class="stable">IE6</b>
+		<b class="stable">IE7</b>
+		<b class="stable">IE8</b>
+		<p class="native-version">IE9开始原生支持。</p>
+		<ul>
+			<li>list自定义序号，其他复杂顺序/关联匹配
+				<p>第几个元素，没必要在模板中申明class，这些都是CSS匹配的工作</p>
+			</li>
+		</ul>
+	</li>
+	<li title="相同tagName的元素的顺序">同类位置表达式：(<a class="ms-ref" href="http://msdn.microsoft.com/library/ff974105.aspx">nth-of-type(n)</a>,<a class="ms-ref" href="http://msdn.microsoft.com/library/ff974104.aspx">nth-last-of-type(n)</a>
+		<b class="stable">IE6</b>
+		<b class="stable">IE7</b>
+		<b class="stable">IE8</b>
+		<p class="native-version">IE9开始原生支持。</p>
+		
+	</li>
+	<li>其他位置表达式:(:first-of-type,:last-of-type,:only-child,:only-of-type)
+		<b class="stable">IE6</b>
+		<b class="stable">IE7</b>
+		<b class="stable">IE8</b>
+		<p class="native-version">IE9开始原生支持。</p>
+		
+	</li>
+	<li>空节点:(<a class="ms-ref" href="http://msdn.microsoft.com/library/ff974095.aspx">:empty</a>)
+		<b class="planning">IE6</b>
+		<b class="planning">IE7</b>
+		<b class="planning">IE8</b>
+		<p class="native-version">IE9开始原生支持。</p>
+		<p>当某个元素没有任何子节点的时候生效</p>
+	</li>
+	<p class="example">示例：<a href="structural.html">structural.html</a></p>
+</ul>
+<h4>组合选择器</h4>
+<ul>
+	<li>IE6多class组合(<a class="ms-ref" href="http://msdn.microsoft.com/library/aa358820.aspx">.classA.andClassB</a>)
+		<b class="stable">IE6</b>
+		<p class="native-version">IE6开始原生支持。</p>
+		<p>IE6 CSS功能的落后也许会让你很无赖，比如他不支持直接子节点的样式匹配(>); 不支持相邻子节点的关系控制(~+)； 不支持同元素同时具有多个class时的样式控制。
+		等等</p>
+		<p>如果系统能帮您抹平这些差异，我想应该是个很让人心情愉快的事情。</p>
+	</li>
+	<li>直接子节点组合(<a class="ms-ref" href="http://msdn.microsoft.com/library/aa358819.aspx">parent>child</a>)
+		<b class="stable">IE6</b>
+		<p class="native-version">IE6开始原生支持。</p>
+		<p></p>
+	</li>
+	<li>紧邻次节点组合(<a class="ms-ref" href="http://msdn.microsoft.com/library/aa358818.aspx">previous+next_1</a>)
+		<b class="stable">IE6</b>
+		<p class="native-version">IE6开始原生支持。</p>
+		<p></p>
+	</li>
+	<li>次节点组合(<a class="ms-ref" href="http://msdn.microsoft.com/library/aa358824.aspx">previous~next_1_n</a>)
+		<b class="stable">IE6</b>
+		<p class="native-version">IE6开始原生支持。</p>
+		<p></p>
+	</li>
+	<li>排除选择器(<a class="ms-ref" href="http://msdn.microsoft.com/library/ff974101.aspx">:not(s)</a>)
+		<b class="planning">IE6</b>
+		<b class="planning">IE7</b>
+		<b class="planning">IE8</b>
+		<p class="native-version">IE9开始原生支持。</p>
+	</li>
+	<p class="example">示例：<a href="combinator.html">combinator.html</a></p>
+</ul>
+</body>
+</html>

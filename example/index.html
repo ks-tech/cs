@@ -3,211 +3,65 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <link rel="stylesheet" type="text/css" href="default.css" />
-<style>
-.stable{
-	background:#0d0;
-}
-.defective{
-	background:#F90;
-}
-.testing{
-	background:#ee0;
-}
-.planning,.planning a:link{
-	background:#960;
-}
-li{
-	cursor:pointer;
-}
-li>p{
-	padding:0;
-	margin:0;
-}
-li>p:last-child{
-	display:none;
-}
-li:hover>p{
-	display:block;
-}
-</style>
 <title>IE6 CSS3增强 与差异化代码实例</title>
 </head>
 <body>
-<p>图例&#9632;：
-<span class="stable">&#160;稳定状态&#160;</span>
-<span class="defective" title="实现处于稳定状态，但是并不完美，需要补充说明">&#160;补充说明&#160;</span>
-<span class="testing">&#160;测试中&#160;</span>
-<span class="planning">&#160;计划中&#160;</span>
+
 <h3>差异化</h3>
 <ul>
-	<li class="stable"><a href="prefix.html">前缀规范</a>
+	<li><a href="prefix.html">前缀规范</a>
 		<p>通过统一的容易理解和书写的前缀来代替以前常用的css hack，来提高代码质量的一种方法。</p>
 	</li>
 </ul>
-
+<style>
+i{font-style:normal;font-size:10px}
+</style>
 <h3>IE 增强</h3>
-<p>目前只支持IE6,7;即将支持IE8; 部分功能处于试验阶段。</p>
 
-
+<p>图例:		<b class="stable">稳定支持</b>
+			<b class="sandbox">正在开发</b>
+			<b class="planning">有支持计划</b>
+			<b class="none">不支持</b>
 </p>
 <ul>
 	<li>
-		<string>IE6</string>
+		<string><a href="selector/index.html">选择器语法增强</a></string>
 		<ul>
-			<li class="stable">
-				<a href="selector.html">选择器增强</a>
-				<p>
-					CSS3选择器更强大，这里增强点主要有：
-					<ul>
-						<li><strong>状态选择器</strong>
-							<p>用例说明：<p>
-							<ul>
-								<li>鼠标悬停(:hover)
-									<p>常用与实现菜单，富文本提示，悬停tab组建，等等...</p>
-								</li>
-								<li>输入焦点(:focus)
-									<p>给输入型表单元素提供丰富的交互体验。<br/>
-									<i>原生支持从IE8开始，但IE7增强代码不与IE6共享</i>。</p>
-								</li>
-								<li>当前元素(:active)
-									<p>给输入型表单元素、连接等具备tabIndex属性的交互元素提供丰富的交互体验</p>
-								</li>
-								<li class="planning">UI状态(:checked,:disabled...)
-									<p>给输选择型表单元素提供丰富的交互体验<br/>
-									<i>原生支持从IE9开始，但IE7增强代码不与IE6共享</i>。</p>
-								</li>
-								<li title="页面跳转样式控制" class="planning">Hash状态(:target,IE7 实现)
-								</li>
-							</ul>
-						</li>
-						<li><strong>结构选择器</strong>
-							<p>用例说明:<p>
-							<ul>
-								<li>首位元素(:first-child,:last-child)
-									<p>首位元素特殊边框等,背景差异等。常用与控制组建背景图形生成，解放以前模板中对首位行号的判断。</p>
-								</li>
-								<li>单双行差异(:nth-child(odd),:nth-child(even))
-									<p>控制隔行样式差异(odd,even 只是特例，事实上这里可以是一个*n+k 表达式)</p>
-								</li>
-								<li>其他(nth-child(?),nth-last-child(?),nth-of-type(?),nth-of-last-type(?))
-									<p>通过这种强大的位置表达式功能，解放模板中对行号的判断。</p>
-								</li>
-							</ul>
-						</li>
-						<li><strong>属性选择器</strong>
-							<p>用例说明：<p>
-							<ul>
-								<li>分类样式
-									<p>如站内链接，链接类型等等差异化展现。</p>
-								</li>
-								<li>其他
-									<p>增强后的代码可以动态支持CSS2的全部属性选择器功能，使用方式自己想象吧^_^</p>
-								</li>
-							</ul>
-						</li>
-						<li><strong>选择器组合</strong>
-							<p>用例说明：<p>
-							<ul>
-								<li>.classA.AndClassB
-									<p>IE6多class组合</p>
-								</li>
-								<li>.parent>.child
-									<p>直接子节点</p>
-								</li>
-								<li>.previous+.next
-									<p>相邻节点(选中next)</p>
-								</li>
-								<li class="planning">.previous~.next
-									<p>前置节点(只要存在更前的兄弟节点即可（不需要相邻），选中next)</p>
-								</li>
-								<li class="planning">.match:not(.unmatch)
-									<p>选中后排除</p>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</p>
+			<li><span class="stable">交互选择器</span>
+				<i>(:hover,:focus,:active)</i>
 			</li>
-			<li class="testing">
-				<a href="ie6-other.html">其他功能类增强</a>
-				<ul>
-					<li>溢出控制(max/min-width/height)
-						<p>控制超出大小的切除和不足大小的补充</p>
-					</li>
-					<li>固定定位(position:fixed)
-						<p></p>
-					</li>
-					<li>PNG24 Alpha
-						<p>CSS 背景中运用 PNG24Alpha图像</p>
-					</li>
-				</ul>
-			</li>
+			<li><span class="stable">状态选择器</span>
+				<i>(:target,:enabled,:disabled,:checked)</i></li>
+			<li><span class="stable">属性选择器</span>
+				<i>([attr="value"],[attr^="prefix"],[attr$="postfix"],[attr*="any"],[attr~="word"],)</i></li>
+			<li><span class="stable">结构选择器</span>
+				<i>(:first-child,:last-child,nth-child(nth/odd/even),nth-last-child(nth),nth-of-(last)?-type(nth)...)</i></li>
+			<li><span class="stable">选择器组合</span>
+				<i>(<span title="多class组合">.classA.AndClassB</span>,
+					<span title="直接子节点组合">P>C</span>,
+					<span title="相邻组合">P+N</span>,
+					<span title="前置组合">P~N</span>,
+					<span title="排除组合" class="sandbox">E:not(s)</span>)</i></li>
 		</ul>
 	</li>
 	<li>
-		<string>IE7</string>
+		<strong><a href="function/index.html">其他功能类增强</a></strong>
 		<ul>
-			<li class="planning">
-				<a href="selector.html">选择器增强</a>
-				<ul>
-					<li>输入焦点(:focus)
-						<p>给输入型表单元素提供丰富的交互体验。<br/><i>代码不与IE6共享</i>。</p>
-					</li>
-					<li class="planning">UI状态(:checked,:disabled...)
-						<p>给输选择型表单元素提供丰富的交互体验<br/>
-						<i>原生支持从IE9开始，但IE7增强代码不与IE6共享</i>。</p>
-					</li>
-					<li title="页面跳转样式控制" class="planning">Hash状态(:target)
-						<p>给页内跳转(hash改变)增加样式支持</p>
-						<!-- onhashchange  从ie8开始 -->
-						<i>原生支持从IE9开始，但IE7增强代码不与IE6共享</i>。</p>
-					</li>
-				</ul>
-			</li>
+			<li><span class="sandbox">变形增强</span>(transform)</li>
+			<li><span class="sandbox">动画增强</span>(transition)</li>
+			<li><span class="planning">溢出控制</span>(max/min-width/height)</li>
+			<li><span class="planning">固定定位</span>(position:fixed)</li>
+			<li><span class="planning">阴影增强</span>(box-shadow)</li>
+			<li><span class="sandbox">圆角增强</span>(border-radius)</li>
+			<li><span class="planning">图形边框</span>(border-image)</li>
+			<li><span class="sandbox">线性渐变</span>(linear-gradient)</li>
+			<li><span class="stable">半透明支持</span>(opacity)</li>
+			<li><span class="planning">RGBA 背景色</span>(background:#11223355)</li>
+			<li><span class="planning">PNG24 Alpha 背景图</span>(background-image:xx.png)</li>
+			<li><span class="sandbox">组合宽高增强</span>(width:calc(50%-2px))</li>
 		</ul>
 	</li>
-	<li>
-		<string>IE8</string>
-		<ul>
-			<li class="planning">
-				<a href="selector.html">选择器增强</a>
-				<ul>
-					<li>UI状态(:checked,:disabled...)
-						<p>给输选择型表单元素提供丰富的交互体验<br/>
-					</li>
-					<li title="页面跳转样式控制" class="planning">Hash状态(:target)
-						<p>给页内跳转(hash改变)增加样式支持</p>
-						<!-- onhashchange  从ie8开始 -->
-						<i>原生支持从IE9开始，但IE8增强代码不与IE7共享</i>。</p>
-					</li>
-				</ul>
-			</li>
-			<li class="testing"><a href="transition.html">变形/动画增强</a>
-				<p>
-					支持transform 变形、transition 动画（需要指定元素）。
-				</p>
-			</li>
-			<li class="testing"><a href="box.html">边框/圆角/阴影类增强</a>
-				<p>这不是一个完美的解决方案，尚在试验中。。。</p>
-			</li>
-			<li class="planning"><a href="#">RGBA 背景色</a>
-				<p>计划中。。。</p>
-			</li>
-			<li class="stable">
-				<a href="ie7-other.html">其他功能类增强</a>
-				<p>半透明(opacity)。</p>
-			</li>
-		</ul>
-	</li>
-	
-	<li>
-		<string>IE9</string>
-		<ul>
-			<li class="planning"><a href="box.html">图形边框</a>
-				<p>计划中。。。</p>
-			</li>
-		</ul>
-	</li>
+
 </ul>
 </body>
 </html>
