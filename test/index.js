@@ -5,5 +5,5 @@ var rbs = require('jsi/test').rbs
 var setupCS = require('../lib/compiler/cs-filter').setupCS;
 setupCS(rbs,'/');
 
-var s = rbs.getContentAsBinary("/test/-ie6-test.css").toString();
+var s = rbs.getContentAsBinary("/example/selector/-ie6-not.css").toString();
 console.log('\ncontents:\n',s)

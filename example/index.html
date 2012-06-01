@@ -14,7 +14,8 @@
 	</li>
 </ul>
 <style>
-i{font-style:normal;font-size:10px}
+i{font-style:normal;font-size:11px}
+li p{margin:0px;padding:0px;}
 </style>
 <h3>IE 增强</h3>
 
@@ -31,11 +32,11 @@ i{font-style:normal;font-size:10px}
 				<i>(:hover,:focus,:active)</i>
 			</li>
 			<li><span class="stable">状态选择器</span>
-				<i>(:target,:enabled,:disabled,:checked)</i></li>
+				<i>(<span class="sandbox">:target</span>,:enabled,:disabled,:checked)</i></li>
 			<li><span class="stable">属性选择器</span>
 				<i>([attr="value"],[attr^="prefix"],[attr$="postfix"],[attr*="any"],[attr~="word"],)</i></li>
 			<li><span class="stable">结构选择器</span>
-				<i>(:first-child,:last-child,nth-child(nth/odd/even),nth-last-child(nth),nth-of-(last)?-type(nth)...)</i></li>
+				<i>(<span class="sandbox">:empty</span>,:first-child,:last-child,nth-child(nth/odd/even),nth-last-child(nth),nth-of-(last)?-type(nth)...)</i></li>
 			<li><span class="stable">选择器组合</span>
 				<i>(<span title="多class组合">.classA.AndClassB</span>,
 					<span title="直接子节点组合">P>C</span>,
@@ -47,18 +48,42 @@ i{font-style:normal;font-size:10px}
 	<li>
 		<strong><a href="function/index.html">其他功能类增强</a></strong>
 		<ul>
-			<li><span class="sandbox">变形增强</span>(transform)</li>
-			<li><span class="sandbox">动画增强</span>(transition)</li>
-			<li><span class="planning">溢出控制</span>(max/min-width/height)</li>
-			<li><span class="planning">固定定位</span>(position:fixed)</li>
-			<li><span class="planning">阴影增强</span>(box-shadow)</li>
-			<li><span class="sandbox">圆角增强</span>(border-radius)</li>
-			<li><span class="planning">图形边框</span>(border-image)</li>
-			<li><span class="sandbox">线性渐变</span>(linear-gradient)</li>
-			<li><span class="stable">半透明支持</span>(opacity)</li>
-			<li><span class="planning">RGBA 背景色</span>(background:#11223355)</li>
-			<li><span class="planning">PNG24 Alpha 背景图</span>(background-image:xx.png)</li>
-			<li><span class="sandbox">组合宽高增强</span>(width:calc(50%-2px))</li>
+			<li><span class="stable">半透明支持</span>(opacity)
+				<p>用户可以直接书写CSS3 opacity属性</p>
+			</li>
+			<li><span class="sandbox">变形增强</span>(transform)
+				<p>位移参数尚未修正</p>
+			</li>
+			<li><span class="sandbox">动画增强</span>(transition)
+				<p>需要明确指定需要变化的 transition-property</p>
+			</li>
+			<li><span class="sandbox">线性渐变</span>(linear-gradient)
+				<p>目前采用filter实现，只能两个颜色，水平和垂直两个方向(不如CSS3强大)，后续可能尝试生成图片文件的方式</p>
+			</li>
+			<li><span class="planning">阴影增强</span>(box-shadow)
+				<p>计划用filter实现，不支持内阴影</p>
+			</li>
+			<li><span class="sandbox">圆角增强</span>(border-radius)
+				<p>目前采用filter＋vml实现，性能不佳，后续可能尝试动态生成图片文件的方式</p>
+			</li>
+			<li><span class="planning">RGBA 背景色</span>(background:#11223355)
+				<p>通过filter渐变背景实现，很快会支持</p>
+			</li>
+			<li><span class="planning">PNG24 Alpha 背景图</span>(background-image:xx.png)
+				<p>需要nodejs读取png源码，难度不搭，很快会支持</p>
+			</li>
+			<li><span class="planning">溢出控制</span>(max/min-width/height)
+				<p>无风险，很快会支持</p>
+			</li>
+			<li><span class="planning">固定定位</span>(position:fixed)
+				<p>无风险，很快会支持，可能有附加规范</p>
+			</li>
+			<li><span class="planning">组合宽高增强</span>(width:calc(50%-2px))
+				<p>看需求确定何时实现</p>
+			</li>
+			<li><span class="planning">图形边框</span>(border-image)
+				<p>有一定难度</p>
+			</li>
 		</ul>
 	</li>
 

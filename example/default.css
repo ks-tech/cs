@@ -17,11 +17,7 @@ body{
 p{
 	text-indent:24px;
 }
-a.ms-ref:first-letter{
-	content:'>>ref';
-	background:#ddd;
-	font-size:8px;
-}
+
 a.ms-ref::after{
 	content:'>>ref';
 	background:#ddd;
