@@ -1,0 +1,63 @@
+﻿<!doctype>
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<link rel="stylesheet" type="text/css" href="../../default.css" />
+<link rel="stylesheet" type="text/css" href="box-shadow.css" />
+<script src2="/static/cs.js"></script>
+<title>filter 示例</title>
+</head>
+<body style="background:green">
+<script>
+function test(el){
+el.style.layoutFlow=el.parentNode.currentStyle.layoutFlow
+document.title = '$$$'
+test = Function.prototype;
+}
+</script>
+<style>
+.xxx *:first-child{
+	background:red;
+}
+.xxx:before{
+	color:red;
+	content:'@@@';
+	
+}
+</style>
+<div class="xxx">
+xxxx<span>sss</span>
+</div>
+<div style="text-indent:50px">
+<span>
+
+<span style="display:inline-block;float:right;border:1px solid yellow;width:30px"></span>
+<span style="display:inline-block;float:right;border:1px solid yellow;width:30px"></span>
+
+<span style="display:inline-block;float:left;border:1px solid red"></span>
+<span style="display:inline-block;float:right;border:1px solid blue"></span>
+
+<span style="display:inline-block;float:left;border:1px solid yellow;width:30px"></span>
+<span style="display:inline-block;float:left;border:1px solid yellow;width:30px"></span>
+</span>
+
+aaaaa<br>
+ddddd
+</div>
+
+<h3>box-shadow:10px 20px 0px 10px blue inset</h3>
+aaa<div style="background:#ddd;display:block;zoom:1;border:1px solid yellow;
+filter:progid:DXImageTransform.Microsoft.Chroma(color='red'),
+ progid:DXImageTransform.Microsoft.Alpha(opacity:100);color:red;background:yellow;
+box-shadow:50px 20px 0px 120px blue;width:130px;height:130px">1<span style="zoom:1;background:red">11</span>
+<span style="z-index:-1;width:0px;height:0px;display:inline;position:relative;border:8px solid yellow">
+dddd
+<div style="display:inline-block;z-index:-1;width:220%;position:absolute;height:200px;border:5px solid red"></div>
+</span>111
+<p>
+dsdsdsds
+
+sdsd
+</div>111
+
+</body>
+</html>

@@ -93,11 +93,20 @@
 	</ul>
 </ul>
 <h4>属性选择器</h4>
-<ul>
-	<li>按属性值显示样式
-		<b class="planning">IE6</b>
+<p>按属性值显示样式。如，根据url连接显示不同的样式（站外的连接，百科类的连接，提问式的连接，不同的input控件（checkbox,select(multi?)...））</p>
+		<b class="stable">IE6</b>
 		<p class="native-version">IE6开始原生支持。</p>
-		<p>如，根据url连接显示不同的样式（站外的连接，百科类的连接，提问式的连接，不同的input控件（checkbox,select(multi?)...））</p>
+<ul>
+	<li>具备属性([attr])	</li>
+	<li>属性相等([attr="value"])	</li>
+	<li>属性前缀([attr^="value"])	</li>
+	<li>属性后缀([attr$="value"])	</li>
+	<li>属性包含([attr*="value"])	</li>
+	<li>属性连字包含([attr|="value"])
+		<p>通过连字符(-)切词</p>
+	</li>
+	<li>属性分字包含([attr~="value"])
+		<p>通过空白切词</p>
 	</li>
 	<p class="example">示例：<a href="attr.html">attr.html</a></p>
 </ul>

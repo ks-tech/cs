@@ -16,6 +16,11 @@
 <style>
 i{font-style:normal;font-size:11px}
 li p{margin:0px;padding:0px;}
+.dev-time{
+	font-style:italic;
+	background:#dd0;
+	padding-left:20px;
+}
 </style>
 <h3>IE 增强</h3>
 
@@ -32,17 +37,20 @@ li p{margin:0px;padding:0px;}
 				<i>(:hover,:focus,:active)</i>
 			</li>
 			<li><span class="stable">状态选择器</span>
-				<i>(<span class="sandbox">:target</span>,:enabled,:disabled,:checked)</i></li>
+				<i>(<span class="sandbox">:target<i class="dev-time">0.5D</i></span>,:enabled,:disabled,:checked)</i></li>
 			<li><span class="stable">属性选择器</span>
 				<i>([attr="value"],[attr^="prefix"],[attr$="postfix"],[attr*="any"],[attr~="word"],)</i></li>
 			<li><span class="stable">结构选择器</span>
-				<i>(<span class="sandbox">:empty</span>,:first-child,:last-child,nth-child(nth/odd/even),nth-last-child(nth),nth-of-(last)?-type(nth)...)</i></li>
+				<i>(<span class="sandbox">:empty<i class="dev-time">0.5D</i></span>,:first-child,:last-child,nth-child(nth/odd/even),nth-last-child(nth),nth-of-(last)?-type(nth)...)</i></li>
 			<li><span class="stable">选择器组合</span>
 				<i>(<span title="多class组合">.classA.AndClassB</span>,
 					<span title="直接子节点组合">P>C</span>,
 					<span title="相邻组合">P+N</span>,
 					<span title="前置组合">P~N</span>,
-					<span title="排除组合" class="sandbox">E:not(s)</span>)</i></li>
+					<span title="排除组合">E:not(s)</span>)</i></li>
+			<li><span class="sandbox">生成内容</span>
+				<i>(<span class="sandbox">:before<i class="dev-time">2D</i></span>,
+					<span class="sandbox">:after<i class="dev-time">1D</i></span>)</i></li>
 		</ul>
 	</li>
 	<li>
@@ -51,37 +59,37 @@ li p{margin:0px;padding:0px;}
 			<li><span class="stable">半透明支持</span>(opacity)
 				<p>用户可以直接书写CSS3 opacity属性</p>
 			</li>
-			<li><span class="sandbox">变形增强</span>(transform)
+			<li><span class="sandbox">变形增强<i class="dev-time">2D</i></span>(transform)
 				<p>位移参数尚未修正</p>
 			</li>
-			<li><span class="sandbox">动画增强</span>(transition)
-				<p>需要明确指定需要变化的 transition-property</p>
+			<li><span class="sandbox">动画增强<i class="dev-time">5D</i></span>(transition)
+				<p>不支持 transition-property:all; 是否需要做filter 性能优化。</p>
 			</li>
-			<li><span class="sandbox">线性渐变</span>(linear-gradient)
+			<li><span class="sandbox">线性渐变<i class="dev-time">4D</i></span>(linear-gradient)
 				<p>目前采用filter实现，只能两个颜色，水平和垂直两个方向(不如CSS3强大)，后续可能尝试生成图片文件的方式</p>
 			</li>
-			<li><span class="planning">阴影增强</span>(box-shadow)
+			<li><span class="planning">阴影增强<i class="dev-time">2D</i></span>(box-shadow)
 				<p>计划用filter实现，不支持内阴影</p>
 			</li>
-			<li><span class="sandbox">圆角增强</span>(border-radius)
+			<li><span class="sandbox">圆角增强<i class="dev-time">4D</i></span>(border-radius)
 				<p>目前采用filter＋vml实现，性能不佳，后续可能尝试动态生成图片文件的方式</p>
 			</li>
-			<li><span class="planning">RGBA 背景色</span>(background:#11223355)
+			<li><span class="planning">RGBA 背景色<i class="dev-time">0.5D</i></span>(background:#11223355)
 				<p>通过filter渐变背景实现，很快会支持</p>
 			</li>
-			<li><span class="planning">PNG24 Alpha 背景图</span>(background-image:xx.png)
-				<p>需要nodejs读取png源码，难度不搭，很快会支持</p>
+			<li><span class="planning">PNG24 Alpha 背景图<i class="dev-time">1D</i></span>(background-image:xx.png)
+				<p>需要nodejs读取png源码，难度不大，很快会支持</p>
 			</li>
-			<li><span class="planning">溢出控制</span>(max/min-width/height)
+			<li><span class="planning">溢出控制<i class="dev-time">1D</i></span>(max/min-width/height)
 				<p>无风险，很快会支持</p>
 			</li>
-			<li><span class="planning">固定定位</span>(position:fixed)
+			<li><span class="planning">固定定位<i class="dev-time">0.5D</i></span>(position:fixed)
 				<p>无风险，很快会支持，可能有附加规范</p>
 			</li>
-			<li><span class="planning">组合宽高增强</span>(width:calc(50%-2px))
+			<li><span class="planning">组合宽高增强<i class="dev-time">0.5D</i></span>(width:calc(50%-2px))
 				<p>看需求确定何时实现</p>
 			</li>
-			<li><span class="planning">图形边框</span>(border-image)
+			<li><span class="planning">图形边框<i class="dev-time">5D</i></span>(border-image)
 				<p>有一定难度</p>
 			</li>
 		</ul>

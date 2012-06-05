@@ -18,10 +18,11 @@ p{
 	text-indent:24px;
 }
 
-a.ms-ref::after{
+a.ms-ref:after{
 	content:'>>ref';
 	background:#ddd;
 	font-size:8px;
+}
 .detail{
 	display:inline;
 	font-size:11px;
@@ -55,8 +56,8 @@ a.ms-ref::after{
 	background:#F00;
 }
 .native-version{
-	background-color:#9f9;
+	background-color:#9f9;; 
 }
 .example{
-	background:#ddd; 
+	background-color:#e3e;
 }

@@ -1,0 +1,25 @@
+body{
+	background:#eee;
+}
+body div{
+	padding:0px;
+}
+.opacity2{
+	opacity:0.2;
+}
+.opacity8{
+	opacity:0.8;
+}
+.linear-gradient{
+	background:linear-gradient(0deg,white,blue);
+}
+.linear-gradient-10{
+	background:linear-gradient(10deg,red,blue);
+}
+.linear-gradient-70{
+	background:linear-gradient(70deg,red,blue);
+}
+.linear-gradient-90{
+	background:linear-gradient(90deg,red,blue);
+}
+

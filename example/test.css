@@ -1,0 +1,9 @@
+h3{
+	cursor:pointer;
+}
+h3:hover+p{
+	background:yellow;
+}
+h3:hover{
+	border-bottom:12px solid red;
+}
