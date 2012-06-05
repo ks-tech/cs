@@ -36,8 +36,12 @@ function writeExample(path){
 		}
 	}
 }
-setTimeout(function(){
-	var ad = rbs.server.address()
-	var exec = require('child_process').exec;
-	exec('explore http://'+ad.address+':'+ad.port); 
-},300)
+if(process.platform == 'win32'){
+	setTimeout(function(){
+		var ad = rbs.server.address()
+		var exec = require('child_process').exec;
+		exec('explorer http://127.0.0.1:'+ad.port,function (error, stdout, stderr) {
+			//console.log(error)
+		}); 
+	},300)
+}
