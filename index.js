@@ -36,3 +36,8 @@ function writeExample(path){
 		}
 	}
 }
+setTimeout(function(){
+	var ad = rbs.server.address()
+	var exec = require('child_process').exec;
+	exec('explore http://'+ad.address+':'+ad.port); 
+},300)
