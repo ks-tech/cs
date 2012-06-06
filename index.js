@@ -15,7 +15,8 @@ function checkExample(){
 		var expect = FS.readFileSync(file);
 		try{
 			var source = FS.readFileSync(Path.resolve(path));
-			if(source != expect){
+			if(source+'' != expect+''){
+				//console.log(path,(source+'').substr(0,100) , ''+(expect+'').substr(0,100))
 				statusMap[path] = [expect,1];
 			}
 		}catch(e){
@@ -80,25 +81,33 @@ setTimeout(function(){
 				addQuestion(n);
 				return;
 			}
-			if(libpath != filepath){//if start from cs project ignore browser;
-				openBlowser()
-				startJSConsole()
-			}else{
-				rl.question('open your browser? (yes|no)', function(v) {
-					//console.log('answer',v)
-					if(/yes/i.test(v)){
-						console.log('try to open your blowser...')
-						openBlowser();
-					}
-					startJSConsole()
-				});
-			}
+			startNext()
 		});
 		
 	}
+	var flag = false;
 	for(var n in exampleStatus){
 		addQuestion(n);
+		flag = true;
 		break;
+	}
+	if(!flag){
+		startNext();
+	}
+	function startNext(){
+		if(libpath != filepath){//if start from cs project ignore browser;
+			openBlowser()
+			startJSConsole()
+		}else{
+			rl.question('open your browser? (yes|no)', function(v) {
+				//console.log('answer',v)
+				if(/yes/i.test(v)){
+					console.log('try to open your blowser...')
+					openBlowser();
+				}
+				startJSConsole()
+			});
+		}
 	}
 	function startJSConsole(){
 		rl.setPrompt('js>');
