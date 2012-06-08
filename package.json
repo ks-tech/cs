@@ -25,9 +25,10 @@
     ],
     "repository": "git@github.com:jindw/cs.git",
     "dependencies": {
+    	"xmldom":">=0.1.9",
     	"cssom":"*",
-    	"jsi":">=0.1.2",
-    	"rbs":">=0.1.2",
+    	"jsi":">=0.1.6",
+    	"rbs":">=0.1.7",
     	"sylvester":"*",
     	"openurl":"*"
     },

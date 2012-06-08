@@ -7,7 +7,7 @@ var setupJSRequire = require('jsi').setupJSRequire;
 var setupCS = require('./lib/compiler/cs-filter').setupCS;
 var addExample = require('rbs/lib/server-ext').addExample;
 setupJSRequire(rbs,'/static/');
-setupCS(rbs,'/',true);
+setupCS(rbs,/\.css$/i,/\.html?$/i,'/static/');
 
 ['static/cs.js','static/cs.htc','example/test.css','example/test.html'].forEach(function(path){
 	var file = require.resolve('cs/'+path);

@@ -18,6 +18,7 @@ h3:hover~p{
 p:nth-child(odd){
 	background:linear-gradient(0deg,white,blue);
 	color:red;
+	font-weight:bold;
 }
 
 
