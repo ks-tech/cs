@@ -9,10 +9,13 @@ var addExample = require('rbs/lib/server-ext').addExample;
 setupJSRequire(rbs,'/static/');
 setupCS(rbs,/\.css$/i,/\.html?$/i,'/static/');
 
-['static/cs.js','static/cs.htc','example/test.css','example/test.html'].forEach(function(path){
+['static/cs.js',
+'static/cs.htc','example/test.css','example/test.html'].forEach(function(path){
 	var file = require.resolve('cs/'+path);
 	var expect = FS.readFileSync(file);
 	addExample(path,expect);
 });
-
+if(require.resolve('cs/lib/runtime/cs-exported.js') != Path.resolve('./lib/runtime/cs-exported.js')){
+	addExample('static/cs.js',FS.readFileSync(require.resolve('cs/lib/runtime/cs-exported.js')));
+}
 startServer(rbs);
