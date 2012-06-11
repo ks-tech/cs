@@ -7,6 +7,14 @@ function fnToggle() {
 	if (bToggle) {
 		bToggle = 0;
 		oDiv.className = 'c1'
+		var width = 100;
+		var intval = setInterval(function(){
+			width+=10;
+			oDiv.style.width = width+'px';
+			if(width>1000){
+				clearInterval(intval)
+			}
+		},80)
 
 	}else {
 		bToggle = 1;
@@ -16,21 +24,25 @@ function fnToggle() {
 }
 </SCRIPT>
 <style>
+body{
+
+filter:progid:DXImageTransform.Microsoft.Alpha(opacity=10);
+}
 div#oDiv{
 height:250px; width:450px; background-color: gold;position:absolute;top:50px;left:10px;
 filter:progid:DXImageTransform.Microsoft.Fade(duration=2),progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
 div#oDiv.c1{
 	left :400px;
-	width :400px;
-	height:200px;
+	/*width :400px;*/
+	/*height:200px;*/
 	background-color:gold;
 	filter2:progid:DXImageTransform.Microsoft.Fade(duration=2),progid:DXImageTransform.Microsoft.Alpha(Opacity=20)
 }
 div#oDiv.c2{
 	left :40px;
-	width :200px;
-	height:400px;
+	/*width :200px;*/
+	/*height:400px;*/
 	background-color:blue;
 	filter2:progid:DXImageTransform.Microsoft.Fade(duration=2),progid:DXImageTransform.Microsoft.Alpha(Opacity=80)
 }

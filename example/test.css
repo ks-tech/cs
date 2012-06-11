@@ -14,6 +14,7 @@ h3:hover+p{
 
 h3:hover~p{
 	opacity:1;
+	color:blue;
 }
 p:nth-child(odd){
 	background:linear-gradient(0deg,white,blue);
@@ -38,8 +39,9 @@ p:nth-child(odd){
 	position:absolute;
 	left:0;top:28px;
 	display:block;
-    transition-property:left;
+    transition-property:left,opacity;
     transition-duration:0.8s;
+	opacity:1;
 }
 .slide ul li{
 	margin:0;padding:0;
@@ -60,9 +62,7 @@ p:nth-child(odd){
 }
 .slide .slide2:hover~ul{
 	left:-402px;
-}
-.slide .slide2:hover ul{
-	background:yellow;
+	opacity:0.3;
 }
 .slide .slide3:hover~ul{
 	left:-804px;
@@ -73,9 +73,7 @@ p:nth-child(odd){
 	padding:0px;
 	margin:0px;
 	cursor:pointer;
-}
 
-.slide span b{
 	display:inline-block;
 	border:1px outset yellow;
 	width:14px;height:14px;
