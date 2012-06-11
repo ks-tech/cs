@@ -1,6 +1,6 @@
 {
     "name": "cs",
-    "version": "0.1.8",
+    "version": "0.1.9",
     "description": "Colored Stone : A CSS3 extension for IE6/7/8",
     "keywords": [
       "css3",
@@ -27,8 +27,8 @@
     "dependencies": {
     	"xmldom":">=0.1.9",
     	"cssom":"*",
-    	"jsi":">=0.1.6",
-    	"rbs":">=0.1.7",
+    	"jsi":">=0.1.7",
+    	"rbs":">=0.1.9",
     	"sylvester":"*",
     	"openurl":"*"
     },
