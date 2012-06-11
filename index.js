@@ -32,7 +32,12 @@ exports.setScriptPath = function(path){
 	console.log('script path is reset as: ',path)
 	rbs.config.cs.scriptPath = path;
 	if(!path.match(/^https?\:\/\//)){
-		addExample(path.replace(/^\//,''),FS.readFileSync(require.resolve('cs/lib/runtime/cs-exported.js')));
+		if(path.indexOf('/static/')!=0){
+			var content = rbs.getContentAsBinary('/static/cs/lib/runtime/cs-exported.js').toString()
+		}else{
+			content = FS.readFileSync(require.resolve('cs/lib/runtime/cs-exported.js'));
+		}
+		addExample(path.replace(/^\//,''),content);
 	}
 	return exports;
 }
