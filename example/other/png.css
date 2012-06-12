@@ -1,0 +1,9 @@
+div{
+	background-image:url(png-alpha.png);
+	background-repeat:no-repeat;
+	background-color:yellow;
+}
+div:hover{
+	background-image:url(png-alpha2.png);
+	opacity:0.5;
+}
