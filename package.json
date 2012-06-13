@@ -1,9 +1,10 @@
 {
     "name": "cs",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "description": "Colored Stone : A CSS3 extension for IE6/7/8",
     "keywords": [ "css3","IE"],
 	"author": "jindw <jindw@xidea.org> (http://www.xidea.org)",
+    "homepage": "https://github.com/jindw/cs",
     "maintainers": [{"name": "jindw","email": "jindw@xidea.org","url": "http://www.xidea.org"}],
     "contributors": [],
     "bugs": {"email": "jindw@xidea.org","url": "https://github.com/jindw/cs/issues"},
