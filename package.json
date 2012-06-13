@@ -9,7 +9,7 @@
     "contributors": [],
     "bugs": {"email": "jindw@xidea.org","url": "https://github.com/jindw/cs/issues"},
     "licenses": [{"type": "LGPL","url": "http://www.gnu.org/licenses/lgpl.html"}],
-    "repository": "git@github.com:jindw/cs.git",
+    "repository": {"type": "git","url": "git@github.com:jindw/cs.git"},
     "dependencies": {
     	"xmldom":">=0.1.9",
     	"cssom":"*",
