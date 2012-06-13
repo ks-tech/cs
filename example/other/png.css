@@ -2,8 +2,15 @@ div{
 	background-image:url(png-alpha.png);
 	background-repeat:no-repeat;
 	background-color:yellow;
+	border:1px solid red;sizing;position:fixed;width:400px;height:400px;
 }
 div:hover{
 	background-image:url(png-alpha2.png);
 	opacity:0.5;
+}
+
+div.alphapng:active{
+	background-image:url(png-alpha.png);
+	background-color:red;
+	opacity:1;
 }
