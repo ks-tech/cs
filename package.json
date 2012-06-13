@@ -5,11 +5,9 @@
     "keywords": [ "css3","IE"],
 	"author": "jindw <jindw@xidea.org> (http://www.xidea.org)",
     "homepage": "https://github.com/jindw/cs",
-    "maintainers": [{"name": "jindw","email": "jindw@xidea.org","url": "http://www.xidea.org"}],
-    "contributors": [],
-    "bugs": {"email": "jindw@xidea.org","url": "https://github.com/jindw/cs/issues"},
-    "licenses": [{"type": "LGPL","url": "http://www.gnu.org/licenses/lgpl.html"}],
     "repository": {"type": "git","url": "git@github.com:jindw/cs.git"},
+    "main": "./lib/index.js",
+    "engines" : { "node" : ">=0.1" },
     "dependencies": {
     	"xmldom":">=0.1.9",
     	"cssom":"*",
@@ -18,6 +16,8 @@
     	"sylvester":"*",
     	"openurl":"*"
     },
-    "engines" : { "node" : ">=0.1" },
-    "main": "./lib/index.js"
+    "maintainers": [{"name": "jindw","email": "jindw@xidea.org","url": "http://www.xidea.org"}],
+    "contributors": [],
+    "bugs": {"email": "jindw@xidea.org","url": "https://github.com/jindw/cs/issues"},
+    "licenses": [{"type": "LGPL","url": "http://www.gnu.org/licenses/lgpl.html"}]
 }
