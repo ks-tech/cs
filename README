@@ -15,6 +15,6 @@ Install:
 	npm install cs
 Example:
 	node -e "require('cs')"
-	node -e "require('cs').setScriptPath('/static/cs.js').setHtcPath('/static/cs.htc').exportTo('../output.zip',true)"
+	node -e "require('cs').setScriptPath('/static/cs.js').setHtcPath('/static/cs.htc').exportTo('../output.zip')"
 
 

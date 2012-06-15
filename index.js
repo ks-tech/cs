@@ -46,8 +46,8 @@ var querystring = require('querystring');
 var http = require('http');  
 
   
-exports.exportTo = function(output,cssBranch,jsBranch,jsiClosure){
-	var postData = genPostData(cssBranch,jsBranch,jsiClosure)
+exports.exportTo = function(output,options){
+	var postData = genPostData(options)
 	var options = {
 		host: '127.0.0.1',
 		port: 2012,
@@ -81,18 +81,22 @@ exports.exportTo = function(output,cssBranch,jsBranch,jsiClosure){
 	post.write(postData);
 	post.end();
 }
-function genPostData(cssBranch,jsBranch,jsiClosure){
-	var postData = {  
-	}; 
-	if(cssBranch){
-		postData.cssBranch = true;
+function genPostData(options){
+	if(options && options.branch){
+		var postData = {  
+		}; 
+		if(options.branch.css){
+			postData.cssBranch = true;
+		}
+		if(options.branch.js){
+			postData.jsBranch = true;
+		}
+		if(options.branch.jsi){
+			postData.jsiClosure = true;
+		}
+		return querystring.stringify(postData)
+	}else{
+		return "cssBranch=true"
 	}
-	if(jsBranch){
-		postData.jsBranch = true;
-	}
-	if(jsiClosure){
-		postData.jsiClosure = true;
-	}
-	return querystring.stringify(postData)
 }
 //var s = rbs.getContentAsBinary("/example/other/-ie6-png.css").toString();
