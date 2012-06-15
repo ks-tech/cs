@@ -17,7 +17,9 @@
     	"openurl":"*"
     },
     "maintainers": [{"name": "jindw","email": "jindw@xidea.org","url": "http://www.xidea.org"}],
-    "contributors": [],
+    "contributors": [
+		{"name" : "nodiseal"},
+	],
     "bugs": {"email": "jindw@xidea.org","url": "https://github.com/jindw/cs/issues"},
     "licenses": [{"type": "LGPL","url": "http://www.gnu.org/licenses/lgpl.html"}]
 }
