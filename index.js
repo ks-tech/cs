@@ -42,4 +42,57 @@ exports.setScriptPath = function(path){
 	return exports;
 }
 
+var querystring = require('querystring');  
+var http = require('http');  
+
+  
+exports.exportTo = function(output,cssBranch,jsBranch,jsiClosure){
+	var postData = genPostData(cssBranch,jsBranch,jsiClosure)
+	var options = {
+		host: '127.0.0.1',
+		port: 2012,
+		"user-agent":'nodejs',
+		'path':'/--export.zip',
+ 		method: 'POST',
+		headers: {  
+			'Content-Type': 'application/x-www-form-urlencoded',  
+			'Content-Length': postData.length  
+		}  
+	};
+
+	var post = http.request(options,function(res){
+		console.log('STATUS: ' + res.statusCode);
+		console.log('HEADERS: ' + JSON.stringify(res.headers));
+		console.log('write to:',output)
+		var out = FS.createWriteStream(output);
+		res.pipe(out);
+		res.on('end',function(){
+			console.log('close output:',output)
+			//out.close()
+		})
+	});
+	post.on('error', function(e) {
+		console.dir(e)
+		console.log("error: "+e.message,'\n',postData,postData.length );
+	});
+//	post.on('data', function (chunk) {
+//		console.log('BODY: ' + chunk);
+//	});
+	post.write(postData);
+	post.end();
+}
+function genPostData(cssBranch,jsBranch,jsiClosure){
+	var postData = {  
+	}; 
+	if(cssBranch){
+		postData.cssBranch = true;
+	}
+	if(jsBranch){
+		postData.jsBranch = true;
+	}
+	if(jsiClosure){
+		postData.jsiClosure = true;
+	}
+	return querystring.stringify(postData)
+}
 //var s = rbs.getContentAsBinary("/example/other/-ie6-png.css").toString();

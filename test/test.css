@@ -1,27 +1,14 @@
-body>*{
-	background:red;
+body{
+   margin:0;
+   padding:0;
+   text-align:center;
 }
-body>*:not(div){
-	background:blue;
+.box{
+  border: 1px solid red;
+  margin:0 auto;
+  width: 400px;
+ 
 }
-
-body>div{
-	border:4px solid yellow;
-}
-div{
-	background-color:#ddd;
-}
-.parent>div{
-	background-color:red;
-	border:1px solid blue;
-}
-.parent{
-	background-color:yellow;
-}
-
-h3~p{
-	border-top:1px solid red;
-}
-h3+p{
-	border-top:12px solid red;
+.box:hover{
+  background-color:#000;
 }

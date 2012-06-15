@@ -14,6 +14,7 @@ Functions
 Install:
 	npm install cs
 Example:
-	node -e "require('cs/test/run');"
+	node -e "require('cs')"
+	node -e "require('cs').setScriptPath('/static/cs.js').setHtcPath('/static/cs.htc').exportTo('../output.zip',true)"
 
 
