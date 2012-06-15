@@ -42,4 +42,4 @@ exports.setScriptPath = function(path){
 	return exports;
 }
 
-var s = rbs.getContentAsBinary("/example/other/-ie6-png.css").toString();
+//var s = rbs.getContentAsBinary("/example/other/-ie6-png.css").toString();
