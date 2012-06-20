@@ -3,12 +3,65 @@ body{
    padding:0;
    text-align:center;
 }
-.box{
-  border: 1px solid red;
-  margin:0 auto;
-  width: 400px;
- 
+.shadow{
+  width: 110px;
+  height:80px;
+  transition-property:box-shadow,alpha;
+  transition-duration:2.8s;
+  background-color:#330;
+  border:1px solid red;
 }
-.box:hover{
-  background-color:#000;
+body .shadow:hover{
+  background-color:#FF0;
+  alpha:0.2;
+  box-shadow:0px 0px 40px 5px #330088;
+}
+span{
+  width: 11px;
+  height:80px;
+  display:block;
+  background-color:#990;
+}
+span.classA.classB{
+  width: 110px;
+  height:80px;
+  background-color:blue;
+  display:block;
+}
+
+span.classA.classB:hover{
+  width: 110px;
+  height:80px;
+  background-color:red;
+  display:block;
+}
+
+
+
+
+
+
+
+
+
+
+.before::before{
+  border: 1px solid blue;
+  margin:0 auto;
+  width: 40px;
+  content:'123';
+  background-color:#FFF;
+}
+.before::after{
+  margin:0 auto;
+  width: 40px;
+  content:'>>>';
+  display:inline;
+  background-color:#FFF;
+}
+.before:hover::after{
+  width: 10px;
+  content:'>>>...........................';
+  display:inline;
+  background-color:red;
 }
