@@ -6,7 +6,7 @@ body{
 .shadow{
   width: 110px;
   height:80px;
-  transition-property:box-shadow,alpha;
+  transition-property2:box-shadow,alpha;
   transition-duration:2.8s;
   background-color:#330;
   border:1px solid red;
