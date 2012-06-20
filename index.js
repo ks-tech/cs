@@ -99,4 +99,4 @@ function genPostData(options){
 		return "cssBranch=true"
 	}
 }
-var s = rbs.getContentAsBinary("/test/-ie6-test.css").toString();console.log(s);
+//var s = rbs.getContentAsBinary("/test/-ie6-test.css").toString();console.log(s);
