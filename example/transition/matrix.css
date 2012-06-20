@@ -1,11 +1,13 @@
 .transform{
-	position:absolute;
+	margin:0;padding:0;
 	background:blue;
-	/**transform:skewX(0deg) rotate(30deg) scale(1,1) translate(20px,20px)*/
+	transform:skewX(0deg) rotate(30deg) scale(1,1) translate(10px,0px);
+	transition-property:all;
+	transition-duration:.1s;
 }
 
 .transform:hover{
-	transform:skewX(50deg) rotate(30deg) scale(1,1) translate(20px,20px);
+	transform:skewX(50deg) rotate(30deg) scale(1,1) translate(0px,10px);
 	background:yellow;
 	opacity:0.3;
 }
