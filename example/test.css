@@ -16,7 +16,7 @@ h3:hover~p{
 	opacity:1;
 	color:blue;
 }
-p:nth-child(odd){
+p:nth-child(even){
 	background:linear-gradient(0deg,white,blue);
 	font-weight:bold;
 }
