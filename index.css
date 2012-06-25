@@ -1,21 +1,25 @@
 i{font-style:normal;font-size:11px}
+body{position:relative;top:0;}
 li p{margin:0px;padding:0px;font-size:12px;}
 .icon{
 	position:absolute;
-	top:2px;
+	top:0px;
 	left:0;
 }
 
 .spec{
 	position:absolute;
-	top:4px;
+	top:2px;
 	right:0;
+	z-index:200;
 }
 .spec ul{
 	background:#EEE;
 	padding:0 0 0 16px;
 	margin:0;
 }
+
+.spec ul ul li{cursor:pointer;}
 .spec>ul,.spec li p{display:none;}
 .spec:hover>ul,.spec li:hover>p{display:block;}
 .spec>ul{
@@ -50,16 +54,19 @@ ul.content>li{
 	background:#eee;
 	position:absolute;
 	top:0;
-	left:60px;
+	left:0;
 	z-index:auto;
 	transition-property:transform,background-color;
-	-ie8-transition-property:none;
+	-ie-transition-property:none;
     transition-duration:0.8s;
     overflow:hidden;
 }
 ul.content{
-	min-height:650px;
-	position:relative;
+	margin:0;padding:0;
+	height:650px;
+	position:absolute;
+	left:0;
+	top:0;
 }
 ul.content>li h3{
 	font-size:42px;
@@ -70,7 +77,7 @@ ul.content>li:hover h3{
 body ul.content>li:hover{
 	transform:none;
 	height:auto;
-	min-height:640px;
+	height:640px;
 	border:none;
 	background:#FFF;
 	z-index:100;
@@ -85,4 +92,29 @@ ul.content>li:nth-child(2){
 }
 ul.content>li:nth-child(3){
 	transform: translate(0px,160px) rotate(45deg) scale(0.5,0.5) skew(-15deg,-15deg);
+}
+.example-background{
+	position:absolute;
+	top:120px;right:20px;
+	z-index:0;font-size:30px;
+	opacity:0.1;
+	transform:skewY(-10deg)
+}
+.example-background::after{
+	font-family:courier,monospace;
+	font-weight:-300;
+	line-height:30px;
+	width:300px;
+	content:".no-ie6-hack{\A\
+	width:110px;\A\
+	/* 只对ie6生效*/\A\
+	-ie6-width:120px;\A\
+}\A\
+.myclass{\A\
+	width:110px;\A\
+	/* 默认对所有ie生效*/\A\
+	-ie-width:120px;\A\
+	/* 覆盖支持css3 的 ie9/10*/\A\
+	-ms-width:110px;\A\
+}"
 }

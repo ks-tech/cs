@@ -99,6 +99,4 @@ function genPostData(options){
 		return "cssBranch=true"
 	}
 }
-setTimeout(function(){
-var s = rbs.getContentAsBinary("/example/-webkit-index.css").toString();//console.log(s);
-},100);
+//var s = rbs.getContentAsBinary("/-webkit-index.css").toString();//console.log(s);

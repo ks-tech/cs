@@ -6,7 +6,7 @@ html{
 	margin:0px;
 }
 body{
-    width:720px;
+    width:780px;
     min-height:720px;
     text-align:left;
     margin:auto;
@@ -54,6 +54,9 @@ a.ms-ref:after{
 }
 .none{
 	background:#F00;
+}
+.back{
+	float:right;
 }
 .native-version{
 	background-color:#9f9;; 
