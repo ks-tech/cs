@@ -3,6 +3,13 @@ body{
    padding:0;
    text-align:center;
 }
+html{
+	background-color2:rgba(0,255,255,0.9);
+}
+body{
+	background-color:hsla(120,100%,50%,.5);
+	color:#00FF00;
+}
 .shadow{
   width: 110px;
   height:80px;

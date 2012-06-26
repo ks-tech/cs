@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<pre class="example-background" style="z-index:266;right:-300px"></pre>
+<pre class="example-background" style="right:-300px"></pre>
 <div class="icon">	
 	<a class="stable">稳定支持</a>
 	<a class="sandbox">正在开发</a>
@@ -61,19 +61,28 @@
 	<li id="layout">
 		<h3 class="sandbox"><a href="example/function/layout/index.html">变形/动画/布局/等其他增强</a></h3>
 		<ul>
-			<li><h4 class="stable">溢出控制<i class="dev-time">1D</i></h4>(max/min-width/height)
-				<p>无风险，很快会支持</p>
+			<li><h4 class="stable">溢出控制<i class="dev-time">1D</i></h4>
+				(max-width/max-height/min-width/min-height)
+				<p>.</p>
 			</li>
-			<li><h4 class="planning">固定定位<i class="dev-time">0.5D</i></h4>(position:fixed)
+			<li><h4 class="planning">固定定位<i class="dev-time">0.5D</i></h4>
+				(position:fixed)
 				<p>无风险，很快会支持，可能有附加规范</p>
 			</li>
-			<li><h4 class="stable">变形增强<i class="dev-time">2D</i></h4>(transform)
-				<p>基本完成,对动画的支持还需优化</p>
+			<li><h4 class="stable">变形增强<i class="dev-time">2D</i></h4>
+				(transform)
+				<p>完成2D变换的全部变换函数,对动画的支持还需优化</p>
 			</li>
-			<li><h4 class="stable">动画增强<i class="dev-time">5D</i></h4>(transition)
-				<p>不支持 transition-property:all</p>
+			<li><h4 class="stable">transition动画增强<i class="dev-time">5D</i></h4>
+				(transition-property)
+				<p>需要明确指定动画的属性，不支持 transition-property:all</p>
 			</li>
-			<li><h4 class="planning">组合宽高增强<i class="dev-time">0.5D</i></h4>(width:calc(50%-2px))
+			<li><h4 class="none">animation动画增强<i class="dev-time">5D</i></h4>
+				(animation)
+				<p>貌似animation动画用javascript描述更合理，目前尚无支持计划。</p>
+			</li>
+			<li><h4 class="planning">组合宽高增强<i class="dev-time">0.5D</i></h4>
+				(width:calc(50%-2px))
 				<p>貌似标准上载争论中,看需求确定何时实现</p>
 			</li>
 		</ul>
@@ -87,8 +96,10 @@
 			<li><h4 class="stable">PNG24 Alpha 背景图<i class="dev-time">1D</i></h4>(background-image:xx.png)
 				<p>读取png源码,判断是否为png24 且包含alpha半透明,如存在,在ie6下会自动转化为filter实现兼容(本实现无相对路径问题)。</p>
 			</li>
-			<li><h4 class="planning">RGBA 背景色<i class="dev-time">0.5D</i></h4>(background:#11223355)
-				<p>通过filter渐变背景实现，很快会支持</p>
+			<li><h4 class="stable" title="rgba(r,g,b,a),hsla(h,s%,l%,a">透明背景色）<i class="dev-time">0.5D</i></h4>
+				(background-color:rgba(0,255,0,0.3);)
+				<!--color:hsl(120,100%,50%) 系统把HSL颜色编译成RGB颜色，-->
+				<p>如果背景色包含alpha通道，将通过filter渐变背景实现</p>
 			</li>
 			<li><h4 class="stable">线性渐变<i class="dev-time">4D</i></h4>(linear-gradient)
 				<p>目前采用filter实现，只能两个颜色，水平和垂直两个方向(不如CSS3强大)，后续可能尝试生成图片文件的方式</p>
