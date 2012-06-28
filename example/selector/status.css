@@ -1,0 +1,17 @@
+#target1,#target2{
+	border:1px solid red;
+}
+#target1:target,#target2:target{
+	background:red;
+}
+input:checked{
+	margin-bottom:100px;
+}
+input:enabled{
+	padding:10px;
+	cbackground:yellow;
+}
+input:disabled{
+	padding:10px;
+	background:blue;
+}

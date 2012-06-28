@@ -17,7 +17,18 @@ body{
 p{
 	text-indent:24px;
 }
-
+a.issues{
+	font-size:8px;
+	line-height:8px;
+    background:#ddd;
+	border:1px solid red;
+}
+.dev-time{
+	font-style:italic;
+	background:#dd0;
+	padding-left:20px;
+	display:none;
+}
 a.ms-ref:after{
 	content:'>>ref';
 	background:#ddd;
@@ -38,10 +49,17 @@ a.ms-ref:after{
 	display:block;
 	
 }
-.stable,.sandbox,.planning,.none{
+.stable,.sandbox,.planning,.none,.native{
 	font-size:12px;
 	font-weight:bold;
+	padding:2px;
 	border:inset 1px yellow;
+	margin-right:10px;
+}
+b.stable,b.sandbox,b.planning,b.none{
+	font-style:italic;
+	font-weight:normal;
+	color:#333;
 }
 .stable{
 	background:#0f0;
@@ -55,12 +73,36 @@ a.ms-ref:after{
 .none{
 	background:#a66;
 }
+.native{
+	color:blue;
+	background:#eee;
+	padding:0;
+	border:solid 3px red;
+	font-style:normal;
+}
+
+.support{
+	background-color:#eee;; 
+}
+.support::before{
+	content:'支持情况:';
+	background:#ccc;
+	font-weight:bold;
+}
+
+
 .back{
 	float:right;
 }
-.native-version{
-	background-color:#9f9;; 
+
+.hover-child *,.hover-child-ul ul{
+	cursor:pointer;
+	display:none;
 }
-.example{
+.hover-child:hover *,.hover-child-ul:hover ul{
+	display:block;
+}
+.example *{
 	background-color:#e3e;
+	color:#FFF;
 }

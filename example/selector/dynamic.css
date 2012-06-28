@@ -1,8 +1,47 @@
-body>div{
-	background:red;
+div:hover{
+	background:yellow;
+}
+div:hover::after{
+	background:#ddd;
+	content:'hover:yellow';
+}
+div:focus{
+	background:blue;
+}
+div:focus::after{
+	background:#ddd;
+	content:'focus:blue';
 }
 
-body>div:not(:nth-child(2n+1)){
-	border:1px solid blue;
+
+div:active{
+	border:1px solid red;
+	background:red;
+}
+div:active::after{
+	background:#ddd;
+	content:'hover:red,border red';
+}
+
+.p3ps:hover{
+	background:yellow;
+}
+.p3ps:hover::after{
+	background:#ddd;
+	content:'hover:yellow';
+}
+.p3ps:active{
+	border:1px solid red;
+	background:red;
+}
+.p3ps:active::after{
+	background:#ddd;
+	content:'hover:red,border red';
+}
+.p3ps:focus{
 	background:blue;
+}
+.p3ps:focus::after{
+	background:#ddd;
+	content:'focus:blue';
 }

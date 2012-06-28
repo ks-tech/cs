@@ -4,36 +4,53 @@
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <link rel="stylesheet" type="text/css" href="default.css" />
 <link rel="stylesheet" type="text/css" href="index.css" />
-<title>IE6 CSS3增强 与差异化代码实例</title>
+<title>浏览器增强 与差异化方案</title>
 
 </head>
 <body>
 
 <pre class="example-background" style="right:-300px"></pre>
 <div class="icon">	
-	<a class="stable">稳定支持</a>
-	<a class="sandbox">正在开发</a>
-	<a class="planning">有支持计划</a>
+	<a class="native">原生支持</a>
+	<a class="stable">增强后稳定支持</a>
+	<a class="sandbox">开发中</a>
+	<a class="planning">计划中</a>
 	<a class="none">不支持</a>
 </div>
-<div class="spec">
+<div class="spec hover-child-ul">
 	<a href="prefix.html">差异化规范</a>
 	<ul>
 		<p>用一种统一的容易理解的前缀来代替以前常用的css hack，以提高代码可读性的一种规范<a href="prefix.html">更多</a>。</p>
 		<li>常用前缀: 
 		<ul>
-			<li>-moz-<p>webkit 系列(谷歌:chrome/苹果:safari等)</p></li> 
-			<li>-webkit-<p>webkit 系列(谷歌:chrome/苹果:safari等)</p></li> 
-			<li>-ms-<p>ie9,ie10+ 等支持html5,css3 的IE浏览器</p></li> 
-			<li>-o-<p>Opera</p></li> 
-			<li>-ie6- -ie7- -ie8- <p>不支持HTML5 的IE浏览器</p></li>
-			<li>-ie9-<p>IE9(部分支持HTML5), -ie9- 优先级高于 -ms-</p></li>
-			<li>-ie-<p> IE 系列浏览器, 优先级最低(会被-ms-, -ie?- 覆盖)</p></li>
+			<li class="hover-child">-moz-<p>webkit 系列(谷歌:chrome/苹果:safari等)</p></li> 
+			<li class="hover-child">-webkit-<p>webkit 系列(谷歌:chrome/苹果:safari等)</p></li> 
+			<li class="hover-child">-ms-<p>ie9,ie10+ 等支持html5,css3 的IE浏览器</p></li> 
+			<li class="hover-child">-o-<p>Opera</p></li> 
+			<li class="hover-child">-ie6- -ie7- -ie8- <p>不支持HTML5 的IE浏览器</p></li>
+			<li class="hover-child">-ie9-<p>IE9(部分支持HTML5), -ie9- 优先级高于 -ms-</p></li>
+			<li class="hover-child">-ie-<p> IE 系列浏览器, 优先级最低(会被-ms-, -ie?- 覆盖)</p></li>
 		</ul></li>
 	</ul>
 </div> 
 
-
+<div class="start hover-child-ul">
+	<a href="start.html">安装/试用</a>
+	<ul>
+		<pre>
+Install:
+  npm install cs
+Example:
+  //start as a test server
+  node -e "require('cs')"
+  //or run export script
+  require('cs')
+        .setScriptPath('/static/cs.js')
+        .setHtcPath('/static/cs.htc')
+        .exportTo('../output.zip')"
+		</pre>
+	</ul>
+</div>
 <ul class="content">
 	<li id="selector">
 		<h3 class="stable"><a href="example/selector/index.html">选择器语法增强</a></h3>
@@ -59,11 +76,11 @@
 		</ul>
 	</li>
 	<li id="layout">
-		<h3 class="sandbox"><a href="example/function/layout/index.html">变形/动画/布局/等其他增强</a></h3>
+		<h3 class="sandbox"><a href="example/layout/index.html">变形/动画/布局类功能增强</a></h3>
 		<ul>
 			<li><h4 class="stable">溢出控制<i class="dev-time">1D</i></h4>
 				(max-width/max-height/min-width/min-height)
-				<p>.</p>
+				<p>控制超出大小的切除和不足大小的补充。</p>
 			</li>
 			<li><h4 class="planning">固定定位<i class="dev-time">0.5D</i></h4>
 				(position:fixed)
@@ -81,14 +98,14 @@
 				(animation)
 				<p>貌似animation动画用javascript描述更合理，目前尚无支持计划。</p>
 			</li>
-			<li><h4 class="planning">组合宽高增强<i class="dev-time">0.5D</i></h4>
+			<li><h4 class="none">组合宽高增强<i class="dev-time">0.5D</i></h4>
 				(width:calc(50%-2px))
 				<p>貌似标准上载争论中,看需求确定何时实现</p>
 			</li>
 		</ul>
 	</li>
 	<li id="background">
-		<h3 class="sandbox"><a href="example/function/background/index.html">背景图形类增强</a></h3>
+		<h3 class="sandbox"><a href="example/background/index.html">背景图形类增强</a></h3>
 		<ul>
 			<li><h4 class="stable">半透明支持</h4>(opacity)
 				<p>用户可以直接书写CSS3 opacity属性,系统自动调用filter实现(本系统有统一的fliter管理器,防止不同filter需求的冲突)。</p>
@@ -115,6 +132,9 @@
 			</li>
 		</ul>
 	</li>
+	<script>
+		https://api.github.com/repos/jindw/xmldom/issues?labels=&callback=test
+	</script>
 </ul>
 <!--
 <ul>
@@ -123,5 +143,6 @@
 	</li>
 </ul>
 -->
+
 </body>
 </html>

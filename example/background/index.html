@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="../../default.css" />
+<title>圆角/阴影/边框类增强 </title>
+</head>
+<body>
+<div class="back"><a href="../../index.html">返回</a></div>
+<h3>功能类增强</h3>
+<p>图例:		
+			<b class="native">IEn</b>原生支持
+			<b class="stable">IEn</b>增强后稳定支持
+			<b class="sandbox">IEn</b>正在开发
+			<b class="planning">IEn</b>有增强支持计划
+			<b class="none">IEn</b>不支持
+</p>
+<ul>
+	
+	<li><h4 class="stable">半透明支持</h4>(opacity)
+		<p class="support"><b class="stable">IE6</b><b class="stable">IE7</b><b class="native">IE8</b></p>
+		
+		<p>用户可以直接书写CSS3 opacity属性,系统自动调用filter实现(本系统有统一的fliter管理器,防止不同filter需求的冲突)。</p>
+	</li>
+	<li><h4 class="stable">PNG24 Alpha 背景图<i class="dev-time">1D</i></h4>(background-image:xx.png)
+		<p class="support"><b class="stable">IE6</b><b class="native">IE7</b></p>
+		<p>读取png源码,判断是否为png24 且包含alpha半透明,如存在,在ie6下会自动转化为filter实现兼容(本实现无相对路径问题)。</p>
+	</li>
+	<li><h4 class="stable" title="rgba(r,g,b,a),hsla(h,s%,l%,a">透明背景色）<i class="dev-time">0.5D</i></h4>
+		(background-color:rgba(0,255,0,0.3);)
+		<p class="support"><b class="stable">IE6</b><b class="stable">IE7</b><b class="stable">IE8</b><b class="native">IE9</b></p>
+		<!--color:hsl(120,100%,50%) 系统把HSL颜色编译成RGB颜色，-->
+		<p>如果背景色包含alpha通道，将通过filter渐变背景实现</p>
+	</li>
+	<li><h4 class="stable">线性渐变<i class="dev-time">4D</i></h4>(linear-gradient)
+		<p class="support"><b class="stable">IE6</b><b class="stable">IE7</b><b class="stable">IE8</b><b class="native">IE9</b></p>
+		<p>目前采用filter实现，只能两个颜色，水平和垂直两个方向(不如CSS3强大)，后续可能尝试生成图片文件的方式</p>
+		<p><a href="linear.html">示例:线性渐变</a></p>
+	</li>
+	<li><h4 class="stable">阴影增强<i class="dev-time">2D</i></h4>(box-shadow)
+		<p class="support"><b class="stable">IE6</b><b class="stable">IE7</b><b class="stable">IE8</b><b class="native">IE9</b></p>
+		<p>用生成辅助节点和filter实现，不支持内阴影</p>
+		<p><a href="box-shadow.html">示例:阴影增强</a></p>
+	</li>
+	<li><h4 class="sandbox">圆角增强<i class="dev-time">4D</i></h4>(border-radius)
+		<p class="support"><b class="stable">IE6</b><b class="stable">IE7</b><b class="stable">IE8</b><b class="native">IE9</b></p>
+		<p>目前采用filter＋vml实现，性能不佳，后续可能尝试动态生成图片文件的方式</p>
+	</li>
+	<li><h4 class="planning">图形边框<i class="dev-time">5D</i></h4>(border-image)
+		<p class="support"><b class="stable">IE6</b><b class="stable">IE7</b><b class="stable">IE8</b><b class="native">IE9</b></p>
+		<p>有一定难度</p>
+		<p><a href="radius.html">示例1:普通圆角示例</a></p>
+		<p><a href="radius-taiji.html">示例2:同时展示100个太极图案的性能测试</a></p>
+	</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!doctype>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="status.css" />
+<script src="/static/cs.js"></script>
+<style></style>
+</head>
+<body>
+<h3>margin-bottom:100px / enabled:background:yellow / disabled:background:blue</h3>
+<input class="uistatus" type="checkbox" checked="checked"/>
+<input class="uistatus" type="radio" checked="checked"/>
+
+<input ondblclick="this.disabled = !this.disabled" value="111"
+ class="uistatus" type="text" checked="checked"/>
+
+
+<h3>hash状态</h3>
+<a href="#target1">show target1</a>
+<div id="target1">target1</div>
+
+<a href="#target2">show target2</a>
+<div id="target2">target2</div>
+
+
+</body>
+</html>

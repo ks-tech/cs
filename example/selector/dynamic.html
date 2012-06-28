@@ -7,25 +7,17 @@
 <style></style>
 </head>
 <body>
-<h3>测试鼠标以上全显</h3>
-<div style="overflow:hidden;width:60px;height:28px;"><p style="text-overflow:ellipsis;border:1px solid red;">asd adsda ada sd addaa</p></div>
-<DIV STYLE="position: absolute; left: 0px; top: 18px; color: black;
-width: 120px; height: 50px; border: 1px solid blue;
-font: 14px Times New Roman, serif; overflow: hidden;
-text-overflow:ellipsis">
-<p>We hold these truths to be self-evident,
-that all people are created equal.We hold these truths to be self-evident,
-that all people are created equal.We hold these truths to be self-evident,
-that all people are created equal.We hold these truths to be self-evident,
-that all people are created equal.We hold these truths to be self-evident,
-that all people are created equal.We hold these truths to be self-evident,
-that all people are created equal.We hold these truths to be self-evident,
-that all people are created equal.We hold these truths to be self-evident,
-that all people are created equal.We hold these truths to be self-evident,
-that all people are created equal.We hold these truths to be self-evident,
-that all people are created equal.We hold these truths to be self-evident,
-that all people are created equal.</p>
-</DIV>
+<h3>普通Div 三态</h3>
+<div>div:hover,div:focus, div:active</div>
+<h3>带tabindex 的Div 三态（可tab键切换focus）</h3>
+<div tabindex="1">tabindex="1" / div:hover,div:focus, div:active</div>
+
+
+<h3>指定class的三态</h3>
+<p class="p3ps">class and 3ps</p>
+<h3>带tabindex 且指定class的三态（可tab键切换focus）</h3>
+<p tabindex="0" class="p3ps">class and 3ps</p>
+
 
 </body>
 </html>

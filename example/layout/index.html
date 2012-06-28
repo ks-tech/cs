@@ -1,0 +1,54 @@
+<!doctype>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="../../default.css" />
+<title>变形/动画/布局类功能增强</title>
+</head>
+<body>
+<div class="back"><a href="../../index.html">返回</a></div>
+<h3>变形/动画/布局类功能类增强</h3>
+<p>图例:		
+			<b class="native">IEn</b>原生支持
+			<b class="stable">IEn</b>增强后稳定支持
+			<b class="sandbox">IEn</b>正在开发
+			<b class="planning">IEn</b>有增强支持计划
+			<b class="none">IEn</b>不支持
+</p>
+<p>主要是针对老IEbug的修复，每个功能都比较独立，框架开发者也可以自己添加新的布局插件。</p>
+<!--p>每个功能类增强都相对独立，他们以统一的轮询和filter管理为基础，框架开发者可以通过addPlugin方式添加新的功能支持，目前大部分功能在测试阶段。</p-->
+<ul>
+	<li><h4 class="stable">溢出控制<i class="dev-time">1D</i></h4>
+		(max-width/max-height/min-width/min-height)
+		<p class="support"><b class="stable">IE6</b><b class="native">IE7</b></p>
+		<p>控制超出大小的切除和不足大小的补充。</p>
+		<p class="example">示例：<a href="./mimax.html">mimax.html</a></p>
+	</li>
+	<li><h4 class="planning">固定定位<i class="dev-time">0.5D</i></h4>
+		(position:fixed)
+		<p class="support"><b class="planning">IE6</b><b class="native">IE7</b></p>
+		<p>无风险，很快会支持，可能有附加规范</p>
+	</li>
+	<li><h4 class="stable">变形增强<i class="dev-time">2D</i></h4>
+		(transform)
+		<p class="support"><b class="stable">IE6</b><b class="stable">IE7</b><b class="stable">IE8</b><b class="native">IE9</b></p>
+		<p>完成2D变换的全部变换函数,对动画的支持还需优化</p>
+	</li>
+	<li><h4 class="stable">transition动画增强<i class="dev-time">5D</i></h4>
+		(transition-property)
+		<p class="support"><b class="stable">IE6</b><b class="stable">IE7</b><b class="stable">IE8</b><b class="native">IE9</b></p>
+		<p>需要明确指定动画的属性，不支持 transition-property:all</p>
+	</li>
+	<li><h4 class="none">animation动画增强<i class="dev-time">5D</i></h4>
+		(animation)
+		<p class="support"><b class="none">IE6</b><b class="none">IE7</b><b class="none">IE8</b><b class="native">IE9</b></p>
+		<p>貌似animation动画用javascript描述更合理，目前尚无支持计划。</p>
+	</li>
+	<li><h4 class="none">组合宽高增强<i class="dev-time">0.5D</i></h4>
+		(width:calc(50%-2px))
+		<p class="support"><b class="none">IE6</b><b class="none">IE7</b><b class="none">IE8</b><b class="native">IE9</b></p>
+		<p>貌似标准上载争论中,看需求确定何时实现</p>
+	</li>
+</ul>
+</body>
+</html>
