@@ -1,0 +1,13 @@
+div{
+min-height:10px;border:1px solid #000;
+}
+.child>*{
+	border:2px solid red;
+	background:yellow;
+}
+
+
+
+.empty-border:empty{
+	border:3px solid red;
+}
