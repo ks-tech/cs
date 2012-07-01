@@ -1,0 +1,12 @@
+div{
+border:1px solid red;
+}
+.fixed{
+	bottom:0px;
+	top:0px;
+	width:100px;
+	height:100px;
+}
+div .fixed{
+	position:fixed;
+}
