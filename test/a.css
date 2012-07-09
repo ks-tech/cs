@@ -1,0 +1,93 @@
+*{margin:0;
+	padding:0;}
+	
+.clearfix::after{
+	content: "[\20]>>";
+	display: block;
+	height: 0;
+	clear: both
+}
+body{
+	background-color:#fff;
+	font-family:Microsoft YaHei;
+	min-height:2400px;
+}
+.circle-round{
+	width:220px;
+	height:220px;
+	background:linear-gradient(270deg,#F3F3F3,white);
+	position:relative;
+	border-radius:110px;
+	border:1px solid #f0f0f0;
+}
+.circle{
+	position:absolute;
+	width:200px;
+	height:200px;
+	top:10px;
+	left:10px;
+	border-radius:100px;
+	background:linear-gradient(270deg,white,#FaFaFa);
+	box-shadow:0px 2px 3px #CCCCCC;
+}
+.circle p{
+	text-align:center;
+	line-height:160px;
+	color:#ccc;
+	opacity:0.25;
+}
+header{
+	position:fixed;
+	width:100%;
+	z-index:10;
+}
+h1{
+	background:linear-gradient(0deg,#C7161C,#B11A1F);
+	font-size:26px;
+	text-shadow:inset 1px 1px 1px #ccc;
+	color:#fff;
+	padding:4px;
+}
+h1 span{
+	font-size:16px;
+	display:block;
+}
+h2{
+	margin-top:10px;
+	line-height:1.5em;
+}
+section{
+	padding:90px 20px 20px 20px;
+}
+.article{
+	float:left;
+	}
+.aside{
+	float:left;
+	margin-left:20px;
+	color:#999;
+	line-height:1.8em;
+}
+.heart,.noheart{
+	display:inline-block;
+	position:absolute;
+}
+.heart{
+	background-image:url("heart.png");
+	top:110px;
+	left:95px;
+	height:26px;
+	width:30px;
+}
+.noheart{
+	background-color:red;
+	top:160px;
+	left:95px;
+	height:30px;
+	width:30px;
+}
+.heart:hover,.noheart:hover{
+	transform:rotate(160deg);
+	transition:all 0.8s ease-out 0s;
+
+}

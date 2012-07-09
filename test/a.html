@@ -1,0 +1,43 @@
+﻿<!doctype>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="a.css" />
+</head>
+<style>
+.test:active{
+	opacity:0.3;
+	behavior:url('../static/cs.htc')
+}
+</style>
+<body>
+<div class="test0" style="background:blue;">
+<div class="test" style="background:red;">sssss</div></div>
+<div class="wrapper">
+<header>
+	<h1>css工具测试    by yitian<span>使用到opacity、linear-gradient、text-shadow、box-shadow、transform、transition、png32、min-height、position:fixed</span><span>测试浏览器chrome\ff\ie6</span></h1>
+	
+</header>
+<section class="clearfix">
+	<div class="article">
+		<div class="circle-round">
+			<div class="circle">
+				<p>圆角阴影渐变</p>
+			</div>
+			<a class="heart" href="###" title="加了这个标签的样式发现ie6报错not loaded!false 0"></a>
+			<a class="noheart" href="###" title="将图片换成纯色不报错"></a>
+		</div>
+	</div>
+	<div class="aside">
+		<p><strong>在ie6下看要先把.heart的background样式删掉，不然会直接报错not loaded!false 0并且没有css</strong></p>
+		<h2>问题描述</h2>
+		<p>1.ie6下外圈圆角渐变ok,内圈效果均不好…并且文字颜色变成白色,::select也不对。(猜想是两层嵌套引起的？)</p>
+		<p>2.中间心型a标签加了样式发现ie6报错not loaded!false 0。经测试应该是png32图片的问题，将background-image换成background-color:red不报错，但ie6下显示的颜色是白色</p>
+		<p>3.'圆角阴影渐变'的opacity在ie6效果同样不好</p>
+		<p>4.加了min-height，ie6下会alert一个空提醒</p>
+		<p>5.position:fixed，ie6下好像没有作用，滚动条会往上弹</p>
+	</div>
+</section>
+</div>
+
+</body>
+</html>

@@ -14,11 +14,11 @@ div.icon a:first-child{
 	position:absolute;
 	top:2px;
 	right:0;
-	z-index:201;
+	z-index:202;
 }
 .start{
 	top:32px;
-	z-index:200;
+	z-index:201;
 }
 .spec ul,.start ul{
 	background:#EEE;
@@ -46,7 +46,11 @@ div.icon a:first-child{
 .spec a::after{
 	content:'>>'
 }
-
+.gitbug-form{
+	top:60px;
+	right:1px;
+	z-index:200;
+}
 ul.content>li{
 	list-style:none;
 	width:600px;

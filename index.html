@@ -4,10 +4,11 @@
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <link rel="stylesheet" type="text/css" href="default.css" />
 <link rel="stylesheet" type="text/css" href="index.css" />
+<script src="static/gitbug.js"></script>
 <title>浏览器增强 与差异化方案</title>
 
 </head>
-<body>
+<body data-git-path="jindw/cs">
 
 <pre class="example-background" style="right:-300px"></pre>
 <div class="icon">	
@@ -33,9 +34,8 @@
 		</ul></li>
 	</ul>
 </div> 
-
 <div class="start hover-child-ul">
-	<a href="start.html">安装/试用</a>
+	<a href="guide/index.html">安装/试用</a>
 	<ul>
 		<pre>
 Install:
@@ -51,90 +51,101 @@ Example:
 		</pre>
 	</ul>
 </div>
+<div class="gitbug-form" data-git-form="cs/jindw"></div>
 <ul class="content">
 	<li id="selector">
 		<h3 class="stable"><a href="example/selector/index.html">选择器语法增强</a></h3>
 		<ul>
-			<li><h4 class="stable">交互选择器</h4>
+			<li><h4 class="stable">交互选择器<div class="gitbug" data-git-label="selector:dynamic"></div></h4>
+				
 				<i>(:hover,:focus,:active)</i>
 			</li>
-			<li><h4 class="stable">状态选择器</h4>
-				<i>(<span>:target<i class="dev-time">0.5D</i></span>,:enabled,:disabled,:checked)</i></li>
-			<li><h4 class="stable">属性选择器</h4>
+			<li><h4 class="stable">状态选择器<div class="gitbug" data-git-label="selector:state"></div></h4>
+				<i>(<span>:target</span>,:enabled,:disabled,:checked)</i></li>
+			<li><h4 class="stable">属性选择器<div class="gitbug" data-git-label="selector:attribute"></div></h4>
 				<i>([attr="value"],[attr^="prefix"],[attr$="postfix"],[attr*="any"],[attr~="word"],)</i></li>
-			<li><h4 class="stable">结构选择器</h4>
-				<i>(<span class="stable">:empty<i class="dev-time">0.5D</i></span>,:first-child,:last-child,nth-child(nth/odd/even),nth-last-child(nth),nth-of-(last)?-type(nth)...)</i></li>
-			<li><h4 class="stable">选择器组合</h4>
+			<li><h4 class="stable">结构选择器<div class="gitbug" data-git-label="selector:structure"></div></h4>
+				<i>(<span class="stable">:empty</span>,:first-child,:last-child,nth-child(nth/odd/even),nth-last-child(nth),nth-of-(last)?-type(nth)...)</i></li>
+			<li><h4 class="stable">选择器组合<div class="gitbug" data-git-label="selector:combinator"></div></h4>
 				<i>(<span title="多class组合">.classA.AndClassB</span>,
 					<span title="直接子节点组合">P>C</span>,
 					<span title="相邻组合">P+N</span>,
 					<span title="前置组合">P~N</span>,
 					<span title="排除组合">E:not(s)</span>)</i></li>
-			<li><h4 class="stable">生成内容</h4>
-				<i>(<span class="stable">:before<i class="dev-time">2D</i></span>,
-					<span class="stable">:after<i class="dev-time">1D</i></span>)</i></li>
+			<li><h4 class="stable">生成内容<div class="gitbug" data-git-label="selector:gen"></div></h4>
+				<i>(<span class="stable">:before</span>,
+					<span class="stable">:after</span>)</i></li>
 		</ul>
 	</li>
 	<li id="layout">
-		<h3 class="sandbox"><a href="example/layout/index.html">变形/动画/布局类功能增强</a></h3>
+		<h3 class="stable"><a href="example/layout/index.html">变形/动画/布局类功能增强</a></h3>
 		<ul>
-			<li><h4 class="stable">溢出控制<i class="dev-time">1D</i></h4>
+			<li><h4 class="stable">溢出控制<div class="gitbug" data-git-label="layout:mimax-size"></div></h4>
 				(max-width/max-height/min-width/min-height)
 				<p>控制超出大小的切除和不足大小的补充。</p>
 			</li>
-			<li><h4 class="stable">固定定位<i class="dev-time">0.5D</i></h4>
+			<li><h4 class="stable">固定定位<div class="gitbug" data-git-label="layout:fixed"></div></h4>
 				(position:fixed)
-				<p>无风险，很快会支持，可能有附加规范</p>
+				<p>已支持，IE6下鼠标拖动时会有抖动</p>
 			</li>
-			<li><h4 class="stable">变形增强<i class="dev-time">2D</i></h4>
+			<li><h4 class="stable">变形增强<div class="gitbug" data-git-label="layout:transform"></div></h4>
 				(transform)
 				<p>完成2D变换的全部变换函数,对动画的支持还需优化</p>
 			</li>
-			<li><h4 class="stable">transition动画增强<i class="dev-time">5D</i></h4>
+			<li><h4 class="stable">transition动画增强<div class="gitbug" data-git-label="layout:transition"></div></h4>
 				(transition-property)
 				<p>需要明确指定动画的属性，不支持 transition-property:all</p>
 			</li>
-			<li><h4 class="none">animation动画增强<i class="dev-time">5D</i></h4>
+			<li><h4 class="none">animation动画增强</h4>
 				(animation)
 				<p>貌似animation动画用javascript描述更合理，目前尚无支持计划。</p>
 			</li>
-			<li><h4 class="none">组合宽高增强<i class="dev-time">0.5D</i></h4>
+			<li><h4 class="none">组合宽高增强</h4>
 				(width:calc(50%-2px))
 				<p>貌似标准上载争论中,看需求确定何时实现</p>
 			</li>
+			<li>
+				<h4 class="none">multi-column </i></h4>(columns)
+				<p>难以实现,不支持</p>
+			</li>
 		</ul>
 	</li>
-	<li id="background">
-		<h3 class="sandbox"><a href="example/background/index.html">背景图形类增强</a></h3>
+	<li id="presentation">
+		<h3 class="stable"><a href="example/background/index.html">边框背景图形类增强</a></h3>
 		<ul>
-			<li><h4 class="stable">半透明支持</h4>(opacity)
+			<li><h4 class="stable">半透明支持<div class="gitbug" data-git-label="presentation:opacity"></div></h4>(opacity)
 				<p>用户可以直接书写CSS3 opacity属性,系统自动调用filter实现(本系统有统一的fliter管理器,防止不同filter需求的冲突)。</p>
 			</li>
-			<li><h4 class="stable">PNG24 Alpha 背景图<i class="dev-time">1D</i></h4>(background-image:xx.png)
+			<li><h4 class="stable">PNG24 Alpha 背景图<div class="gitbug" data-git-label="presentation:png24"></div></h4>(background-image:xx.png)
 				<p>读取png源码,判断是否为png24 且包含alpha半透明,如存在,在ie6下会自动转化为filter实现兼容(本实现无相对路径问题)。</p>
 			</li>
-			<li><h4 class="stable" title="rgba(r,g,b,a),hsla(h,s%,l%,a">透明背景色）<i class="dev-time">0.5D</i></h4>
+			<li><h4 class="stable" title="rgba(r,g,b,a),hsla(h,s%,l%,a">透明背景色）<div class="gitbug" data-git-label="presentation:rgba"></div></h4>
 				(background-color:rgba(0,255,0,0.3);)
 				<!--color:hsl(120,100%,50%) 系统把HSL颜色编译成RGB颜色，-->
 				<p>如果背景色包含alpha通道，将通过filter渐变背景实现</p>
 			</li>
-			<li><h4 class="stable">线性渐变<i class="dev-time">4D</i></h4>(linear-gradient)
+			<li><h4 class="stable">线性渐变<div class="gitbug" data-git-label="presentation:gradient"></div></h4>
+				(linear-gradient)
 				<p>目前采用filter实现，只能两个颜色，水平和垂直两个方向(不如CSS3强大)，后续可能尝试生成图片文件的方式</p>
 			</li>
-			<li><h4 class="stable">阴影增强<i class="dev-time">2D</i></h4>(box-shadow)
+			<li><h4 class="stable">阴影增强<div class="gitbug" data-git-label="presentation:box-shadow"></div></h4>
+				(box-shadow)
 				<p>计划用filter实现，不支持内阴影</p>
 			</li>
-			<li><h4 class="sandbox">圆角增强<i class="dev-time">4D</i></h4>(border-radius)
+			<li><h4 class="sandbox">圆角增强<div class="gitbug" data-git-label="presentation:radius"></div></h4>
+				(border-radius)
 				<p>目前采用filter＋vml实现，性能不佳，后续可能尝试动态生成图片文件的方式</p>
 			</li>
-			<li><h4 class="planning">图形边框<i class="dev-time">5D</i></h4>(border-image)
+			<li><h4 class="planning">图形边框<div class="gitbug" data-git-label="presentation:border-image"></div></h4>
+				(border-image)
 				<p>有一定难度</p>
+			</li>
+			<li>
+				<h4 class="none">outline</i></h4>(outline)
+				<p>难以实现,不支持</p>
 			</li>
 		</ul>
 	</li>
-	<script>
-		https://api.github.com/repos/jindw/xmldom/issues?labels=&callback=test
-	</script>
 </ul>
 <!--
 <ul>

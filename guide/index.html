@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="index.css" />
+<title>浏览器增强 与差异化方案</title>
+</head>
+
+<!--
+	x:[1-6];
+	y:[0-5];
+ -->
+<body state-x="1" state-y="0" onkeyup="
+var c = event.keyCode;switch(c){case 37:case 39:this.setAttribute('state-x',(this.getAttribute('state-x')-c+38)%6||6);break;
+case 38:case 40:this.setAttribute('state-y',(this.getAttribute('state-y')-3+c)%6);}
+this.className = this.className;
+">
+<div>S1</div>
+<div>S2</div>
+<div>S3</div>
+
+<div>S4</div>
+<div>S5</div>
+<div>S6</div>
+</body>
+</html>

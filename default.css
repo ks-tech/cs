@@ -106,3 +106,73 @@ b.stable,b.sandbox,b.planning,b.none{
 	background-color:#e3e;
 	color:#FFF;
 }
+.gitbug{
+	width:42px;
+	height:11px;
+	display:inline-block;
+	margin:10px 0 0 10px;
+	cursor:pointer;
+	color:#666;
+	font-weight:bold;
+	font-size:8px;
+	position:relative;
+}
+.gitbug a{
+	color:blue;
+}
+.gitbug strong,.gitbug span{
+	color:#666;
+	width:14px;
+	background:#dd0;
+	display:inline-block;
+	border-radius:2px 0 0 2px;
+	border:1px outset #dd0;
+}
+.gitbug span{
+	background:#0d0;
+	border-radius:0 2px 2px 0;
+}
+.gitbug ul,.gitbug:empty ul{
+	background:#FFF;
+	display:none;
+}
+
+.gitbug:hover ul{
+	display:block;
+	border:1px solid #300;
+	width:120px;
+	margin:0;padding:0;
+}
+
+.gitbug li{
+	margin:0;padding:0;
+	background:#0d0;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	height:12px;
+	word-break:keep-all;
+	border-bottom:1px solid white;
+}
+.gitbug li.unclosed{
+	margin:0;padding:0;
+	background:#dd0;
+}
+.gitbug li.report{
+	background:#ff0;
+	text-align:right;
+	padding-right:12px;
+}
+
+.gitbug-form{
+	position:absolute;
+	top:100px;
+	right:1px;
+	width:180px;
+	z-index:200;
+	text-align:right;
+}
+.gitbug-form input{width:85px;}
+.gitbug-form label{cursor:pointer;}
+.gitbug-form fieldset{display:none}
+.gitbug-form fieldset input{width:auto;}
+.gitbug-form:hover fieldset{display:block}

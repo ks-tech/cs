@@ -9,9 +9,12 @@ var addExample = require('rbs/lib/server-ext').addExample;
 setupJSRequire(rbs,'/static/');
 setupCS(rbs,/\.css$/i,/\.html?$/i);
 
+var config = JSON.parse(FS.readFileSync(require.resolve('cs/package.json')));
 
+console.log('welcome to test cs: '+config.version);
 
-['static/cs.js',
+['index.html','index.css','default.css',
+'static/cs.js',
 'static/cs.htc','example/test.css','example/test.html'].forEach(function(path){
 	var file = require.resolve('cs/'+path);
 	var expect = FS.readFileSync(file);
