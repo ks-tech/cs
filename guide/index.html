@@ -11,7 +11,8 @@
 	y:[0-5];
  -->
 <body state-x="1" state-y="0" onkeyup="
-var c = event.keyCode;switch(c){case 37:case 39:this.setAttribute('state-x',(this.getAttribute('state-x')-c+38)%6||6);break;
+var c = event.keyCode;switch(c){
+case 37:case 39:this.setAttribute('state-x',(this.getAttribute('state-x')-2+c)%6||6);break;
 case 38:case 40:this.setAttribute('state-y',(this.getAttribute('state-y')-3+c)%6);}
 this.className = this.className;
 ">
