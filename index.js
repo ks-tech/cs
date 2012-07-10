@@ -15,6 +15,7 @@ console.log('welcome to test cs: '+config.version);
 
 ['index.html','index.css','default.css',
 'static/cs.js',
+'static/gitbug.js',
 'static/cs.htc','example/test.css','example/test.html'].forEach(function(path){
 	var file = require.resolve('cs/'+path);
 	var expect = FS.readFileSync(file);
