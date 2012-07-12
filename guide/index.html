@@ -11,17 +11,263 @@
 	y:[0-5];
  -->
 <body state-x="1" state-y="0" onkeyup="
-var c = event.keyCode;switch(c){
-case 37:case 39:this.setAttribute('state-x',(this.getAttribute('state-x')-2+c)%6||6);break;
-case 38:case 40:this.setAttribute('state-y',(this.getAttribute('state-y')-3+c)%6);}
+var c = event.keyCode;var y = this.getAttribute('state-y');
+switch(c){
+case 37:case 39:this.setAttribute('state-x',(this.getAttribute('state-x')-2+c)%6||6);this.setAttribute('state-y',y=='0'?'0':'1');break;
+case 38:case 40:this.setAttribute('state-y',(y-3+c)%6);}
 this.className = this.className;
 ">
-<div>S1</div>
-<div>S2</div>
-<div>S3</div>
 
-<div>S4</div>
-<div>S5</div>
-<div>S6</div>
+<div>
+	<h2>设计要求</h2>
+	<ul style="font-size:80%">
+		<li>DOM 操作友好
+			<p>自发初始化 <i>---解铃还须系铃人</i></p>
+<div class="code">
+<pre>
+el.innerHTML = '....'
+el.appendChild(??);el.removeChild(??)
+....
+</pre>
+</div>
+<br class="clear"/>
+		</li>
+		<li>不定义新语法
+			<p>不做恶,直接用css3语法，附加信息让系统自动生成</p>
+			
+<div class="code">
+<pre>
+.test>div{
+	background:<strong>linear-gradient(0,white,blue);</strong>
+	<strong>position:fixed;</strong>
+	top:0;left:0;
+	<strong>max-width:50%;</strong>
+}
+</pre>
+</div>
+			<br class="clear"/>
+		</li>
+		<li>运行方式
+			<p>平台＋自动预处理</p>
+			<p>文件系统＋JavaScript库（测试用/不宜线上运行）</p>
+		</li>
+		<!--
+		<li>插件化与增量开销
+			<p>功能插件方式开发</p>
+			<p>运算量与插件数量无关，与需要增强的元素有关</p>
+		</li>
+		-->
+	</ul>
+	<div class="next">
+		<h2>CSS自初始化介绍</h2>
+		<ul>
+			<li>
+				IE6/7 expression and override
+			</li>
+			<li>
+				IE8 htc
+			</li>
+		</ul>
+		<div class="next">
+		<h2>使用方式</h2>
+		<ul>
+			<li>
+				自动预编译方式（FIS/专题平台/调试服务器）
+				<p>提供一个编译脚本，集成到平台实现自动编译。</p>
+				<p>提供一个简化版版的预编译服务器，可在本地开发测试，修改后直接预览效果。
+<div class="code"><pre>npm install cs</pre><pre>node -e reqiure('cs')</pre></div><br class="clear"/>
+				</p>
+			</li>
+			<li>
+				直接javascript库在文件系统上运行
+				<p>将css编译工作迁移到浏览器上完成。</p>
+				<p>可以通过是否文件系统判断是否需要装载更庞大的编译脚本</p>
+				<p>也可以通过cookie标记，让测试服务器也能装载编译脚本（系统探测到css没有编译，标记cookie，刷新即可具备编译功能）。</p>
+			</li>
+		</ul>
+	</div>
+	</div>
+	
+</div>
+<div>
+	<h2>功能支持</h2>
+	<ul>
+		<li>选择器语法增强
+			<p>交互/状态/属性/结构/组合/生成内容</p>
+		</li>
+		<li>变形/动画/布局类功能增强
+			<p>溢出控制/固定定位/变形增强/transition动画增强</p>
+		</li>
+		<li>边框背景图形类增强
+			<p>半透明/PNG24/rgba/linear-gradient/阴影增强</p>
+			<p>圆角增强/图形边框</p>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>实现原理</h2>
+	<ul>
+		<li>选择器等价转换
+			<p>以组合class为基础，事件触发，关联查询</p>
+		</li>
+		<li>Filter管理器
+			<p>让多个filter不相互覆盖(如：opacity和transform的class自由组合)</p>
+		</li>
+		<li>附加元素管理器
+			<p>::before,::after,content,box-shadow,border-radius</p>
+		</li>
+	</ul>
+	<div class="next">
+		<h2>选择器等价转换</h2>
+		<ul>
+			<li>(伪类/结构/属性)->都转化为编码class
+<div class="code">
+<pre>p<strong>:hover</strong>{background:yellow;}
+-->
+p<strong>.hover__</strong>{background:#FF0;}
+</pre><pre>p<strong>:nth-child(even)</strong>{...}
+-->
+p<strong>.nth-child_2_1__</strong> {...}
+</pre><pre>p<strong>[title='钓鱼岛']</strong>{...}
+-->
+p<strong>.attr-title_3D_E9_92_93_E9_B1_BC_E5_B2_9B__</strong>{...}
+</pre>
+</div>
+<br class="clear"/>
+			</li>
+			<li>关联class-> 关联动态标识检测
+<div class="code">
+<pre>p<strong>></strong>span{color:red}
+-->
+p span.ref-child-p__ {color: #FF0000;}
+p {<strong>cs-target-child-p</strong>: 1;}
+p span {cs-ref: 1; <strong>cs-ref-child-p</strong>: 1; ...;}
+</pre><pre>p:first-child<strong>:not([title])</strong>{...}
+-->
+html p.nth-child_0_1__--<strong>ref-not-_5Btitle_5D__</strong> {...}
+</pre>
+</div>
+<br class="clear"/>
+			</li>
+			<li>IE6的组合class
+<div class="code">
+<pre>p<strong>:nth-child(odd):focus</strong>{...}
+-->
+html p<strong>.focus__--nth-child_2_0__</strong>{...}
+</pre>
+</div>
+<br class="clear"/>
+			</li>
+		</ul>
+		<div class="next">
+			<h2>Filter管理器</h2>
+			<ul>
+				<li>源码不写filter && 生成的代码也没有filter
+<div class="code">
+<pre>p{<strong>opacity</strong>:0.3}
+-->
+p{<strong>opacity</strong>:0.3}
+</pre><pre>p{<strong>background:rgba(255,255,255,0.5)</strong>}
+-->
+p{background: transparent; 
+<strong>cs-background-rgba: #7fffffff;</strong>
+layout-flow: expression(CS(this,'update')); }
+</pre>
+</div>
+<br class="clear"/>
+				</li>
+				<li>filter只在运行时按需添加和维护
+<div class="code">
+<pre>CS.addPlugin({id:'update-cs-background-rgba',
+	update:function(el,config,rgba){
+		ElementExtension(el).setGradient(rgba && ['linear',0,rgba,rgba]);
+	}
+},'onchange','cs-background-rgba')
+</pre>
+</div>
+<br class="clear"/>
+				</li>
+			</ul>
+			<!--
+			<div class="next">
+				<h2>附加元素管理器</h2>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			-->
+		</div>
+	</div>
+</div>
+<div>
+	<h2>前端运行框架介绍</h2>
+	<ul>
+		<li>元素管理
+			<ul>
+				<li>Filter 管理器</li>
+				<li>附加组件 管理器</li>
+			</ul>
+		</li>
+		<li>初始化插件
+			<p>muti-class,attribute,dynamic pseudo</p>
+		</li>
+		<li>更新插件
+			<ul>
+				<li>onchange 插件</li>
+				<li>onexist 插件</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>模块构成</h2>
+	<ul style="font-size:90%">
+		<li>编译模块
+			<p>/cs/lib/compiler/index.js</p>
+			<p>/cs/lib/compiler/selector-parser.js</p>
+			<p>/cs/index.js(调试服务器)</p>
+		</li>
+		<li>运行框架
+			<p>/cs/lib/runtime/index.js</p>
+			<p>/cs/lib/runtime/core.js</p>
+		</li>
+		<li style="position:absolute;right:0;top:20px">外部依赖
+<div class="code">
+<pre>"dependencies": {
+    	"cssom":"*",
+    	"sylvester":"*",
+    	"jsi":">=0.1.7",
+    	<span style='opacity:0.3'>
+    	"xmldom":">=0.1.9",
+    	"rbs":">=0.1.9",
+    	"openurl":"*"</span>
+    },</pre></div><br class="clear"/>
+		</li>
+	</ul>
+</div>
+<div>
+	<h2>难点风险及后续改进思路</h2>
+	<ul>
+		<li>选择器的编译无法很好的模块化，相互关联较多。</li>
+		<li>filter 的bug有时候是无能为力的，避开bug的尝试风险高。</li>
+	</ul>
+	<ul>
+		<li>部分尝试图像生成取代不可靠的filter（gradient,rgba,border-radius,...）</li>
+	</ul>
+	<!--
+	<div class="next">
+		<h2>难点与风险分析</h2>
+		
+		<div class="next">
+			<h2>改进思路</h2>
+			<ul>
+				<li>部分尝试图像生成取代不可靠的filter（gradient,rgba,border-radius,...）</li>
+			</ul>
+		</div>
+	</div>
+	-->
+</div>
 </body>
 </html>

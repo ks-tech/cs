@@ -1,30 +1,59 @@
+p>span{background:rgba(255,255,255,0.5)}
+
 html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;}
-body>div{
+body>div,body>div .next{
 	position:absolute;
-	background:blue;
+	background:rgba(0,0,255,0.1);
 	width:100%;
 	height:100%;
 	left:-100%;
+	transform-origin:0 0;
 	transition-property:left,top,transform,opacity,transform;
     transition-duration:0.8s;
-	-ie-transition-property:none;
+	-ie-transition-property:left,top;
+	color:#444;
+	font-size:200%;
 }
 body>div{
 	top:-100%;
 }
+body[state-y='0']{
+	-ie-position:absolute;
+	-ie-left:-400px;
+	-ie-top:-200px;
+	-ie-opacity:0.5;
+	overflow:visible;
+}
+body>div:nth-child(4),body>div:nth-child(4) .next{
+	background:rgba(255,255,0,0.4);
+	left:100%;
+}
+body>div:nth-child(1),body>div:nth-child(1) .next,body>div:nth-child(3),body>div:nth-child(3) .next{
+	background:rgba(0,255,0,0.4);
+	top:100%;
+}
+div.next::before{
+	content:'↓↓↓';
+	position:absolute;
+	display:block;
+	top:-40px;
+	right:0;
+}
+html body div.next{
+	position:absolute;
+	left:0;
+	top:100%;
+	width:100%;
+	height:100%;
+	opacity:0.95;
+	font-size: 100%;
+}
 body:not([state-y='0'])>div:nth-child(1),
 body:not([state-y='0'])>div:nth-child(3),
 body:not([state-y='0'])>div:nth-child(5){
-	opacity:0;
+	opacity:0.5;
 }
-body>div:nth-child(4){
-	background:yellow;
-	left:100%;
-}
-body>div:nth-child(1),body>div:nth-child(3){
-	background:green;
-	top:100%;
-}
+
 body[state-x='1']>div:nth-child(1),
 body[state-x='2']>div:nth-child(2),
 body[state-x='3']>div:nth-child(3),
@@ -36,11 +65,24 @@ body[state-x='6']>div:nth-child(6)
 	opacity:1;
 	transform:none;
 }
-
+html:hover body[state-y='2']>div{
+	top:-100%;
+}
+html:hover body[state-y='3']>div{
+	top:-200%;
+}
+html:hover body[state-y='4']>div{
+	top:-300%;
+}
+html:hover body[state-y='5']>div{
+	top:-400%;
+}
 body[state-x='1']>div:nth-child(1),
 body[state-x='3']>div:nth-child(3){
 	transform:rotate(360deg);
 }
+
+
 
 
 body[state-y='0'][state-x='1']>div:nth-child(2),
@@ -49,9 +91,8 @@ body[state-y='0'][state-x='3']>div:nth-child(4),
 body[state-y='0'][state-x='4']>div:nth-child(5),
 body[state-y='0'][state-x='5']>div:nth-child(6),
 body[state-y='0'][state-x='6']>div:nth-child(1){
-	top:30%;left:5%;
-	width:20%;height:50%;
-	transform:skew(0,15deg);
+	top:20%;left:5%;
+	transform:skew(0,15deg) scale(0.2,0.3);
 	z-index:200;
 }
 body[state-y='0'][state-x='1']>div:nth-child(1),
@@ -61,8 +102,8 @@ body[state-y='0'][state-x='4']>div:nth-child(4),
 body[state-y='0'][state-x='5']>div:nth-child(5),
 body[state-y='0'][state-x='6']>div:nth-child(6)
 {
-	top:40%;left:30%;
-	width:30%;height:50%;
+	top:35%;left:30%;
+	transform:scale(0.3,0.3);
 	z-index:200;
 }
 body[state-y='0'][state-x='1']>div:nth-child(6),
@@ -72,8 +113,7 @@ body[state-y='0'][state-x='4']>div:nth-child(3),
 body[state-y='0'][state-x='5']>div:nth-child(4),
 body[state-y='0'][state-x='6']>div:nth-child(5){
 	top:30%;left:65%;
-	width:20%;height:50%;
-	transform:skew(0,-15deg);
+	transform:skew(0,-15deg) scale(0.2,0.3);
 	z-index:200;
 }
 
@@ -84,9 +124,8 @@ body[state-y='0'][state-x='4']>div:nth-child(2),
 body[state-y='0'][state-x='5']>div:nth-child(3),
 body[state-y='0'][state-x='6']>div:nth-child(4){
 	opacity:0.5;
-	top:20%;left:65%;
-	width:20%;height:50%;
-	transform:skew(0,15deg);
+	top:9%;left:65%;
+	transform:skew(0,15deg) scale(0.2,0.3);
 }
 
 body[state-y='0'][state-x='1']>div:nth-child(4),
@@ -96,8 +135,8 @@ body[state-y='0'][state-x='4']>div:nth-child(1),
 body[state-y='0'][state-x='5']>div:nth-child(2),
 body[state-y='0'][state-x='6']>div:nth-child(3){
 	opacity:0.5;
-	top:10%;left:30%;
-	width:30%;height:50%;
+	top:9%;left:30%;
+	transform: scale(0.3,0.3);
 }
 
 
@@ -109,6 +148,16 @@ body[state-y='0'][state-x='5']>div:nth-child(1),
 body[state-y='0'][state-x='6']>div:nth-child(2){
 	opacity:0.5;
 	top:20%;left:5%;
-	width:20%;height:50%;
-	transform:skew(0,-15deg);
+	transform:skew(0,-15deg) scale(0.2,0.3);
 }
+.code{clear:both;}
+.code strong{color:red}
+.code pre{
+	font-size:80%;
+	margin:2px;
+	float:left;
+	display:inline-block;
+	border:1px dashed #333;
+	background:rgba(0,0,0,0.3);
+}
+.clear{clear:both}
