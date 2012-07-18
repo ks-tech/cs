@@ -1,0 +1,203 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="index.css" />
+<title>浏览器增强 与差异化方案</title>
+</head>
+
+<!--
+	x:[1-6];
+	y:[0-5];
+ -->
+<body state-x="1" state-y="0" onkeyup="
+var c = event.keyCode;var y = this.getAttribute('state-y');
+switch(c){
+case 37:case 39:this.setAttribute('state-x',(this.getAttribute('state-x')-2+c)%6||6);this.setAttribute('state-y',y=='0'?'0':'1');break;
+case 38:case 40:this.setAttribute('state-y',(y-3+c)%6);}
+this.className = this.className;
+">
+<!--
+基本数据模型 (data)
+
+展现控制信息 (data+template)
+	样式实现 (dom + class)
+
+交互逻辑抽象(dom + class)
+	数据交互 (javascript + ajax + dom)
+	状态迁移 (javascript + dom + class)
+
+-->
+
+
+<section>
+	<section>
+		<h2>CSS3的发展 -- WEB展现逻辑标准化</h2>
+		<p>CSS3发展 是一个展现逻辑表述语言的标准化过程.</p>
+		<ul>
+			<li>传统的程序语言编程实现
+				<div class="code">
+<pre>
+$(el).onmouseenter(function(el){
+		el.addClass('mouseenter')
+	}
+);
+$(el).onmouseouter(function(el){
+		el.removeClass('mouseenter')
+	}
+);
+
+</pre></div><br class="clear"/>
+			</li>
+			<li>进化成通过申明式语言实现
+				<div class="code">
+<pre>
+s:hover{
+...
+}
+</pre></div><br class="clear"/></li>
+		</ul>
+		<!--p>能够完成越来越多的展现控制逻辑. Web展现逻辑标准化的过程.</p-->
+		<!--
+		<p>脚本/模板 标准化的伪类/选择器或功能属性</p>
+		<ul
+			<li>脚本功能
+				<p>:hover,:focus,:target...</p>
+				
+			</li>>
+			<li>模板功能
+				<p>条件控制(属性)</p>
+				<p>结构选择器</p>
+				<p>切字</p>
+				<p>将模板条件逻辑封装成特定的选择器或者功能属性</p>
+			</li>
+			<li>html/布局/图形功能
+				<p>min/max-width/height</p>
+				<p>before/after</p>
+			</li>
+		</ul>
+		-->
+	</section>
+	<section>
+		<h2>CSS3的发展 -- WEB展现逻辑标准化</h2>
+		<ul>
+			<li>标准化行为控制脚本
+				<p>将常用细节交互逻辑(hover,focus,active,target)标准化为特定的伪类.</p>
+			</li>
+			<li>标准化终端适配脚本
+				<p>根据终端情况(设备/屏幕),自适应展现样式(media query).</p>
+			</li>
+			<li>标准化模板功能
+				<p>结构选择器,属性条件,切字...</p>
+			</li>
+			<li>动画/变形/布局/图形等功能
+				<p>animation/transform/min/max-width/height,before/after/...</p>
+			</li>
+		</ul>
+	</section>
+</section>
+<section>
+		<!--
+		<p>基本信息数据和变化的控制</p>
+		<ul>
+			<li>模型变化
+				<p>数据</p>
+			</li>
+			<li>状态抽象
+				<p>数据</p>
+			</li>
+			<li>状态迁移
+				<p>hover,focus,target...</p>
+			</li>
+		</ul>
+		-->
+	<section>
+		<h2>CSS3 向前一步是天堂</h2>
+		<p>接管绝大部分状态和展现相关的工作</p>
+		<ul>
+			<li>语义化/标准化状态描述
+				<p>强调编程接口与内部封装</p>
+				<p title="anonymous,logging,logged">弹出对话框为例</p>
+			</li>
+			<li>扩展通用伪类
+				<p>:actived,:actived,:last-active</p>
+				<p>Tab切换为例</p>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h2>CSS3 向前一步是天堂</h2>
+		<p>单纯化JavaScript控制逻辑</p>
+		<ul>
+			<li>关注状态模型
+				<p>只关注状态抽象模型.不用直接与样式控制接口(css,class)</p>
+			</li>
+			<li>关注状态迁移与数据
+				<p>拦截状态迁移,实现数据交互(忽略切换效果,那是CSS的职责)</p>
+			</li>
+		</ul>
+	</section>
+</section>
+<section>
+	<section style="font-size:90%;">
+		<h2>理想状态</h2>
+		<ul style="font-size:80%;">
+			<li>状态的组成
+				<p>瞬间状态:标准/扩展伪类</p>
+				<p>持久状态:模块节点的自定义属性记录的持久状态</p>
+			</li>
+			<li>以模块为中心
+				<p>模块为状态唯一宿主</p>
+				<p>统一入口,方便查询和控制</p>
+			</li>
+			<li>状态的控制
+				<p>CSS描述驱动/JavaScript直接驱动/拦截更改(不可操作瞬间状态？)</p>
+				<p>我们可能需要一个拦截/驱动状态迁移的js库</p>
+			</li>
+			<li>数据变化
+				<p>发生在状态变化过程中,也可以在过程中影响迁移规则</p>
+				<p>数据状态对状态切换逻辑的影响可借助状态迁移的拦截实现 </p>
+			</li>
+		</ul>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>困恼与解决思路</h2>
+		<ul>
+			<li>状态的复杂性
+				<p>多个维度组合</p>
+			</li>
+			<li>状态的拦截控制与拆解
+				<p>状态图的设计、分解是一个枯燥严谨的工作，工程师可能难以接受</p>
+			</li>
+		</ul>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>潜在收益面</h2>
+		<ul>
+			<li>UI(样式/交互)工作独立分工
+				<p></p>
+				<p>程序员/页面制作</p>
+				<p>程序语言/申明式语法(配置)</p>
+			</li>
+			<li>自动化
+				<p>自动化测试</p>
+				<p>固化模式:建立通用模型,有益于 切图/文档/代码生成</p>
+			</li>
+		</ul>
+	</section>
+</section>
+<section>
+	<section>
+		<h2>难点风险</h2>
+		<ul>
+			<li>自身实现代价,跨浏览器成本。</li>
+			<li>工程师习惯的冲击以及当前分工结构的限制。</li>
+		</ul>
+	</section>
+</section>
+</body>
+</html>

@@ -1,11 +1,14 @@
-p>span{background:rgba(255,255,255,0.5)}
-
 html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;}
-body>div,body>div .next{
+section h2{padding-top:10px;margin-top:0;}
+section p{text-indent:20px}
+section h2+p{padding:6px;background:rgba(255,255,0,0.4)}
+section ul{margin:20px;padding:40px;}
+
+body>section{
 	position:absolute;
-	background:rgba(0,0,255,0.1);
 	width:100%;
 	height:100%;
+	top:-100%;
 	left:-100%;
 	transform-origin:0 0;
 	transition-property:left,top,transform,opacity,transform;
@@ -14,9 +17,27 @@ body>div,body>div .next{
 	color:#444;
 	font-size:200%;
 }
-body>div{
-	top:-100%;
+body>section>section{
+	padding:0;
+	margin:0;
+	width:100%;
+	height:100%;
+	position:relative;
+	background:rgba(0,0,255,0.1);
 }
+body>section:nth-child(4) {
+	left:100%;
+}
+body>section:nth-child(4)>section {
+	background:rgba(255,255,0,0.4);
+}
+body>section:nth-child(1),body>section:nth-child(3){
+	top:100%;
+}
+body>section:nth-child(1)>section,body>section:nth-child(3)>section{
+	background:rgba(0,255,0,0.4);
+}
+
 body[state-y='0']{
 	-ie-position:absolute;
 	-ie-left:-400px;
@@ -24,128 +45,122 @@ body[state-y='0']{
 	-ie-opacity:0.5;
 	overflow:visible;
 }
-body>div:nth-child(4),body>div:nth-child(4) .next{
-	background:rgba(255,255,0,0.4);
-	left:100%;
-}
-body>div:nth-child(1),body>div:nth-child(1) .next,body>div:nth-child(3),body>div:nth-child(3) .next{
-	background:rgba(0,255,0,0.4);
-	top:100%;
-}
-div.next::before{
+body>section>section:nth-child(n+2)::before{
 	content:'↓↓↓';
 	position:absolute;
 	display:block;
 	top:-40px;
 	right:0;
+	border-top:1px solid white;
 }
-html body div.next{
+
+body>section>section:last-child:not(:first-child)::after{
+	content:'↑↑↑';
 	position:absolute;
-	left:0;
-	top:100%;
-	width:100%;
-	height:100%;
-	opacity:0.95;
-	font-size: 100%;
+	display:block;
+	top:0px;
+	right:0;
+	border-top:1px solid white;
 }
-body:not([state-y='0'])>div:nth-child(1),
-body:not([state-y='0'])>div:nth-child(3),
-body:not([state-y='0'])>div:nth-child(5){
+
+body:not([state-y='0'])>section:nth-child(1),
+body:not([state-y='0'])>section:nth-child(3),
+body:not([state-y='0'])>section:nth-child(5){
 	opacity:0.5;
 }
 
-body[state-x='1']>div:nth-child(1),
-body[state-x='2']>div:nth-child(2),
-body[state-x='3']>div:nth-child(3),
-body[state-x='4']>div:nth-child(4),
-body[state-x='5']>div:nth-child(5),
-body[state-x='6']>div:nth-child(6)
+body[state-x='1']>section:nth-child(1),
+body[state-x='2']>section:nth-child(2),
+body[state-x='3']>section:nth-child(3),
+body[state-x='4']>section:nth-child(4),
+body[state-x='5']>section:nth-child(5),
+body[state-x='6']>section:nth-child(6)
 {
 	top:0;left:0;
 	opacity:1;
 	transform:none;
 }
-html:hover body[state-y='2']>div{
+html:hover body[state-y='2']>section{
 	top:-100%;
 }
-html:hover body[state-y='3']>div{
+html:hover body[state-y='3']>section{
 	top:-200%;
 }
-html:hover body[state-y='4']>div{
+html:hover body[state-y='4']>section{
 	top:-300%;
 }
-html:hover body[state-y='5']>div{
+html:hover body[state-y='5']>section{
 	top:-400%;
 }
-body[state-x='1']>div:nth-child(1),
-body[state-x='3']>div:nth-child(3){
+body[state-x='1']>section:nth-child(1),
+body[state-x='3']>section:nth-child(3){
 	transform:rotate(360deg);
 }
 
 
 
 
-body[state-y='0'][state-x='1']>div:nth-child(2),
-body[state-y='0'][state-x='2']>div:nth-child(3),
-body[state-y='0'][state-x='3']>div:nth-child(4),
-body[state-y='0'][state-x='4']>div:nth-child(5),
-body[state-y='0'][state-x='5']>div:nth-child(6),
-body[state-y='0'][state-x='6']>div:nth-child(1){
+body[state-y='0'][state-x='1']>section:nth-child(2),
+body[state-y='0'][state-x='2']>section:nth-child(3),
+body[state-y='0'][state-x='3']>section:nth-child(4),
+body[state-y='0'][state-x='4']>section:nth-child(5),
+body[state-y='0'][state-x='5']>section:nth-child(6),
+body[state-y='0'][state-x='6']>section:nth-child(1){
 	top:20%;left:5%;
 	transform:skew(0,15deg) scale(0.2,0.3);
 	z-index:200;
 }
-body[state-y='0'][state-x='1']>div:nth-child(1),
-body[state-y='0'][state-x='2']>div:nth-child(2),
-body[state-y='0'][state-x='3']>div:nth-child(3),
-body[state-y='0'][state-x='4']>div:nth-child(4),
-body[state-y='0'][state-x='5']>div:nth-child(5),
-body[state-y='0'][state-x='6']>div:nth-child(6)
+body[state-y='0'][state-x='1']>section:nth-child(1),
+body[state-y='0'][state-x='2']>section:nth-child(2),
+body[state-y='0'][state-x='3']>section:nth-child(3),
+body[state-y='0'][state-x='4']>section:nth-child(4),
+body[state-y='0'][state-x='5']>section:nth-child(5),
+body[state-y='0'][state-x='6']>section:nth-child(6)
 {
 	top:35%;left:30%;
 	transform:scale(0.3,0.3);
 	z-index:200;
 }
-body[state-y='0'][state-x='1']>div:nth-child(6),
-body[state-y='0'][state-x='2']>div:nth-child(1),
-body[state-y='0'][state-x='3']>div:nth-child(2),
-body[state-y='0'][state-x='4']>div:nth-child(3),
-body[state-y='0'][state-x='5']>div:nth-child(4),
-body[state-y='0'][state-x='6']>div:nth-child(5){
+body[state-y='0'][state-x='1']>section:nth-child(6),
+body[state-y='0'][state-x='2']>section:nth-child(1),
+body[state-y='0'][state-x='3']>section:nth-child(2),
+body[state-y='0'][state-x='4']>section:nth-child(3),
+body[state-y='0'][state-x='5']>section:nth-child(4),
+body[state-y='0'][state-x='6']>section:nth-child(5){
 	top:30%;left:65%;
 	transform:skew(0,-15deg) scale(0.2,0.3);
 	z-index:200;
 }
 
-body[state-y='0'][state-x='1']>div:nth-child(5),
-body[state-y='0'][state-x='2']>div:nth-child(6),
-body[state-y='0'][state-x='3']>div:nth-child(1),
-body[state-y='0'][state-x='4']>div:nth-child(2),
-body[state-y='0'][state-x='5']>div:nth-child(3),
-body[state-y='0'][state-x='6']>div:nth-child(4){
+body[state-y='0'][state-x='1']>section:nth-child(5),
+body[state-y='0'][state-x='2']>section:nth-child(6),
+body[state-y='0'][state-x='3']>section:nth-child(1),
+body[state-y='0'][state-x='4']>section:nth-child(2),
+body[state-y='0'][state-x='5']>section:nth-child(3),
+body[state-y='0'][state-x='6']>section:nth-child(4){
 	opacity:0.5;
 	top:9%;left:65%;
 	transform:skew(0,15deg) scale(0.2,0.3);
 }
 
-body[state-y='0'][state-x='1']>div:nth-child(4),
-body[state-y='0'][state-x='2']>div:nth-child(5),
-body[state-y='0'][state-x='3']>div:nth-child(6),
-body[state-y='0'][state-x='4']>div:nth-child(1),
-body[state-y='0'][state-x='5']>div:nth-child(2),
-body[state-y='0'][state-x='6']>div:nth-child(3){
+body[state-y='0'][state-x='1']>section:nth-child(4),
+body[state-y='0'][state-x='2']>section:nth-child(5),
+body[state-y='0'][state-x='3']>section:nth-child(6),
+body[state-y='0'][state-x='4']>section:nth-child(1),
+body[state-y='0'][state-x='5']>section:nth-child(2),
+body[state-y='0'][state-x='6']>section:nth-child(3){
 	opacity:0.5;
 	top:9%;left:30%;
 	transform: scale(0.3,0.3);
 }
 
 
-body[state-y='0'][state-x='1']>div:nth-child(3),
-body[state-y='0'][state-x='2']>div:nth-child(4),
-body[state-y='0'][state-x='3']>div:nth-child(5),
-body[state-y='0'][state-x='4']>div:nth-child(6),
-body[state-y='0'][state-x='5']>div:nth-child(1),
-body[state-y='0'][state-x='6']>div:nth-child(2){
+body[state-y='0'][state-x='1']>section:nth-child(3),
+body[state-y='0'][state-x='2']>section:nth-child(4),
+body[state-y='0'][state-x='3']>section:nth-child(5),
+body[state-y='0'][state-x='4']>section:nth-child(6),
+body[state-y='0'][state-x='5']>section:nth-child(1),
+body[state-y='0'][state-x='6']>section:nth-child(2){
 	opacity:0.5;
 	top:20%;left:5%;
 	transform:skew(0,-15deg) scale(0.2,0.3);
