@@ -15,163 +15,11 @@
  </head>
 
  <body>
-	<style>
-	body {
-		margin:0;
-		padding: 0;
-		background: black;
-        overflow: hidden;
-	}
-	html {
-        *overflow: hidden;
-	}
-	#cavas {
-		position: relative;
-        -webkit-transition: -webkit-transform 2s ease-in-out; 
-        -moz-transition: -moz-transform 2s ease-in-out;
-		transition: -webkit-transform 2s ease-in-out;
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<link rel="stylesheet" type="text/css" href="sub.css" />
+		<style>
 
-
-	}
-	.slide {
-		display: none;
-		position: absolute;
-		overflow: hidden;
-		left: 50%;
-		top: 50%;	
-		width: 960px;
-		height: 720px;
-		margin-top: -360px;
-		/*padding: 40px;*/
-
-		font-family: 微软雅黑;
-		background: white;
-		/* background: -webkit-gradient(linear, left bottom, left top, from(#BBD), to(white));
-		-webkit-transition: margin 0.25s ease-in-out;
-		background-color: #EEE;
-		background: -moz-linear-gradient(left bottom, #BBD, white);
-		-moz-transition: margin 0.25s ease-in-out; */
-		border: 1px solid #D9D9D9;
-		border-top: none;
-		border-bottom: none;
-		/*box-shadow: 0 0 4px rgba(0, 0, 0, .1);*/
-		box-shadow: 1px 1px 1px 0px #6CF;
-		border-radius: 10px;
-
-		transition: margin 0.25s ease-in-out; 
-        -webkit-transition: margin 0.25s ease-in-out; 
-        -moz-transition: margin 0.25s ease-in-out;
-	}
-  .slide:nth-child(even) {
-	border-top-left-radius: 20px;
-	border-bottom-right-radius: 20px;
-  }
-  
-  .slide:nth-child(odd) {
-	border-top-right-radius: 20px;
-	border-bottom-left-radius: 20px;
-  }
-  .slide:hover {
-	outline: orange dotted 10px;
-  }
-  .slide:active {
-	outline: none;
-  }
-   .slide:focus {
-	outline: none;
-  }
-
-/****切换****/
-      .slide.far-past {
-        display: block;
-        margin-left: -2400px;
-      }
-      
-      .slide.past {
-        display: block;
-        margin-left: -1490px;	/*-450-900-50*/
-      }
-      
-      .slide.current {
-        display: block;
-        margin-left: -480px;
-      }
-      
-      .slide.future {
-        display: block;
-        margin-left: 530px;	/*-450+900+50*/
-      }
-      
-      .slide.far-future {
-        display: block;
-        margin-left: 1500px;
-      }
-/********/
-
-	.fullscreen {
-		position:fixed;
-		bottom: 0;
-		left: 0;
-		background: orange;
-	}
-
-	/*content*/
-	/** #ppt1 */
-	.split1 {
-		position: absolute;
-		bottom: 330px;
-		left: 0;
-		width: 100%;
-		text-align: right;
-	}
-	.split2 {
-		position: absolute;
-		top: 390px;
-		left: 0;
-		width: 100%;
-		text-align: right;
-	}
-	.split {
-		position: absolute;
-		width: 100%;
-		left: 0;
-		top: 390px;
-	}
-	.split > img {
-		position: absolute;
-		top: -50px;
-		left: 45px;
-		z-index: 5;
-	}
-	#ppt1 .line {
-		margin-left: 100px;
-		position: absolute;
-		z-index: 4;
-		width: 670px;
-		right: 0;
-		font-size: 0;
-		line-height: 0;
-		border-top: 2px dotted #a9a9a9;
-	}
-	h1 {
-		color: #0065cb;
-		font-size: 32px;	/*24pt*/
-		font-family: 微软雅黑;
-		padding-right: 20px;
-	}
-	.desc {
-		color: #0065cb;
-		font-size: 19px;	/*14pt*/
-		padding: 20px;
-	}
-	.footer .log {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		text-align: center;
-		color: #7f7f7f;
-	}
-	</style>
+		</style>
 	<script>
 	
 	</script>
@@ -183,59 +31,306 @@
 			</div>
 			<div class="split"><img src="logo.png" /><div class="line"></div></div>
 			<div class="split2">
-				<p class="desc">知识搜索部   梁东杰<br /> liangdongjie@baidu.com</p>
+				<p class="desc">百度知识搜索部   梁东杰<br /> liangdongjie@baidu.com</p>
 			</div>
 			<div class="footer">
 				<p class="log">修改时间：2012.7.19（web ppt 2012.7.25）</p>
 			</div>
 		</div>
+		<div class="slide sub introduce">
+			<style>
+				.introduce .content {
+					padding-left: 100px;
+				}
+				.introduce a {
+					text-decoration: none;
+				}
+				.introduce .content > dl > dt {
+					margin: 10px 0;
+				}
+				.introduce .name:after,
+				.introduce .id:before
+				{
+					background-color: gray;
+					color: white;
+					display: inline-block;
+					width: 22px;
+					height: 22px;
+					font-size:  30px;
+					line-height: 25px;
+					height: 25px;
+					padding: 0px 3px;
+					border-radius: 20px;
+					text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.251);
+					font-weight: bold;
+					content: '@'
+				}
+				.introduce .content {
+					font-size: 28px;
+				}
+				.label-group a,
+				.label-group span,
+				.label {
+					display: inline-block;
+
+					color: #FFFFFF;
+					vertical-align: baseline;
+					white-space: nowrap;
+					padding: 1px 4px 2px;
+
+					border-radius: 3px;
+					text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.251);
+					box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.196), 0px 1px 2px rgba(0, 0, 0, 0.047);
+					border-bottom-color: rgba(0, 0, 0, 0.251);
+					border-left-color: rgba(0, 0, 0, 0.102);
+					border-right-color: rgba(0, 0, 0, 0.102);
+					border-top-color: rgba(0, 0, 0, 0.102);				
+				}
+				.introduce .content .product-list a{
+					font-weight: 700;
+					background-image: -o-linear-gradient(top, #5BC0DE, #2F96B4);
+					background-image: -webkit-linear-gradient(top, #5BC0DE, #2F96B4);
+					background-color: #3A87AD;
+				}
+				.introduce .content .project-list span{
+					background-color: #5BB75B;
+					background-repeat: repeat-x;
+					background-image: -webkit-linear-gradient(top, #62C462, #51A351);
+					background-image: -o-linear-gradient(top, #62C462, #51A351);
+				}
+				.introduce .current-focus .label{
+					background-color: #F89406;
+					background-color: #FAA732;
+					background-image: -o-linear-gradient(top, #FBB450, #F89406);
+					background-image: -webkit-linear-gradient(top, #FBB450, #F89406);
+				}
+				.contact a,
+				.contact a:visited
+				{
+					color: #0088CC;
+				}
+				abbr {
+					border-bottom-style: dotted;
+					border-bottom-width: 1px;
+				}
+				/*
+				:hover {
+					background: rgba(255, 255, 255, 0.2);
+				}
+				*/
+			</style>
+			<article>
+				<header>
+					<hgroup><h2>关于我</h2></hgroup>
+				</header>
+				<section>
+					<div class="content">
+						<dl>
+							<dt><strong>梁东杰</strong> 百度知识搜索部(<abbr title="Baidu Knowledge Search">KS</abbr>) 资深研发工程师</dt>
+							<dd>
+								<dl class="product-list">
+									<dt>曾参与产品线：</dt>
+									<dd class="label-group">
+										<a href="http://hi.baidu.com" target="_blank">空间</a>、<a href="http://baike.baidu.com" target="_blank">百科</a>、<a href="http://lv.baidu.com" target="_blank">旅游</a>、<a href="http://xiangce.baidu.com" target="_blank">相册</a>
+									</dd>
+								</dl>
+								<dl class="project-list">
+									<dt>参与技术项目：</dt><dd class="label-group"><span>百度前端集成解决方案(<abbr title="FrontEnd Integrated solution">FIS</abbr>)</span></dd>
+								</dl>
+								<dl class="current-focus">
+									<dt>当前关注领域：</dt><dd><span class="label">前端开发自动化</span></dd>
+								</dl>
+								<dl>
+									<dt></dt><dd>Email：<span class="name">nodiseal</span><span class="provider">gmail.com</span></dd>
+								</dl>
+								<dl class="contact">
+									<dt></dt><dd><strong>Twitter</strong>: <a class="id" href="http://twitter.com/nodiseal" target="_blank">nodiseal</a>   <strong>Weibo</strong>：<a class="id" href="http://weibo.com/nedj" target="_blank">nedj</a></dd>
+								</dl>
+							</dd>
+						</dl>
+					</div>
+				</section>
+			</article>
+		</div>
+		<div class="slide dir summary">
+			<style>
+				.dir {
+					background: #eee;
+				}
+				.dir h2 {
+					font-size: 100px;
+					color: white;
+					width: 400px;
+					text-align: center;
+					border-bottom: 2px solid white;
+				}
+				.dir ol .current {
+					font-size: 50px;
+				}
+				.dir ol {
+					list-style: none;
+					margin-left: 100px;
+					font-size: 32px;
+				}
+				.dir.summary h2{
+					width: 600px;
+					font-size: 60px;
+				}
+				.dir.summary .content {
+					margin-left: 100px;
+					margin-top: 80px;
+				}
+				.dir.summary .content dt{
+					font-size: 48px;
+					margin: 25px 0;
+				}
+				.dir.summary .content dd {
+					font-size: 32px;
+				}
+			</style>
+			<article>
+				<header>
+					<h2>浏览器增强和差异化</h2>
+				</header>
+				<section>
+					<div class="content">
+						<div>
+							<dl>
+								<dt>方案目标</dt>
+								<dd>
+									为推动CSS3应用<br />
+									开发的一套<br />
+									跨浏览器<br />
+									实现效果增强和差异的方案
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+		<div class="slide dir">
+			<style>
+			</style>
+			<article>
+				<header>
+					<h2>目录</h2>
+				</header>
+				<section>
+					<div class="content">
+						<ol>
+							<li><a href="#chapter1">一、CSS3 -- 让你眼前一亮</a></li>
+							<li><a href="#chapter2">二、浏览器限制 -- 理想与现实</a></li>
+							<li><a href="#chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#chapter4">四、功能介绍 -- 细数家珍</a></li>
+							<li><a href="#chapter5">五、技术实现 -- 众妙之门</a></li>
+						</ol>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+
+		<div class="slide trans-pic trans0 sub">
+			<style>
+				.trans0 .word {
+
+					font-size: 40px;
+					-webkit-transform-origin:left top;
+					-ms-transform-origin:left top;
+
+					-webkit-transform: translate(320px,0) rotate(-45deg);
+					-ms-transform: translate(320px,0) rotate(-45deg);
+
+					-webkit-transition: -webkit-transform 2s ease-in-out;
+				}
+				.trans1 .word:hover {
+				  -webkit-transform: rotateZ(-5deg);
+				}
+			</style>
+			<article>
+				<section>
+					<div class="content">
+						<div style="margin-left: 180px;">
+							<p><img src="pic-css3-is-good.png" /></p>
+							<p class="word">CSS3真的好！</p>
+						</div>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+
+		<div class="slide dir">
+			<style>
+			</style>
+			<article>
+				<header>
+					<h2>目录</h2>
+				</header>
+				<section>
+					<div class="content">
+						<ol>
+							<li class="current"><a href="#chapter1">一、CSS3 -- 让你眼前一亮</a></li>
+							<li><a href="#chapter2">二、浏览器限制 -- 理想与现实</a></li>
+							<li><a href="#chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#chapter4">四、功能介绍 -- 细数家珍</a></li>
+							<li><a href="#chapter5">五、技术实现 -- 众妙之门</a></li>
+						</ol>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
 		<div class="slide sub">
-		<style>
-			.sub {
-			}
-			.sub article {
-				padding: 40px;
-			}
-			.master-text {
-				color: #585858;
-				font-size: 26px;
-			}
-			.sub hgroup {
-				color: #0065cb;
-				font-size: 32px;
-				background: white url(bg-logo.png) no-repeat bottom right;
-			}
-			.sub hgroup h2,
-			.sub hgroup h3 {
-				display:inline;
-			}
-			.sub article section {
-				padding: 40px 0;
-				background: white;
-				text-shadow: rgba(0, 0, 0, 0.196) 0px 2px 5px;
-			}
-			.sub .content {
-				margin-top: 55px;
-			}
-			.sub footer {
-				color: #bdbdbd;
-				position: absolute;
-				bottom: 0;
-				right: 0;
-				text-align: right;
-				padding-right: 5px;
-			}
-			.x-list {
-				/*font-family: '黑体';*/
-				font-size: 48px;
-				list-style: square;
-				margin-left: 150px;
-				color: #585858;
-			}
-			.x-list dl dd {
-				font-size: 36px;
-			}
-		</style>
+			<article>
+				<header>
+					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>变形、动画很酷</h3></hgroup>
+				</header>
+				<section>
+					<div class="master-text"></div>
+					<div class="content">
+						<ul class="x-list">
+							<li>
+								<dl>
+									<dt>变换</dt>
+									<dd>transition</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>变形</dt>
+									<dd>transform</dd>
+								</dl>
+							</li>
+							<li>			
+								<dl>
+									<dt>动画</dt>
+									<dd>animation</dd>
+								</dl>
+							</li>
+
+						</ul>
+					</div>
+					<div>
+						<mark>demo</mark>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!-- /.slide -->
+		<div class="slide sub">
 			<article>
 				<header>
 					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>图形修饰功能够震撼</h3></hgroup>
@@ -258,7 +353,7 @@
 					<span class="site">http://www.baidu.com</span>
 				</footer>
 			<article>
-		</div>
+		</div><!-- /.slide -->
 		<div class="slide sub">
 			<article>
 				<header>
@@ -357,29 +452,29 @@
 
 		<div class="slide sub">
 			<style>
-				table.button-dev-job {
+				table {
 					width: 100%;
 					border-spacing: 0;
 					border: 0;
 					border-collapse: collapse;
 				}
-				.button-dev-job td,
-				.button-dev-job th {
+				 td,
+				 th {
 					border: 2px solid white;
 					line-height: 2;
 					padding: 2px 5px;
 				}
-				.button-dev-job thead{
+				 thead{
 					background: #4e80bc;
 					color: white;
 					font-size: 20px;
 					font-weight: bold;
 					border-bottom: 3px solid white;
 				}
-				.button-dev-job tbody tr:nth-child(odd) {
+				 tbody tr:nth-child(odd) {
 					background: #CFD7E7;
 				}
-				.button-dev-job tbody tr:nth-child(even) {
+				 tbody tr:nth-child(even) {
 					background: #E8ECF3;
 				}
 			</style>
@@ -431,16 +526,29 @@
 				</footer>
 			<article>
 		</div><!--/.slide-->
-		<div class="slide trans-pic sub">
+		<div class="slide trans-pic trans1 sub">
 			<style>
+				.trans1 .word {
 
+					font-size: 40px;
+					-webkit-transform-origin:left top;
+					-ms-transform-origin:left top;
+
+					-webkit-transform: translate(250px,100px) rotate(-45deg);
+					-ms-transform: translate(250px,100px) rotate(-45deg);
+
+					-webkit-transition: -webkit-transform 2s ease-in-out;
+				}
+				.trans1 .word:hover {
+				  -webkit-transform: rotateZ(-5deg);
+				}
 			</style>
 			<article>
 				<section>
 					<div class="content">
 						<div style="margin-left: 180px;">
 							<p><img src="pic-env-bad.png" /></p>
-							<p class="word">可是浏览器环境很糟呀！</p>
+							<p class="word">可是。。。浏览器环境很糟呀！</p>
 						</div>
 					</div>
 				</section>
@@ -449,6 +557,300 @@
 				</footer>
 			<article>
 		</div><!--/.slide-->
+
+
+		<!-- ================== 第二章 ================ -->
+
+		<div class="slide dir">
+			<style>
+			</style>
+			<article>
+				<header>
+					<h2>目录</h2>
+				</header>
+				<section>
+					<div class="content">
+						<ol>
+							<li><a href="#chapter1">一、CSS3 -- 让你眼前一亮</a></li>
+							<li class="current"><a href="#chapter2">二、浏览器限制 -- 理想与现实</a></li>
+							<li><a href="#chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#chapter4">四、功能介绍 -- 细数家珍</a></li>
+							<li><a href="#chapter5">五、技术实现 -- 众妙之门</a></li>
+						</ol>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+
+		<div class="slide sub">
+			<style>
+			</style>
+			<article>
+				<header>
+					<hgroup><h2>二、浏览器限制</h2> <span>&gt;&gt;</span><h3>浏览器分布</h3></hgroup>
+				</header>
+				<section>
+					<div class="content">
+						<p>某产品5月份情况</p>
+						<table class="browser-rat">
+						<thead>
+							<tr>
+								<th>浏览器</th><th>占比</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>IE6</td><td><div style="width: 21.4%;background: rgba(191,84,46,0.6);">21.4%</div>	</td>
+							</tr>
+							<tr>
+								<td>IE7</td><td><div style="width: 27.13%;background: rgba(250,235,215,0.6);">27.13%</div>	</td>
+							</tr>
+							<tr>
+								<td>IE8</td><td><div style="width: 27.77%;background: rgba(240,239,136,0.6);">27.77%</div>	</td>
+							</tr>
+							<tr>
+								<td>IE9</td><td><div style="width: 2.22%;background: rgba(0,63,76,0.6);">2.22%</div>	</td>
+							</tr>
+							<tr>
+								<td>Chrome</td><td><div style="width: 18.94%;background: rgba(34, 139, 34, 0.6);">18.94%</div></td>
+							</tr>
+							<tr>
+								<td>Safari</td><td><div style="width:auto; $background: rba(218，112, 214, 0.6);"> - </div></td>
+							</tr>
+							<tr>	
+								<td>其他</td><td><div style="width: 0%; $background: rba(0,0, 255, 0.6);"> - </div></td>
+							</tr>
+						</thead>
+						</table>
+						
+					</div>
+					<div>
+						<mark>demo</mark>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+		<div class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>二、浏览器限制</h2> <span>&gt;&gt;</span><h3>CSS3环境</h3></hgroup>
+				</header>
+				<section>
+					<div class="content" style=>
+						<ul class="x-list">
+							<li>
+								<dl>
+									<dt> IE6~8的落后</dt>
+									<dd>不支持新特性 / bug很多 / 兼容hack横飞
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl><dt> 现代浏览器的前缀</dt><dd>-webkit- / -moz- /-o- /-ms- </dd></dl>
+							</li>
+							<li>
+								<dl><dt>IE9伪现代</dt><dd>border-image / muti-columns / transition... </dd></dl>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+		<div class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>二、浏览器限制</h2> <span>&gt;&gt;</span><h3>低端浏览器</h3></hgroup>
+				</header>
+				<section>
+					<div class="content" style=>
+						<ul class="x-list">
+							<li>
+								<dl>
+									<dt> 优雅降级？不易降呀</dt>
+									<dd>
+										<ul>
+											<li> 图形修饰、动画类可以忽略</li>
+											<li> 选择器类，影响可用性</li>
+										</ul>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl><dt> 低端浏览器增强很重要</dt>
+								<dd><ul>
+									<li>解决差异问题依然值得重视</li>
+									<li>可用性不可忽略</li>
+									<li>差异化或许不可避免</li>
+								</ul></dd></dl>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+
+		<!-- ==============第三章===================== -->
+
+		<div class="slide trans-pic trans2 sub">
+			<style>
+				.trans2 .word {
+
+					font-size: 40px;
+					color: white;
+					-webkit-transform-origin:left top;
+					-ms-transform-origin:left top;
+
+					-webkit-transform: translate(350px,-50px) rotate(-45deg);
+					-ms-transform: translate(350px,-50px) rotate(-45deg);
+
+					-webkit-transition: -webkit-transform 2s ease-in-out;
+				}
+				.trans1 .word:hover {
+				  -webkit-transform: rotateZ(-5deg);
+				}
+			</style>
+			<article>
+				<section>
+					<div class="content">
+						<div style="margin-left: 120px;">
+							<p><img src="pic-here-is-cs.png" /></p>
+							<p class="word">不怕，有它呢！</p>
+						</div>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+		<div class="slide dir">
+			<style>
+			</style>
+			<article>
+				<header>
+					<h2>目录</h2>
+				</header>
+				<section>
+					<div class="content">
+						<ol>
+							<li><a href="#chapter1">一、CSS3 -- 让你眼前一亮</a></li>
+							<li><a href="#chapter2">二、浏览器限制 -- 理想与现实</a></li>
+							<li class="current"><a href="#chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#chapter4">四、功能介绍 -- 细数家珍</a></li>
+							<li><a href="#chapter5">五、技术实现 -- 众妙之门</a></li>
+						</ol>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+
+		<div class="slide dir">
+			<style>
+			</style>
+			<article>
+				<header>
+					<h2>目录</h2>
+				</header>
+				<section>
+					<div class="content">
+						<ol>
+							<li><a href="#chapter1">一、CSS3 -- 让你眼前一亮</a></li>
+							<li><a href="#chapter2">二、浏览器限制 -- 理想与现实</a></li>
+							<li><a href="#chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li class="current"><a href="#chapter4">四、功能介绍 -- 细数家珍</a></li>
+							<li><a href="#chapter5">五、技术实现 -- 众妙之门</a></li>
+						</ol>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+
+
+
+		<div class="slide dir">
+			<style>
+			</style>
+			<article>
+				<header>
+					<h2>目录</h2>
+				</header>
+				<section>
+					<div class="content">
+						<ol>
+							<li><a href="#chapter1">一、CSS3 -- 让你眼前一亮</a></li>
+							<li><a href="#chapter2">二、浏览器限制 -- 理想与现实</a></li>
+							<li><a href="#chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#chapter4">四、功能介绍 -- 细数家珍</a></li>
+							<li class="current"><a href="#chapter5">五、技术实现 -- 众妙之门</a></li>
+						</ol>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+
+
+
+
+		<div id="ppt1" class="slide">
+			<div class="split1">
+			<h1>Q & A</h1>
+			</div>
+			<div class="split"><img src="logo.png" /><div class="line"></div></div>
+		</div>
+
+
+		<div id="ppt1" class="slide">
+			<div class="split1">
+			<h1>谢谢！</h1>
+			</div>
+			<div class="split"><img src="logo.png" /><div class="line"></div></div>
+		</div>
+
+		<div class="slide sub introduce">
+			<style>
+			</style>
+			<article>
+				<header>
+					<hgroup><h2>联系我</h2></hgroup>
+				</header>
+				<section>
+					<div class="content">
+						<dl>
+							<dt><strong>梁东杰</strong> 百度知识搜索部(<abbr title="Baidu Knowledge Search">KS</abbr>) 资深研发工程师</dt>
+							<dd>
+								<dl>
+									<dt></dt><dd>Email：<span class="name">nodiseal</span><span class="provider">gmail.com</span></dd>
+								</dl>
+								<dl class="contact">
+									<dt></dt><dd><strong>Twitter</strong>: <a class="id" href="http://twitter.com/nodiseal" target="_blank">nodiseal</a>   <strong>Weibo</strong>：<a class="id" href="http://weibo.com/nedj" target="_blank">nedj</a></dd>
+								</dl>
+							</dd>
+						</dl>
+					</div>
+				</section>
+			</article>
+		</div>
 	</div>
 	<div class="fullscreen">
 		<input type="button" value="Go Fullscreen" id="fsbutton" />
@@ -518,6 +920,7 @@ if (window.fullScreenApi.supportsFullScreen) {
 			var index = $(slide).data('slide-index');
 			console.log(index);
 			switchToSide(index);
+			e.preventDefault();	//别点到链接了
 		} else {
 			//忽略
 		}
@@ -574,7 +977,15 @@ if (window.fullScreenApi.supportsFullScreen) {
           //el.className = 'slide ' + className;
         }
       }
-      
+      function resetSlideClasses() {
+        var els = slides;
+        for (var i = 0, el; el = els[i]; i++) {
+			baidu.dom.addClass(el, 'far-future');
+			baidu.dom.removeClass(el, 'far-past past current future far-future');
+			//console.log('hello:'+ $(el).data('slide-index'));
+          //el.className = 'slide far-future';
+        }
+	  }
       function updateSlideClasses() {
         window.location.hash = "slide" + currentSlideNo;
         changeSlideElClass(currentSlideNo - 2, 'far-past');
@@ -583,8 +994,14 @@ if (window.fullScreenApi.supportsFullScreen) {
         changeSlideElClass(currentSlideNo + 1, 'future');
         changeSlideElClass(currentSlideNo + 2, 'far-future');                
       }
-      
+      function  switchToHome() {
+		switchToSide(1);
+      }
+      function  switchToEnd() {
+		switchToSide(slides.length);
+      }
       function switchToSide(num) {
+		resetSlideClasses();
         if (num > 0 && num <= slides.length) {
           currentSlideNo = num;
         }
@@ -626,21 +1043,38 @@ if (window.fullScreenApi.supportsFullScreen) {
         notesOn = (notesOn) ? false:true;
       }
       
+	  /*
+		keyCode: 36
+		keyIdentifier: "Home"
+
+		keyCode: 35
+		keyIdentifier: "End"
+	  */
       function handleBodyKeyDown(event) {
         switch (event.keyCode) {
-          case 37: // left arrow
+		case 33:	//pageUp
+        case 37: // left arrow
             prevSlide();
             break;
+		  case 34:	//pageDown
           case 39: // right arrow
           // case 32: // space
             nextSlide();
             break;
+			break;
+			break;
           case 51: // 3
             switch3D();          
             break;
           case 50: // 2
             showNotes();          
             break;
+		  case 35:	//End
+			event.ctrlKey && switchToEnd();
+			break;
+		  case 36:	//Home
+			event.ctrlKey && switchToHome();
+			break;
         }
       }
       
