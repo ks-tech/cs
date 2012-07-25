@@ -1,0 +1,666 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title> new document </title>
+  <meta name="author" content="NE">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="reset.css" />
+  <script type="text/javascript" src="http://img.baidu.com/js/tangram-base-1.5.2.1.js"></script>
+  <script src="http://lib.sinaapp.com/js/jquery/1.7/jquery.js"></script>
+  <!--[if lte IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+ </head>
+
+ <body>
+	<style>
+	body {
+		margin:0;
+		padding: 0;
+		background: black;
+        overflow: hidden;
+	}
+	html {
+        *overflow: hidden;
+	}
+	#cavas {
+		position: relative;
+        -webkit-transition: -webkit-transform 2s ease-in-out; 
+        -moz-transition: -moz-transform 2s ease-in-out;
+		transition: -webkit-transform 2s ease-in-out;
+
+
+	}
+	.slide {
+		display: none;
+		position: absolute;
+		overflow: hidden;
+		left: 50%;
+		top: 50%;	
+		width: 960px;
+		height: 720px;
+		margin-top: -360px;
+		/*padding: 40px;*/
+
+		font-family: 微软雅黑;
+		background: white;
+		/* background: -webkit-gradient(linear, left bottom, left top, from(#BBD), to(white));
+		-webkit-transition: margin 0.25s ease-in-out;
+		background-color: #EEE;
+		background: -moz-linear-gradient(left bottom, #BBD, white);
+		-moz-transition: margin 0.25s ease-in-out; */
+		border: 1px solid #D9D9D9;
+		border-top: none;
+		border-bottom: none;
+		/*box-shadow: 0 0 4px rgba(0, 0, 0, .1);*/
+		box-shadow: 1px 1px 1px 0px #6CF;
+		border-radius: 10px;
+
+		transition: margin 0.25s ease-in-out; 
+        -webkit-transition: margin 0.25s ease-in-out; 
+        -moz-transition: margin 0.25s ease-in-out;
+	}
+  .slide:nth-child(even) {
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+  }
+  
+  .slide:nth-child(odd) {
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+  }
+  .slide:hover {
+	outline: orange dotted 10px;
+  }
+  .slide:active {
+	outline: none;
+  }
+   .slide:focus {
+	outline: none;
+  }
+
+/****切换****/
+      .slide.far-past {
+        display: block;
+        margin-left: -2400px;
+      }
+      
+      .slide.past {
+        display: block;
+        margin-left: -1490px;	/*-450-900-50*/
+      }
+      
+      .slide.current {
+        display: block;
+        margin-left: -480px;
+      }
+      
+      .slide.future {
+        display: block;
+        margin-left: 530px;	/*-450+900+50*/
+      }
+      
+      .slide.far-future {
+        display: block;
+        margin-left: 1500px;
+      }
+/********/
+
+	.fullscreen {
+		position:fixed;
+		bottom: 0;
+		left: 0;
+		background: orange;
+	}
+
+	/*content*/
+	/** #ppt1 */
+	.split1 {
+		position: absolute;
+		bottom: 330px;
+		left: 0;
+		width: 100%;
+		text-align: right;
+	}
+	.split2 {
+		position: absolute;
+		top: 390px;
+		left: 0;
+		width: 100%;
+		text-align: right;
+	}
+	.split {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 390px;
+	}
+	.split > img {
+		position: absolute;
+		top: -50px;
+		left: 45px;
+		z-index: 5;
+	}
+	#ppt1 .line {
+		margin-left: 100px;
+		position: absolute;
+		z-index: 4;
+		width: 670px;
+		right: 0;
+		font-size: 0;
+		line-height: 0;
+		border-top: 2px dotted #a9a9a9;
+	}
+	h1 {
+		color: #0065cb;
+		font-size: 32px;	/*24pt*/
+		font-family: 微软雅黑;
+		padding-right: 20px;
+	}
+	.desc {
+		color: #0065cb;
+		font-size: 19px;	/*14pt*/
+		padding: 20px;
+	}
+	.footer .log {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		color: #7f7f7f;
+	}
+	</style>
+	<script>
+	
+	</script>
+
+	<div id="canvas">
+		<div id="ppt1" class="slide">
+			<div class="split1">
+			<h1>浏览器增强和差异化</h1>
+			</div>
+			<div class="split"><img src="logo.png" /><div class="line"></div></div>
+			<div class="split2">
+				<p class="desc">知识搜索部   梁东杰<br /> liangdongjie@baidu.com</p>
+			</div>
+			<div class="footer">
+				<p class="log">修改时间：2012.7.19（web ppt 2012.7.25）</p>
+			</div>
+		</div>
+		<div class="slide sub">
+		<style>
+			.sub {
+			}
+			.sub article {
+				padding: 40px;
+			}
+			.master-text {
+				color: #585858;
+				font-size: 26px;
+			}
+			.sub hgroup {
+				color: #0065cb;
+				font-size: 32px;
+				background: white url(bg-logo.png) no-repeat bottom right;
+			}
+			.sub hgroup h2,
+			.sub hgroup h3 {
+				display:inline;
+			}
+			.sub article section {
+				padding: 40px 0;
+				background: white;
+				text-shadow: rgba(0, 0, 0, 0.196) 0px 2px 5px;
+			}
+			.sub .content {
+				margin-top: 55px;
+			}
+			.sub footer {
+				color: #bdbdbd;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				text-align: right;
+				padding-right: 5px;
+			}
+			.x-list {
+				/*font-family: '黑体';*/
+				font-size: 48px;
+				list-style: square;
+				margin-left: 150px;
+				color: #585858;
+			}
+			.x-list dl dd {
+				font-size: 36px;
+			}
+		</style>
+			<article>
+				<header>
+					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>图形修饰功能够震撼</h3></hgroup>
+				</header>
+				<section>
+					<div class="master-text"></div>
+					<div class="content">
+						<ul class="x-list">
+							<li>透明</li>
+							<li>背景渐变</li>
+							<li>盒子效果：圆角、阴影</li>
+							<li>文字效果：截断、阴影</li>
+						</ul>
+					</div>
+					<div>
+						<mark>demo</mark>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div>
+		<div class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>细节交互脚本的终结者</h3></hgroup>
+				</header>
+				<section>
+					<div class="master-text"></div>
+					<div class="content">
+						<ul class="x-list">
+							<li>
+								<dl>
+									<dt>状态伪类</dt>
+									<dd>:hover/:focus /:active</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>容器控制</dt>
+									<dd>min/max-width</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>定位</dt>
+									<dd>position:fixed</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<mark>demo</mark>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div>
+
+
+		<div class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>模板hack都可以靠边站</h3></hgroup>
+				</header>
+				<section>
+					<div class="master-text"></div>
+					<div class="content">
+						<ul class="x-list">
+							<li>
+								<dl>
+									<dt> 结构匹配</dt>
+									<dd>nth-child系列</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<mark>demo</mark>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+
+
+		<div class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>终端适配很简单</h3></hgroup>
+				</header>
+				<section>
+					<div class="master-text"></div>
+					<div class="content">
+						<ul class="x-list">
+							<li>
+								<dl>
+									<dt>终端条件处理</dt>
+									<dd>mediaQuery</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<mark>demo</mark>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+
+
+		<div class="slide sub">
+			<style>
+				table.button-dev-job {
+					width: 100%;
+					border-spacing: 0;
+					border: 0;
+					border-collapse: collapse;
+				}
+				.button-dev-job td,
+				.button-dev-job th {
+					border: 2px solid white;
+					line-height: 2;
+					padding: 2px 5px;
+				}
+				.button-dev-job thead{
+					background: #4e80bc;
+					color: white;
+					font-size: 20px;
+					font-weight: bold;
+					border-bottom: 3px solid white;
+				}
+				.button-dev-job tbody tr:nth-child(odd) {
+					background: #CFD7E7;
+				}
+				.button-dev-job tbody tr:nth-child(even) {
+					background: #E8ECF3;
+				}
+			</style>
+			<article>
+				<header>
+					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>轻松应乎普通开发</h3></hgroup>
+				</header>
+				<section>
+					<div class="content">
+						<dl style="margin-left: 150px;margin-top: -50px;">
+							<dt>传统关键词</dt>
+							<dd>切图、改HTML、写JS、私有语法、用Hack、需求改到头大</dd>
+						</dl>
+						<table class="button-dev-job">
+						<thead>
+							<tr>
+								<th>需求</th><th>传统实现</th><th>CSS3</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>背景渐变的</td><td>把背景切下来吧</td><td>linear-gradient</td>
+							</tr>
+							<tr>
+								<td>要有阴影</td><td>把边缘也切下来</td><td>box-shadow</td>
+							</tr>
+							<tr>
+								<td>自适应的圆角</td><td>得补上HTML结构</td><td>border-radius</td>
+							</tr>
+							<tr>
+								<td>边缘是半透明</td><td>给补个透明滤镜吧</td><td>box-shadow</td>
+							</tr>
+							<tr>
+								<td>做成三态</td><td>得写JS帮忙了</td><td>:hover / :active</td>
+							</tr>
+							<tr>
+								<td>调整下立体感</td><td>重新切吧！</td><td>改css参数</td>
+							</tr>
+						</thead>
+						</table>
+						
+					</div>
+					<div>
+						<mark>demo</mark>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+		<div class="slide trans-pic sub">
+			<style>
+
+			</style>
+			<article>
+				<section>
+					<div class="content">
+						<div style="margin-left: 180px;">
+							<p><img src="pic-env-bad.png" /></p>
+							<p class="word">可是浏览器环境很糟呀！</p>
+						</div>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+	</div>
+	<div class="fullscreen">
+		<input type="button" value="Go Fullscreen" id="fsbutton" />
+		<p>Status: <span id="fsstatus"></span></p>
+	
+	</div>
+
+<script src="fullscreen.js"></script>
+<script>
+// do something interesting with fullscreen support
+var fsButton = baidu.dom.g('fsbutton'),
+	fsElement = baidu.dom.g('canvas'),
+	fsStatus = baidu.dom.g('fsstatus');
+
+
+if (window.fullScreenApi.supportsFullScreen) {
+	fsStatus.innerHTML = 'YES: Your browser supports FullScreen';
+	fsStatus.className = 'fullScreenSupported';
+	
+	// handle button click
+	fsButton.addEventListener('click', function() {
+		window.fullScreenApi.requestFullScreen(fsElement);
+	}, true);
+	
+	fsElement.addEventListener(fullScreenApi.fullScreenEventName, function() {
+		if (fullScreenApi.isFullScreen()) {
+			fsStatus.innerHTML = 'Whoa, you went fullscreen';
+		} else {
+			fsStatus.innerHTML = 'Back to normal';
+		}
+	}, true);
+	
+} else {
+	fsStatus.innerHTML = 'SORRY: Your browser does not support FullScreen';
+}
+</script>
+
+
+  <script>
+		/**
+		@see http://www.html5rocks.com/
+		*/
+
+      var currentSlideNo;
+      var notesOn = false;
+      var slides = baidu.dom.query('.slide');
+      var touchStartX = 0;
+
+      // var slide_hash = window.location.hash.replace(/#/, '');
+      // if (slide_hash) {
+      //   for (var i = 0, len = slides.length; i < len; i++) {
+      //     if (slides[i].id == slide_hash) {
+      //       currentSlideNo = i;
+      //       updateSlideClasses(); 
+      //     }
+      //   }
+      // }
+
+	  /**
+		绑定Ctrl+点击，切换到相应PPT的事件
+	  */
+	  function clickOnSelect (e) {
+		if(e.ctrlKey) {
+			console.log(e);
+			var slide = $(e.target).closest('.slide');
+			console.log(slide);
+			var index = $(slide).data('slide-index');
+			console.log(index);
+			switchToSide(index);
+		} else {
+			//忽略
+		}
+	  }
+      
+      function initialize() {
+        if (window.location.hash != "") {
+          currentSlideNo = Number(window.location.hash.replace('#slide', ''));
+        } else {
+          currentSlideNo = 1;
+        }
+
+        //document.addEventListener('keydown', handleBodyKeyDown, false);
+		baidu.event.on(document, 'keydown', handleBodyKeyDown, false);
+		$(document).delegate('.slide','click', clickOnSelect);
+		//$(document).delegate('[slide-index]','hover', clickOnSelect);
+
+
+        var els = slides;
+        for (var i = 0, el; el = els[i]; i++) {
+			baidu.dom.addClass(el, 'far-future');
+			$(el).data('slide-index', 1+i);
+			//console.log('hello:'+ $(el).data('slide-index'));
+          //el.className = 'slide far-future';
+        }
+        updateSlideClasses(); 
+        addTouchListeners();
+      }
+      
+      function getSlideEl(slideNo) {
+        if (slideNo > 0) {
+          return slides[slideNo - 1];
+        } else {
+          return null;
+        }
+      }
+      
+      function getSlideTitle(slideNo) {
+        var el = getSlideEl(slideNo);
+        
+        if (el) {
+          return el.getElementsByTagName('header')[0].innerHTML;
+        } else {
+          return null;
+        }
+      }
+      
+      function changeSlideElClass(slideNo, className) {
+        var el = getSlideEl(slideNo);
+        
+        if (el) {
+		  baidu.dom.removeClass(el, 'far-past past current future far-future');
+		  baidu.dom.addClass(el, className);
+          //el.className = 'slide ' + className;
+        }
+      }
+      
+      function updateSlideClasses() {
+        window.location.hash = "slide" + currentSlideNo;
+        changeSlideElClass(currentSlideNo - 2, 'far-past');
+        changeSlideElClass(currentSlideNo - 1, 'past');
+        changeSlideElClass(currentSlideNo, 'current');
+        changeSlideElClass(currentSlideNo + 1, 'future');
+        changeSlideElClass(currentSlideNo + 2, 'far-future');                
+      }
+      
+      function switchToSide(num) {
+        if (num > 0 && num <= slides.length) {
+          currentSlideNo = num;
+        }
+        
+        updateSlideClasses();
+      }
+
+      function nextSlide() {
+        if (currentSlideNo < slides.length) {
+          currentSlideNo++;
+        }
+        
+        updateSlideClasses();
+      }
+      
+      function prevSlide() {
+        if (currentSlideNo > 1) {
+          currentSlideNo--;
+        }
+        updateSlideClasses();
+      }
+      
+      function switch3D() {
+        if (document.body.className.indexOf('three-d') == -1) {
+          document.getElementsByClassName('presentation')[0].style.webkitPerspective = '1000px';
+
+          document.body.className += ' three-d';
+        } else {
+          window.setTimeout("document.getElementsByClassName('presentation')[0].style.webkitPerspective = '0';", 2000);
+          document.body.className = document.body.className.replace(/three-d/, '');
+        }
+      }
+      
+      function showNotes() {
+        var notes = document.querySelectorAll('.notes');
+        for (var i = 0, len = notes.length; i < len; i++) {
+          notes[i].style.display = (notesOn) ? 'none':'block';
+        }
+        notesOn = (notesOn) ? false:true;
+      }
+      
+      function handleBodyKeyDown(event) {
+        switch (event.keyCode) {
+          case 37: // left arrow
+            prevSlide();
+            break;
+          case 39: // right arrow
+          // case 32: // space
+            nextSlide();
+            break;
+          case 51: // 3
+            switch3D();          
+            break;
+          case 50: // 2
+            showNotes();          
+            break;
+        }
+      }
+      
+      function addTouchListeners() {
+        document.addEventListener('touchstart', function(e) {
+          touchStartX = e.touches[0].pageX;
+        }, false);
+        document.addEventListener('touchend', function(e) {
+          var pixelsMoved = touchStartX - e.changedTouches[0].pageX;
+          var SWIPE_SIZE = 150;
+          if (pixelsMoved > SWIPE_SIZE) {
+            nextSlide();
+          }
+          else if (pixelsMoved < -SWIPE_SIZE) {
+            prevSlide();
+          }
+        }, false);
+      }
+      
+      initialize();
+    </script>
+ </body>
+</html>
