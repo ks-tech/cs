@@ -109,71 +109,10 @@
         display: block;
         margin-left: 1500px;
       }
-/********/
 
-	.fullscreen {
-		position:fixed;
-		bottom: 0;
-		left: 0;
-		background: orange;
-	}
 
 	/*content*/
-	/** #ppt1 */
-	.split1 {
-		position: absolute;
-		bottom: 330px;
-		left: 0;
-		width: 100%;
-		text-align: right;
-	}
-	.split2 {
-		position: absolute;
-		top: 390px;
-		left: 0;
-		width: 100%;
-		text-align: right;
-	}
-	.split {
-		position: absolute;
-		width: 100%;
-		left: 0;
-		top: 390px;
-	}
-	.split > img {
-		position: absolute;
-		top: -50px;
-		left: 45px;
-		z-index: 5;
-	}
-	#ppt1 .line {
-		margin-left: 100px;
-		position: absolute;
-		z-index: 4;
-		width: 670px;
-		right: 0;
-		font-size: 0;
-		line-height: 0;
-		border-top: 2px dotted #a9a9a9;
-	}
-	h1 {
-		color: #0065cb;
-		font-size: 32px;	/*24pt*/
-		font-family: 微软雅黑;
-		padding-right: 20px;
-	}
-	.desc {
-		color: #0065cb;
-		font-size: 19px;	/*14pt*/
-		padding: 20px;
-	}
-	.footer .log {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		text-align: center;
-		color: #7f7f7f;
-	}
+
 	footer .site {
 		color: #bdbdbd;
 		position: absolute;

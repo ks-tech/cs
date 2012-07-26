@@ -1,0 +1,43 @@
+
+		.help {
+			position: fixed;
+			top: 20000px;
+			background: black;
+			opacity: 0.2;
+			transition: opacity 0.5s ease-in-out; 
+		}
+		.help:hover {
+			opacity: 1;
+		}
+		.help .tip{
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			background: white;
+			color: orange;
+			cursor: pointer;
+			z-index: 900;
+		}
+		.help .command {
+			background: yellow;
+			height: 100%;
+			width: 400px;
+		}
+		.help .tip:hover + .command,
+		.command:hover
+		{
+			position: fixed;
+			left: 0;
+			top: 0;
+			opacity: 0.5;
+			z-index: 901;
+		}
+		/********/
+
+		.xfullscreen {
+			position:fixed;
+			bottom: 0;
+			left: 0;
+			background: orange;
+			z-index: 902;
+		}

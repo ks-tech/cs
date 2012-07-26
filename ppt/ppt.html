@@ -10,6 +10,10 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
   <meta name="keywords" content="">
   <meta name="description" content="">
   <link rel="stylesheet" type="text/css" href="reset.css" />
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<link rel="stylesheet" type="text/css" href="sub.css" />
+	<link rel="stylesheet" type="text/css" href="ppt-item.css" />
+
   <script type="text/javascript" src="http://img.baidu.com/js/tangram-base-1.5.2.1.js"></script>
   <script src="http://lib.sinaapp.com/js/jquery/1.7/jquery.js"></script>
   <!--[if lte IE 9]>
@@ -18,17 +22,8 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
  </head>
 
  <body>
-	<link rel="stylesheet" type="text/css" href="main.css" />
-	<link rel="stylesheet" type="text/css" href="sub.css" />
-		<style>
-
-		</style>
-	<script>
-	
-	</script>
-
 	<div id="canvas">
-		<div id="ppt1" class="slide">
+		<div id="ppt-cover" class="slide cover">
 			<div class="split1">
 			<h1>浏览器增强和差异化</h1>
 			</div>
@@ -44,88 +39,9 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 			<div class="footer">
 				<p class="log">修改时间：2012.7.19（web ppt 2012.7.25）</p>
 			</div>
-		</div>
-		<div class="slide sub introduce">
+		</div><!--/.slide-->
+		<div id="ppt-introduce" class="slide sub introduce">
 			<style>
-				.introduce .content {
-					padding-left: 100px;
-				}
-				.introduce a {
-					text-decoration: none;
-				}
-				.introduce .content > dl > dt {
-					margin: 10px 0;
-				}
-				.introduce .name:after,
-				.introduce .id:before
-				{
-					background-color: gray;
-					color: white;
-					display: inline-block;
-					width: 22px;
-					height: 22px;
-					font-size:  30px;
-					line-height: 25px;
-					height: 25px;
-					padding: 0px 3px;
-					border-radius: 20px;
-					text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.251);
-					font-weight: bold;
-					content: '@'
-				}
-				.introduce .content {
-					font-size: 28px;
-				}
-				.label-group a,
-				.label-group span,
-				.label {
-					display: inline-block;
-
-					color: #FFFFFF;
-					vertical-align: baseline;
-					white-space: nowrap;
-					padding: 1px 4px 2px;
-
-					border-radius: 3px;
-					text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.251);
-					box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.196), 0px 1px 2px rgba(0, 0, 0, 0.047);
-					border-bottom-color: rgba(0, 0, 0, 0.251);
-					border-left-color: rgba(0, 0, 0, 0.102);
-					border-right-color: rgba(0, 0, 0, 0.102);
-					border-top-color: rgba(0, 0, 0, 0.102);				
-				}
-				.introduce .content .product-list a{
-					font-weight: 700;
-					background-image: -o-linear-gradient(top, #5BC0DE, #2F96B4);
-					background-image: -webkit-linear-gradient(top, #5BC0DE, #2F96B4);
-					background-color: #3A87AD;
-				}
-				.introduce .content .project-list span{
-					background-color: #5BB75B;
-					background-repeat: repeat-x;
-					background-image: -webkit-linear-gradient(top, #62C462, #51A351);
-					background-image: -o-linear-gradient(top, #62C462, #51A351);
-				}
-				.introduce .current-focus .label{
-					background-color: #F89406;
-					background-color: #FAA732;
-					background-image: -o-linear-gradient(top, #FBB450, #F89406);
-					background-image: -webkit-linear-gradient(top, #FBB450, #F89406);
-				}
-				.contact a,
-				.contact a:visited
-				{
-					color: #0088CC;
-				}
-				abbr {
-					border-bottom-style: dotted;
-					border-bottom-width: 1px;
-				}
-				/*
-				:hover {
-					background: rgba(255, 255, 255, 0.2);
-				}
-				*/
 			</style>
 			<article>
 				<header>
@@ -159,43 +75,8 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 					</div>
 				</section>
 			</article>
-		</div>
-		<div class="slide dir summary">
-			<style>
-				.dir {
-					background: #eee;
-				}
-				.dir h2 {
-					font-size: 100px;
-					color: white;
-					width: 400px;
-					text-align: center;
-					border-bottom: 2px solid white;
-				}
-				.dir ol .current {
-					font-size: 50px;
-				}
-				.dir ol {
-					list-style: none;
-					margin-left: 100px;
-					font-size: 32px;
-				}
-				.dir.summary h2{
-					width: 600px;
-					font-size: 60px;
-				}
-				.dir.summary .content {
-					margin-left: 100px;
-					margin-top: 80px;
-				}
-				.dir.summary .content dt{
-					font-size: 48px;
-					margin: 25px 0;
-				}
-				.dir.summary .content dd {
-					font-size: 32px;
-				}
-			</style>
+		</div><!--/.slide-->
+		<div id="ppt-summary" class="slide dir summary">
 			<article>
 				<header>
 					<h2>浏览器增强和差异化</h2>
@@ -220,9 +101,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</footer>
 			<article>
 		</div><!--/.slide-->
-		<div class="slide dir">
-			<style>
-			</style>
+		<div id="ppt-dir" class="slide dir">
 			<article>
 				<header>
 					<h2>目录</h2>
@@ -230,11 +109,11 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				<section>
 					<div class="content">
 						<ol>
-							<li><a href="#chapter1">一、CSS3 -- 让你眼前一亮</a></li>
-							<li><a href="#chapter2">二、浏览器限制 -- 理想与现实</a></li>
-							<li><a href="#chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
-							<li><a href="#chapter4">四、功能介绍 -- 细数家珍</a></li>
-							<li><a href="#chapter5">五、技术实现 -- 众妙之门</a></li>
+							<li><a href="#ppt-chapter1">一、CSS3 -- 让你眼前一亮</a></li>
+							<li><a href="#ppt-chapter2">二、浏览器限制 -- 理想与现实</a></li>
+							<li><a href="#ppt-chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#ppt-chapter4">四、功能介绍 -- 细数家珍</a></li>
+							<li><a href="#ppt-chapter5">五、技术实现 -- 众妙之门</a></li>
 						</ol>
 					</div>
 				</section>
@@ -244,22 +123,8 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 			<article>
 		</div><!--/.slide-->
 
-		<div class="slide trans-pic trans0 sub">
+		<div id="ppt-trans1" class="slide trans-pic trans1 sub">
 			<style>
-				.trans0 .word {
-
-					font-size: 40px;
-					-webkit-transform-origin:left top;
-					-ms-transform-origin:left top;
-
-					-webkit-transform: translate(320px,0) rotate(-45deg);
-					-ms-transform: translate(320px,0) rotate(-45deg);
-
-					-webkit-transition: -webkit-transform 2s ease-in-out;
-				}
-				.trans1 .word:hover {
-				  -webkit-transform: rotateZ(-5deg);
-				}
 			</style>
 			<article>
 				<section>
@@ -276,9 +141,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 			<article>
 		</div><!--/.slide-->
 
-		<div class="slide dir">
-			<style>
-			</style>
+		<div id="ppt-chapter1" class="slide dir">
 			<article>
 				<header>
 					<h2>目录</h2>
@@ -286,11 +149,11 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				<section>
 					<div class="content">
 						<ol>
-							<li class="current"><a href="#chapter1">一、CSS3 -- 让你眼前一亮</a></li>
-							<li><a href="#chapter2">二、浏览器限制 -- 理想与现实</a></li>
-							<li><a href="#chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
-							<li><a href="#chapter4">四、功能介绍 -- 细数家珍</a></li>
-							<li><a href="#chapter5">五、技术实现 -- 众妙之门</a></li>
+							<li class="current"><a href="#ppt-chapter1">一、CSS3 -- 让你眼前一亮</a></li>
+							<li><a href="#ppt-chapter2">二、浏览器限制 -- 理想与现实</a></li>
+							<li><a href="#ppt-chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#ppt-chapter4">四、功能介绍 -- 细数家珍</a></li>
+							<li><a href="#ppt-chapter5">五、技术实现 -- 众妙之门</a></li>
 						</ol>
 					</div>
 				</section>
@@ -299,7 +162,8 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</footer>
 			<article>
 		</div><!--/.slide-->
-		<div class="slide sub">
+
+		<div id="ppt-transition" class="slide sub">
 			<article>
 				<header>
 					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>变形、动画很酷</h3></hgroup>
@@ -338,7 +202,8 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</footer>
 			<article>
 		</div><!-- /.slide -->
-		<div class="slide sub">
+
+		<div id="ppt-graphic" class="slide sub">
 			<article>
 				<header>
 					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>图形修饰功能够震撼</h3></hgroup>
@@ -362,7 +227,8 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</footer>
 			<article>
 		</div><!-- /.slide -->
-		<div class="slide sub">
+
+		<div id="ppt-interactive" class="slide sub">
 			<article>
 				<header>
 					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>细节交互脚本的终结者</h3></hgroup>
@@ -401,8 +267,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 			<article>
 		</div>
 
-
-		<div class="slide sub">
+		<div id="ppt-selector" class="slide sub">
 			<article>
 				<header>
 					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>模板hack都可以靠边站</h3></hgroup>
@@ -429,8 +294,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 			<article>
 		</div><!--/.slide-->
 
-
-		<div class="slide sub">
+		<div id="ppt-terminal" class="slide sub">
 			<article>
 				<header>
 					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>终端适配很简单</h3></hgroup>
@@ -457,35 +321,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 			<article>
 		</div><!--/.slide-->
 
-
-		<div class="slide sub">
-			<style>
-				table {
-					width: 100%;
-					border-spacing: 0;
-					border: 0;
-					border-collapse: collapse;
-				}
-				 td,
-				 th {
-					border: 2px solid white;
-					line-height: 2;
-					padding: 2px 5px;
-				}
-				 thead{
-					background: #4e80bc;
-					color: white;
-					font-size: 20px;
-					font-weight: bold;
-					border-bottom: 3px solid white;
-				}
-				 tbody tr:nth-child(odd) {
-					background: #CFD7E7;
-				}
-				 tbody tr:nth-child(even) {
-					background: #E8ECF3;
-				}
-			</style>
+		<div id="ppt-simple-dev" class="slide sub">
 			<article>
 				<header>
 					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>轻松应乎普通开发</h3></hgroup>
@@ -525,6 +361,48 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 						</table>
 						
 					</div>
+					<div><!-- from css3PIE -->
+						<style>
+							.css3pie-button {
+								border: 1px solid #696;
+								padding: 60px 0;
+								text-align: center; width: 200px;
+								-webkit-border-radius: 8px;
+								-moz-border-radius: 8px;
+								border-radius: 8px;
+								-webkit-box-shadow: #666 0px 2px 3px;
+								-moz-box-shadow: #666 0px 2px 3px;
+								box-shadow: #666 0px 2px 3px;
+								background: #EEFF99;
+								background: -webkit-gradient(linear, 0 0, 0 bottom, from(#EEFF99), to(#66EE33));
+								background: -webkit-linear-gradient(#EEFF99, #66EE33);
+								background: -moz-linear-gradient(#EEFF99, #66EE33);
+								background: -ms-linear-gradient(#EEFF99, #66EE33);
+								background: -o-linear-gradient(#EEFF99, #66EE33);
+								background: linear-gradient(#EEFF99, #66EE33);
+							}
+							.baidu-search-button {
+								border: 1px solid #696;
+								padding: 60px 0;
+								text-align: center; width: 200px;
+								-webkit-border-radius: 8px;
+								-moz-border-radius: 8px;
+								border-radius: 8px;
+								-webkit-box-shadow: #666 0px 2px 3px;
+								-moz-box-shadow: #666 0px 2px 3px;
+								box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.196), 0px 1px 2px rgba(0, 0, 0, 0.047)
+								box-shadow: #666 0px 2px 3px;
+								background: #EEFF99;
+								background: -webkit-gradient(linear, 0 0, 0 bottom, from(#EEFF99), to(#66EE33));
+								background: -webkit-linear-gradient(#EEFF99, #66EE33);
+								background: -moz-linear-gradient(#EEFF99, #66EE33);
+								background: -ms-linear-gradient(#EEFF99, #66EE33);
+								background: -o-linear-gradient(#EEFF99, #66EE33);
+								background: linear-gradient(#EEFF99, #66EE33);
+							}
+						
+						</style>
+					</div>
 					<div>
 						<mark>demo</mark>
 					</div>
@@ -534,23 +412,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</footer>
 			<article>
 		</div><!--/.slide-->
-		<div class="slide trans-pic trans1 sub">
-			<style>
-				.trans1 .word {
-
-					font-size: 40px;
-					-webkit-transform-origin:left top;
-					-ms-transform-origin:left top;
-
-					-webkit-transform: translate(250px,100px) rotate(-45deg);
-					-ms-transform: translate(250px,100px) rotate(-45deg);
-
-					-webkit-transition: -webkit-transform 2s ease-in-out;
-				}
-				.trans1 .word:hover {
-				  -webkit-transform: rotateZ(-5deg);
-				}
-			</style>
+		<div class="slide trans-pic trans2 sub">
 			<article>
 				<section>
 					<div class="content">
@@ -569,9 +431,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 
 		<!-- ================== 第二章 ================ -->
 
-		<div class="slide dir">
-			<style>
-			</style>
+		<div id="ppt-chapter2" class="slide dir">
 			<article>
 				<header>
 					<h2>目录</h2>
@@ -579,11 +439,11 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				<section>
 					<div class="content">
 						<ol>
-							<li><a href="#chapter1">一、CSS3 -- 让你眼前一亮</a></li>
-							<li class="current"><a href="#chapter2">二、浏览器限制 -- 理想与现实</a></li>
-							<li><a href="#chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
-							<li><a href="#chapter4">四、功能介绍 -- 细数家珍</a></li>
-							<li><a href="#chapter5">五、技术实现 -- 众妙之门</a></li>
+							<li><a href="#ppt-chapter1">一、CSS3 -- 让你眼前一亮</a></li>
+							<li class="current"><a href="#ppt-chapter2">二、浏览器限制 -- 理想与现实</a></li>
+							<li><a href="#ppt-chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#ppt-chapter4">四、功能介绍 -- 细数家珍</a></li>
+							<li><a href="#ppt-chapter5">五、技术实现 -- 众妙之门</a></li>
 						</ol>
 					</div>
 				</section>
@@ -593,9 +453,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 			<article>
 		</div><!--/.slide-->
 
-		<div class="slide sub">
-			<style>
-			</style>
+		<div id="ppt-browser-rat" class="slide sub">
 			<article>
 				<header>
 					<hgroup><h2>二、浏览器限制</h2> <span>&gt;&gt;</span><h3>浏览器分布</h3></hgroup>
@@ -644,7 +502,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</footer>
 			<article>
 		</div><!--/.slide-->
-		<div class="slide sub">
+		<div id="ppt-css3-support" class="slide sub">
 			<article>
 				<header>
 					<hgroup><h2>二、浏览器限制</h2> <span>&gt;&gt;</span><h3>CSS3环境</h3></hgroup>
@@ -673,7 +531,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</footer>
 			<article>
 		</div><!--/.slide-->
-		<div class="slide sub">
+		<div id="ppt-old-browser" class="slide sub">
 			<article>
 				<header>
 					<hgroup><h2>二、浏览器限制</h2> <span>&gt;&gt;</span><h3>低端浏览器</h3></hgroup>
@@ -711,26 +569,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 
 		<!-- ==============第三章===================== -->
 
-		<div class="slide trans-pic trans2 sub">
-			<style>
-				.trans2 .content {
-					margin-top: 0;
-				}
-				.trans2 .word {
-
-					font-size: 40px;
-					-webkit-transform-origin:left top;
-					-ms-transform-origin:left top;
-
-					-webkit-transform: translate(250px,0) rotate(-45deg);
-					-ms-transform: translate(250px,0) rotate(-45deg);
-
-					-webkit-transition: -webkit-transform 2s ease-in-out;
-				}
-				.trans1 .word:hover {
-				  -webkit-transform: rotateZ(-5deg);
-				}
-			</style>
+		<div id="ppt-tarns3" class="slide trans-pic trans3 sub">
 			<article>
 				<section>
 					<div class="content">
@@ -745,9 +584,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</footer>
 			<article>
 		</div><!--/.slide-->
-		<div class="slide dir">
-			<style>
-			</style>
+		<div id="ppt-chapter3" class="slide dir">
 			<article>
 				<header>
 					<h2>目录</h2>
@@ -755,11 +592,34 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				<section>
 					<div class="content">
 						<ol>
-							<li><a href="#chapter1">一、CSS3 -- 让你眼前一亮</a></li>
-							<li><a href="#chapter2">二、浏览器限制 -- 理想与现实</a></li>
-							<li class="current"><a href="#chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
-							<li><a href="#chapter4">四、功能介绍 -- 细数家珍</a></li>
-							<li><a href="#chapter5">五、技术实现 -- 众妙之门</a></li>
+							<li><a href="#ppt-chapter1">一、CSS3 -- 让你眼前一亮</a></li>
+							<li><a href="#ppt-chapter2">二、浏览器限制 -- 理想与现实</a></li>
+							<li class="current"><a href="#ppt-chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#ppt-chapter4">四、功能介绍 -- 细数家珍</a></li>
+							<li><a href="#ppt-chapter5">五、技术实现 -- 众妙之门</a></li>
+						</ol>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+		<!-- ==============第四章===================== -->
+
+		<div id="ppt-chapter4" class="slide dir">
+			<article>
+				<header>
+					<h2>目录</h2>
+				</header>
+				<section>
+					<div class="content">
+						<ol>
+							<li><a href="#ppt-chapter1">一、CSS3 -- 让你眼前一亮</a></li>
+							<li><a href="#ppt-chapter2">二、浏览器限制 -- 理想与现实</a></li>
+							<li><a href="#ppt-chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li class="current"><a href="#ppt-chapter4">四、功能介绍 -- 细数家珍</a></li>
+							<li><a href="#ppt-chapter5">五、技术实现 -- 众妙之门</a></li>
 						</ol>
 					</div>
 				</section>
@@ -769,9 +629,9 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 			<article>
 		</div><!--/.slide-->
 
-		<div class="slide dir">
-			<style>
-			</style>
+		<!-- ==============第五章===================== -->
+
+		<div id="ppt-chapter5" class="slide dir">
 			<article>
 				<header>
 					<h2>目录</h2>
@@ -779,37 +639,11 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				<section>
 					<div class="content">
 						<ol>
-							<li><a href="#chapter1">一、CSS3 -- 让你眼前一亮</a></li>
-							<li><a href="#chapter2">二、浏览器限制 -- 理想与现实</a></li>
-							<li><a href="#chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
-							<li class="current"><a href="#chapter4">四、功能介绍 -- 细数家珍</a></li>
-							<li><a href="#chapter5">五、技术实现 -- 众妙之门</a></li>
-						</ol>
-					</div>
-				</section>
-				<footer>
-					<span class="site">http://www.baidu.com</span>
-				</footer>
-			<article>
-		</div><!--/.slide-->
-
-
-
-		<div class="slide dir">
-			<style>
-			</style>
-			<article>
-				<header>
-					<h2>目录</h2>
-				</header>
-				<section>
-					<div class="content">
-						<ol>
-							<li><a href="#chapter1">一、CSS3 -- 让你眼前一亮</a></li>
-							<li><a href="#chapter2">二、浏览器限制 -- 理想与现实</a></li>
-							<li><a href="#chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
-							<li><a href="#chapter4">四、功能介绍 -- 细数家珍</a></li>
-							<li class="current"><a href="#chapter5">五、技术实现 -- 众妙之门</a></li>
+							<li><a href="#ppt-chapter1">一、CSS3 -- 让你眼前一亮</a></li>
+							<li><a href="#ppt-chapter2">二、浏览器限制 -- 理想与现实</a></li>
+							<li><a href="#ppt-chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#ppt-chapter4">四、功能介绍 -- 细数家珍</a></li>
+							<li class="current"><a href="#ppt-chapter5">五、技术实现 -- 众妙之门</a></li>
 						</ol>
 					</div>
 				</section>
@@ -822,7 +656,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 
 
 
-		<div id="ppt1" class="slide">
+		<div id="ppt-qa" class="slide">
 			<div class="split1">
 			<h1>Q & A</h1>
 			</div>
@@ -830,14 +664,14 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 		</div>
 
 
-		<div id="ppt1" class="slide">
+		<div id="ppt-thx" class="slide">
 			<div class="split1">
 			<h1>谢谢！</h1>
 			</div>
 			<div class="split"><img src="logo.png" /><div class="line"></div></div>
 		</div>
 
-		<div class="slide sub introduce">
+		<div id="ppt-contact" class="slide sub introduce">
 			<style>
 			</style>
 			<article>
@@ -861,246 +695,61 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</section>
 			</article>
 		</div>
-	</div>
-	<div class="fullscreen">
-		<input type="button" value="Go Fullscreen" id="fsbutton" />
-		<p>Status: <span id="fsstatus"></span></p>
-	
-	</div>
-
-<script src="fullscreen.js"></script>
-<script>
-// do something interesting with fullscreen support
-var fsButton = baidu.dom.g('fsbutton'),
-	fsElement = baidu.dom.g('canvas'),
-	fsStatus = baidu.dom.g('fsstatus');
 
 
-if (window.fullScreenApi.supportsFullScreen) {
-	fsStatus.innerHTML = 'YES: Your browser supports FullScreen';
-	fsStatus.className = 'fullScreenSupported';
-	
-	// handle button click
-	fsButton.addEventListener('click', function() {
-		window.fullScreenApi.requestFullScreen(fsElement);
-	}, true);
-	
-	fsElement.addEventListener(fullScreenApi.fullScreenEventName, function() {
-		if (fullScreenApi.isFullScreen()) {
-			fsStatus.innerHTML = 'Whoa, you went fullscreen';
-		} else {
-			fsStatus.innerHTML = 'Back to normal';
-		}
-	}, true);
-	
-} else {
-	fsStatus.innerHTML = 'SORRY: Your browser does not support FullScreen';
-}
-</script>
+
+	<div class="help">
+		<div class="tip">[help]</div>
+		<div class="command">
+            <ul>
+              <li><span class="key">&larr;</span> and <span class="key">&rarr;</span> to move around.</li>
+              <li><span class="key">Ctrl/Command</span> and <span class="key">+</span> or <span class="key">-</span> to zoom in and out if slides don’t fit.</li>
+              <!-- <li><span class="key">S</span> to view page source.</li>
+              <li><span class="key">T</span> to change the theme.</li>
+              <li><span class="key">H</span> to toggle syntax highlight.</li>
+              <li><span class="key">N</span> to toggle speaker notes.</li>
+              <li><span class="key">3</span> to toggle 3D effect.</li>
+              <li><span class="key">0</span> to toggle help.</li> -->
+            </ul>
+			<div class="fullscreen">
+				<input type="button" value="Go Fullscreen" id="fsbutton" />
+				<p>Status: <span id="fsstatus"></span></p>
+			</div>		
+		</div>
+	</div><!-- /.help -->
+</div><!-- /#canvas -->
 
 
-  <script>
-		/**
-		@see http://www.html5rocks.com/
-		*/
-
-      var currentSlideNo;
-      var notesOn = false;
-      var slides = baidu.dom.query('.slide');
-      var touchStartX = 0;
-
-      // var slide_hash = window.location.hash.replace(/#/, '');
-      // if (slide_hash) {
-      //   for (var i = 0, len = slides.length; i < len; i++) {
-      //     if (slides[i].id == slide_hash) {
-      //       currentSlideNo = i;
-      //       updateSlideClasses(); 
-      //     }
-      //   }
-      // }
-
-	  /**
-		绑定Ctrl+点击，切换到相应PPT的事件
-	  */
-	  function clickOnSelect (e) {
-		if(e.ctrlKey) {
-			console.log(e);
-			var slide = $(e.target).closest('.slide');
-			console.log(slide);
-			var index = $(slide).data('slide-index');
-			console.log(index);
-			switchToSide(index);
-			e.preventDefault();	//别点到链接了
-		} else {
-			//忽略
-		}
-	  }
-      
-      function initialize() {
-        if (window.location.hash != "") {
-          currentSlideNo = Number(window.location.hash.replace('#slide', ''));
-        } else {
-          currentSlideNo = 1;
-        }
-
-        //document.addEventListener('keydown', handleBodyKeyDown, false);
-		baidu.event.on(document, 'keydown', handleBodyKeyDown, false);
-		$(document).delegate('.slide','click', clickOnSelect);
-		//$(document).delegate('[slide-index]','hover', clickOnSelect);
+	<link rel="stylesheet" type="text/css" src="ppt-show.css" />
+	<script src="fullscreen.js"></script>
+	<script>
+	// do something interesting with fullscreen support
+	var fsButton = baidu.dom.g('fsbutton'),
+		fsElement = baidu.dom.g('canvas'),
+		fsStatus = baidu.dom.g('fsstatus');
 
 
-        var els = slides;
-        for (var i = 0, el; el = els[i]; i++) {
-			baidu.dom.addClass(el, 'far-future');
-			$(el).data('slide-index', 1+i);
-			//console.log('hello:'+ $(el).data('slide-index'));
-          //el.className = 'slide far-future';
-        }
-        updateSlideClasses(); 
-        addTouchListeners();
-      }
-      
-      function getSlideEl(slideNo) {
-        if (slideNo > 0) {
-          return slides[slideNo - 1];
-        } else {
-          return null;
-        }
-      }
-      
-      function getSlideTitle(slideNo) {
-        var el = getSlideEl(slideNo);
-        
-        if (el) {
-          return el.getElementsByTagName('header')[0].innerHTML;
-        } else {
-          return null;
-        }
-      }
-      
-      function changeSlideElClass(slideNo, className) {
-        var el = getSlideEl(slideNo);
-        
-        if (el) {
-		  baidu.dom.removeClass(el, 'far-past past current future far-future');
-		  baidu.dom.addClass(el, className);
-          //el.className = 'slide ' + className;
-        }
-      }
-      function resetSlideClasses() {
-        var els = slides;
-        for (var i = 0, el; el = els[i]; i++) {
-			baidu.dom.addClass(el, 'far-future');
-			baidu.dom.removeClass(el, 'far-past past current future far-future');
-			//console.log('hello:'+ $(el).data('slide-index'));
-          //el.className = 'slide far-future';
-        }
-	  }
-      function updateSlideClasses() {
-        window.location.hash = "slide" + currentSlideNo;
-        changeSlideElClass(currentSlideNo - 2, 'far-past');
-        changeSlideElClass(currentSlideNo - 1, 'past');
-        changeSlideElClass(currentSlideNo, 'current');
-        changeSlideElClass(currentSlideNo + 1, 'future');
-        changeSlideElClass(currentSlideNo + 2, 'far-future');                
-      }
-      function  switchToHome() {
-		switchToSide(1);
-      }
-      function  switchToEnd() {
-		switchToSide(slides.length);
-      }
-      function switchToSide(num) {
-		resetSlideClasses();
-        if (num > 0 && num <= slides.length) {
-          currentSlideNo = num;
-        }
-        
-        updateSlideClasses();
-      }
-
-      function nextSlide() {
-        if (currentSlideNo < slides.length) {
-          currentSlideNo++;
-        }
-        
-        updateSlideClasses();
-      }
-      
-      function prevSlide() {
-        if (currentSlideNo > 1) {
-          currentSlideNo--;
-        }
-        updateSlideClasses();
-      }
-      
-      function switch3D() {
-        if (document.body.className.indexOf('three-d') == -1) {
-          document.getElementsByClassName('presentation')[0].style.webkitPerspective = '1000px';
-
-          document.body.className += ' three-d';
-        } else {
-          window.setTimeout("document.getElementsByClassName('presentation')[0].style.webkitPerspective = '0';", 2000);
-          document.body.className = document.body.className.replace(/three-d/, '');
-        }
-      }
-      
-      function showNotes() {
-        var notes = document.querySelectorAll('.notes');
-        for (var i = 0, len = notes.length; i < len; i++) {
-          notes[i].style.display = (notesOn) ? 'none':'block';
-        }
-        notesOn = (notesOn) ? false:true;
-      }
-      
-	  /*
-		keyCode: 36
-		keyIdentifier: "Home"
-
-		keyCode: 35
-		keyIdentifier: "End"
-	  */
-      function handleBodyKeyDown(event) {
-        switch (event.keyCode) {
-		case 33:	//pageUp
-        case 37: // left arrow
-            prevSlide();
-            break;
-		  case 32:	//Space
-		  case 34:	//pageDown
-          case 39: // right arrow
-          // case 32: // space
-            nextSlide();
-            break;
-          case 50: // 2
-            showNotes();          
-            break;
-		  case 35:	//End
-			event.ctrlKey && switchToEnd();
-			break;
-		  case 36:	//Home
-			event.ctrlKey && switchToHome();
-			break;
-        }
-      }
-      
-      function addTouchListeners() {
-        document.addEventListener('touchstart', function(e) {
-          touchStartX = e.touches[0].pageX;
-        }, false);
-        document.addEventListener('touchend', function(e) {
-          var pixelsMoved = touchStartX - e.changedTouches[0].pageX;
-          var SWIPE_SIZE = 150;
-          if (pixelsMoved > SWIPE_SIZE) {
-            nextSlide();
-          }
-          else if (pixelsMoved < -SWIPE_SIZE) {
-            prevSlide();
-          }
-        }, false);
-      }
-      
-      initialize();
-    </script>
+	if (window.fullScreenApi.supportsFullScreen) {
+		fsStatus.innerHTML = 'YES: Your browser supports FullScreen';
+		fsStatus.className = 'fullScreenSupported';
+		
+		// handle button click
+		fsButton.addEventListener('click', function() {
+			window.fullScreenApi.requestFullScreen(fsElement);
+		}, true);
+		
+		fsElement.addEventListener(fullScreenApi.fullScreenEventName, function() {
+			if (fullScreenApi.isFullScreen()) {
+				fsStatus.innerHTML = 'Whoa, you went fullscreen';
+			} else {
+				fsStatus.innerHTML = 'Back to normal';
+			}
+		}, true);
+		
+	} else {
+		fsStatus.innerHTML = 'SORRY: Your browser does not support FullScreen';
+	}
+	</script>
+  <script src="ppt-show.js"></script>
  </body>
 </html>
