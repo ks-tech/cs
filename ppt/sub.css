@@ -26,9 +26,7 @@
 				background: white;
 				text-shadow: rgba(0, 0, 0, 0.196) 0px 2px 5px;
 			}
-			.sub .content {
-				margin-top: 55px;
-			}
+
 			.x-list {
 				/*font-family: '黑体';*/
 				font-size: 48px;
@@ -38,4 +36,16 @@
 			}
 			.x-list dl dd {
 				font-size: 32px;
+			}
+			.content ul ul {
+				margin-left: 50px;
+			}	
+			.slide .less.content {
+				margin-top: 100px;
+			}
+			.slide .content {
+				margin-top: 55px;
+			}
+			.slide .more.content {
+				margin-top: 15px;
 			}
