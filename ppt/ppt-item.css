@@ -48,6 +48,13 @@
 		font-size: 19px;	/*14pt*/
 		padding: 20px;
 	}
+
+	.key.label {
+		background-color: #414141;
+		background-image: -webkit-linear-gradient(top, #555, #222);
+		background-image: -ms-linear-gradient(top, #555, #222);
+		background-repeat: repeat-x;
+	}
 	.footer .log {
 		position: absolute;
 		bottom: 0;

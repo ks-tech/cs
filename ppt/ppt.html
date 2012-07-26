@@ -5,8 +5,8 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 <html>
  <head>
   <meta charset="utf-8" />
-  <title> new document </title>
-  <meta name="author" content="NE">
+  <title>浏览器增强和差异化</title>
+  <meta name="author" content="NE,jindw">
   <meta name="keywords" content="">
   <meta name="description" content="">
   <link rel="stylesheet" type="text/css" href="reset.css" />
@@ -14,10 +14,10 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 	<link rel="stylesheet" type="text/css" href="sub.css" />
 	<link rel="stylesheet" type="text/css" href="ppt-item.css" />
 
-  <script type="text/javascript" src="http://img.baidu.com/js/tangram-base-1.5.2.1.js"></script>
-  <script src="http://lib.sinaapp.com/js/jquery/1.7/jquery.js"></script>
+	<script from="http://img.baidu.com/js/" src="tangram-1.5.2.2.js"></script>
+	<script src="jquery-1.7.2.js" rel="http://code.jquery.com/"></script>
   <!--[if lte IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="html5.js" rel="http://html5shim.googlecode.com/svn/trunk/"></script>
   <![endif]-->
  </head>
 
@@ -32,8 +32,8 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				<p class="desc">百度知识搜索部   梁东杰<br /> liangdongjie@baidu.com</p>
 				<p>
 				  Press 
-				  <span id="left-init-key" class="key label">→</span>
-				   key to advance.
+				  <span class="key label">→</span>
+				   key to GO
 				</p>
 			</div>
 			<div class="footer">
@@ -306,7 +306,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 							<li>
 								<dl>
 									<dt>终端条件处理</dt>
-									<dd>mediaQuery</dd>
+									<dd>mediaQuery 【TODO: 做一个简单效果】</dd>
 								</dl>
 							</li>
 						</ul>
@@ -460,7 +460,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</header>
 				<section>
 					<div class="content">
-						<p>某产品5月份情况</p>
+						<p>某产品5月份情况【换成饼图】</p>
 						<table class="browser-rat">
 						<thead>
 							<tr>
@@ -505,7 +505,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 		<div id="ppt-css3-support" class="slide sub">
 			<article>
 				<header>
-					<hgroup><h2>二、浏览器限制</h2> <span>&gt;&gt;</span><h3>CSS3环境</h3></hgroup>
+					<hgroup><h2>二、浏览器限制</h2> <span>&gt;&gt;</span><h3>CSS3环境【TODO：思路都得改】</h3></hgroup>
 				</header>
 				<section>
 					<div class="content" style=>
@@ -521,7 +521,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 								<dl><dt> 现代浏览器的前缀</dt><dd>-webkit- / -moz- /-o- /-ms- </dd></dl>
 							</li>
 							<li>
-								<dl><dt>IE9伪现代</dt><dd>border-image / muti-columns / transition... </dd></dl>
+								<dl><dt>IE9伪现代</dt><dd> text-shadow / transition /  muti-columns... </dd></dl>
 							</li>
 						</ul>
 					</div>
@@ -545,7 +545,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 									<dd>
 										<ul>
 											<li> 图形修饰、动画类可以忽略</li>
-											<li> 选择器类，影响可用性</li>
+											<li> 选择器类，影响可用性【TODO：用例子介绍（比如下拉菜单）】</li>
 										</ul>
 									</dd>
 								</dl>
@@ -605,6 +605,119 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</footer>
 			<article>
 		</div><!--/.slide-->
+
+		<div id="ppt-tool-provide" class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>浏览器增强实体产出</h3></hgroup>
+				</header>
+				<section>
+					<div class="content">
+						<p><abbr title="Color Stone, github.com/jindw/cs">cs</abbr>增强开发工具</p>
+						<blockquote>七彩石，女娲用来补天的。取名ColorStone，意为弥补浏览器不足</blockquote>
+						<p>目标浏览器：IE6/7/8/9; FF/Chrome,Safari/Opera</p>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+		<div id="ppt-tool-idea" class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>浏览器增强实体产出</h3></hgroup>
+				</header>
+				<section>
+					<div class="content">
+						<ul class="x-list">
+							<li>
+								<dl>
+									<dt> 解铃还须系铃人</dt>
+									<dd>
+										<ul>
+											<li> 用CSS解决CSS的问题</li>
+											<li> DOM操作友好</li>
+										</ul>
+									</dd>
+								</dl>
+							</li>
+							<li>
+							100％ 纯CSS3，不加料
+							</li>
+							<li>
+							保证可用性，稍有差异
+							</li>
+						</ul>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+		<div id="ppt-tool-use" class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>使用方式</h3></hgroup>
+				</header>
+				<section>
+					<div class="content">
+						<ul class="x-list">
+							<li>
+								<dl>
+									<dt> 安装/启动</dt>
+									<dd>
+										<pre>
+npm cs
+node –e “require(‘cs’)”										</pre>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>开发</dt>
+									<dd>
+									修改代码/实时查看效果
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>发布</dt>
+									<dd>
+									打包发布
+									</dd>
+								</dl>				
+								</li>
+						</ul>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+		<div id="ppt-tool-experience" class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>开发体验很重要 </h3></hgroup>
+				</header>
+				<section>
+					<div class="content">
+						<ul class="x-list">
+							<li>只关注最新标准</li>
+							<li>无附加的语法</li>
+							<li>自动编译，无需操作/等待</li>
+							<li>友好语法提醒</li>
+						</ul>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
 		<!-- ==============第四章===================== -->
 
 		<div id="ppt-chapter4" class="slide dir">
@@ -628,7 +741,40 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</footer>
 			<article>
 		</div><!--/.slide-->
-
+		<div id="ppt-tool-experience" class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>四、功能介绍</h2> <span>&gt;&gt;</span><h3>xxxxx </h3></hgroup>
+				</header>
+				<section>
+					<div class="content">
+						<ul class="x-list">
+							<li></li>
+						</ul>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
+		<div id="ppt-tool-experience" class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>四、功能介绍</h2> <span>&gt;&gt;</span><h3>高端浏览器的差异抹平 </h3></hgroup>
+				</header>
+				<section>
+					<div class="content">
+						<ul class="x-list">
+							<li>私有前缀（-prefix-）</li>
+						</ul>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			<article>
+		</div><!--/.slide-->
 		<!-- ==============第五章===================== -->
 
 		<div id="ppt-chapter5" class="slide dir">
@@ -720,8 +866,9 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 </div><!-- /#canvas -->
 
 
-	<link rel="stylesheet" type="text/css" src="ppt-show.css" />
+	<link rel="stylesheet" type="text/css" href="ppt-show.css" />
 	<script src="fullscreen.js"></script>
+	<script src="ppt-show.js"></script>
 	<script>
 	// do something interesting with fullscreen support
 	var fsButton = baidu.dom.g('fsbutton'),
@@ -750,6 +897,5 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 		fsStatus.innerHTML = 'SORRY: Your browser does not support FullScreen';
 	}
 	</script>
-  <script src="ppt-show.js"></script>
  </body>
 </html>

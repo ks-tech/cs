@@ -3,8 +3,11 @@
 	body {
 		margin:0;
 		padding: 0;
-		background: black;
+		width: 100%;
+		height: 100%;
+		position: absolute;
         overflow: hidden;
+		background: black;
 	}
 	html {
         *overflow: hidden;
@@ -46,9 +49,9 @@
 		box-shadow: 1px 1px 1px 0px #6CF;
 		border-radius: 10px;
 
-		transition: margin 0.25s ease-in-out; 
-        -webkit-transition: margin 0.25s ease-in-out; 
-        -moz-transition: margin 0.25s ease-in-out;
+		transition: margin 0.5s ease-in-out; 
+        -webkit-transition: margin 0.5s ease-in-out; 
+        -ms-transition: margin 0.5s ease-in-out;
 	}
   .slide:nth-child(even) {
 	border-top-left-radius: 20px;
@@ -85,7 +88,6 @@
 		-moz-transform: translate(500px,150px) scale(0.6) rotateZ(50deg);
 		-ms-transform: translate(500px,150px) scale(0.6) rotate(50deg);*/
 		-webkit-transform: translate(500px,0)  scale(0.5) rotateZ(-50deg);        
-		-moz-transform: translate(500px,0) scale(0.5) rotateZ(-50deg);
 		-ms-transform: translate(500px,0) scale(0.5) rotate(-50deg);
       }
       
@@ -101,7 +103,6 @@
 		opacity: 0.6;
 		/* 实现缩小的效果*/
 		-webkit-transform: translate(-384px,50px) scale(0.3) rotateZ(-50deg); 
-		-moz-transform: translate(-384px,150px) scale(0.3) rotateZ(-50deg);
 		-ms-transform: translate(-384px,150px) scale(0.3) rotate(-50deg);
       }
       

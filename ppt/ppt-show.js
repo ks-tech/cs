@@ -4,8 +4,9 @@
 
       var currentSlideNo;
       var notesOn = false;
-      var slides = baidu.dom.query('.slide');
-      var touchStartX = 0;
+      var slides = baidu.dom.query('.slide'); //from Index
+	  var slideIndexList = ['占位'];	//['#xxx', '#slide24'] //IndexOfId
+	  var slideList = {};	//idForDom
 
       // var slide_hash = window.location.hash.replace(/#/, '');
       // if (slide_hash) {
@@ -22,44 +23,90 @@
 	  */
 	  function clickOnSelect (e) {
 		if(e.ctrlKey) {
-			console.log(e);
+			//console.log(e);
 			var slide = $(e.target).closest('.slide');
-			console.log(slide);
+			//console.log(slide);
 			var index = $(slide).data('slide-index');
-			console.log(index);
+			//console.log(index);
 			switchToSide(index);
 			e.preventDefault();	//别点到链接了
 		} else {
 			//忽略
 		}
 	  }
-      
+	  /**
+		绑定目录的跳转
+	  */
+		function clickOnJump (e) {
+			var el = e.target;
+			if(el.tagName.toLowerCase() == 'a' && (el.href.indexOf('#ppt-') > -1)) {
+				var id = el.href.slice(el.href.indexOf('#ppt-'));
+				//console.log(id);
+				switchToId(id.replace('#',''));
+				e.preventDefault();
+			}
+		}
+	  /*<*/
+	  var currentSlideId = '';
+	  var currentSlideIndex = 1;
+      function indexToId (i) {
+		  return slideIndexList[i];
+      }
+	  function idToIndex (id) {
+		  return baidu.array.indexOf(slideIndexList, id);
+	  }
+	  function getLocationId () {
+		return window.location.hash.replace('#!/', '');
+	  }
+	  function setLocationId (id) {
+		window.location.hash = '!/'+id;
+	  }
       function initialize() {
-        if (window.location.hash != "") {
-          currentSlideNo = Number(window.location.hash.replace('#slide', ''));
-        } else {
-          currentSlideNo = 1;
-        }
-
-        //document.addEventListener('keydown', handleBodyKeyDown, false);
-		baidu.event.on(document, 'keydown', handleBodyKeyDown, false);
-		$(document).delegate('.slide','click', clickOnSelect);
-		//$(document).delegate('[slide-index]','hover', clickOnSelect);
-
-
+		 ///构建PPT队列
         var els = slides;
         for (var i = 0, el; el = els[i]; i++) {
+			//建立id/dom的
+			var id = el.id || 'slide'+(i+1);	
+			slideIndexList.push(id) ;
+			slideList[id] = el;
+			//console.log(slideIndexList.length-1+":"+id);
 			baidu.dom.addClass(el, 'far-future');
 			$(el).data('slide-index', 1+i);
 			//console.log('hello:'+ $(el).data('slide-index'));
           //el.className = 'slide far-future';
+        }      
+		
+		if (currentSlideId = getLocationId() ) {
+			//currentSlideId = window.location.hash.replace('#', '');
+			currentSlideIndex = Math.max(idToIndex(currentSlideId),1);
+
+			//currentSlideNo = Number(window.location.hash.replace('#slide', ''));
+        } else {
+			currentSlideIndex = 1;
+			currentSlideId = indexToId(currentSlideIndex);
+		
+			//currentSlideNo = 1;
         }
+		//console.log("index:"+currentSlideIndex);
+		//console.log('id:'+currentSlideId);
+	  /*>*/
+
+        //document.addEventListener('keydown', handleBodyKeyDown, false);
+		baidu.event.on(document, 'keydown', handleBodyKeyDown, false);
+		$(document).delegate('.slide','click', clickOnSelect);
+		$(document).delegate('a[href*=#ppt-]','click', clickOnJump);
+		//$(document).delegate('[slide-index]','hover', clickOnSelect);
+
+
+
         updateSlideClasses(); 
       }
       
       function getSlideEl(slideNo) {
         if (slideNo > 0) {
-          return slides[slideNo - 1];
+			return slideList[indexToId(slideNo)];
+
+			//return slides[slideNo - 1];
         } else {
           return null;
         }
@@ -69,7 +116,7 @@
         var el = getSlideEl(slideNo);
         
         if (el) {
-          return el.getElementsByTagName('header')[0].innerHTML;
+          return el.getElementsByTagName('hgroup')[0].innerHTML;
         } else {
           return null;
         }
@@ -85,8 +132,7 @@
         }
       }
       function resetSlideClasses() {
-        var els = slides;
-        for (var i = 0, el; el = els[i]; i++) {
+        for (var i = 1, el; idx = slideIndexList[i], el=slideList[idx]; i++) {
 			baidu.dom.addClass(el, 'far-future');
 			baidu.dom.removeClass(el, 'far-past past current future far-future');
 			//console.log('hello:'+ $(el).data('slide-index'));
@@ -94,62 +140,62 @@
         }
 	  }
       function updateSlideClasses() {
-        window.location.hash = "slide" + currentSlideNo;
+        //window.location.hash = "slide" + currentSlideNo;
+		setLocationId(slideIndexList[currentSlideIndex]);
+		/**
         changeSlideElClass(currentSlideNo - 2, 'far-past');
         changeSlideElClass(currentSlideNo - 1, 'past');
         changeSlideElClass(currentSlideNo, 'current');
         changeSlideElClass(currentSlideNo + 1, 'future');
-        changeSlideElClass(currentSlideNo + 2, 'far-future');                
+        changeSlideElClass(currentSlideNo + 2, 'far-future');  
+		**/
+        changeSlideElClass(currentSlideIndex - 2, 'far-past');
+        changeSlideElClass(currentSlideIndex - 1, 'past');
+        changeSlideElClass(currentSlideIndex, 'current');
+        changeSlideElClass(currentSlideIndex + 1, 'future');
+        changeSlideElClass(currentSlideIndex + 2, 'far-future'); 
       }
       function  switchToHome() {
 		switchToSide(1);
       }
       function  switchToEnd() {
-		switchToSide(slides.length);
+		//switchToSide(slides.length);
+		switchToSide(slideIndexList.length-1);
       }
+	  function switchToId(id){
+		switchToSide(idToIndex(id));
+	  }
       function switchToSide(num) {
 		resetSlideClasses();
         if (num > 0 && num <= slides.length) {
-          currentSlideNo = num;
+          //currentSlideNo = num;
+		  currentSlideIndex = num;
         }
         
         updateSlideClasses();
       }
 
       function nextSlide() {
+		 /*
         if (currentSlideNo < slides.length) {
           currentSlideNo++;
-        }
-        
+        }*/
+		if (currentSlideIndex < slideIndexList.length-1) {
+			currentSlideIndex++;
+		}
         updateSlideClasses();
       }
       
       function prevSlide() {
+		 /*
         if (currentSlideNo > 1) {
           currentSlideNo--;
-        }
+        }*/
+		if (currentSlideIndex > 1) {
+			currentSlideIndex--;
+		}
         updateSlideClasses();
       }
-      
-      function switch3D() {
-        if (document.body.className.indexOf('three-d') == -1) {
-          document.getElementsByClassName('presentation')[0].style.webkitPerspective = '1000px';
-
-          document.body.className += ' three-d';
-        } else {
-          window.setTimeout("document.getElementsByClassName('presentation')[0].style.webkitPerspective = '0';", 2000);
-          document.body.className = document.body.className.replace(/three-d/, '');
-        }
-      }
-      
-      function showNotes() {
-        var notes = document.querySelectorAll('.notes');
-        for (var i = 0, len = notes.length; i < len; i++) {
-          notes[i].style.display = (notesOn) ? 'none':'block';
-        }
-        notesOn = (notesOn) ? false:true;
-      }
-      
 	  /*
 		keyCode: 36
 		keyIdentifier: "Home"
