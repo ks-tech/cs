@@ -3,22 +3,28 @@ h3{
 }
 p{
 	padding:6px;
-	opacity:0.4;
+	/*opacity:0.4;*/
 }
 h3:hover{
+	background:rgba(0,255,0,0.1);
+	opacity:0.95;
 	border-bottom:1px solid red;
 }
-h3:hover+p{
+h3+p{
 	background:yellow;
+}
+h3:hover+p{
+	background:rgba(0,255,0,0.1);
 }
 
 h3:hover~p{
-	opacity:1;
+	/*opacity:1;*/
 	color:blue;
 }
-p:nth-child(even){
+p:nth-child(odd){
 	background:linear-gradient(0deg,white,blue);
 	font-weight:bold;
+	color:#333;
 }
 
 
@@ -31,6 +37,7 @@ p:nth-child(even){
 	height:122px;
 	overflow:hidden;
 	border:1px solid red;
+	color:#ccc;
 }
 .slide ul{
 	margin:0;padding:0;
