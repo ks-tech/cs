@@ -1,4 +1,7 @@
 <!doctype html>
+<!--
+thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
+-->
 <html>
  <head>
   <meta charset="utf-8" />
@@ -32,6 +35,11 @@
 			<div class="split"><img src="logo.png" /><div class="line"></div></div>
 			<div class="split2">
 				<p class="desc">百度知识搜索部   梁东杰<br /> liangdongjie@baidu.com</p>
+				<p>
+				  Press 
+				  <span id="left-init-key" class="key label">→</span>
+				   key to advance.
+				</p>
 			</div>
 			<div class="footer">
 				<p class="log">修改时间：2012.7.19（web ppt 2012.7.25）</p>
@@ -705,15 +713,17 @@
 
 		<div class="slide trans-pic trans2 sub">
 			<style>
+				.trans2 .content {
+					margin-top: 0;
+				}
 				.trans2 .word {
 
 					font-size: 40px;
-					color: white;
 					-webkit-transform-origin:left top;
 					-ms-transform-origin:left top;
 
-					-webkit-transform: translate(350px,-50px) rotate(-45deg);
-					-ms-transform: translate(350px,-50px) rotate(-45deg);
+					-webkit-transform: translate(250px,0) rotate(-45deg);
+					-ms-transform: translate(250px,0) rotate(-45deg);
 
 					-webkit-transition: -webkit-transform 2s ease-in-out;
 				}
@@ -724,8 +734,8 @@
 			<article>
 				<section>
 					<div class="content">
-						<div style="margin-left: 120px;">
-							<p><img src="pic-here-is-cs.png" /></p>
+						<div style="margin-left: 180px;">
+							<p><img src="pic-here-is-cs.jpg" /></p>
 							<p class="word">不怕，有它呢！</p>
 						</div>
 					</div>
@@ -1056,15 +1066,11 @@ if (window.fullScreenApi.supportsFullScreen) {
         case 37: // left arrow
             prevSlide();
             break;
+		  case 32:	//Space
 		  case 34:	//pageDown
           case 39: // right arrow
           // case 32: // space
             nextSlide();
-            break;
-			break;
-			break;
-          case 51: // 3
-            switch3D();          
             break;
           case 50: // 2
             showNotes();          
