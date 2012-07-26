@@ -27,7 +27,7 @@
 		left: 45px;
 		z-index: 5;
 	}
-	.slide.cover .line {
+	.slide .line {
 		margin-left: 100px;
 		position: absolute;
 		z-index: 4;
@@ -150,14 +150,23 @@
 { ****/
 
 	.dir {
-		background: #eee;
+		background: white;
 	}
 	.dir h2 {
 		font-size: 100px;
-		color: white;
+		color: #eee;
+		text-shadow: 1px 1px 2px gray, 0 0 0  black; #159326;
+	
+				/*.dir a{
+				#EEE
+	text-shadow: 1px 1px 2px white, 0 0 0  black; #159326;
+				color: rgba(200, 200, 200, 0.8);
+				text-shadow: 1px 1px 2px #08C, 0 0 0 black;
+				}*/
+
 		width: 400px;
 		text-align: center;
-		border-bottom: 2px solid white;
+		border-bottom: 2px solid #eee;
 	}
 	.dir ol .current {
 		font-size: 50px;
