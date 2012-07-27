@@ -224,6 +224,10 @@
 		  case 36:	//Home
 			event.ctrlKey && switchToHome();
 			break;
+		  case 27:
+		  	document.body.id =document.body.id=='outline'?'all':'outline';
+		  	break;
+		  default:
         }
       }
             
