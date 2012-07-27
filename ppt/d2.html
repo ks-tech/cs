@@ -401,7 +401,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</style>
 			<article>
 				<header>
-					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>终端适配很简单</h3></hgroup>
+					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>终端适配更简单</h3></hgroup>
 				</header>
 				<section>
 					<div class="content less">
@@ -474,7 +474,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 						</style>
 			<article>
 				<header>
-					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>轻松应乎普通开发</h3></hgroup>
+					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>轻松应付普通开发</h3></hgroup>
 				</header>
 				<section>
 					<div class="content">
@@ -613,7 +613,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 							</tr>
 						</thead>
 						</table -->
-						
+						<p>去围观：<a href="http://www.ie6countdown.com/">http://www.ie6countdown.com/</a></p>
 					</div>
 				</section>
 				<footer>
@@ -624,25 +624,29 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 		<div id="ppt-css3-support" class="slide sub">
 			<article>
 				<header>
-					<hgroup><h2>二、浏览器限制</h2> <span>&gt;&gt;</span><h3>CSS3环境【TODO：思路都得改】</h3></hgroup>
+					<hgroup><h2>二、浏览器限制</h2> <span>&gt;&gt;</span><h3>CSS3支持情况</h3></hgroup>
 				</header>
 				<section>
-					<div class="content" style=>
+					<div class="content more">
 						<ul class="x-list">
+							<li>IE6不用说了</li>
 							<li>
-								<dl>
-									<dt> IE6~8的落后</dt>
-									<dd>不支持新特性 / bug很多 / 兼容hack横飞
-									</dd>
+								<dl><dt>IE7比IE6 稍好</dt>
+								<dd>支持部分选择器，如[att$="val"],[att*="val"]</dd>
 								</dl>
 							</li>
 							<li>
-								<dl><dt> 现代浏览器的前缀</dt><dd>-webkit- / -moz- /-o- /-ms- </dd></dl>
+								<dl><dt>IE9是伪现代</dt>
+								<dd>有部分不支持：动画(transition、animation)、渐变背景、文本阴影、muti-columns</dd></dl>
 							</li>
 							<li>
-								<dl><dt>IE9伪现代</dt><dd> text-shadow / transition /  muti-columns... </dd></dl>
+								<dl>
+									<dt>高级浏览器良好，带前缀</dt>
+									<dd>-webkit/-moz/-o/-ms</dd>
+								</dl>
 							</li>
 						</ul>
+						<p>参考：http://www.findmebyip.com/litmus/</p>
 					</div>
 				</section>
 				<footer>
@@ -660,21 +664,20 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 						<ul class="x-list">
 							<li>
 								<dl>
-									<dt> 优雅降级？不易降呀</dt>
+									<dt> 优雅降级？</dt>
 									<dd>
 										<ul>
-											<li> 图形修饰、动画类可以忽略</li>
-											<li> 选择器类，影响可用性【TODO：用例子介绍（比如下拉菜单）】</li>
+											<li> 图形修饰、动画类可忽略</li>
+											<li> 选择器类，会影响可用性</li>
 										</ul>
 									</dd>
 								</dl>
 							</li>
 							<li>
-								<dl><dt> 低端浏览器增强很重要</dt>
+								<dl><dt>差异化不可避免</dt>
 								<dd><ul>
-									<li>解决差异问题依然值得重视</li>
 									<li>可用性不可忽略</li>
-									<li>差异化或许不可避免</li>
+									<li>解决差异问题依然值得重视</li>
 								</ul></dd></dl>
 							</li>
 						</ul>
@@ -694,7 +697,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 					<div class="content">
 						<div style="margin-left: 180px;">
 							<p><img src="pic-here-is-cs.jpg" /></p>
-							<p class="word">不怕，有它呢！</p>
+							<p class="word">不怕，有TA在！</p>
 						</div>
 					</div>
 				</section>
@@ -726,15 +729,28 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 		</div><!--/.slide-->
 
 		<div id="ppt-function-provide" class="slide sub">
+			<style>
+				.sub .text {
+					padding: 0 40px;
+				}
+				.sub .text dt {
+					font-size: 48px;
+				}
+				.sub .text dd {
+					font-size: 32px;
+				}
+			</style>
 			<article>
 				<header>
-					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>浏览器增强实体产出</h3></hgroup>
+					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>产出</h3></hgroup>
 				</header>
 				<section>
 					<div class="content">
-						<p><abbr title="Color Stone, github.com/jindw/cs">cs</abbr>增强开发工具</p>
-						<blockquote>七彩石，女娲用来补天的。取名ColorStone，意为弥补浏览器不足</blockquote>
-						<p>目标浏览器：IE6/7/8/9; FF/Chrome,Safari/Opera</p>
+						<dl class="text">
+						<dt>浏览器增强开发工具：ColorStone</dt>
+						<dd class="box">五色石(ColorStone)，出自“女娲补天”神话，相传是女娲用来补天的材料。项目取名<abbr title="Color Stone, github.com/jindw/cs">CS</abbr>，意为弥补浏览器不足</dd>
+						<dd><p>目标浏览器：IE6/7/8/9; FF/Chrome,Safari/Opera</p></dd>
+						</dl>
 					</div>
 				</section>
 				<footer>
@@ -745,7 +761,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 		<div id="ppt-function-idea" class="slide sub">
 			<article>
 				<header>
-					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>浏览器增强实体产出</h3></hgroup>
+					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>浏览器增强思路</h3></hgroup>
 				</header>
 				<section>
 					<div class="content">
@@ -762,7 +778,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 								</dl>
 							</li>
 							<li>
-							100％ 纯CSS3，不加料
+							纯CSS3，不加料
 							</li>
 							<li>
 							保证可用性，稍有差异
@@ -787,7 +803,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 								<dl>
 									<dt> 安装/启动</dt>
 									<dd>
-										<pre>
+										<pre class="box">
 npm cs
 node –e “require(‘cs’)”										</pre>
 									</dd>
@@ -820,7 +836,7 @@ node –e “require(‘cs’)”										</pre>
 		<div id="ppt-function-experience" class="slide sub">
 			<article>
 				<header>
-					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>开发体验很重要 </h3></hgroup>
+					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>保证开发体验 </h3></hgroup>
 				</header>
 				<section>
 					<div class="content">
@@ -871,19 +887,20 @@ node –e “require(‘cs’)”										</pre>
 							<li>
 								<dl>
 								<dt>选择器类</dt>
-								<dd>对比：ie7.js</dd>
+								<dd>对比：<a href="http://dean.edwards.name/IE7/">ie7.js(Dean Edwards)</a></dd>
 								</dl>
 							</li>
 							<li>
 								<dl>
 								<dt>图形修饰类</dt>
-								<dd>对比：CSS3PIE</dd>
+								<dd>对比：<a hef="http://css3pie.com/">CSS3PIE</a></dd>
 								</dl>
 							</li>
 							<li>
 								动画/变形/布局类
 							</li>
 						</ul>
+						<p><a href="http://www.xidea.org/cs">Color当前功能清单</a></p>
 					</div>
 				</section>
 				<footer>
@@ -897,9 +914,17 @@ node –e “require(‘cs’)”										</pre>
 					<hgroup><h2>四、功能介绍</h2> <span>&gt;&gt;</span><h3>高端浏览器的差异抹平 </h3></hgroup>
 				</header>
 				<section>
-					<div class="content less">
+					<div class="content">
 						<ul class="x-list">
-							<li>私有前缀（-prefix-）</li>
+							<li>
+							<dl><dt>私有前缀补全（-prefix-）</dt>
+							<dd class="box">transform: rotate(5deg);</dd>
+							<dd class="box">-webkit-transform: rotate(5deg);<br />
+								-moz-transform: rotate(5deg);<br />
+								-o-transform: rotate(5deg);<br />
+								-ms-transform: rotate(5deg);<br />
+								</dd>
+							</dl></li>
 						</ul>
 					</div>
 				</section>
@@ -914,16 +939,20 @@ node –e “require(‘cs’)”										</pre>
 					<hgroup><h2>四、功能介绍</h2> <span>&gt;&gt;</span><h3> 标准化hack语法 </h3></hgroup>
 				</header>
 				<section>
-					<div class="content less">
+					<div class="content">
 						<ul class="x-list">
+							<li>部分差异不方便抹平</li>
 							<li>
 								<dl>
-								<dt>语义化，易理解</dt>
-								<dd>-ie6/-ie7/-ie8/-ie9/-ms/-moz/-webkit/-o</dd>
+								<dt>将Hack语义化！易理解</dt>
+								<dd>
+									<p class="box">-ie6-width:  ==>  _width:</p>
+									<p>-ie6/-ie7/-ie8/-ie9/-ms/-moz/-webkit/-o</p>
+								</dd>
 								</dl>
 							</li>
 							<li>
-								编译生成，顺序无所谓了
+								编译生成，自动修正顺序
 							</li>
 						</ul>
 					</div>
@@ -985,31 +1014,21 @@ node –e “require(‘cs’)”										</pre>
 					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 模块介绍 </h3></hgroup>
 				</header>
 				<section>
-					<div class="content">
+					<div class="content more">
 						<ul class="x-list">
 							<li>
-								<dl><dt>基于Node的编译调试工具</dt>
+								<dl><dt>基于Node的编译、调试工具</dt>
 									<dd>
 										<ul>
-											<li>本地调试服务器实现开发调试自动化</li>
-											<li>
-												<dl>
-												<dt>按浏览器类型和版本生成多份兼容代码</dt>
-												<dd>
-													<ul>
-														<li>-ie6-,-ie7-,-ie8-</li>
-														<li>-ms-,-moz-,-webkit-</li>
-													</ul>
-												</dd>
-												</dl>
-											</li>
+											<li>编译生成兼容代码</li>
+											<li>本地服务器辅助开发调试</li>
 										</ul>
 									</dd>
 								</dl>
 							</li>
 							<li>
 								<dl>
-									<dt>运行时框架</dt>
+									<dt>运行时JS框架</dt>
 									<dd>用于IE类的支持</dd>
 								</dl>
 							</li>
@@ -1028,8 +1047,42 @@ node –e “require(‘cs’)”										</pre>
 					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 系统运行流程 </h3></hgroup>
 				</header>
 				<section>
-					<div class="content">
+					<div class="content more">
+						<p style="text-align:center;"><img src="tool-process.png" /></p>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			</article>
+		</div><!--/.slide-->
+		<div id="ppt-implement-ie" class="slide sub for-ie">
+			<style>
+				.for-ie .content .master-text{
+					padding: 32px;
+				}
+			</style>
+			<article>
+				<header>
+					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> IE兼容思路 </h3></hgroup>
+				</header>
+				<section>
+					<div class="content more">
+						<p class="master-text">采用专有属性及JS扩展等技术手段，让老版本的浏览器(如：IE6)支持更新的CSS标准</p>
 						<ul class="x-list">
+						<li>
+							<dl>
+								<dt>流程使用到技术：</dt>
+								<dd>
+									<ul>
+										<li>增强特性语法识别和配置：编译</li>
+										<li>元素效果初始化：expression/htc</li>
+										<li>图形效果及动画：滤镜</li>
+										<li>JS监听/条件轮询</li>
+									</ul>
+								</dd>
+							</dl>
+						</li>
 						</ul>
 					</div>
 				</section>
@@ -1038,27 +1091,49 @@ node –e “require(‘cs’)”										</pre>
 				</footer>
 			</article>
 		</div><!--/.slide-->
-		<div id="ppt-implement-ie" class="slide sub">
+		<div id="ppt-implement-build" class="slide sub">
+			<style>
+			.center {text-align:center;}
+			</style>
 			<article>
 				<header>
-					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> IE兼容思路 </h3></hgroup>
+					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 编译模块插件化 </h3></hgroup>
 				</header>
 				<section>
-					<div class="content">
-						<p>采用专有属性及JS扩展等技术手段，让老版本的浏览器(如：IE6)支持更新的CSS标准</p>
-						<dl>
-							<dt>用到技术：</dt>
-							<dd>
-								<ul>
-									<li>编译</li>
-									<li>expression/htc</li>
-									<li>滤镜</li>
-									<li>监听/条件轮询</li>
-								</ul>
-							</dd>
-						</dl>
-						<ul class="x-list">
-						</ul>
+					<div class="content more">
+						<p class="center"><img src="build-plugin.png" /></p>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			</article>
+		</div><!--/.slide-->
+		<div id="ppt-implement-fw" class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 运行时框架工作原理 </h3></hgroup>
+				</header>
+				<section>
+					<div class="content more">
+						<p style="text-align:center">
+							<img src="ie-runtime-fw.png" />
+						</p>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			</article>
+		</div><!--/.slide-->
+		<div id="ppt-implement-runtime" class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 运行时框架插件化 </h3></hgroup>
+				</header>
+				<section>
+					<div class="content more">
+						<p><img src="runtime-plugin-api.png" /></p>
 					</div>
 				</section>
 				<footer>
@@ -1085,90 +1160,6 @@ node –e “require(‘cs’)”										</pre>
 				</footer>
 			</article>
 		</div><!--/.slide-->
-		<div id="ppt-implement-build" class="slide sub">
-			<article>
-				<header>
-					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 编译模块插件化 </h3></hgroup>
-				</header>
-				<section>
-					<div class="content">
-						<ul class="x-list">
-							<li>
-								<dl><dt>基于Node的编译调试工具</dt>
-									<dd>
-										<ul>
-											<li>本地调试服务器实现开发调试自动化</li>
-											<li>
-												<dl>
-												<dt>按浏览器类型和版本生成多份兼容代码</dt>
-												<dd>
-													<ul>
-														<li>-ie6-,-ie7-,-ie8-</li>
-														<li>-ms-,-moz-,-webkit-</li>
-													</ul>
-												</dd>
-												</dl>
-											</li>
-										</ul>
-									</dd>
-								</dl>
-							</li>
-							<li>
-								<dl>
-									<dt>运行时框架</dt>
-									<dd>用于IE类的支持</dd>
-								</dl>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<footer>
-					<span class="site">http://www.baidu.com</span>
-				</footer>
-			</article>
-		</div><!--/.slide-->
-		<div id="ppt-implement-runtime" class="slide sub">
-			<article>
-				<header>
-					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 运行时框架插件化 </h3></hgroup>
-				</header>
-				<section>
-					<div class="content">
-						<ul class="x-list">
-							<li>
-								<dl><dt>基于Node的编译调试工具</dt>
-									<dd>
-										<ul>
-											<li>本地调试服务器实现开发调试自动化</li>
-											<li>
-												<dl>
-												<dt>按浏览器类型和版本生成多份兼容代码</dt>
-												<dd>
-													<ul>
-														<li>-ie6-,-ie7-,-ie8-</li>
-														<li>-ms-,-moz-,-webkit-</li>
-													</ul>
-												</dd>
-												</dl>
-											</li>
-										</ul>
-									</dd>
-								</dl>
-							</li>
-							<li>
-								<dl>
-									<dt>运行时框架</dt>
-									<dd>用于IE类的支持</dd>
-								</dl>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<footer>
-					<span class="site">http://www.baidu.com</span>
-				</footer>
-			</article>
-		</div><!--/.slide-->
 		<div id="ppt-implement-performance-optimization" class="slide sub">
 			<article>
 				<header>
@@ -1179,7 +1170,7 @@ node –e “require(‘cs’)”										</pre>
 						<ul class="x-list">
 							<li>
 								<dl>
-									<dt>expression/htc</dt><dd>能被有效覆盖是关键</dd>
+									<dt>expression/htc</dt><dd>只运行一次，初始化后即被覆盖</dd>
 								</dl>
 							</li>
 							<li>
@@ -1246,9 +1237,9 @@ node –e “require(‘cs’)”										</pre>
 					<div class="content">
 						<ul class="x-list">
 							<li>原生CSS3语法</li>
+							<li>支持较全面</li>
 							<li>DOM修改友好</li>
 							<li>更可靠的性能（编译期优化）</li>
-							<li>支持较全面</li>
 						</ul>
 					</div>
 				</section>
