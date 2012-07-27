@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<title>用户认证_百度知道</title>
+<link href="./default.css" rel="stylesheet" type="text/css">
+<link type="text/css" rel="stylesheet" href="./index.css">
+</head>
+<body>
+      <div class="clearfix" id="usrbar"><ul class="usr-infos"><li><a href="http://www.baidu.com/" id="baidu-index">百度首页</a></li><li class="line">|</li><li><a href="https://passport.baidu.com/?login" id="usrbar-login">登录</a></li><li><a href="javascript:void(0);" id="usrbar-reg" target="_blank">注册</a></li></ul></div>
+      <div id="header">
+            <div class="top-search-box clearfix" id="top-search-box">
+            <a class="logo" href="http://zhidao.baidu.com/"><img alt="" width="137" height="46" src="./images/logo-zhidao.gif"></a>
+            <ul class="channel">
+                <li><a log="key:2012,sc_pos:c_news" href="http://news.baidu.com/">新闻</a></li><li><a log="key:2012,sc_pos:c_baidu" href="http://www.baidu.com/">网页</a></li> <li><a log="key:2012,sc_pos:c_tieba" href="http://tieba.baidu.com/">贴吧</a></li><li><strong>知道</strong></li> <li><a log="key:2012,sc_pos:c_mp3" href="http://mp3.baidu.com/">MP3</a></li> <li><a log="key:2012,sc_pos:c_pic" href="http://image.baidu.com/">图片</a></li><li><a log="key:2012,sc_pos:c_video" href="http://video.baidu.com/">视频</a></li><li><a log="key:2012,sc_pos:c_map" href="http://map.baidu.com/">地图</a></li> <li><a log="key:2012,sc_pos:c_baike" href="http://baike.baidu.com/">百科</a></li><li><a log="key:2012,sc_pos:c_doc" href="http://wenku.baidu.com/">文库</a></li> 
+            </ul>
+            <form action="http://zhidao.baidu.com/q" id="top-search-form" method="get" name="top-search-form">
+                <div class="box" style="position:relative;width:650px">
+                    <span class="top-search-box-bg"></span>
+                    <input class="hdi" id="kw" maxlength="256" name="word" size="46" tabindex="1" value="">
+                </div>
+                <div class="btns" style="width:650px">
+<!-- 增强点1 input 的 hover,active,focus 三态效果 -->
+                    <span class="btn-wrap"><input type="button" id="top-search-btn" hidefocus="true" tabindex="2" value="搜索答案" class="state"></span> 
+                    <span class="btn-wrap"><input type="button" id="top-ask-btn" hidefocus="true"  tabindex="3" value="我要提问" class="state"></span>
+                    <span class="btn-wrap"><input type="button" id="top-answer-btn" hidefocus="true" tabindex="4" value="我要回答" class="state"></span>
+		    		<span class="example">按钮三态<pre>input.state{
+	border:1px solid #333;
+	width:95px;height:32px;
+}
+
+input.state:hover{
+	background-image:linear-gradient(90deg,#fff,#999);
+}
+input.state:active{
+	border:1px solid #f66;
+	box-shadow:0 0 3px red;
+	background-image:linear-gradient(90deg,#999,#fff);
+}</pre></span>
+                </div>
+            </form>
+        </div>
+
+        <div class="menu" id="menu">
+	     <div class="main-menu" style="clear:both">
+		<div class="outer">
+		    <div class="inner">
+			<ul>
+				<li class="first"><a class="first" href="http://zhidao.baidu.com/">知道首页</a></li>
+				<li class=""><a href="http://zhidao.baidu.com/team">知道团队</a></li>
+				<li class="current"><a href="./zhidao.htm">知道公社</a></li>
+				<li class=""><a href="http://zhidao.baidu.com/s/activity/index.html">知道活动</a></li>
+				<li class="three"><a class="three" href="http://light.baidu.com/" target="_blank">小桔灯</a></li>
+				<li class="two"><a class="two" target="_blank" href="http://jingyan.baidu.com/">经验</a></li>
+			</ul>
+                        <span class="total">累计解决问题：<span id="hasDone-e">205346926</span></span>
+		</div>
+	      </div>
+	</div>
+	<div class="sub-menu"> 
+		<ul> 
+			<li><a>知道认证</a></li> 
+			<li><a href="http://zhidao.baidu.com/user/admin">知道管理员</a></li> 
+			<li><a href="http://zhidao.baidu.com/s/star/index.html">知道之星</a></li>
+			<li><a href="http://zhidao.baidu.com/upf/?expert">知道专家</a></li>
+			<li><a href="http://zhidao.baidu.com/shop">知道商城</a></li> 
+		</ul> 
+		<span class="example">节点顺序<pre>.sub-menu li:last-child{border:none}</pre></span>
+	</div>
+	<div id="body">
+
+               <div id="main" class="span-33">
+                       <div class="banner clearfix">
+                       
+<!-- 动画 -->
+<ul id="wall">
+	<li><img src="./images/1.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/2.jpg"/><div><h4>雨鱼郁玉</h4><p>百度知道烦恼分类名人</p></div></li>
+	<li><img src="./images/3.jpg"/><div><h4>地狱流浪</h4><p>北京大学传播专业学生</p></div></li>
+	<li><img src="./images/4.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/5.jpg"/><div><h4>如若初筱</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/6.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/7.jpg"/><div><h4>透明的小雪球</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/8.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/9.jpg"/><div><h4>比尔盖茨李</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/10.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/11.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/12.jpg"/><div><h4>企鹅mmc</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/13.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/14.jpg"/><div><h4>小林中国</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/15.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/16.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/17.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/18.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/19.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/20.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/21.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/22.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/23.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+	<li><img src="./images/24.jpg"/><div><h4>黑色七玄</h4><p>百度知道完美游戏分类打人</p></div></li>
+</ul>
+
+
+
+
+              <a class="buttons" href="http://zhidao.baidu.com/s/info" id="btn-apply">
+              	<span style="position:relative;top:-20px;left:-80px" class="example">动画提示:
+<pre>
+#wall li div{
+	width:0px;height:65px;
+	-webkit-transition:width 0.4s;
+	background:rgba(0,150,0,0.8);
+	...
+}
+#wall li:hover div{
+	width:180px;
+	...
+}
+</pre>
+</span>
+              
+              </a>
+                                             </div>
+                                             <div class="page">
+                                                     <dl class="recommend clearfix">
+      <dt class="hd clearfix">
+	    <a id="login-apply" href="javascript://" class="buttons btn-auth" style="">马上登陆 申请认证</a>
+      </dt>
+      <dd>
+            <ul class="clearfix">
+                 <li>
+                      <dl>
+		            <dt>
+			          <a target="_blank" href="http://hi.baidu.com/du%D0%A1%D5%E6/blog/item/ec65f7a10d5567294a36d61d.html"><img title="coollaohu" src="./images/coollaohu.jpg"></a>
+		           </dt>
+		           <dd class="user-id">
+			          <a target="_blank" href="http://hi.baidu.com/du%D0%A1%D5%E6/blog/item/ec65f7a10d5567294a36d61d.html">coollaohu</a>
+		           </dd>
+		           <dd title="百度知道精英团燕赵群雄团团长" class="abstract">百度知道精英团燕赵群雄团团...</dd>
+	               </dl>
+	         </li>
+	         <li>
+                      <dl>
+		            <dt>
+			          <a target="_blank" href="http://hi.baidu.com/du_xiaozhen/item/c004e31104c3065a3b176e43"><img title="scut_benladen2" src="./images/scut.jpg"></a>
+		           </dt>
+		           <dd class="user-id">
+			          <a target="_blank" href="http://hi.baidu.com/du_xiaozhen/item/c004e31104c3065a3b176e43">scut_benladen2</a>
+		           </dd>
+		           <dd title="华南理工大学广州汽车学院学生" class="abstract">华南理工大学广州汽车学院学...</dd>
+	               </dl>
+	         </li>
+                 <li>
+                      <dl>
+		            <dt>
+			          <a target="_blank" href="http://hi.baidu.com/du_xiaozhen/item/4994311179c3c4fd5e53b147"><img title="瑾珆" src="./images/jy.jpg"></a>
+		           </dt>
+		           <dd class="user-id">
+			          <a target="_blank" href="http://hi.baidu.com/du_xiaozhen/item/4994311179c3c4fd5e53b147">瑾珆</a>
+		           </dd>
+		           <dd title="百度知道文化艺术分类达人" class="abstract">百度知道文化艺术分类达人</dd>
+	               </dl>
+	         </li>
+                 <li>
+                      <dl>
+		            <dt>
+			          <a target="_blank" href="http://hi.baidu.com/du_xiaozhen/item/02ce203be4c3cd93f4e4ad47"><img title="hahazil" src="./images/hahazil-1.jpg"></a>
+		           </dt>
+		           <dd class="user-id">
+			          <a target="_blank" href="http://hi.baidu.com/du_xiaozhen/item/02ce203be4c3cd93f4e4ad47">hahazil</a>
+		           </dd>
+		           <dd title="建筑结构设计软件销售" class="abstract">建筑结构设计软件销售</dd>
+	               </dl>
+	         </li>
+                 <li>
+                      <dl>
+		            <dt>
+			          <a target="_blank" href="http://hi.baidu.com/du%D0%A1%D5%E6/blog/item/621a6012ad36ec3f403417c7.html"><img title="醉话吟" src="./images/zhy-1.jpg"></a>
+		           </dt>
+		           <dd class="user-id">
+			          <a target="_blank" href="http://hi.baidu.com/du%D0%A1%D5%E6/blog/item/621a6012ad36ec3f403417c7.html">醉话吟</a>
+		           </dd>
+		           <dd title="百度知道文化艺术分类名人" class="abstract">百度知道文化艺术分类名人</dd>
+	               </dl>
+	         </li>
+                 <li>
+                      <dl>
+		            <dt>
+			          <a target="_blank" href="http://hi.baidu.com/du%D0%A1%D5%E6/blog/item/78b3b402c4520bd47acbe13b.html"><img title="球球roye1017" src="./images/roye135.jpg"></a>
+		           </dt>
+		           <dd class="user-id">
+			          <a target="_blank" href="http://hi.baidu.com/du%D0%A1%D5%E6/blog/item/78b3b402c4520bd47acbe13b.html">球球roye1017</a>
+		           </dd>
+		           <dd title="百度知道文化艺术分类名人" class="abstract">百度知道文化艺术分类名人</dd>
+	               </dl>
+	         </li>
+             </ul>
+      </dd>
+</dl>
+                                                     <iframe height="450px" frameborder="0" width="978px" scrolling="no" src="http://zhidao.baidu.com/s/auth/classify.html"></iframe>
+                                                     <div class="pop-links">
+	<dl>
+	      <dt>常见问题：</dt>
+	      <dd><a target="_blank" href="http://www.baidu.com/search/zhidao_help.html#为什么要进行知道认证">为什么要进行知道认证？</a></dd>
+	      <dd><a target="_blank" href="http://www.baidu.com/search/zhidao_help.html#如何申请知道认证">如何申请知道认证？</a></dd>
+	</dl>
+	<dl>
+	       <dt>常用贴吧&amp;HI群</dt>
+	       <dd><a target="_blank" href="http://tieba.baidu.com/f?kw=%B0%D9%B6%C8%D6%AA%B5%C0%C8%CF%D6%A4%D3%C3%BB%A7">知道认证用户吧</a></dd>
+	       <dd><a target="_blank" href="http://hi.baidu.com/%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93%E5%85%AC%E5%91%8A/blog/item/f6fdc716be96dd02962b430c.html">认证用户交流群</a></dd>
+	</dl>
+	<dl>
+		<dt>意见交流：</dt>
+		<dd><a target="_blank" href="mailto:zhidaorz@baidu.com">zhidaorz@baidu.com</a></dd>
+	</dl>
+</div>
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+                                             </div>
+                                      </div>
+                             </div>
+<div id="footer" style="margin-bottom: 30px;">
+<p><a href="http://www.baidu.com/search/zhidao_help.html" target="_blank">帮助</a>
+|
+<a href="http://tieba.baidu.com/f?kw=%D6%AA%B5%C0%D2%E2%BC%FB%C9%E7" target="_blank">反馈建议</a>
+|
+<a href="http://tousu.baidu.com/zhidao" target="_blank">投诉举报</a>
+|
+<a href="http://zhidao.baidu.com/iknowcode.html" target="_blank">百度知道免费代码</a>
+</p>
+<p>
+<span class="copyright">&#169;2012 Baidu&nbsp;&nbsp;</span>
+<a href="http://www.baidu.com/duty/" target="_blank">使用百度前必读</a>
+|
+<a href="http://www.baidu.com/search/zhidao_help.html#知道协议" target="_blank">知道协议</a>
+|
+<a href="http://zhidao.baidu.com/s/open" target="_blank">百度知道开放平台</a></p>
+
+</div>
+
+<style>
+#notify{
+	width:100px;
+	height:60px;
+	position:fixed;
+	bottom:10px;
+	right:10px;
+	background:white;
+	border:1px solid red;
+
+}
+</style>
+<div id="notify">
+<h2>推送消息</h2>
+<p>content</p>
+</div>
+
+
+</body></html>
