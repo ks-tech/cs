@@ -1,0 +1,64 @@
+input.state{
+	border:1px solid #333;
+	width:95px;height:32px;padding:0;
+}
+
+input.state:hover{
+	background-image:linear-gradient(90deg,#fff,#999);
+}
+input.state:active{
+	border:1px solid #f66;
+	background-image:linear-gradient(90deg,#999,#fff);
+}
+
+.sub-menu li:last-child{border:none}
+
+
+#wall{
+	height:204px;width:559px;
+	padding:2px;margin:0;
+	font-weight:200%;
+	font-size:120%;
+}
+#wall img{width:65px;height:65px;margin:0;padding:0;}
+#wall li{
+	position:relative;
+	float:left;
+	width:65px;height:65px;
+	margin:-1px;padding:0;
+	border:1px solid white;
+	cursor:pointer;
+	position:relative;
+	background:#333;
+	z-index:0;
+}
+
+#wall li div{
+	width:0px;height:65px;
+	transition:width 0.4s;
+	background:rgba(0,150,0,0.8);
+	display:inline-block;
+	margin:-1px;padding:0;
+	border:1px solid white;
+	position:absolute;
+	overflow:hidden;
+	left:65px;
+	z-index:999;
+}
+#wall li:hover div{
+	width:180px;
+	color:white;
+	border-color:green;
+}
+#wall li:hover{
+	z-index:999;
+	border-color:green;
+}
+
+
+
+
+
+.example{position:relative;border-bottom:4px dashed red; color:red;z-index:999;}
+.example pre{background:#666;display:none;position:absolute;left:0;top:12px;border:1px solid #333;z-index:999;}
+.example:hover pre{display:block}
