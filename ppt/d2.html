@@ -13,7 +13,6 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 	<link rel="stylesheet" type="text/css" href="main.css" />
 	<link rel="stylesheet" type="text/css" href="sub.css" />
 	<link rel="stylesheet" type="text/css" href="ppt-item.css" />
-	<link rel="stylesheet" type="text/css" href="ppt-outline.css" />
 
 	<script from="http://img.baidu.com/js/" src="tangram-1.5.2.2.js"></script>
 	<script src="jquery-1.7.2.js" rel="http://code.jquery.com/"></script>
@@ -22,7 +21,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
   <![endif]-->
  </head>
 
- <body id="outline">
+ <body class="test">
 	<div id="canvas">
 		<div id="ppt-cover" class="slide cover">
 			<div class="split1">
@@ -42,6 +41,8 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 			</div>
 		</div><!--/.slide-->
 		<div id="ppt-introduce" class="slide introduce sub">
+			<style>
+			</style>
 			<article>
 				<header>
 					<hgroup><h2>关于我</h2></hgroup>
@@ -76,26 +77,38 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 			</article>
 		</div><!--/.slide-->
 		<div id="ppt-summary" class="slide dir summary">
+			<style>
+				.summary .css3-to-browser {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					opacity: 0.5;
+				}
+			</style>
 			<article>
 				<header>
 					<h2>浏览器增强和差异化</h2>
 				</header>
 				<section>
-					<div class="content">
+					<div class="content more">
 						<div>
 							<dl>
-								<dt>何谓增强和差异化？</dt>
+								<dt>“增强”和“差异化”研究的什么？</dt>
 								<dd>
-									balabalala<br />
+									<strong>增强</strong>：让浏览器支持新的功能<br />
+									<strong>差异化</strong>：不同代码相同效果 或 同样代码不同效果
+
 								</dd>
 								<dt>方案目标</dt>
 								<dd>
-									为推动CSS3应用<br />
-									开发的一套<br />
-									跨浏览器<br />
-									实现效果增强和差异的方案
+									增强各路浏览器<br />
+									实现，标准化的CSS3开发和应用！
 								</dd>
 							</dl>
+						<div style="margin-top: 40px;">
+							（这里CSS3泛指，也包括部分CSS2特性）
+						</div>
+							<img class="css3-to-browser" src="browser-mini.jpg" />
 						</div>
 					</div>
 				</section>
@@ -112,9 +125,9 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				<section>
 					<div class="content">
 						<ol class="build">
-							<li><a href="#ppt-chapter1">一、CSS3 -- 让你眼前一亮</a></li>
-							<li><a href="#ppt-chapter2">二、浏览器限制 -- 理想与现实</a></li>
-							<li><a href="#ppt-chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#ppt-chapter1">一、CSS3 -- 看着很美</a></li>
+							<li><a href="#ppt-chapter2">二、浏览器限制 -- 现实残酷</a></li>
+							<li><a href="#ppt-chapter3">三、增强开发工具 -- 如获新生</a></li>
 							<li><a href="#ppt-chapter4">四、功能介绍 -- 细数家珍</a></li>
 							<li><a href="#ppt-chapter5">五、技术实现 -- 众妙之门</a></li>
 						</ol>
@@ -152,9 +165,9 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				<section>
 					<div class="content">
 						<ol>
-							<li class="current"><a href="#ppt-chapter1">一、CSS3 -- 让你眼前一亮</a></li>
-							<li><a href="#ppt-chapter2">二、浏览器限制 -- 理想与现实</a></li>
-							<li><a href="#ppt-chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li class="current"><a href="#ppt-chapter1">一、CSS3 -- 看着很美</a></li>
+							<li><a href="#ppt-chapter2">二、浏览器限制 -- 现实残酷</a></li>
+							<li><a href="#ppt-chapter3">三、增强开发工具 -- 如获新生</a></li>
 							<li><a href="#ppt-chapter4">四、功能介绍 -- 细数家珍</a></li>
 							<li><a href="#ppt-chapter5">五、技术实现 -- 众妙之门</a></li>
 						</ol>
@@ -177,19 +190,20 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 						<ul class="x-list">
 							<li>
 								<dl>
-									<dt>变换</dt>
-									<dd>transition</dd>
-								</dl>
-							</li>
-							<li>
-								<dl>
 									<dt>变形</dt>
 									<dd>transform</dd>
 								</dl>
+							</li>	
+							<li>
+								<dl>
+									<dt>过渡动画</dt>
+									<dd>transition</dd>
+								</dl>
 							</li>
+
 							<li>			
 								<dl>
-									<dt>动画</dt>
+									<dt>关键帧动画</dt>
 									<dd>animation</dd>
 								</dl>
 							</li>
@@ -197,7 +211,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 						</ul>
 					</div>
 					<div>
-						<mark>demo</mark>
+						<a href="demo/gallery/gallery.htm"><mark>DEMO</mark></a>
 					</div>
 				</section>
 				<footer>
@@ -222,7 +236,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 						</ul>
 					</div>
 					<div>
-						<mark>demo</mark>
+						<a href="demo/doraemon/doraemon.html"><mark>demo</mark></a>
 					</div>
 				</section>
 				<footer>
@@ -260,9 +274,6 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 							</li>
 						</ul>
 					</div>
-					<div>
-						<mark>demo</mark>
-					</div>
 				</section>
 				<footer>
 					<span class="site">http://www.baidu.com</span>
@@ -271,23 +282,81 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 		</div>
 
 		<div id="ppt-selector" class="slide sub">
+			<style>
+				.sub .example {
+					width: 35%;
+					display: inline-block;
+					padding: 10px 20px;
+					color: black;
+					background: rgba(235, 235, 235, 0.4);
+					-webkit-border-radius: 8px;
+					-khtml-border-radius: 8px;
+					-moz-border-radius: 8px;
+					border-radius: 8px;
+					margin-bottom: 10px;
+					border: 1px solid rgba(0, 0, 0, 0.2);
+				}
+				/*.sub ul.example {list-style-type:cycle(disk,circle,square,box);} */
+				.sub ul.example {
+					margin: 0;
+					list-style: none;
+				}
+				.example.nth li:nth-child(odd) {
+					background: rgba(0, 0, 0, 0.05);
+					color: #C61800;
+					text-shadow: #C61800 0 0 1px;
+				}
+				.example.nth li:nth-child(even) {
+					background: #BBB;
+					color: white;
+				}
+				.diff > li:first-child {
+					background: blue;
+					color: orange;
+				}
+				.diff > li:last-child {
+					background: green;
+					color: yellow;
+				}
+			
+			</style>
 			<article>
 				<header>
 					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>模板hack都可以靠边站</h3></hgroup>
 				</header>
 				<section>
-					<div class="content less">
+					<div class="content">
 						<ul class="x-list">
 							<li>
 								<dl>
 									<dt> 结构匹配</dt>
-									<dd>nth-child系列</dd>
+									<dd>
+									:nth-child(nth/odd/even), :nth-of-type(nth)等,<br />
+									:first-child, :last-child, :empty等
+									</dd>
+									<dd>
+										<ul class="example nth"> 
+										  <li>Row 1</li> 
+										  <li>Row 2</li> 
+										  <li>Row 3</li> 
+										  <li>Row 4</li> 
+										</ul>
+										<ul class="example diff"> 
+										  <li>Row 1</li> 
+										  <li>Row 2</li> 
+										  <li>Row 3</li> 
+										  <li>Row 4</li> 
+										</ul>
+									</dd>
+									<dt></dt>
+									<dd></dd>
 								</dl>
 							</li>
 						</ul>
 					</div>
 					<div>
-						<mark>demo</mark>
+					<div>
+					</div>
 					</div>
 				</section>
 				<footer>
@@ -297,9 +366,42 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 		</div><!--/.slide-->
 
 		<div id="ppt-terminal" class="slide sub">
+				<style>
+					.box {
+						padding: 10px 20px;
+						color: black;
+						border-radius: 8px;
+						margin-bottom: 10px;
+						border: 1px solid rgba(0, 0, 0, 0.2);
+					}
+					@media (max-width: 699px) {
+						.sub .width-query:before {
+							content: 'width: ~ 699px';
+							color: blue;
+						}					
+					}
+					@media (min-width: 700px) and (max-width: 1000px) {
+						.sub .width-query:before {
+							content: 'width: 700px ~ 1000px';
+							color: green;
+						}					
+					}
+					@media (min-width: 1001px) and (max-width: 1024px) {
+						.sub .width-query:before {
+							content: 'width: 1001px ~ 1024px';
+							color: orange;
+						}
+					}
+					@media (min-width: 1025px) {
+						.sub .width-query:before {
+							content: 'width: 1025px ~ ';
+							color: red;
+						}
+					}
+				</style>
 			<article>
 				<header>
-					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>终端适配很简单</h3></hgroup>
+					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>终端适配更简单</h3></hgroup>
 				</header>
 				<section>
 					<div class="content less">
@@ -307,13 +409,14 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 							<li>
 								<dl>
 									<dt>终端条件处理</dt>
-									<dd>mediaQuery 【TODO: 做一个简单效果】</dd>
+									<dd>mediaQuery </dd>
+									<dd>
+									<div class="box">页面宽度是？<span class="width-query"></span></div>
+									</dd>
+
 								</dl>
 							</li>
 						</ul>
-					</div>
-					<div>
-						<mark>demo</mark>
 					</div>
 				</section>
 				<footer>
@@ -323,9 +426,55 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 		</div><!--/.slide-->
 
 		<div id="ppt-simple-dev" class="slide sub">
+			<style>
+				.pd40 {
+					padding: 40px;
+				}
+			</style>
+<!-- from css3PIE -->
+						<style>
+							.css3pie-button {
+								border: 1px solid #696;
+								padding: 20px 0;
+								width: 300px;
+								text-align: center;
+								border-radius: 8px;
+								box-shadow: inset white 1px 2px 2px, rgba(0, 0, 0, 0.6) 6px 8px 5px;
+								background: #EEFF99;
+								background: -webkit-gradient(linear, 0 0, 0 bottom, from(#EEFF99), to(#66EE33));
+								background: -webkit-linear-gradient(#EEFF99, #66EE33);
+								background: -moz-linear-gradient(#EEFF99, #66EE33);
+								background: -ms-linear-gradient(#EEFF99, #66EE33);
+								background: -o-linear-gradient(#EEFF99, #66EE33);
+								background: linear-gradient(#EEFF99, #66EE33);
+								font-size: 30px;
+								font-weight: bold;
+								color: white;
+							}
+							.baidu-search-button {
+								border: 1px solid #696;
+								padding: 60px 0;
+								text-align: center; width: 200px;
+								-webkit-border-radius: 8px;
+								-moz-border-radius: 8px;
+								border-radius: 8px;
+								-webkit-box-shadow: #666 0px 2px 3px;
+								-moz-box-shadow: #666 0px 2px 3px;
+								box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.196), 0px 1px 2px rgba(0, 0, 0, 0.047)
+								box-shadow: #666 0px 2px 3px;
+								background: #EEFF99;
+								background: -webkit-gradient(linear, 0 0, 0 bottom, from(#EEFF99), to(#66EE33));
+								background: -webkit-linear-gradient(#EEFF99, #66EE33);
+								background: -moz-linear-gradient(#EEFF99, #66EE33);
+								background: -ms-linear-gradient(#EEFF99, #66EE33);
+								background: -o-linear-gradient(#EEFF99, #66EE33);
+								background: linear-gradient(#EEFF99, #66EE33);
+							}
+						
+						</style>
 			<article>
 				<header>
-					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>轻松应乎普通开发</h3></hgroup>
+					<hgroup><h2>一、CSS3</h2> <span>&gt;&gt;</span><h3>轻松应付普通开发</h3></hgroup>
 				</header>
 				<section>
 					<div class="content">
@@ -333,6 +482,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 							<dt>传统关键词</dt>
 							<dd>切图、改HTML、写JS、私有语法、用Hack、需求改到头大</dd>
 						</dl>
+						<div class="pd40">
 						<table class="button-dev-job">
 						<thead>
 							<tr>
@@ -356,56 +506,16 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 								<td>做成三态</td><td>得写JS帮忙了</td><td>:hover / :active</td>
 							</tr>
 							<tr>
-								<td>调整下立体感</td><td>重新切吧！</td><td>改css参数</td>
+								<td>调整下立体感</td><td>重新切吧 T_T</td><td>改css参数 :P </td>
 							</tr>
 						</thead>
 						</table>
-						
-					</div>
-					<div><!-- from css3PIE -->
-						<style>
-							.css3pie-button {
-								border: 1px solid #696;
-								padding: 60px 0;
-								text-align: center; width: 200px;
-								-webkit-border-radius: 8px;
-								-moz-border-radius: 8px;
-								border-radius: 8px;
-								-webkit-box-shadow: #666 0px 2px 3px;
-								-moz-box-shadow: #666 0px 2px 3px;
-								box-shadow: #666 0px 2px 3px;
-								background: #EEFF99;
-								background: -webkit-gradient(linear, 0 0, 0 bottom, from(#EEFF99), to(#66EE33));
-								background: -webkit-linear-gradient(#EEFF99, #66EE33);
-								background: -moz-linear-gradient(#EEFF99, #66EE33);
-								background: -ms-linear-gradient(#EEFF99, #66EE33);
-								background: -o-linear-gradient(#EEFF99, #66EE33);
-								background: linear-gradient(#EEFF99, #66EE33);
-							}
-							.baidu-search-button {
-								border: 1px solid #696;
-								padding: 60px 0;
-								text-align: center; width: 200px;
-								-webkit-border-radius: 8px;
-								-moz-border-radius: 8px;
-								border-radius: 8px;
-								-webkit-box-shadow: #666 0px 2px 3px;
-								-moz-box-shadow: #666 0px 2px 3px;
-								box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.196), 0px 1px 2px rgba(0, 0, 0, 0.047)
-								box-shadow: #666 0px 2px 3px;
-								background: #EEFF99;
-								background: -webkit-gradient(linear, 0 0, 0 bottom, from(#EEFF99), to(#66EE33));
-								background: -webkit-linear-gradient(#EEFF99, #66EE33);
-								background: -moz-linear-gradient(#EEFF99, #66EE33);
-								background: -ms-linear-gradient(#EEFF99, #66EE33);
-								background: -o-linear-gradient(#EEFF99, #66EE33);
-								background: linear-gradient(#EEFF99, #66EE33);
-							}
-						
-						</style>
+							<div style="margin-top: 40px; padding: 40px; background: url(button-wrapper-bg.jpg) no-repeat -50px -60px;">
+								<div class="css3pie-button">呦！切 It Now</div>
+							</div>
+						</div>
 					</div>
 					<div>
-						<mark>demo</mark>
 					</div>
 				</section>
 				<footer>
@@ -448,9 +558,9 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				<section>
 					<div class="content">
 						<ol>
-							<li><a href="#ppt-chapter1">一、CSS3 -- 让你眼前一亮</a></li>
-							<li class="current"><a href="#ppt-chapter2">二、浏览器限制 -- 理想与现实</a></li>
-							<li><a href="#ppt-chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#ppt-chapter1">一、CSS3 -- 看着很美</a></li>
+							<li class="current"><a href="#ppt-chapter2">二、浏览器限制 -- 现实残酷</a></li>
+							<li><a href="#ppt-chapter3">三、增强开发工具 -- 如获新生</a></li>
 							<li><a href="#ppt-chapter4">四、功能介绍 -- 细数家珍</a></li>
 							<li><a href="#ppt-chapter5">五、技术实现 -- 众妙之门</a></li>
 						</ol>
@@ -468,9 +578,12 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 					<hgroup><h2>二、浏览器限制</h2> <span>&gt;&gt;</span><h3>浏览器分布</h3></hgroup>
 				</header>
 				<section>
-					<div class="content">
-						<p>某产品5月份情况【换成饼图】</p>
-						<table class="browser-rat">
+					<div class="content pd40 more">
+						<p style="text-align: center">
+							某产品5月份情况<br /><br />
+							<img src="browser-rat.JPG" />
+						</p>
+						<!-- table class="browser-rat">
 						<thead>
 							<tr>
 								<th>浏览器</th><th>占比</th>
@@ -499,11 +612,8 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 								<td>其他</td><td><div style="width: 0%; $background: rba(0,0, 255, 0.6);"> - </div></td>
 							</tr>
 						</thead>
-						</table>
-						
-					</div>
-					<div>
-						<mark>demo</mark>
+						</table -->
+						<p>去围观：<a href="http://www.ie6countdown.com/">http://www.ie6countdown.com/</a></p>
 					</div>
 				</section>
 				<footer>
@@ -514,25 +624,29 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 		<div id="ppt-css3-support" class="slide sub">
 			<article>
 				<header>
-					<hgroup><h2>二、浏览器限制</h2> <span>&gt;&gt;</span><h3>CSS3环境【TODO：思路都得改】</h3></hgroup>
+					<hgroup><h2>二、浏览器限制</h2> <span>&gt;&gt;</span><h3>CSS3支持情况</h3></hgroup>
 				</header>
 				<section>
-					<div class="content" style=>
+					<div class="content more">
 						<ul class="x-list">
+							<li>IE6不用说了</li>
 							<li>
-								<dl>
-									<dt> IE6~8的落后</dt>
-									<dd>不支持新特性 / bug很多 / 兼容hack横飞
-									</dd>
+								<dl><dt>IE7比IE6 稍好</dt>
+								<dd>支持部分选择器，如[att$="val"],[att*="val"]</dd>
 								</dl>
 							</li>
 							<li>
-								<dl><dt> 现代浏览器的前缀</dt><dd>-webkit- / -moz- /-o- /-ms- </dd></dl>
+								<dl><dt>IE9是伪现代</dt>
+								<dd>有部分不支持：动画(transition、animation)、渐变背景、文本阴影、muti-columns</dd></dl>
 							</li>
 							<li>
-								<dl><dt>IE9伪现代</dt><dd> text-shadow / transition /  muti-columns... </dd></dl>
+								<dl>
+									<dt>高级浏览器良好，带前缀</dt>
+									<dd>-webkit/-moz/-o/-ms</dd>
+								</dl>
 							</li>
 						</ul>
+						<p>参考：http://www.findmebyip.com/litmus/</p>
 					</div>
 				</section>
 				<footer>
@@ -550,21 +664,20 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 						<ul class="x-list">
 							<li>
 								<dl>
-									<dt> 优雅降级？不易降呀</dt>
+									<dt> 优雅降级？</dt>
 									<dd>
 										<ul>
-											<li> 图形修饰、动画类可以忽略</li>
-											<li> 选择器类，影响可用性【TODO：用例子介绍（比如下拉菜单）】</li>
+											<li> 图形修饰、动画类可忽略</li>
+											<li> 选择器类，会影响可用性</li>
 										</ul>
 									</dd>
 								</dl>
 							</li>
 							<li>
-								<dl><dt> 低端浏览器增强很重要</dt>
+								<dl><dt>差异化不可避免</dt>
 								<dd><ul>
-									<li>解决差异问题依然值得重视</li>
 									<li>可用性不可忽略</li>
-									<li>差异化或许不可避免</li>
+									<li>解决差异问题依然值得重视</li>
 								</ul></dd></dl>
 							</li>
 						</ul>
@@ -584,7 +697,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 					<div class="content">
 						<div style="margin-left: 180px;">
 							<p><img src="pic-here-is-cs.jpg" /></p>
-							<p class="word">不怕，有它呢！</p>
+							<p class="word">不怕，有TA在！</p>
 						</div>
 					</div>
 				</section>
@@ -601,9 +714,9 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				<section>
 					<div class="content">
 						<ol>
-							<li><a href="#ppt-chapter1">一、CSS3 -- 让你眼前一亮</a></li>
-							<li><a href="#ppt-chapter2">二、浏览器限制 -- 理想与现实</a></li>
-							<li class="current"><a href="#ppt-chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#ppt-chapter1">一、CSS3 -- 看着很美</a></li>
+							<li><a href="#ppt-chapter2">二、浏览器限制 -- 现实残酷</a></li>
+							<li class="current"><a href="#ppt-chapter3">三、增强开发工具 -- 如获新生</a></li>
 							<li><a href="#ppt-chapter4">四、功能介绍 -- 细数家珍</a></li>
 							<li><a href="#ppt-chapter5">五、技术实现 -- 众妙之门</a></li>
 						</ol>
@@ -616,15 +729,28 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 		</div><!--/.slide-->
 
 		<div id="ppt-function-provide" class="slide sub">
+			<style>
+				.sub .text {
+					padding: 0 40px;
+				}
+				.sub .text dt {
+					font-size: 48px;
+				}
+				.sub .text dd {
+					font-size: 32px;
+				}
+			</style>
 			<article>
 				<header>
-					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>浏览器增强实体产出</h3></hgroup>
+					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>产出</h3></hgroup>
 				</header>
 				<section>
 					<div class="content">
-						<p><abbr title="Color Stone, github.com/jindw/cs">cs</abbr>增强开发工具</p>
-						<blockquote>七彩石，女娲用来补天的。取名ColorStone，意为弥补浏览器不足</blockquote>
-						<p>目标浏览器：IE6/7/8/9; FF/Chrome,Safari/Opera</p>
+						<dl class="text">
+						<dt>浏览器增强开发工具：ColorStone</dt>
+						<dd class="box">五色石(ColorStone)，出自“女娲补天”神话，相传是女娲用来补天的材料。项目取名<abbr title="Color Stone, github.com/jindw/cs">CS</abbr>，意为弥补浏览器不足</dd>
+						<dd><p>目标浏览器：IE6/7/8/9; FF/Chrome,Safari/Opera</p></dd>
+						</dl>
 					</div>
 				</section>
 				<footer>
@@ -635,7 +761,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 		<div id="ppt-function-idea" class="slide sub">
 			<article>
 				<header>
-					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>浏览器增强实体产出</h3></hgroup>
+					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>浏览器增强思路</h3></hgroup>
 				</header>
 				<section>
 					<div class="content">
@@ -652,7 +778,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 								</dl>
 							</li>
 							<li>
-							100％ 纯CSS3，不加料
+							纯CSS3，不加料
 							</li>
 							<li>
 							保证可用性，稍有差异
@@ -677,7 +803,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 								<dl>
 									<dt> 安装/启动</dt>
 									<dd>
-										<pre>
+										<pre class="box">
 npm cs
 node –e “require(‘cs’)”										</pre>
 									</dd>
@@ -710,7 +836,7 @@ node –e “require(‘cs’)”										</pre>
 		<div id="ppt-function-experience" class="slide sub">
 			<article>
 				<header>
-					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>开发体验很重要 </h3></hgroup>
+					<hgroup><h2>三、增强开发工具</h2> <span>&gt;&gt;</span><h3>保证开发体验 </h3></hgroup>
 				</header>
 				<section>
 					<div class="content">
@@ -737,9 +863,9 @@ node –e “require(‘cs’)”										</pre>
 				<section>
 					<div class="content">
 						<ol>
-							<li><a href="#ppt-chapter1">一、CSS3 -- 让你眼前一亮</a></li>
-							<li><a href="#ppt-chapter2">二、浏览器限制 -- 理想与现实</a></li>
-							<li><a href="#ppt-chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#ppt-chapter1">一、CSS3 -- 看着很美</a></li>
+							<li><a href="#ppt-chapter2">二、浏览器限制 -- 现实残酷</a></li>
+							<li><a href="#ppt-chapter3">三、增强开发工具 -- 如获新生</a></li>
 							<li class="current"><a href="#ppt-chapter4">四、功能介绍 -- 细数家珍</a></li>
 							<li><a href="#ppt-chapter5">五、技术实现 -- 众妙之门</a></li>
 						</ol>
@@ -761,19 +887,20 @@ node –e “require(‘cs’)”										</pre>
 							<li>
 								<dl>
 								<dt>选择器类</dt>
-								<dd>对比：ie7.js</dd>
+								<dd>对比：<a href="http://dean.edwards.name/IE7/">ie7.js(Dean Edwards)</a></dd>
 								</dl>
 							</li>
 							<li>
 								<dl>
 								<dt>图形修饰类</dt>
-								<dd>对比：CSS3PIE</dd>
+								<dd>对比：<a hef="http://css3pie.com/">CSS3PIE</a></dd>
 								</dl>
 							</li>
 							<li>
 								动画/变形/布局类
 							</li>
 						</ul>
+						<p><a href="http://www.xidea.org/cs">Color当前功能清单</a></p>
 					</div>
 				</section>
 				<footer>
@@ -787,9 +914,17 @@ node –e “require(‘cs’)”										</pre>
 					<hgroup><h2>四、功能介绍</h2> <span>&gt;&gt;</span><h3>高端浏览器的差异抹平 </h3></hgroup>
 				</header>
 				<section>
-					<div class="content less">
+					<div class="content">
 						<ul class="x-list">
-							<li>私有前缀（-prefix-）</li>
+							<li>
+							<dl><dt>私有前缀补全（-prefix-）</dt>
+							<dd class="box">transform: rotate(5deg);</dd>
+							<dd class="box">-webkit-transform: rotate(5deg);<br />
+								-moz-transform: rotate(5deg);<br />
+								-o-transform: rotate(5deg);<br />
+								-ms-transform: rotate(5deg);<br />
+								</dd>
+							</dl></li>
 						</ul>
 					</div>
 				</section>
@@ -804,16 +939,20 @@ node –e “require(‘cs’)”										</pre>
 					<hgroup><h2>四、功能介绍</h2> <span>&gt;&gt;</span><h3> 标准化hack语法 </h3></hgroup>
 				</header>
 				<section>
-					<div class="content less">
+					<div class="content">
 						<ul class="x-list">
+							<li>部分差异不方便抹平</li>
 							<li>
 								<dl>
-								<dt>语义化，易理解</dt>
-								<dd>-ie6/-ie7/-ie8/-ie9/-ms/-moz/-webkit/-o</dd>
+								<dt>将Hack语义化！易理解</dt>
+								<dd>
+									<p class="box">-ie6-width:  ==>  _width:</p>
+									<p>-ie6/-ie7/-ie8/-ie9/-ms/-moz/-webkit/-o</p>
+								</dd>
 								</dl>
 							</li>
 							<li>
-								编译生成，顺序无所谓了
+								编译生成，自动修正顺序
 							</li>
 						</ul>
 					</div>
@@ -855,9 +994,9 @@ node –e “require(‘cs’)”										</pre>
 				<section>
 					<div class="content">
 						<ol>
-							<li><a href="#ppt-chapter1">一、CSS3 -- 让你眼前一亮</a></li>
-							<li><a href="#ppt-chapter2">二、浏览器限制 -- 理想与现实</a></li>
-							<li><a href="#ppt-chapter3">三、增强开发工具 -- CSS3为我所用</a></li>
+							<li><a href="#ppt-chapter1">一、CSS3 -- 看着很美</a></li>
+							<li><a href="#ppt-chapter2">二、浏览器限制 -- 现实残酷</a></li>
+							<li><a href="#ppt-chapter3">三、增强开发工具 -- 如获新生</a></li>
 							<li><a href="#ppt-chapter4">四、功能介绍 -- 细数家珍</a></li>
 							<li class="current"><a href="#ppt-chapter5">五、技术实现 -- 众妙之门</a></li>
 						</ol>
@@ -875,31 +1014,21 @@ node –e “require(‘cs’)”										</pre>
 					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 模块介绍 </h3></hgroup>
 				</header>
 				<section>
-					<div class="content">
+					<div class="content more">
 						<ul class="x-list">
 							<li>
-								<dl><dt>基于Node的编译调试工具</dt>
+								<dl><dt>基于Node的编译、调试工具</dt>
 									<dd>
 										<ul>
-											<li>本地调试服务器实现开发调试自动化</li>
-											<li>
-												<dl>
-												<dt>按浏览器类型和版本生成多份兼容代码</dt>
-												<dd>
-													<ul>
-														<li>-ie6-,-ie7-,-ie8-</li>
-														<li>-ms-,-moz-,-webkit-</li>
-													</ul>
-												</dd>
-												</dl>
-											</li>
+											<li>编译生成兼容代码</li>
+											<li>本地服务器辅助开发调试</li>
 										</ul>
 									</dd>
 								</dl>
 							</li>
 							<li>
 								<dl>
-									<dt>运行时框架</dt>
+									<dt>运行时JS框架</dt>
 									<dd>用于IE类的支持</dd>
 								</dl>
 							</li>
@@ -918,8 +1047,42 @@ node –e “require(‘cs’)”										</pre>
 					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 系统运行流程 </h3></hgroup>
 				</header>
 				<section>
-					<div class="content">
+					<div class="content more">
+						<p style="text-align:center;"><img src="tool-process.png" /></p>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			</article>
+		</div><!--/.slide-->
+		<div id="ppt-implement-ie" class="slide sub for-ie">
+			<style>
+				.for-ie .content .master-text{
+					padding: 32px;
+				}
+			</style>
+			<article>
+				<header>
+					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> IE兼容思路 </h3></hgroup>
+				</header>
+				<section>
+					<div class="content more">
+						<p class="master-text">采用专有属性及JS扩展等技术手段，让老版本的浏览器(如：IE6)支持更新的CSS标准</p>
 						<ul class="x-list">
+						<li>
+							<dl>
+								<dt>流程使用到技术：</dt>
+								<dd>
+									<ul>
+										<li>增强特性语法识别和配置：编译</li>
+										<li>元素效果初始化：expression/htc</li>
+										<li>图形效果及动画：滤镜</li>
+										<li>JS监听/条件轮询</li>
+									</ul>
+								</dd>
+							</dl>
+						</li>
 						</ul>
 					</div>
 				</section>
@@ -928,27 +1091,49 @@ node –e “require(‘cs’)”										</pre>
 				</footer>
 			</article>
 		</div><!--/.slide-->
-		<div id="ppt-implement-ie" class="slide sub">
+		<div id="ppt-implement-build" class="slide sub">
+			<style>
+			.center {text-align:center;}
+			</style>
 			<article>
 				<header>
-					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> IE兼容思路 </h3></hgroup>
+					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 编译模块插件化 </h3></hgroup>
 				</header>
 				<section>
-					<div class="content">
-						<p>采用专有属性及JS扩展等技术手段，让老版本的浏览器(如：IE6)支持更新的CSS标准</p>
-						<dl>
-							<dt>用到技术：</dt>
-							<dd>
-								<ul>
-									<li>编译</li>
-									<li>expression/htc</li>
-									<li>滤镜</li>
-									<li>监听/条件轮询</li>
-								</ul>
-							</dd>
-						</dl>
-						<ul class="x-list">
-						</ul>
+					<div class="content more">
+						<p class="center"><img src="build-plugin.png" /></p>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			</article>
+		</div><!--/.slide-->
+		<div id="ppt-implement-fw" class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 运行时框架工作原理 </h3></hgroup>
+				</header>
+				<section>
+					<div class="content more">
+						<p style="text-align:center">
+							<img src="ie-runtime-fw.png" />
+						</p>
+					</div>
+				</section>
+				<footer>
+					<span class="site">http://www.baidu.com</span>
+				</footer>
+			</article>
+		</div><!--/.slide-->
+		<div id="ppt-implement-runtime" class="slide sub">
+			<article>
+				<header>
+					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 运行时框架插件化 </h3></hgroup>
+				</header>
+				<section>
+					<div class="content more">
+						<p><img src="runtime-plugin-api.png" /></p>
 					</div>
 				</section>
 				<footer>
@@ -975,90 +1160,6 @@ node –e “require(‘cs’)”										</pre>
 				</footer>
 			</article>
 		</div><!--/.slide-->
-		<div id="ppt-implement-build" class="slide sub">
-			<article>
-				<header>
-					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 编译模块插件化 </h3></hgroup>
-				</header>
-				<section>
-					<div class="content">
-						<ul class="x-list">
-							<li>
-								<dl><dt>基于Node的编译调试工具</dt>
-									<dd>
-										<ul>
-											<li>本地调试服务器实现开发调试自动化</li>
-											<li>
-												<dl>
-												<dt>按浏览器类型和版本生成多份兼容代码</dt>
-												<dd>
-													<ul>
-														<li>-ie6-,-ie7-,-ie8-</li>
-														<li>-ms-,-moz-,-webkit-</li>
-													</ul>
-												</dd>
-												</dl>
-											</li>
-										</ul>
-									</dd>
-								</dl>
-							</li>
-							<li>
-								<dl>
-									<dt>运行时框架</dt>
-									<dd>用于IE类的支持</dd>
-								</dl>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<footer>
-					<span class="site">http://www.baidu.com</span>
-				</footer>
-			</article>
-		</div><!--/.slide-->
-		<div id="ppt-implement-runtime" class="slide sub">
-			<article>
-				<header>
-					<hgroup><h2>五、技术实现</h2> <span>&gt;&gt;</span><h3> 运行时框架插件化 </h3></hgroup>
-				</header>
-				<section>
-					<div class="content">
-						<ul class="x-list">
-							<li>
-								<dl><dt>基于Node的编译调试工具</dt>
-									<dd>
-										<ul>
-											<li>本地调试服务器实现开发调试自动化</li>
-											<li>
-												<dl>
-												<dt>按浏览器类型和版本生成多份兼容代码</dt>
-												<dd>
-													<ul>
-														<li>-ie6-,-ie7-,-ie8-</li>
-														<li>-ms-,-moz-,-webkit-</li>
-													</ul>
-												</dd>
-												</dl>
-											</li>
-										</ul>
-									</dd>
-								</dl>
-							</li>
-							<li>
-								<dl>
-									<dt>运行时框架</dt>
-									<dd>用于IE类的支持</dd>
-								</dl>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<footer>
-					<span class="site">http://www.baidu.com</span>
-				</footer>
-			</article>
-		</div><!--/.slide-->
 		<div id="ppt-implement-performance-optimization" class="slide sub">
 			<article>
 				<header>
@@ -1069,7 +1170,7 @@ node –e “require(‘cs’)”										</pre>
 						<ul class="x-list">
 							<li>
 								<dl>
-									<dt>expression/htc</dt><dd>能被有效覆盖是关键</dd>
+									<dt>expression/htc</dt><dd>只运行一次，初始化后即被覆盖</dd>
 								</dl>
 							</li>
 							<li>
@@ -1136,9 +1237,9 @@ node –e “require(‘cs’)”										</pre>
 					<div class="content">
 						<ul class="x-list">
 							<li>原生CSS3语法</li>
+							<li>支持较全面</li>
 							<li>DOM修改友好</li>
 							<li>更可靠的性能（编译期优化）</li>
-							<li>支持较全面</li>
 						</ul>
 					</div>
 				</section>

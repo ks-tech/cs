@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>CSS3 transitions gallery</title>
+<style>
+	body {
+		background: #dce4e4;
+		font-family: Georgia, "Times New Roman", Times, serif;}
+
+	#gallery {
+		width: 1000px;
+		height: 1200px;
+		margin: 20px auto;
+		padding: 40px;
+		position: relative;}
+	
+		#gallery div {
+			background: #fff;
+			position: absolute;
+			overflow: hidden;
+			opacity: 0.9;
+			-webkit-transition: all 500ms linear;
+
+			-webkit-border-radius: 15px;
+			-moz-border-radius: 15px;
+			border-radius: 15px;
+
+			-webkit-box-shadow: -3px -3px 50px #666;
+			-moz-box-shadow: -3px -3px 50px #666;
+			box-shadow: -3px -3px 50px #666;}
+			
+		#gallery div#img1:hover,
+		#gallery div#img2:hover,
+		#gallery div#img3:hover,
+		#gallery div#img4:hover,
+		#gallery div#img5:hover,
+		#gallery div#img6:hover {
+			z-index: 999;
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			opacity: 1;}		
+		
+		
+		#gallery span {
+			position: absolute;
+			right: 0;
+			bottom: 15px;
+			color: #999;
+			background: #fff;
+			width: 35%;
+			text-align: right;
+			padding: 10px;
+			font-size: 13px;
+			font-weight: bold;}
+			
+			
+		#gallery img {
+			-webkit-mask-box-image: url(background.svg);
+			-webkit-mask-repeat: none;}
+		
+		#gallery #img1 {
+			-webkit-transform: rotate(-15deg) scale(0.5);
+			-moz-transform: rotate(-15deg) scale(0.5);
+			top: 50px;
+			left: 130px;
+			z-index:1;}
+			
+		#gallery #img2 {
+			-webkit-transform: rotate(-15deg) scale(0.5);
+			-moz-transform: rotate(-15deg) scale(0.5);
+			top: 200px;
+			left:100px;
+			z-index:7;}
+			
+		#gallery #img3 {
+			-webkit-transform: rotate(-5deg) scale(0.5);
+			-moz-transform: rotate(-15deg) scale(0.5);
+			top: 350px;
+			left:250px;
+			z-index:3;}
+			
+			#img3 img {
+				width: 350px;}
+
+		#gallery #img4 { /* eye */
+			-webkit-transform: rotate(-10deg) scale(0.5);
+			-moz-transform: rotate(-10deg) scale(0.5);
+			top: 350px;
+			left: 450px;
+			z-index:4;}
+			
+		#gallery #img5 {
+			-webkit-transform: rotate(5deg) scale(0.5);
+			-moz-transform: rotate(5deg) scale(0.5);
+			top: -10px;
+			right: 200px;
+			z-index:5;}
+			
+		#gallery #img6 {
+			-webkit-transform: rotate(20deg) scale(0.5);
+			-moz-transform: rotate(20deg) scale(0.5);
+			top: 220px;
+			right: 120px;
+			z-index:6;}
+</style>
+</head>
+
+<body>
+<div id="gallery">
+	<div id="img1">
+		<img src="./image1.jpg">
+		<span>Image 1 caption</span>
+	</div>	
+	<div id="img2">
+		<img src="./image2.jpg">
+		<span>Image 2 caption</span>
+	</div>	
+	<div id="img3">
+		<img src="./image3.jpg">
+		<span>Image 3 caption</span>
+	</div>	
+	<div id="img4">
+		<img src="./image4.jpg">
+		<span>Image 4 caption</span>
+	</div>	
+	<div id="img5">
+		<img src="./image5.jpg">
+		<span>Image 5 caption</span>
+	</div>	
+	<div id="img6">
+		<img src="./image6.jpg">
+		<span>Image 6 caption</span>
+	</div>	
+</div>
+
+
+
+
+</body></html>
