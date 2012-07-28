@@ -102,13 +102,12 @@ input.state:active{
 
 
 
-              <a class="buttons" href="http://zhidao.baidu.com/s/info" id="btn-apply">
+              <span class="buttons" href="http://zhidao.baidu.com/s/info" id="btn-apply">
               	<span style="position:relative;top:-20px;left:-80px" class="example">动画提示:
 <pre>
 #wall li div{
 	width:0px;height:65px;
-	-webkit-transition:width 0.4s;
-	background:rgba(0,150,0,0.8);
+	transition:width 0.4s;
 	...
 }
 #wall li:hover div{
@@ -118,7 +117,7 @@ input.state:active{
 </pre>
 </span>
               
-              </a>
+              </span>
                                              </div>
                                              <div class="page">
                                                      <dl class="recommend clearfix">
@@ -247,20 +246,22 @@ input.state:active{
 </div>
 
 <style>
-#notify{
-	width:100px;
-	height:60px;
-	position:fixed;
-	bottom:10px;
-	right:10px;
-	background:white;
-	border:1px solid red;
 
-}
 </style>
 <div id="notify">
+		<span class="example">绝地定位
+<pre>
+#notify{
+position:fixed;
+z-index:100;
+bottom:10px;
+right:10px;}</pre></span>
+
 <h2>推送消息</h2>
-<p>content</p>
+<p><span class="msg-item-word"><a target="_blank" title="慢半拍C" href="/new/bingyanc/blog" onclick="event.cancelBubble=true;">慢半拍C</a> 关注了你</span>
+</p>
+<div class="bubble-more"><a href="/qmsg" class="a-normal" target="_blank">查看全部消息</a></div>
+
 </div>
 
 

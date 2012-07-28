@@ -1,0 +1,103 @@
+h3{
+	cursor:pointer;
+}
+p{
+	padding:6px;
+	/*opacity:0.4;*/
+}
+h3:hover{
+	background:rgba(0,255,0,0.1);
+	opacity:0.95;
+	border-bottom:1px solid red;
+}
+h3+p{
+	background:yellow;
+}
+h3:hover+p{
+	background:rgba(0,255,0,0.1);
+}
+
+h3:hover~p{
+	/*opacity:1;*/
+	color:blue;
+}
+p:nth-child(odd){
+	background:linear-gradient(0deg,white,blue);
+	font-weight:bold;
+	color:#333;
+}
+
+
+
+.slide{
+	position:relative;
+	margin:0;
+	padding:0;
+	width:402px;
+	height:122px;
+	overflow:hidden;
+	border:1px solid red;
+	color:#ccc;
+}
+.slide ul{
+	margin:0;padding:0;
+	width:10000px;height:88px;
+	position:absolute;
+	left:0;top:28px;
+	display:block;
+    transition-property:left,opacity;
+    transition-duration:0.8s;
+	opacity:1;
+}
+.slide ul li{
+	margin:0;padding:0;
+	text-indent:0;
+	list-style:none;
+	display:inline-block;
+	background:blue;
+	float:left;
+	width:400px;height:80px;
+	border:1px solid yellow;
+	z-index:0;
+}
+.slide ul li:nth-child(even){
+	background:green;
+}
+.slide .slide1:hover~ul{
+	left:0px;
+}
+.slide .slide2:hover~ul{
+	left:-402px;
+	opacity:0.3;
+}
+.slide .slide3:hover~ul{
+	left:-804px;
+}
+.slide span{
+	float:right;
+	z-index:2;
+	padding:0px;
+	margin:0px;
+	cursor:pointer;
+
+	display:inline-block;
+	border:1px outset yellow;
+	width:14px;height:14px;
+	text-align:center;
+	font-size:10px;
+	padding:2px;
+	margin:2px;
+}
+
+.transition-width{
+	width:10px;
+	transition:width 0.4s;
+	background:red;
+}
+.transition-width:hover{
+	width:100px;
+}
+
+.slide span:hover{
+	background:yellow;
+}
