@@ -224,7 +224,7 @@
 		  case 36:	//Home
 			event.ctrlKey && switchToHome();
 			break;
-		 case 27:
+		 case 121:	//F10
 		  	document.body.id =document.body.id=='outline'?'all':'outline';
 		  	break;
 		  case 122: //F11

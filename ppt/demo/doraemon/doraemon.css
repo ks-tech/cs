@@ -89,7 +89,7 @@ div.black_eye{
 	background:#333;
 	z-index:21;
 		-webkit-animation-name: cate;
-		-webkit-animation-duration: 10s;
+		-webkit-animation-duration: 2s;
 		-webkit-animation-timing-function: linear;
 		-webkit-animation-iteration-count: 200;
 }
