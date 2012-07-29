@@ -1,0 +1,55 @@
+
+			.sub {
+				color: #585858;
+			}
+			.sub article,
+			.trans-pic article
+			{
+				padding: 40px;
+			}
+			.master-text {
+				color: #585858;
+				font-size: 26px;
+			}
+			.sub hgroup {
+				color: #0082CB;
+				font-size: 26px;
+				background: white url(bg-logo.png) no-repeat bottom right;
+			}
+			.sub hgroup h2{
+				color: #0065cb;
+				font-size: 32px;
+			}
+			.sub hgroup h2,
+			.sub hgroup h3 {
+				display:inline;
+			}
+			.sub article section,
+			.trans-pic article section
+			{
+				padding: 40px 0;
+				background: white;
+				text-shadow: rgba(0, 0, 0, 0.196) 0px 2px 5px;
+			}
+
+			.x-list {
+				/*font-family: '黑体';*/
+				font-size: 48px;
+				list-style: square;
+				margin-left: 150px;
+			}
+			.x-list dl dd {
+				font-size: 32px;
+			}
+			.content ul ul {
+				margin-left: 50px;
+			}	
+			.slide .less.content {
+				margin-top: 100px;
+			}
+			.slide .content {
+				margin-top: 55px;
+			}
+			.slide .more.content {
+				margin-top: 15px;
+			}

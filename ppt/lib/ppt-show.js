@@ -87,13 +87,12 @@
 		
 			//currentSlideNo = 1;
         }
-		//console.log("index:"+currentSlideIndex);
-		//console.log('id:'+currentSlideId);
 	  /*>*/
 
-        //document.addEventListener('keydown', handleBodyKeyDown, false);
-		baidu.event.on(document, 'keydown', handleBodyKeyDown, false);
-		$(document).delegate('.slide','click', clickOnSelect);
+		configKeyboradControl();
+		configMouseControl();
+		//baidu.event.on(document, 'keydown', handleBodyKeyDown, false);
+		//$(document).delegate('.slide','click', clickOnSelect);
 		$(document).delegate('a[href*=#ppt-]','click', clickOnJump);
 		//$(document).delegate('[slide-index]','hover', clickOnSelect);
 
@@ -196,6 +195,10 @@
 		}
         updateSlideClasses();
       }
+	  function toggleMini() {
+		  baidu.dom.toggleClass(document.body, 'outline');
+		  //document.body.id =document.body.id=='outline'?'all':'outline';
+	  }
 	  /*
 		keyCode: 36
 		keyIdentifier: "Home"
@@ -203,7 +206,28 @@
 		keyCode: 35
 		keyIdentifier: "End"
 	  */
+
+	  //@see https://github.com/madrobby/keymaster
+		function configKeyboradControl () {
+			//向前
+			key('pagedown, down, right, space', nextSlide);
+			//返回
+			key('pageup, up, left', prevSlide);
+			//回首页
+			key('home', switchToHome);
+			//到末页
+			key('end', switchToEnd);
+			//切换鸟瞰视图
+			key('shift+3', toggleMini);
+		}
+		function configMouseControl () {
+			//$(document).delegate('.slide','click', clickOnSelect);
+			mouse.on('click', 'left', clickOnSelect);	//: add callback as listener for each type in types
+			//mouse.off(types, [buttons], callback): remove callback from listeners for each type in types
+		}
+		/*
       function handleBodyKeyDown(event) {
+
         switch (event.keyCode) {
 		case 33:	//pageUp
         case 37: // left arrow
@@ -230,6 +254,6 @@
 		  case 122: //F11
 			break;
         }
-      }
+      }*/
             
       initialize();

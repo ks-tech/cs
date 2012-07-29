@@ -9,26 +9,27 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
   <meta name="author" content="NE,jindw">
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <link rel="stylesheet" type="text/css" href="reset.css" />
-	<link rel="stylesheet" type="text/css" href="main.css" />
-	<link rel="stylesheet" type="text/css" href="sub.css" />
-	<link rel="stylesheet" type="text/css" href="ppt-item.css" />
-	<link rel="stylesheet" type="text/css" href="ppt-outline.css" />
+    <link rel="stylesheet" type="text/css" href="ui/reset.css" />
+	<link rel="stylesheet" type="text/css" href="ui/main.css" />
+	<link rel="stylesheet" type="text/css" href="ui/sub.css" />
+	<link rel="stylesheet" type="text/css" href="ui/ppt-show.css" />
+	<link rel="stylesheet" type="text/css" href="ui/ppt-item.css" />
+	<link rel="stylesheet" type="text/css" href="ui/ppt-outline.css" />
 
-	<script from="http://img.baidu.com/js/" src="tangram-1.5.2.2.js"></script>
-	<script src="jquery-1.7.2.js" rel="http://code.jquery.com/"></script>
+	<script from="http://img.baidu.com/js/" src="lib/tangram-1.5.2.2.js"></script>
+	<script from="http://code.jquery.com/" src="lib/jquery-1.7.2.js"></script>
   <!--[if lte IE 9]>
-  <script src="html5.js" rel="http://html5shim.googlecode.com/svn/trunk/"></script>
+  <script src="lib/html5.js" rel="http://html5shim.googlecode.com/svn/trunk/"></script>
   <![endif]-->
  </head>
 
- <body class="test">
+ <body>
 	<div id="canvas">
 		<div id="ppt-cover" class="slide cover">
 			<div class="split1">
 			<h1>浏览器增强和差异化</h1>
 			</div>
-			<div class="split"><img src="logo.png" /><div class="line"></div></div>
+			<div class="split"><img src="photo/logo.png" /><div class="line"></div></div>
 			<div class="split2">
 				<p class="desc">百度知识搜索部   梁东杰<br /> liangdongjie@baidu.com</p>
 				<p>
@@ -52,7 +53,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 					<div class="content">
 						<dl>
 							<dt><strong>梁东杰</strong> 百度知识搜索部(<abbr title="Baidu Knowledge Search">KS</abbr>) 资深研发工程师</dt>
-							<dd>
+							<dd class="build">
 								<dl class="product-list">
 									<dt>曾参与产品线：</dt>
 									<dd class="label-group">
@@ -77,6 +78,10 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				</section>
 			</article>
 		</div><!--/.slide-->
+		<script>
+			
+			console.log(baidu.dom.query('.build > *'));
+		</script>
 		<div id="ppt-summary" class="slide dir summary">
 			<style>
 				.summary .css3-to-browser {
@@ -109,7 +114,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 						<div style="margin-top: 40px;">
 							（这里CSS3泛指，也包括部分CSS2特性）
 						</div>
-							<img class="css3-to-browser" src="browser-mini.jpg" />
+							<img class="css3-to-browser" src="photo/browser-mini.jpg" />
 						</div>
 					</div>
 				</section>
@@ -147,7 +152,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				<section>
 					<div class="content">
 						<div style="margin-left: 180px;">
-							<p><img src="pic-css3-is-good.png" /></p>
+							<p><img src="photo/pic-css3-is-good.png" /></p>
 							<p class="word">CSS3真的好！</p>
 						</div>
 					</div>
@@ -452,25 +457,6 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 								font-weight: bold;
 								color: white;
 							}
-							.baidu-search-button {
-								border: 1px solid #696;
-								padding: 60px 0;
-								text-align: center; width: 200px;
-								-webkit-border-radius: 8px;
-								-moz-border-radius: 8px;
-								border-radius: 8px;
-								-webkit-box-shadow: #666 0px 2px 3px;
-								-moz-box-shadow: #666 0px 2px 3px;
-								box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.196), 0px 1px 2px rgba(0, 0, 0, 0.047)
-								box-shadow: #666 0px 2px 3px;
-								background: #EEFF99;
-								background: -webkit-gradient(linear, 0 0, 0 bottom, from(#EEFF99), to(#66EE33));
-								background: -webkit-linear-gradient(#EEFF99, #66EE33);
-								background: -moz-linear-gradient(#EEFF99, #66EE33);
-								background: -ms-linear-gradient(#EEFF99, #66EE33);
-								background: -o-linear-gradient(#EEFF99, #66EE33);
-								background: linear-gradient(#EEFF99, #66EE33);
-							}
 						
 						</style>
 			<article>
@@ -511,7 +497,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 							</tr>
 						</thead>
 						</table>
-							<div style="margin-top: 40px; padding: 40px; background: url(button-wrapper-bg.jpg) no-repeat -50px -60px;">
+							<div style="margin-top: 40px; padding: 40px; background: url(photo/button-wrapper-bg.jpg) no-repeat -50px -60px;">
 								<div class="css3pie-button">呦！切 It Now</div>
 							</div>
 						</div>
@@ -529,7 +515,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				<section>
 					<div class="content">
 						<div style="margin-left: 180px;">
-							<p><img src="pic-env-bad.png" /></p>
+							<p><img src="photo/pic-env-bad.png" /></p>
 							<p class="word">可是。。。浏览器环境很糟呀！</p>
 						</div>
 					</div>
@@ -582,7 +568,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 					<div class="content pd40 more">
 						<p style="text-align: center">
 							某产品5月份情况<br /><br />
-							<img src="browser-rat.JPG" />
+							<img src="photo/browser-rat.JPG" />
 						</p>
 						<!-- table class="browser-rat">
 						<thead>
@@ -697,7 +683,7 @@ thanks to <a>http://slides.html5rocks.com/#landing-slide</a>
 				<section>
 					<div class="content">
 						<div style="margin-left: 180px;">
-							<p><img src="pic-here-is-cs.jpg" /></p>
+							<p><img src="photo/pic-here-is-cs.jpg" /></p>
 							<p class="word">不怕，有TA在！</p>
 						</div>
 					</div>
@@ -1049,7 +1035,7 @@ node –e “require(‘cs’)”										</pre>
 				</header>
 				<section>
 					<div class="content more">
-						<p style="text-align:center;"><img src="tool-process.png" /></p>
+						<p style="text-align:center;"><img src="photo/tool-process.png" /></p>
 					</div>
 				</section>
 				<footer>
@@ -1102,7 +1088,7 @@ node –e “require(‘cs’)”										</pre>
 				</header>
 				<section>
 					<div class="content more">
-						<p class="center"><img src="build-plugin.png" /></p>
+						<p class="center"><img src="photo/build-plugin.png" /></p>
 					</div>
 				</section>
 				<footer>
@@ -1118,7 +1104,7 @@ node –e “require(‘cs’)”										</pre>
 				<section>
 					<div class="content more">
 						<p style="text-align:center">
-							<img src="ie-runtime-fw.png" />
+							<img src="photo/ie-runtime-fw.png" />
 						</p>
 					</div>
 				</section>
@@ -1134,7 +1120,7 @@ node –e “require(‘cs’)”										</pre>
 				</header>
 				<section>
 					<div class="content more">
-						<p><img src="runtime-plugin-api.png" /></p>
+						<p><img src="photo/runtime-plugin-api.png" /></p>
 					</div>
 				</section>
 				<footer>
@@ -1253,7 +1239,7 @@ node –e “require(‘cs’)”										</pre>
 			<div class="split1">
 			<h1>Q & A</h1>
 			</div>
-			<div class="split"><img src="logo.png" /><div class="line"></div></div>
+			<div class="split"><img src="photo/logo.png" /><div class="line"></div></div>
 		</div>
 
 
@@ -1261,7 +1247,7 @@ node –e “require(‘cs’)”										</pre>
 			<div class="split1">
 			<h1>谢谢！</h1>
 			</div>
-			<div class="split"><img src="logo.png" /><div class="line"></div></div>
+			<div class="split"><img src="photo/logo.png" /><div class="line"></div></div>
 		</div>
 
 		<div id="ppt-contact" class="slide introduce sub">
@@ -1294,16 +1280,20 @@ node –e “require(‘cs’)”										</pre>
 	<div class="help">
 		<div class="tip">[help]</div>
 		<div class="command">
-            <ul>
-              <li><span class="key">&larr;</span> and <span class="key">&rarr;</span> to move around.</li>
-              <li><span class="key">Ctrl/Command</span> and <span class="key">+</span> or <span class="key">-</span> to zoom in and out if slides don’t fit.</li>
-              <!-- <li><span class="key">S</span> to view page source.</li>
-              <li><span class="key">T</span> to change the theme.</li>
-              <li><span class="key">H</span> to toggle syntax highlight.</li>
-              <li><span class="key">N</span> to toggle speaker notes.</li>
-              <li><span class="key">3</span> to toggle 3D effect.</li>
-              <li><span class="key">0</span> to toggle help.</li> -->
-            </ul>
+            <div class="cmd-list">
+			<pre>
+//向前
+key('pagedown, down,rihgt, space', nextSlide);
+//返回
+key('pageup, up, left', prevSlide);
+//回首页
+key('home', switchToHome);
+//到末页
+key('end', switchToEnd);
+//切换鸟瞰视图
+key('shift+3', toggleMini);
+			</pre>
+			</div>
 			<div class="fullscreen">
 				<input type="button" value="Go Fullscreen" id="fsbutton" />
 				<p>Status: <span id="fsstatus"></span></p>
@@ -1313,9 +1303,11 @@ node –e “require(‘cs’)”										</pre>
 </div><!-- /#canvas -->
 
 
-	<link rel="stylesheet" type="text/css" href="ppt-show.css" />
-	<script src="fullscreen.js"></script>
-	<script src="ppt-show.js"></script>
+	<script src="lib/fullscreen.js"></script>
+	<script src="lib/keymaster.js"></script>
+	<script src="lib/keymaster.js"></script>
+	<script src="lib/Mouse.js"></script>
+	<script src="lib/ppt-show.js"></script>
 	<script>
 	// do something interesting with fullscreen support
 	var fsButton = baidu.dom.g('fsbutton'),
