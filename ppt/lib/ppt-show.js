@@ -183,6 +183,7 @@
 			currentSlideIndex++;
 		}
         updateSlideClasses();
+		return false;	//避免前后漂移。。
       }
       
       function prevSlide() {
@@ -194,6 +195,7 @@
 			currentSlideIndex--;
 		}
         updateSlideClasses();
+		return false;	//避免前后漂移。。
       }
 	  function toggleMini() {
 		  baidu.dom.toggleClass(document.body, 'outline');
