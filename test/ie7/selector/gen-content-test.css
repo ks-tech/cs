@@ -1,0 +1,48 @@
+
+<!--
+div, h1, h2 {display: block; clear: both; }
+#float-test .navigation {display: block; clear: both;}
+#float-test .navigation ul {margin: 0; padding: 10px 10px 0; list-style: none; }
+#float-test .navigation li { float: left; margin: 0; padding: 0; }
+
+#float-test .navigation ul::before{ content: "[&#xA0;"; float: left; }
+#float-test .navigation ul::after{ content: "&#160;]"; }
+#float-test .navigation ul li::before{ content: "&#160;|&nbsp;"; }
+#float-test .navigation ul li:first-child::before{ content: ""; }
+
+#float-test .nav {display: block; clear: both;}
+#float-test .nav ul {margin: 0; padding: 10px 10px 0; list-style: none; }
+#float-test .nav li { float: left; margin: 0; padding: 0; }
+
+#float-test .nav ul::before{ content: "\005b\00a0"; float: left; }
+#float-test .nav ul::after{ content: "\00a0\005d"; }
+#float-test .nav ul li::before{ content: "\00a0\007c\0020"; }
+#float-test .nav ul li:first-child::before{ content: ""; }
+
+
+#inline-test .navigation {display: inline;}
+#inline-test .navigation ul {margin: 0; padding: 10px 10px 0; list-style: none; }
+#inline-test .navigation li { float: left; margin: 0; padding: 0; }
+
+#inline-test .navigation ul::before{ content: "[&#xA0;"; }
+#inline-test .navigation ul::after{ content: "&#160;]"; }
+#inline-test .navigation ul li::before{ content: "&#160;|&nbsp;"; }
+#inline-test .navigation ul li:first-child::before{ content: ""; }
+
+#inline-test .nav {display: inline;}
+#inline-test .nav ul {margin: 0; padding: 10px 10px 0; list-style: none; }
+#inline-test .nav li { float: left; margin: 0; padding: 0; }
+
+#inline-test .nav ul::after{ content: "\00a0\005d"; }
+#inline-test .nav ul li::before{ content: "\00a0\007c\00a0"; }
+#inline-test .nav ul li:first-child:before{ content: "\005b\00a0";  }
+
+/* Lets test counters while we're at it, since I think it is important for some of my published content */
+
+body { counter-reset: chap-num; }
+#counter-test h1 {counter-increment: chap-num; counter-reset: sub-num;}
+#counter-test h1::before { content: counter(chap-num, upper-roman) "\00a0"; }
+#counter-test h2 {counter-increment: sub-num; counter-reset: sub-sub-num;}
+#counter-test h2::before {content: counter(chap-num, upper-roman) "." counter(sub-num, numeric) "\00a0"; }
+
+-->

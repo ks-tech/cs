@@ -1,0 +1,38 @@
+
+   table.singular tr:nth-last-child(3) {
+    background: red;
+   }
+   table.singular2 tr:nth-last-child(0n+1) {
+    background: green;
+   }
+   table.all tr:nth-last-child(1n+0) {
+    background: orange;
+   }
+   table.all2 tr:nth-last-child(n+0) {
+    background: blue;
+   }
+   table.all3 tr:nth-last-child(n) {
+    background: red;
+   }
+   table.even tr:nth-last-child(even) {
+    background: green;
+   }
+   table.odd tr:nth-last-child(odd) {
+    background: orange;
+   }
+   table.lastRows tr:nth-last-child(1n+3) {
+    background: silver;
+   }
+   p:nth-last-child(4n) {
+    background: red;
+   }
+   p:nth-last-child(4n+1) {
+    background: green;
+   }
+   p:nth-last-child(4n+2) {
+    background: blue;
+   }
+  p:nth-last-child(4n+3) {
+    background: orange;
+   }
+  

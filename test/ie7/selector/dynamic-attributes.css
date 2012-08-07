@@ -1,0 +1,53 @@
+
+
+ 	/* this is the dynamic rule. It matches the "required" flag
+ 	   of empty input elements */
+
+	fieldset p.required > input[value=""] + sup {
+		color: red;
+	}
+
+	/* the remaining rules make the form look nice :-) */
+
+	form {
+		margin: 20px;
+		padding: 20px;
+		border: 1px dashed #ddd;
+	}
+
+	fieldset {
+		border: none;
+		font: 12px/14px Verdana,Arial,sans-serif;
+		border-left: 40px solid #efe;
+	}
+
+	fieldset p {
+		margin-left: 10px;
+	}
+
+	fieldset p * {
+		margin-right: 4px;
+	}
+
+	fieldset p > label {
+		display: block;
+		font-weight: bold;
+		min-width: 80px;
+	}
+
+	fieldset p > input {
+		border: 1px solid black;
+		margin: 1px 4px 4px 1px;
+		padding-left: 2px;
+	}
+
+	fieldset p > input:focus {
+		background-color: #efe;
+	}
+
+	fieldset p > input + sup {
+		vertical-align: top;
+		color: #ddd;
+	}
+
+ 

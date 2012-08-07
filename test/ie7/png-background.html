@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+
+ <style>
+
+  #test {
+
+   margin: 40px 0px;
+   padding: 20px;
+   width: 200px;
+   height: 200px;
+   background-image: url("tukan-trans.png");
+   background-repeat: repeat;
+   border: 1px white solid;
+
+  }
+
+  #background {
+
+   padding: 20px;
+   width: 250px;
+   height: 300px;
+   background-image: url(purple_stucco.jpg);
+   background-repeat: repeat;
+   border: 5px black solid;
+
+  }
+
+ </style>
+</head>
+<body>
+ <script src="ie7-demo.js"></script>
+ <h2>background-image: url(*.png)</h2>
+
+ <div id="background"><div id="test"></div></div>
+ <p>Unfortunately, the transparent background image cannot be tiled (repeated)
+  using <code>background-repeat</code>. Nor can it be positioned using
+  <code>background-position</code>.</p>
+
+ <p>&lt;&nbsp;<a href="index.html">back</a></p>
+</body>
+</html>

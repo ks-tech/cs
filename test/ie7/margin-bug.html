@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+
+ <style>
+
+  #parent {
+
+   background-color: silver;
+   height: 100px;
+   margin: 100px;
+
+  }
+
+  #child {
+
+   background-color: red;
+   height: 50px;
+   margin: 50px;
+
+  }
+
+  #parent > #child {
+   background-color: yellow;
+  }
+
+ </style>
+</head>
+
+<body>
+ <script src="ie7-demo.js"></script>
+ <h2>Noncollapsible Margins Bug</h2>
+
+ <p>Margins don&#8217;t collapse correctly when an element has
+  &#8220;<a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/haslayout.asp">layout</a>&#8221;.</p>
+
+ <div id="container"><div id="parent"><div id="child"></div></div></div>
+
+ <p>&lt;&nbsp;<a href="index.html">back</a></p>
+</body>
+</html>

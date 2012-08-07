@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+
+ <style>
+  #box {
+   position: absolute;
+   border: black 5px solid;
+   background: url(horizontal-gauge.gif);
+   left: 20em;
+   right: 20px;
+   top: 15px;
+   height: 120px;
+   margin: auto;
+   padding: 40px;
+   box-sizing:border-box;
+   -moz-box-sizing:border-box;
+  }
+ </style>
+
+ </head>
+ <body>
+  <script src="ie7-demo.js"></script>
+  <h2>right:</h2>
+
+  <div id="box"></div>
+
+  <p>&lt;&nbsp;<a href="index.html">back</a></p>
+ </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+
+ <style>
+
+  div.overflow {
+
+   background-color: #ccc;
+   width: 200px;
+   height: 200px;
+   overflow: visible;
+   border: 10px solid black;
+   margin-left: 4em;
+
+  }
+
+  body > div.overflow {
+
+   background-color: yellow;
+
+  }
+
+ </style>
+</head>
+
+<body>
+ <script src="ie7-demo.js"></script>
+ <h2>overflow: visible</h2>
+
+ <p>Although <code>visible</code> is the default for most browsers it is <em>not</em>
+  for IE7. Use this fix with care as it changes the structure of the document by 
+  putting a wrapper around the target element.</p>
+
+ <div class="overflow">
+  blah_blah_blah_blah_blah_blah_blah_blah_blah_blah_blah_blah_blah_blah_blah
+  blah_blah_blah_blah_blah_blah_blah_blah_blah_blah_blah_blah_blah_blah_blah
+  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+  blah blah blah blah blah blah blah blah blah</div>
+
+ <p>&lt;&nbsp;<a href="index.html">back</a></p>
+</body>
+</html>

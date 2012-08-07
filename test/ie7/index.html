@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+ <head>
+ <title>IE7.js Test Pages</title>
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+ <style>
+  html, body {margin: 0; padding: 0;}
+  body {font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;}
+  div {width: 80%; margin: 2em auto;}
+  h2 {margin: 1.5em 0; background: #e6e9f9; padding: 4px;}
+  table {width: 100%; border-collapse: collapse; border: 1px #e6e9f9 solid;}
+  th {text-align: left; background-color: #f2f3f8;}
+  th.comments {width: 60%;}
+  th.test {width: 6em;}
+  th, td {border-right-width: 1px; border-right-style: solid; border-bottom-width: 1px; border-bottom-style: solid; border-color: #e6e9f9; padding: 3px;}
+  .content {padding-bottom: 40px;}
+ </style>
+</head>
+
+<body>
+<div class="content">
+ <h1>IE7 { css2: auto; }</h1>
+ <p>version 2.1 beta4</p>
+ <p>The selectors and properties below should all work according to the
+  <a href="http://www.w3.org/" title="World Wide Web Consortium">W3C</a> specifications.</p>
+  
+ <h2>IE7.js</h2>
+ 
+ <h3>CSS Selectors</h3>
+ <table>
+  <thead>
+   <tr><th>Selector</th><th class="comments">Comments</th><th class="test">Test</th></tr>
+  </thead>
+  <tbody>
+   <tr><td>parent > child</td><td></td><td><a href="selector/child.html">html</a></td></tr>
+   <tr><td>adjacent + sibling</td><td></td><td><a href="selector/adjacent.html">html</a></td></tr>
+   <tr><td>adjacent ~ sibling</td><td></td><td><a href="selector/indirect.html">html</a></td></tr>
+   <tr><td>.multiple.classes</td><td>IE5/6 <a href="selector/multiple-classes.html?ie7_off">bug</a> fixed
+    (also applies to <a href="selector/multiple-pseudo-classes.html">pseudo classes</a>)</td>
+    <td><a href="selector/multiple-classes.html">html</a></td></tr>
+   <tr><td>:hover</td><td>Now applies to all elements</td><td><a href="selector/hover.html">html</a></td></tr>
+   <tr><td>:first-child</td><td></td><td><a href="selector/first-child.html">html</a></td></tr>
+   <tr><td>[attr]</td><td></td><td><a href="selector/attr.html">html</a></td></tr>
+   <tr><td>[attr="value"]</td><td></td><td><a href="selector/attr-value.html">html</a></td></tr>
+   <tr><td>[attr~="value"]</td><td></td><td><a href="selector/attr-list.html">html</a></td></tr>
+   <tr><td>[attr|="value"]</td><td></td><td><a href="selector/attr-dash-list.html">html</a></td></tr>
+   <tr><td>[attr^="value"]</td><td></td><td><a href="selector/attr-begin.html">html</a></td></tr>
+   <tr><td>[attr$="value"]</td><td></td><td><a href="selector/attr-end.html">html</a></td></tr>
+   <tr><td>[attr*="value"]</td><td></td><td><a href="selector/attr-contains.html">html</a></td></tr>
+  </tbody>
+ </table>
+
+ <h3>CSS Properties</h3>
+ <table>
+  <thead>
+   <tr><th>Property</th><th class="comments">Comments</th><th class="test">Test</th></tr>
+  </thead>
+  <tbody>
+   <tr><td>background-attachment</td><td>support fixed positioning</td><td><a href="background-fixed.html">html</a></td></tr>
+   <tr><td>background-image</td><td><abbr title="Portable Network Graphics (format)">PNG</abbr>
+    alpha transparency (IE5.5+)</td><td><a href="png-background.html">html</a></td></tr>
+   <tr><td>bottom</td><td><code>height</code> implied if <code>top</code> is
+    supplied</td><td><a href="top-bottom.html">html</a></td></tr>
+   <tr><td>cursor</td><td>support <code>pointer</code> for IE5.x</td><td><a href="cursor-pointer.html">html</a></td></tr>
+   <tr><td>display</td><td>convert <code>list-item</code> to <code>block</code> for IE5.x</td><td></td></tr>
+   <tr><td>font-size</td><td>fix named font sizes (IE5.x)</td><td><a href="font-size.html">html</a></td></tr>
+   <tr><td>margin</td><td>support <code>auto</code> (IE5.x)</td><td><a href="margin-auto.html">html</a></td></tr>
+   <tr><td>max-height</td><td></td><td><a href="max-height.html">html</a></td></tr>
+   <tr><td>max-width</td><td></td><td><a href="max-width.html">html</a></td></tr>
+   <tr><td>min-height</td><td>implemented for IE5</td><td><a href="min-height.html">html</a></td></tr>
+   <tr><td>min-width</td><td></td><td><a href="min-width.html">html</a></td></tr>
+   <tr><td>overflow</td><td>support <code>overflow:visible</code></td><td><a href="overflow.html">html</a></td></tr>
+   <tr><td>position</td><td>support fixed positioning</td><td><a href="fixed.html">html</a></td></tr>
+   <tr><td>right</td><td><code>width</code> implied if <code>left</code> is
+    supplied</td><td><a href="left-right.html">html</a></td></tr>
+  </tbody>
+ </table>
+
+ <h3><abbr title="HyperText Markup Language">HTML</abbr></h3>
+ <table>
+  <thead>
+   <tr><th>Element</th><th class="comments">Comments</th><th class="test">Test</th></tr>
+  </thead>
+  <tbody>
+   <tr><td>abbr</td><td>IE5/6 bugs fixed</td><td><a href="abbr.html">html</a></td></tr>
+   <tr><td>img</td><td><abbr>PNG</abbr> alpha
+    transparency (IE5.5+)</td><td><a href="png.html">html</a></td></tr>
+   <tr><td>label</td><td>bind to the first child control</td><td><a href="label.html">html</a></td></tr>
+  </tbody>
+ </table>
+  
+ <h2>IE8.js</h2>
+
+ <h3>CSS Selectors</h3>
+ <table>
+  <thead>
+   <tr><th>Selector</th><th class="comments">Comments</th><th class="test">Test</th></tr>
+  </thead>
+  <tbody>
+   <tr><td>::after</td><td></td><td><a href="selector/after.html">html</a></td></tr>
+   <tr><td>::before</td><td></td><td><a href="selector/before.html">html</a></td></tr>
+   <tr><td>:active</td><td></td><td><a href="selector/active.html">html</a></td></tr>
+   <tr><td>:focus</td><td></td><td><a href="selector/focus.html">html</a></td></tr>
+   <tr><td>:lang()</td><td></td><td><a href="selector/lang.html">html</a></td></tr>
+  </tbody>
+ </table>
+
+ <h3>CSS Properties</h3>
+ <table>
+  <thead>
+   <tr><th>Property</th><th class="comments">Comments</th><th class="test">Test</th></tr>
+  </thead>
+  <tbody>
+   <tr><td>border-spacing</td><td><abbr>HTML</abbr> tables only</td><td><a href="border-spacing.html">html</a></td></tr>
+   <tr><td>box-sizing</td><td><code>content-box</code> (assumed)</td><td><a href="box-sizing.html">html</a></td></tr>
+   <tr><td>content</td><td>Supports the use of <code><a href="content-attr.html">attr()</a></code> and
+    <code><a href="content.html">url()</a></code></td><td><a href="content.html">html</a></td></tr>
+   <tr><td><i>property</i>: inherit</td><td>Support for inherited property values</td><td><a href="inherit.html">html</a></td></tr>
+  </tbody>
+ </table>
+
+ <h3><abbr>HTML</abbr></h3>
+ <table>
+  <thead>
+   <tr><th>Element</th><th class="comments">Comments</th><th class="test">Test</th></tr>
+  </thead>
+  <tbody>
+   <tr><td>button[type=submit]</td><td><code>value</code> submitted rather than
+    <code>innerText</code></td><td><a href="button.html">html</a></td></tr>
+   <tr><td>form</td><td>only submit <a href="http://www.w3.org/TR/REC-html40/interact/forms.html#h-17.13.2">successful
+    controls</a></td><td><a href="form.html">html</a></td></tr>
+   <tr><td>object</td><td>improved support for <code>type=image/*</code></td><td><a href="object.html">html</a></td></tr>
+  </tbody>
+ </table>
+
+ <h2>IE9.js</h2>
+
+ <h3>CSS Selectors</h3>
+ <table class="data">
+  <thead>
+   <tr><th>Selector</th><th class="comments">Comments</th><th class="test">Test</th></tr>
+  </thead>
+  <tbody>
+   <tr><td>:checked</td><td></td><td><a href="selector/checked.html">html</a></td></tr>
+   <tr><td>:disabled</td><td></td><td><a href="selector/disabled.html">html</a></td></tr>
+   <tr><td>:empty</td><td></td><td><a href="selector/empty.html">html</a></td></tr>
+   <tr><td>:enabled</td><td></td><td><a href="selector/enabled.html">html</a></td></tr>
+   <tr><td>:indeterminate</td><td></td><td><a href="selector/indeterminate.html">html</a></td></tr>
+   <tr><td>:first-of-type</td><td></td><td><a href="selector/of-type.html">html</a></td></tr>
+   <tr><td>:last-child</td><td></td><td><a href="selector/last-child.html">html</a></td></tr>
+   <tr><td>:last-of-type</td><td></td><td><a href="selector/of-type.html">html</a></td></tr>
+   <tr><td>:not()</td><td></td><td><a href="selector/not.html">html</a></td></tr>
+   <tr><td>:nth-child()</td><td></td><td><a href="selector/nth-child.html">html</a></td></tr>
+   <tr><td>:nth-last-child()</td><td></td><td><a href="selector/nth-last-child.html">html</a></td></tr>
+   <tr><td>:nth-last-of-type()</td><td></td><td><a href="selector/of-type.html">html</a></td></tr>
+   <tr><td>:nth-of-type()</td><td></td><td><a href="selector/of-type.html">html</a></td></tr>
+   <tr><td>:only-child</td><td></td><td><a href="selector/only-child.html">html</a></td></tr>
+   <tr><td>:only-of-type</td><td></td><td><a href="selector/of-type.html">html</a></td></tr>
+   <tr><td>:root</td><td></td><td><a href="selector/root.html">html</a></td></tr>
+   <tr><td>:target</td><td></td><td><a href="selector/target.html#bananas">html</a></td></tr>
+  </tbody>
+ </table>
+
+ <h3>CSS Properties</h3>
+ <table>
+  <thead>
+   <tr><th>Property</th><th class="comments">Comments</th><th class="test">Test</th></tr>
+  </thead>
+  <tbody>
+   <tr><td>opacity</td><td>IE5.5+</td><td><a href="opacity.html">html</a></td></tr>
+  </tbody>
+ </table>
+
+ <h3><abbr title="HyperText Markup Language">HTML</abbr></h3>
+ <table>
+  <thead>
+   <tr><th>Element</th><th class="comments">Comments</th><th class="test">Test</th></tr>
+  </thead>
+  <tbody>
+   <tr><td>article, aside, audio, canvas, details, figcaption, figure, footer,
+    header, hgroup, mark, menu, meter, nav, output, progress, section, summary,
+    time, video</td><td>Only rendering support and basic style are provided</td><td><a href="html5.html">html</a></td></tr>
+  </tbody>
+ </table>
+
+ <h2>Other Bug Fixes</h2>
+ <table>
+  <thead>
+   <tr><th>Bug</th><th class="comments">Comments</th><th class="test">Test</th></tr>
+  </thead>
+  <tbody>
+   <tr><td>Doubled Margin*</td><td><a href="http://www.positioniseverything.net/explorer/doubled-margin.html">Position
+    Is Everything</a></td><td><a href="doubled-margin.html">html</a></td></tr>
+   <tr><td>Peekaboo*</td><td><a href="http://www.positioniseverything.net/explorer/peekaboo.html">Position
+    Is Everything</a></td><td><a href="peekaboo.html">html</a></td></tr>
+   <tr><td>Unscrollable Content*</td><td><a href="http://www.positioniseverything.net/explorer/unscrollable.html">Position
+    Is Everything</a></td><td><a href="unscrollable.html">html</a></td></tr>
+  </tbody>
+ </table>
+ 
+ <p><em>*These fixes are not in the standard IE7 library. They are included in a separate
+  module <code>ie7-squish.js</code>.</em></p>
+</div>
+</body>
+</html>

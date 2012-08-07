@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]>
+ <script src="../trunk/lib/IE9.js"></script>
+ <script src="../ie7-recalc.js"></script>
+ <![endif]-->
+
+ <link rel="stylesheet" href="style1.css" title="Style 1">
+ <link rel="alternate stylesheet" href="style2.css" title="Style 2">
+ <link rel="alternate stylesheet" href="style3.css" title="Style 3">
+
+ <script src="styleswitcher.js"></script>
+</head>
+<body>
+ <script src="ie7-demo.js"></script>
+ <h2>Style Switching Example</h2>
+ <p>
+  <a href="style-switcher.html" onclick="setActiveStyleSheet('Style 1'); return false;">Style 1</a>
+  <a href="style-switcher.html" onclick="setActiveStyleSheet('Style 2'); return false;">Style 2</a>
+  <a href="style-switcher.html" onclick="setActiveStyleSheet('Style 3'); return false;">Style 3</a>
+ </p>
+ <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec euismod sapien a sem. Quisque ac dui. Duis purus pede, ornare eu, iaculis in, semper eu, tortor. Pellentesque eu enim. Ut ante massa, sollicitudin eget, convallis non, volutpat in, dolor. In eget ipsum ut metus sollicitudin rutrum. Donec et metus non ante tincidunt sodales. Integer semper pulvinar dolor. Morbi laoreet dictum nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi quam ante, vestibulum ac, sagittis at, lobortis at, lacus. Nunc pellentesque nisi aliquet magna. In hac habitasse platea dictumst. Fusce neque. Integer odio. Proin ultricies bibendum lectus. Mauris libero ante, faucibus in, ultricies ut, consequat sit amet, eros. Fusce porta. Cras commodo, diam eu rutrum facilisis, neque ante varius turpis, eu malesuada lectus ipsum in sapien.</p>
+ <p>Vestibulum auctor. Aenean sit amet massa. Donec ultricies. Sed id sem eget arcu gravida facilisis. Donec euismod. Duis congue. Morbi id urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas tincidunt porttitor urna.</p>
+ <p>Aliquam aliquam sapien quis dolor. Donec hendrerit. Aenean scelerisque lacinia sapien. Donec luctus imperdiet augue. Integer eu risus. Mauris accumsan. Nullam facilisis tortor vitae orci. Morbi et erat ut turpis pharetra venenatis. Nam orci. Quisque ut est et neque accumsan faucibus. Duis mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Suspendisse risus pede, eleifend ac, tincidunt ut, lobortis ac, orci. Nam a quam vel massa semper lobortis. Fusce congue purus sed pede. Sed urna erat, euismod eu, sollicitudin in, volutpat sed, enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Praesent eget nunc.</p>
+
+ <p>&lt;&nbsp;<a href="index.html">back</a></p>
+</body>
+</html>

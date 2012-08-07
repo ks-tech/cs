@@ -1,0 +1,11 @@
+
+
+  p.pointer {
+
+   cursor: pointer;
+
+  }
+
+  body > p.pointer {background-color: yellow;}
+
+ 

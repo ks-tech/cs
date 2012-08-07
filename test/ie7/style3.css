@@ -1,0 +1,8 @@
+body {
+	font-family: monospace;
+	font-weight: bold;
+	color: lime;
+}
+html>body {
+	background-color: black;
+}

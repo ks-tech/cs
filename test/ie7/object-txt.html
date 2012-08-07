@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+
+ <style>
+
+  object {
+   border: 16px solid #CCC;
+  }
+  p>object, p>img {
+   border-color: yellow;
+  }
+
+ </style>
+</head>
+
+<body>
+ <script src="ie7-demo.js"></script>
+ <h2>&lt;object type="text/*"&gt;</h2>
+
+ <p><object type="text/plain" data="test.txt" width="152" height="160">A beagle
+  sitting in a woman&#8217;s lap</object></p>
+
+ <p>&lt;&nbsp;<a href="javascript:history.back()">back</a></p>
+</body>
+</html>

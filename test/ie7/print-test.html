@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+
+ <style>
+
+  p {color: red;}
+  body>p {font-weight:bold;}
+
+  @media screen {
+   p {color:green;}
+   p:after {content:" (SCREEN)";}
+  }
+  
+  @media print {
+   p {color:blue;}
+   p:after {content:" (PRINT)";}
+  }
+
+ </style>
+</head>
+
+<body>
+<p>This should be green on screen and blue on print.</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+
+ <style>
+  img {border: 4px solid black;}
+ </style>
+</head>
+
+<body>
+ <script src="ie7-demo.js"></script>
+ <h2>&lt;img alt="This is not a title"&gt;</h2>
+
+ <p><img src="testcard.jpg" alt="This is not a title"></p>
+ <p>Move your mouse over the image. There should be no tooltip
+  as there is no <code>title</code> attribute.</p>
+
+ <p>&lt;&nbsp;<a href="index.html">back</a></p>
+</body>
+</html>

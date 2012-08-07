@@ -1,0 +1,66 @@
+
+
+  div {
+
+   background: silver;
+   width: 200px;
+
+  }
+
+  #test1:hover > p {
+
+   background-color: yellow;
+
+  }
+
+  #test2 p:hover + p {
+
+   background-color: yellow;
+
+  }
+
+  input {
+
+   background: red;
+
+  }
+
+  input + input {
+
+   background: orange;
+
+  }
+
+  input + input + input {
+
+   background: lime;
+
+  }
+
+  #test3 input:focus + input {
+
+   background-color: yellow;
+
+  }
+
+  #test4 p:hover ~ p {
+
+   background-color: yellow;
+
+  }
+
+  code {
+
+   background-color: #eee;
+
+  }
+
+  code.box {
+
+   display: block;
+   margin: 1em 0em;
+   padding: 1em;
+
+  }
+
+ 

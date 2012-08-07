@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]>
+  <script src="../trunk/lib/IE9.js"></script>
+  <script src="../ie7-css-strict.js"></script>
+ <![endif]-->
+
+ <style>
+
+  p.blue {color: blue;}
+  p.green {color:green;}
+  p+p {color:red;}
+
+ </style>
+</head>
+
+<body>
+<p>This is a normal paragraph.</p>
+<p>This should be red.</p>
+<p class="blue">This should be blue.</p>
+<p class="green">This should be green.</p>
+</body>
+</html>

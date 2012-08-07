@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+ <head>
+  <title>IE7 {CSS2: auto}</title>
+
+  <!-- Compliance patch for Microsoft browsers -->
+  <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+
+  <style>
+
+   body {
+
+    background-color: white;
+
+   }
+
+   div {
+
+    background-color: yellow;
+
+   }
+
+   div div {
+
+    background-color: white;
+
+   }
+
+   div div.inherited {
+
+    background-color: inherit;
+
+   }
+
+  </style>
+ </head>
+ <body>
+  <script src="ie7-demo.js"></script>
+  <h2><i>property</i>: inherit</h2>
+
+  <div>
+   <div class="inherited">Inherited.</div>
+   <div>Not inherited.</div>
+   <div>Not inherited.</div>
+  </div>
+
+  <p>&lt;&nbsp;<a href="index.html">back</a></p>
+ </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+
+ <link rel="stylesheet" href="attr-list.css"/>
+</head>
+<body>
+ <script src="ie7-demo.js"></script>
+ <h2>[attr~="value"]</h2>
+
+ <ul>
+  <li class="first">First class.</li>
+  <li class="second">Second class.</li>
+  <li class="third">Third class.</li>
+  <li class="first second">First and second class.</li>
+  <li class="first third">First and third class.</li>
+  <li class="second third">Second and third class.</li>
+  <li class="first second third">First, second and third class.</li>
+ </ul>
+ <p class="first">First class only ;-)</p>
+
+ <p>&lt;&nbsp;<a href="index.html">back</a></p>
+</body>
+</html>

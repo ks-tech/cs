@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+
+ <style>
+
+  object, img {
+   border: 16px solid #CCC;
+  }
+
+  p>object, p>img {
+   border-color: yellow;
+  }
+
+ </style>
+</head>
+
+<body>
+ <script src="ie7-demo.js"></script>
+ <h2>&lt;object type="image/*"&gt;</h2>
+
+ <p><object type="image/jpeg" data="beagle-gimli.jpg" width="152" height="160">A beagle
+  sitting in a woman&#8217;s lap</object></p>
+  <p><object type="image/png" data="tukan-trans.png" width="150" height="150">Transparent Tucan image</object></p>
+  <p><img src="tukan-trans.png" width="150" height="150"></p>
+<p>Now you too can be a
+  <a href="http://diveintomark.org/archives/2003/04/13/object_and_internet_explorer">markup
+  wanker</a>.</p>
+ <p>&lt;&nbsp;<a href="javascript:history.back()">back</a></p>
+</body>
+</html>

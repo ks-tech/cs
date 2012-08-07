@@ -1,0 +1,9 @@
+
+
+   li:not(:first-child) {
+
+    background-color: yellow;
+
+   }
+
+  

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+
+ <style>
+
+  div.box {
+
+   border: black 25px solid;
+   padding: 5em;
+   background: url(horizontal-gauge.gif);
+   width: 10cm;
+   height: 5cm;
+
+  }
+
+  #content-box {
+
+   box-sizing: content-box;
+
+  }
+
+  #border-box {
+
+   box-sizing: border-box;
+
+  }
+
+ </style>
+</head>
+<body>
+ <script src="ie7-demo.js"></script>
+
+ <h2>box-sizing: border-box;</h2>
+ 
+ <div class="box" id="border-box"></div>
+
+ <h2>box-sizing: content-box;</h2>
+ <p>You do not need to declare <code>box-sizing:content-box</code> as it is
+  implied as soon as you specify a <code>width</code> or <code>height</code>
+  using <abbr>CSS</abbr>. Declaring <code>box-sizing:content-box</code> means
+  that matching elements will have &#34;<a href="">layout</a>&#34; (this is
+  exactly what the &#34;<a href="http://www.positioniseverything.net/articles/hollyhack.html">Holly
+  Hack</a>&#34; does). You can mix and match measurement units (<code>cm</code>,
+  <code>em</code>, <code>px</code> etc) as this example demonstrates.</p>
+  
+ <div class="box" id="content-box"></div>
+
+ <p>&lt;&nbsp;<a href="index.html">back</a></p>
+</body>
+</html>

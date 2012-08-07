@@ -1,0 +1,8 @@
+body {
+	font-family: fantasy;
+	font-style: italic;
+	color: red;
+}
+html>body {
+	background-color: white;
+}

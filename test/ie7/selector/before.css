@@ -1,0 +1,23 @@
+
+
+  p.test {
+   background: skyblue;
+   font: 20px/24px cursive;
+   color: red;
+  }
+
+  p.test:before {
+   background-color: yellow;
+   content: "Hello";
+   margin-right: .3em;
+  }
+
+  #inline:before {
+   display: inline;
+  }
+
+  #block:before {
+   display: block;
+  }
+
+ 

@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]>
+ <script src="../trunk/lib/IE9.js"></script>
+ <script src="../trunk/src/ie7-recalc.js"></script>
+ <![endif]-->
+ 
+ <style>  
+  label:hover {
+   background-color: yellow;
+  }
+  
+  li:last-child {
+   background-color: yellow;
+  }
+  
+  /* colourful boxes with tricky box-model calculations */
+  div.box {border: black 10px solid; width: 2cm; height: 1cm;
+   padding: 3em; margin: 1em; float: left;}
+
+  /* clear floats */
+  div#boxes+p::before {clear: both; content: "\A0"; height: 0; line-height: 0;}
+
+  /* alternate colours of boxes using CSS3 */
+  div.box:nth-child(4n) {background-color: red;}
+  div.box:nth-child(4n+1) {background-color: yellow;}
+  div.box:nth-child(4n+2) {background-color: green;}
+  div.box:nth-child(4n+3) {background-color: blue;}
+ </style>
+ 
+ <script src="last-child.js"></script>
+ 
+ <script>
+  function addLabel() {
+   var parent = document.getElementById("labels");
+   var child = document.createElement("p");
+   var copy = parent.getElementsByTagName("p")[0];
+   child.innerHTML = copy.innerHTML;
+   parent.appendChild(child);
+   child.getElementsByTagName("input")[0].checked = false;
+   if (document.recalc) document.recalc(); // IE7
+  };
+  
+  function addListItem() {
+   var parent = document.getElementById("list");
+   var child = document.createElement("li");
+   var text = document.createTextNode(item());
+   child.appendChild(text);
+   parent.appendChild(child);
+   if (document.recalc) document.recalc(); // IE7
+  };
+  
+  function addBox() {
+   var parent = document.getElementById("boxes");
+   var child = document.createElement("div");
+   child.className = "box";
+   parent.appendChild(child);
+   if (document.recalc) document.recalc(); // IE7
+  };
+ </script>
+</head>
+<body>
+ <script src="ie7-demo.js"></script>
+
+ <h2>document.recalc()</h2>
+ <p>Calling <code>document.recalc()</code> after you have made changes to the
+  <abbr title="Document Object Model">DOM</abbr> will refresh the IE7 style rules.
+  You must include the module <code>ie7-recalc.js</code> for this to work.</p>
+ 
+ <hr>
+
+ <!-- test new HTML elements -->
+ <h3>Refresh <abbr title="HyperText Markup Language">HTML</abbr> Elements</h3>
+ <p>New <abbr>HTML</abbr> elements are fixed after they are created.</p>
+ <div id="labels">
+  <p><label>You should be able to click this label to check/uncheck the box
+   <input type="checkbox" value="test"></label></p>
+ </div>
+ <p><button onclick="addLabel()">Add Label</button></p>
+
+ <hr>
+
+ <!-- test CSS2/3 selectors -->
+ <h3>Refresh <abbr title="Cascading Style Sheets">CSS</abbr> Rules</h3>
+ <p>Add more list items and maintain the <code>last-child</code> selector.</p>
+ <ul id="list">
+  <li>I am first.</li>
+  <li>I am second.</li>
+  <li>I am last.</li>
+ </ul>
+ <p><button onclick="addListItem()">Add List Item</button></p>
+ 
+ <hr>
+
+ <!-- test calculated styles -->
+ <h3>Recalculate Style Properties</h3>
+ <p>Calculated properties (e.g. <code>width</code>) are maintained as new
+  content is created.</p>
+ <div id="boxes">
+  <div class="box"></div>
+ </div>
+ <p><button onclick="addBox()">Add Box</button></p>
+ 
+ <hr>
+
+ <p>&lt;&nbsp;<a href="index.html">back</a></p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+
+ <link rel="stylesheet" href="child.css"/>
+</head>
+<body>
+ <script src="ie7-demo.js"></script>
+ <h2>parent &gt; child</h2>
+
+ <div class="parent">Parent
+  <div class="child">Child</div>
+ </div>
+ <div class="parent">Parent
+  <div class="baby-sitter">Baby-sitter
+   <div class="child">Child</div>
+  </div>
+ </div>
+
+ <p>&lt;&nbsp;<a href="index.html">back</a></p>
+</body>
+</html>

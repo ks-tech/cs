@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+ <title>IE7 {CSS2: auto}</title>
+
+ <!-- Compliance patch for Microsoft browsers -->
+ <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
+
+ <link rel="stylesheet" href="super-dynamic.css"/>
+</head>
+<body>
+ <script src="ie7-demo.js"></script>
+ <h2>Dynamic Pseudo-Classes</h2>
+
+ <p>The examples below seem slightly confusing. This is because an element&#8217;s
+    style is influenced by dynamic pseudo-classes attached to adjacent elements.
+    View the source of this document to fully understand these selectors.</p>
+
+ <hr>
+
+ <code class="box">
+  #test1:hover > p {
+
+   background-color: yellow;
+
+  }
+ </code>
+
+ <div id="test1">
+  <p>Here is a paragraph.</p>
+  <p>And another.</p>
+ </div>
+
+ <hr>
+
+ <code class="box">
+  #test2 p:hover + p {
+
+   background-color: yellow;
+
+  }
+ </code>
+
+ <div id="test2">
+  <p>Paragraph 1.</p>
+  <p>Paragraph 2.</p>
+  <p>Paragraph 3.</p>
+ </div>
+
+ <hr>
+
+ <code class="box">
+  #test3 input:focus + input {
+
+   background-color: yellow;
+
+  }
+ </code>
+
+ <div id="test3">
+  <input type="text" value="input 1">
+  <input type="text" value="input 2">
+  <input type="text" value="input 3">
+ </div>
+
+ <hr>
+
+ <code class="box">
+  #test4 p:hover ~ p {
+
+   background-color: yellow;
+
+  }
+ </code>
+
+ <div id="test4">
+  <p>Paragraph 1.</p>
+  <p>Paragraph 2.</p>
+  <p>Paragraph 3.</p>
+  <p>Paragraph 4.</p>
+  <p>Paragraph 5.</p>
+  <p>Paragraph 6.</p>
+ </div>
+
+ <p>&lt;&nbsp;<a href="index.html">back</a></p>
+</body>
+</html>

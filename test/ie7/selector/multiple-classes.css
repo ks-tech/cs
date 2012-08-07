@@ -1,0 +1,15 @@
+
+
+  .bold {
+   font-weight: bold;
+  }
+
+  .blue {
+   color: blue;
+  }
+
+  .bold.blue {
+   background-color: yellow;
+  }
+
+ 
