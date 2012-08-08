@@ -16,4 +16,18 @@
 
  <p>&lt;&nbsp;<a href="index.html">back</a></p>
 </body>
+<script>
+	var input = document.getElementsByTagName('input')[0];
+	Test.addTask('@before active test',function(){
+		Test.showMessage("点击输入框(按下并持续半秒左右)");
+		Test.on(input,'mousedown',function(){
+			//document.body.appendChild(
+			//document.createTextNode(input.currentStyle.backgroundColor));
+			Test.run(100);
+		})
+		return -1;
+	}).addTask('active test',function(){
+		Test.assertColor(input.currentStyle.backgroundColor,'yellow')
+	}).run();;
+</script>
 </html>

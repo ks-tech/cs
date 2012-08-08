@@ -24,5 +24,20 @@
  <p class="first">First class only ;-)</p>
 
  <p>&lt;&nbsp;<a href="index.html">back</a></p>
+ 
+ 
+<script>
+	var ps = document.getElementsByTagName('p');
+	Test.addTask('[class|="first"]',function(){
+		Test.assertColor(ps[0].currentStyle.backgroundColor,'yellow');
+		Test.assertColor(ps[3].currentStyle.backgroundColor,'yellow');
+		Test.assertColor(ps[4].currentStyle.backgroundColor,'yellow');
+		Test.assertColor(ps[6].currentStyle.backgroundColor,'yellow');
+	}).addTask('not hit :[class|="first"]',function(){
+		Test.assertColor(ps[1].currentStyle.backgroundColor,'transparent');
+		Test.assertColor(ps[2].currentStyle.backgroundColor,'transparent');
+		Test.assertColor(ps[5].currentStyle.backgroundColor,'transparent');
+	}).run(2000);;
+</script>
 </body>
 </html>

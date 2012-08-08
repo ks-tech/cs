@@ -18,7 +18,8 @@
     },
     "maintainers": [{"name": "jindw","email": "jindw@xidea.org","url": "http://www.xidea.org"}],
     "contributors": [
-		{"name" : "nodiseal"}
+		{"name" : "nodiseal","email":"nodiseal@gmail.com"},
+		{"name" : "dailiqi","email":"richiedai@live.com"}
 	],
     "bugs": {"email": "jindw@xidea.org","url": "https://github.com/jindw/cs/issues"},
     "licenses": [{"type": "LGPL","url": "http://www.gnu.org/licenses/lgpl.html"}]

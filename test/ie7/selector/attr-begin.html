@@ -18,5 +18,16 @@
  <p title="goodbye">This starts out good...</p>
 
  <p>&lt;&nbsp;<a href="index.html">back</a></p>
+ 
+ 
+ 
+<script>
+	var ps = document.getElementsByTagName('p');
+	Test.addTask('p[title^="good"]',function(){
+		Test.assertColor(ps[0].currentStyle.backgroundColor,'transparent');
+		Test.assertColor(ps[1].currentStyle.backgroundColor,'transparent');
+		Test.assertColor(ps[2].currentStyle.backgroundColor,'yellow');
+	}).run(100);;
+</script>
 </body>
 </html>

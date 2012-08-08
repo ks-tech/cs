@@ -9,3 +9,5 @@ document.write("<style>"+
 "<h1 id='ie7_demo'>IE7&nbsp;<button type=button onclick=\"location.replace(location.pathname+'"+
 (location.search=="?ie7_off"?"":"?ie7_off")+"')\">"+
 (location.search=="?ie7_off"?"Apply":"Remove")+"</button></h1>");
+
+document.write('<script src="test.js"></script>')

@@ -17,5 +17,13 @@
 
  <p>&lt;&nbsp;<a href="index.html">back</a></p>
  <!-- thanks Menno! -->
+ 
+<script>
+	var ps = document.getElementsByTagName('p');
+	Test.addTask('h1+p',function(){
+		Test.assertColor(ps[0].currentStyle.backgroundColor,'yellow');
+		Test.assertColor(ps[1].currentStyle.backgroundColor,'transparent');
+	}).run(100);;
+</script>
 </body>
 </html>
