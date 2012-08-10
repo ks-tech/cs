@@ -27,7 +27,7 @@
  
  
 <script>
-	var ps = document.getElementsByTagName('p');
+	var ps = document.getElementsByTagName('li');
 	Test.addTask('[class|="first"]',function(){
 		Test.assertColor(ps[0].currentStyle.backgroundColor,'yellow');
 		Test.assertColor(ps[3].currentStyle.backgroundColor,'yellow');
@@ -37,7 +37,7 @@
 		Test.assertColor(ps[1].currentStyle.backgroundColor,'transparent');
 		Test.assertColor(ps[2].currentStyle.backgroundColor,'transparent');
 		Test.assertColor(ps[5].currentStyle.backgroundColor,'transparent');
-	}).run(2000);;
+	}).run(200);;
 </script>
 </body>
 </html>

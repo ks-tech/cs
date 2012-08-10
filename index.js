@@ -5,7 +5,7 @@ var RBS = require('rbs/lib/rbs').RBS;
 var rbs = new RBS();
 var setupJSRequire = require('jsi').setupJSRequire;
 var setupCS = require('./lib/compiler').setupCS;
-var addExample = require('rbs/lib/server-ext').addExample;
+var addExample = require('rbs/lib/server/server-ext').addExample;
 setupJSRequire(rbs,'/static/');
 setupCS(rbs,/\.css$/i,/\.html?$/i);
 
@@ -104,3 +104,9 @@ function genPostData(options){
 	}
 }
 //var s = rbs.getContentAsBinary("/-webkit-index.css").toString();//console.log(s);
+//var s = require('http').get("http://localhost:2012/rbs/test.php",function(res){
+//	console.log("Got response: " + res.statusCode);
+//	//res.on('data',function(data){console.log('data:',data+'')})
+//});
+
+
