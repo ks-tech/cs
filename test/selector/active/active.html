@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <script type="text/javascript" src="../../framework/static/jquery-1.3.2.js"></script>
+    <link rel="stylesheet" href="active.css"/>
+</head>
+<body>
+<!--<script src="ie7-demo.js"></script>-->
+<!--<h2>:active</h2>-->
+
+<input id="test" type="text" value="Click here">
+
+<!--<p>&lt;&nbsp;<a href="index.html">back</a></p>-->
+</body>
+<script>
+</script>
+<!--<script>
+	var input = document.getElementsByTagName('input')[0];
+	Test.addTask('@before active test',function(){
+		Test.showMessage("点击输入框(按下并持续半秒左右)");
+		Test.on(input,'mousedown',function(){
+			//document.body.appendChild(
+			//document.createTextNode(input.currentStyle.backgroundColor));
+			Test.run(100);
+		})
+		return -1;
+	}).addTask('active test',function(){
+		Test.assertColor(input.currentStyle.backgroundColor,'yellow')
+	}).run();;
+</script>-->
+</html>

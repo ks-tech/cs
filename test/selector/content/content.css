@@ -1,0 +1,27 @@
+
+
+  p.test {
+   font: 20px/24px cursive;
+   background: #ccc;
+   color: red;
+   text-align: center;
+  }
+
+  p.test:before, p.test:after {
+   display: block;
+   background: yellow none no-repeat top right;
+   text-align: left;
+   height: 30px;
+  }
+
+  p.test:before {
+   content: url(top-left.gif);
+   background-image: url(top-right.gif);
+  }
+
+  p.test:after {
+   content: url(bottom-left.gif);
+   background-image: url(bottom-right.gif);
+  }
+
+ 

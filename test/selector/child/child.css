@@ -1,0 +1,21 @@
+div {
+
+    border: silver 1px solid;
+    margin: 0.3em;
+    padding: 0.3em;
+
+}
+
+.parent {
+
+    margin: 1em 0.3em 0.3em;
+
+}
+
+.parent > .child {
+
+    background-color: yellow;
+
+}
+
+ 

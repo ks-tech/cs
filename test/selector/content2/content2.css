@@ -1,0 +1,27 @@
+
+
+  input.test {
+   font-family: monospace;
+   background-color: #ccc;
+   color: red;
+   text-align: center;
+  }
+
+  input.test:before, input.test:after {
+   display: block;
+   height: 30px;
+   background: yellow none no-repeat top right;
+   text-align: left;
+  }
+
+  input.test:before {
+   content: url(top-left.gif);
+   background-image: url(top-right.gif);
+  }
+
+  input.test:after {
+   content: url(bottom-left.gif);
+   background-image: url(bottom-right.gif);
+  }
+
+ 

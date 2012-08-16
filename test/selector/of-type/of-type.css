@@ -1,0 +1,19 @@
+
+
+    ul:first-of-type li:first-of-type { background:#33f; }
+    ul:first-of-type li:nth-of-type(2) { background:#f33; }
+    ul:first-of-type li:last-of-type { background:#3f3; }
+
+    ul:nth-of-type(2) li:first-child { background:#33f; }
+    ul:nth-of-type(2) li:nth-child(2) { background:#f33; }
+    ul:nth-of-type(2) li:last-child { background:#3f3; }
+
+    ul:nth-of-type(3) li:nth-last-of-type(3) { background:#33f; }
+    ul:nth-of-type(3) li:nth-child(2) { background:#f33; }
+    ul:nth-of-type(3) li:nth-last-child(1) { background:#3f3; }
+
+    ol:only-of-type li:nth-last-of-type(3) { background:#33f; }
+    ol:only-of-type li:nth-child(2) { background:#f33; }
+    ol:only-of-type li:nth-last-child(1) { background:#3f3; }
+
+  

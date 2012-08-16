@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>IE7 {CSS2: auto}</title>
+    <script type="text/javascript" src="../../framework/static/jquery-1.3.2.js"></script>
+    <link rel="stylesheet" href="attr-dash-list.css"/>
+</head>
+<body>
+<h2>[attr|="value"]</h2>
+
+<ul>
+    <li class="first">First class.</li>
+    <li class="second">Second class.</li>
+    <li class="third">Third class.</li>
+    <li class="first-second">First and second class.</li>
+    <li class="first-third">First and third class.</li>
+    <li class="second-third">Second and third class.</li>
+    <li class="first-second-third">First, second and third class.</li>
+</ul>
+<p class="first">First class only ;-)</p>
+
+<p>&lt;&nbsp;<a href="index.html">back</a></p>
+
+
+<!--<script>
+    var ps = document.getElementsByTagName('p');
+    Test.addTask('[class|="first"]',function () {
+        Test.assertColor(ps[0].currentStyle.backgroundColor, 'yellow');
+        Test.assertColor(ps[3].currentStyle.backgroundColor, 'yellow');
+        Test.assertColor(ps[4].currentStyle.backgroundColor, 'yellow');
+        Test.assertColor(ps[6].currentStyle.backgroundColor, 'yellow');
+    }).addTask('not hit :[class|="first"]',function () {
+                Test.assertColor(ps[1].currentStyle.backgroundColor, 'transparent');
+                Test.assertColor(ps[2].currentStyle.backgroundColor, 'transparent');
+                Test.assertColor(ps[5].currentStyle.backgroundColor, 'transparent');
+            }).run(2000);
+    ;
+</script>-->
+</body>
+</html>

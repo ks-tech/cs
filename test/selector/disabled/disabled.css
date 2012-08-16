@@ -1,0 +1,15 @@
+
+
+  input {
+
+   background-color: white;
+
+  }
+
+  input:disabled {
+
+   background-color: yellow;
+
+  }
+
+ 
