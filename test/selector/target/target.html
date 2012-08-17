@@ -1,26 +1,27 @@
 <!doctype html>
 <html>
 <head>
- <title>IE7 {CSS2: auto}</title>
+    <title>IE7 {CSS2: auto}</title>
 
- <!-- Compliance patch for Microsoft browsers -->
- <!--[if lt IE 9]><script src="../trunk/lib/IE9.js"></script><![endif]-->
-
- <link rel="stylesheet" href="target.css"/>
+    <script type="text/javascript" src="../../framework/static/jquery-1.3.2.js"></script>
+    <link rel="stylesheet" href="target.css"/>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a[href]').eq(0).click();
+        });
+    </script>
 </head>
 <body>
- <script src="ie7-demo.js"></script>
- <h2>:target</h2>
- <ul>
-  <li id="apples">Apples</li>
-  <li id="oranges">Oranges</li>
-  <li id="bananas">Bananas</li>
- </ul>
- <p>So which do you prefer? <a href="#apples">Apples</a>, <a href="#oranges">oranges</a>
-  or <a href="#bananas">bananas</a>?</p>
+<h2>:target</h2>
+<ul>
+    <li id="apples">Apples</li>
+    <li id="oranges">Oranges</li>
+    <li id="bananas">Bananas</li>
+</ul>
+<p>So which do you prefer? <a href="#apples">Apples</a>, <a href="#oranges">oranges</a>
+    or <a href="#bananas">bananas</a>?</p>
 
- <p><em>This solution does not detect the back button. I don&#8217;t know how to do that.</em></p>
+<p><em>This solution does not detect the back button. I don&#8217;t know how to do that.</em></p>
 
- <p>&lt;&nbsp;<a href="index.html">back</a></p>
 </body>
 </html>
