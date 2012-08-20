@@ -5,7 +5,7 @@ function frameHtml(op) {
     op.finish = function() {
         pw.$(fid).unbind();
         setTimeout(function() {
-            pw.$('div#div'+id).remove();
+//            pw.$('div#div'+id).remove();
             start();
         }, 20);
     };

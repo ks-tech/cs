@@ -10,6 +10,7 @@ if (!$quirk) {
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>CS Test Index Page</title>
+    <script type="text/javascript" src="/static/cs.js"></script>
     <script type="text/javascript" src="static/jquery-1.3.2.js"></script>
     <script type="text/javascript" src="static/run.js"></script>
     <link media="screen" href="static/list.css" type="text/css" rel="stylesheet"/>
@@ -85,7 +86,8 @@ if (!$quirk) {
         return $files;
     }
 
-    $testdir = dirname(dirname(__FILE__));
+    $testdir = dirname(dirname(__FILE__)) . "/selector";
+//var_dump($testdir);    
     $array = find($testdir, "/^((?!framework).)*\.js$/");
     foreach ($array as $key) {
         $key = str_replace('/', '.', substr($key, strlen($testdir) + 1));
@@ -93,7 +95,7 @@ if (!$quirk) {
         print('<A class="jsframe_qunit" target="_blank" id="' . $id . '" title=' . $key . ' onlick="run(\'' . $key . '\')">' . $key . '</A>');
         // id=\"$c->case_id\" class=\"jsframe_qunit\" target=\"_blank\" title=\"$name\" onclick=\"run('$name');\$('#id_rerun').html('$name');return false;\">
     }
-    ?>
+//    ?>
     <div style="clear: both; overflow: hidden"></div>
 </div>
 <div id="id_runningarea" class="runningarea" style="border: solid; display: none"></div>

@@ -3,8 +3,8 @@ test("child", function () {
         src:'/test/selector/child/child.html',
         ontest:function (w, f) {
 
-            colorEqual('rgb(255, 255, 0)', w.$('.parent > .child').css('background-color'));
-            colorNotEqual('rgb(255, 255, 0)', w.$('.baby-sister > .child').css('background-color'));
+            colorEqual('yellow', w.$('div .child').eq(0).css('background-color'));
+            colorNotEqual('red', w.$('div .child').eq(0).css('background-color'));
             this.finish();
         }
     });

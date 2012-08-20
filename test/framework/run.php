@@ -13,11 +13,12 @@ $casestr = str_replace(".", "/", $case);
     <title>Qunit</title>
     <meta content="text/html; charset=UTF-8" http-equiv='Context-Type' />
     <link href="static/framework.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="/static/cs.js"></script>
     <script type="text/javascript" src="static/jquery-1.3.2.js"></script>
     <script type="text/javascript" src="static/testrunner.js"></script>
     <script type="text/javascript" src="static/framework.js"></script>
     <script type="text/javascript" src="static/ext_qunit.js"></script>
-<script type="text/javascript" src="/test/<?php echo $casestr;?>.js"></script>
+<script type="text/javascript" src="/test/selector/<?php echo $casestr;?>.js"></script>
 </head>
 <body>
 <h1 id="qunit-header"><?php echo $case?></h1>
