@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>测试css修改及查看效果</title>
+        <style>
+            input[type=button] {
+                padding: 5px;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>代码需要提交到后台编译才能生效</h1>
+        <p><script>document.write(navigator.userAgent);</script></p>
+        <fieldset>
+            <legend>HTML代码</legend>
+        <textarea id="code-html" cols="50" rows="10">
+            <ul class="list">
+                <li>1第一行</li>
+                <li>2第二行</li>
+                <li>3第三行</li>
+                <li>4第四行</li>
+                <li>5第五行</li>
+            </ul>
+        </textarea>
+    </fieldset>
+        <fieldset>
+            <legend>CSS代码</legend>
+        <textarea id="code-css" cols="50" rows="10">
+            .list {
+                color: gray;
+            }
+            .list li:first-child {background-color:green;}
+            .list li:last-child {background-color: blue;}
+            .list li:nth-child(odd) {color: orange}
+            .list li:nth-child(even) {color: red}
+        </textarea>
+        </fieldset>
+
+        <input type="button" id="run" value="运行代码" onclick="runIt()" />
+        <div id="iframe-wrapper"></div>
+        <script>
+            function runIt() {
+                getCssLink();
+            }
+            function resetIframe() {
+                var wrapper = document.getElementById('iframe-wrapper');
+                wrapper.innerHTML = '<iframe id="css-demo-iframe"></iframe>';
+            }
+            function doRunCode(cssLink) {
+                resetIframe(); //CS.link 是document.write的 切换iframe内容又要保证js/css不污染，这样简单点
+                var iframe = document.getElementById('css-demo-iframe');
+                var htmlCode = document.getElementById('code-html').value;
+                //iframe.contentDocument.body.innerHTML = '';
+                //iframe.contentWindow.document.body.innerHTML = '';
+                iframe.contentWindow.document.write(
+                '<!doctype><html>'
+                    + '<head>'
+                        + '<script src="/static/cs.js"><\/script>'
+                    +        '</head><body>'
+                    + '<script>setTimeout(function() { CS.link("' + cssLink + '");document.close();}, 20);<\/script>'
+                    + htmlCode
+                    + '</body></html>'
+                );
+            }
+            function ajaxGet(url, queryData, callback) {
+                    var xhr = getXHR();
+                    xhr.onreadystatechange = function(e) {
+                        if(xhr.readyState == 4 && xhr.status == 200){
+                            callback(xhr);
+                        }
+                    }
+                    xhr.open('post', url);
+                    xhr.send(queryData);
+                }
+                function getXHR() {
+                if(window.XMLHttpRequest) {
+                    return (new XMLHttpRequest());
+                } else if(window.ActiveXObject) {
+                    return (new ActiveXObject('Microsoft.XMLHTTP'));
+                }
+            }
+            function getCssLink() {
+                //postCode
+                var cssCode = document.getElementById('code-css').value;
+                ajaxGet('/temp-css', 'code='+cssCode, function(req) {
+                        setTimeout(function () { doRunCode(req.responseText); }, 500);
+                });
+            }
+            //first run
+            setTimeout(function() { runIt(); }, 300);
+        </script>
+    </body>
+    </html>
