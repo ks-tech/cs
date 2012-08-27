@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>测试css修改及查看效果</title>
+        <script src="/static/cs.js"></script>
         <style>
             input[type=button] {
                 padding: 5px;
@@ -52,17 +53,12 @@
                 resetIframe(); //CS.link 是document.write的 切换iframe内容又要保证js/css不污染，这样简单点
                 var iframe = document.getElementById('css-demo-iframe');
                 var htmlCode = document.getElementById('code-html').value;
-                //iframe.contentDocument.body.innerHTML = '';
-                //iframe.contentWindow.document.body.innerHTML = '';
-                iframe.contentWindow.document.write(
-                '<!doctype><html>'
-                    + '<head>'
-                        + '<script src="/static/cs.js"><\/script>'
-                    +        '</head><body>'
-                    + '<script>setTimeout(function() { CS.link("' + cssLink + '");document.close();}, 20);<\/script>'
-                    + htmlCode
-                    + '</body></html>'
-                );
+                iframe.src='about:blank';
+                setTimeout(function(){
+                	var content =cssLink +'\n'+ htmlCode
+                	 iframe.src=window.location.href.replace(/-run(\.html)$/,'$1')+'#'+encodeURIComponent(content)
+                },500)
+
             }
             function ajaxGet(url, queryData, callback) {
                     var xhr = getXHR();
@@ -84,8 +80,8 @@
             function getCssLink() {
                 //postCode
                 var cssCode = document.getElementById('code-css').value;
-                ajaxGet('/temp-css', 'code='+cssCode, function(req) {
-                        setTimeout(function () { doRunCode(req.responseText); }, 500);
+                ajaxGet('/css-temp', 'code='+cssCode, function(req) {
+                        doRunCode(req.responseText); 
                 });
             }
             //first run

@@ -25,6 +25,7 @@ if(require.resolve('cs/lib/runtime/cs-exported.js') != Path.resolve('./lib/runti
 }
 var testServer = startServer(rbs);
 require('./lib/server/export').init(testServer,exports);
+testServer.post(/\/css-temp/,require('./lib/server/css-temp.js').createCSSTemp(rbs,'/static/css-temp.css'))
 testServer.complete = function(){
 	var root = testServer.root;
 	var webURL = 'http://127.0.0.1:'+testServer.port+'/';

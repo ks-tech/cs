@@ -1,0 +1,11 @@
+<html><head>
+<script src="/static/cs.js"></script>
+</head>
+<body>
+<script>
+var hash = decodeURIComponent(location.hash.substr(1));
+var p = hash.indexOf('\n');
+CS.link(hash.substr(0,p))
+document.write(hash.substr(p+1))
+</script>
+</body></html>

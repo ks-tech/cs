@@ -1,0 +1,8 @@
+            .list {
+                color: gray;
+            }
+            .list li:first-child {border:1px solid red;background-color:yellow;}
+            .list li:last-child {background-color: yellow;}
+            .list li:nth-child(odd) {color: blue}
+            .list li:nth-child(even) {color: red}
+        
