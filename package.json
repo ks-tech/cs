@@ -1,6 +1,6 @@
 {
     "name": "cs",
-    "version": "0.1.22",
+    "version": "0.1.24",
     "description": "Colored Stone : A CSS3 extension for IE6/7/8",
     "keywords": [ "css3","IE"],
 	"author": "jindw <jindw@xidea.org> (http://www.xidea.org)",
@@ -10,7 +10,7 @@
     "engines" : { "node" : ">=0.1" },
     "dependencies": {
     	"xmldom":">=0.1.9",
-    	"cssom":"*",
+    	"cssom":"=0.2.2",
     	"jsi":">=0.1.7",
     	"rbs":">=0.1.16",
     	"sylvester":"*",
