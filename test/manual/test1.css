@@ -1,0 +1,13 @@
+div {
+    position: absolute;
+    left: 50;
+    top: 70;
+    width: 150;
+}
+
+img {
+    position: absolute;
+    top: 20;
+    left: 40;
+    filter: alpha(opacity = 0);
+}
