@@ -92,9 +92,66 @@ div.black_eye{
 		-webkit-animation-duration: 2s;
 		-webkit-animation-timing-function: linear;
 		-webkit-animation-iteration-count: 200;
+
+		-moz-animation-name: cate;
+		-moz-animation-duration: 2s;
+		-moz-animation-timing-function: linear;
+		-moz-animation-iteration-count: 200;
+
+
+		-o-animation-name: cate;
+		-o-animation-duration: 2s;
+		-o-animation-timing-function: linear;
+		-o-animation-iteration-count: 200;
 }
 
 @-webkit-keyframes cate{
+	0%{
+		margin:0 0 0 0;
+	}
+	80%	{
+		margin:0px 0 0 0;
+	}
+	85%	{
+		margin:-20px 0 0 0;
+	}
+	90%{
+		margin:0 0 0 0;
+	}
+	93%{
+		margin:0 0 0 7px;
+	}
+	96%{
+		margin:0 0 0 0;
+	}
+	100%{
+		margin:0 0 0 0;
+	}
+}
+@-moz-keyframes cate{
+	0%{
+		margin:0 0 0 0;
+	}
+	80%	{
+		margin:0px 0 0 0;
+	}
+	85%	{
+		margin:-20px 0 0 0;
+	}
+	90%{
+		margin:0 0 0 0;
+	}
+	93%{
+		margin:0 0 0 7px;
+	}
+	96%{
+		margin:0 0 0 0;
+	}
+	100%{
+		margin:0 0 0 0;
+	}
+}
+@-o-keyframes cate{
 	0%{
 		margin:0 0 0 0;
 	}
@@ -210,7 +267,7 @@ div.eye_right{
 		-webkit-border-radius:45px;
 		-moz-border-radius:60px;
 }
-
+/*
 #firefox_mouth, x:-moz-broken, x:last-of-type, x:indeterminate {
 	position:relative;
 	width:170px;
@@ -222,7 +279,7 @@ div.eye_right{
 	top:-3px;
 	left:70px;
 }
-
+*/
 .whiskers{
 	background:#333;
 	height:2px;
