@@ -8,13 +8,15 @@
 
  <link rel="stylesheet" href="checked.css"/>
 </head>
-
+<style>
+INPUT.test__+SPAN{background:blue}
+</style>
 <body>
  <script src="ie7-demo.js"></script>
  <h2>:checked</h2>
 
  <form>
-  <label><input type="radio" name="radio" value="V" checked> <span>Vanilla</span></label><br>
+  <label><input class="test__" type="radio" name="radio" value="V" checked> <span>Vanilla</span></label><br>
   <label><input type="radio" name="radio" value="S"> <span>Strawberry</span></label><br>
   <label><input type="radio" name="radio" value="C"> <span>Chocolate</span></label>
  </form>

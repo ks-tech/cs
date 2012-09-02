@@ -1,0 +1,17 @@
+
+   #container {
+
+    height: 400px;
+    width: 400px;
+    border: 1px black solid;
+	  margin: 50px;
+
+   }
+
+   #box {
+
+    min-height: 250px;
+    border: 25px black solid;
+    background: url(vertical-gauge.gif);
+
+   }
