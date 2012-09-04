@@ -1,0 +1,24 @@
+body {
+    height: 2000px;
+}
+p.one {
+    position: fixed;
+    left: 100px;
+    top: 100px;
+    width: 100px;
+    background-color: blue;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+p.two {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    width: 100px;
+    background-color: #9acd32;
+    text-overflow: ellipsis;
+    overflow:visible;
+    white-space:nowrap;
+}

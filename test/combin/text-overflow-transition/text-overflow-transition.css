@@ -1,0 +1,11 @@
+div{
+    width:20px;
+    transition:width 0.4s;
+    background:red;
+    overflow:hidden;
+    white-space:nowrap;
+}
+div:hover{
+    width:100px;
+    text-overflow: ellipsis;
+}

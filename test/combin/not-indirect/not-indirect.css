@@ -1,0 +1,3 @@
+h2 ~ p:not(.not) {
+    background-color: yellow;
+}

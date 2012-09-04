@@ -1,0 +1,13 @@
+div{
+    width:20px;
+    transition:position,top,left 0.4s;
+    position: relative;
+    background:red;
+    overflow:hidden;
+    white-space:nowrap;
+}
+div:hover{
+    position: fixed;
+    top: 300px;
+    left: 300px;
+}

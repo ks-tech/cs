@@ -1,0 +1,5 @@
+h2 + p:empty {
+    background-color: yellow;
+    width: 800px;
+    height: 100px
+}

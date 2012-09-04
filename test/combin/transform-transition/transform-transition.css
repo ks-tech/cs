@@ -1,0 +1,12 @@
+div{
+    position: fixed;
+    top:100px;
+    left:100px;
+    width:  100px;
+    height: 100px;
+    transition:transform 0.4s;
+    background-color:red;
+}
+div:hover{
+    transform:skewX(30deg);
+}
