@@ -1,16 +1,6 @@
-a:nth-of-type(1):hover~ul>li:nth-of-type(1){background:blue}
-a:nth-of-type(2):hover~ul>li:nth-of-type(2){background:blue}
-a:nth-of-type(3):hover~ul>li:nth-of-type(3){background:blue}
-
-
-
-a:nth-of-type(2):hover{background:red}
-
-
-a[title^='https://']{background:yellow}
-
-  input:checked + span {
-
-   background-color: yellow;
-
-  }
+img{
+	transform:rotate(80deg);
+	width:100px;height:2px;
+	display:inline-block;
+	background-color:red;
+}
