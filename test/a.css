@@ -5,4 +5,4 @@ img{
 	background-color:red;
 }
 
-h1.test+p{background:red;}
+h1.test~p{background:red;}

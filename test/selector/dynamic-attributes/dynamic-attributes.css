@@ -3,7 +3,15 @@
  	/* this is the dynamic rule. It matches the "required" flag
  	   of empty input elements */
 
-	fieldset p.required > input[value=""] + sup {
+input[value='1']{
+background:yellow;
+}
+	fieldset p > input + sup {
+		vertical-align: top;
+		color: #ddd;
+	}
+
+	fieldset p.required > input[value="1"] + sup {
 		color: red;
 	}
 
@@ -44,10 +52,4 @@
 	fieldset p > input:focus {
 		background-color: #efe;
 	}
-
-	fieldset p > input + sup {
-		vertical-align: top;
-		color: #ddd;
-	}
-
  
