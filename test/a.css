@@ -4,3 +4,5 @@ img{
 	display:inline-block;
 	background-color:red;
 }
+
+h1.test+p{background:red;}
