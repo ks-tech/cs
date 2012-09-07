@@ -1,20 +1,63 @@
 Color Stone
 	A CSS enhancement for IE/6/7/8 and CSS different code generator for all popular browser
 
-Functions
- * CSS3 Selector
-   you can use css3 selector and some related features in ie6.
- * animation
- 	transition is supported
- * box and radius
- 	radius is supported
- * some others
- 	min-height/max-height(width),alpha,png24,position:fix...
-		
 Install:
 	npm install cs
 Example:
 	node -e "require('cs')"
 	node -e "require('cs').setScriptPath('/static/cs.js').setHtcPath('/static/cs.htc').exportTo('../output.zip')"
 
+----------------------
+Functions:
+选择器(selectors):
+	可以 兼容绝大部门大部分选择器功能。功能稳定,建议试用
+	
+	不支持的功能
+		:indeterminate 因为ie系列暂不支持改特性。本案未作模拟
+		:lang 暂不支持
+		::befor,::after 元素的 content 属性（内容生成）支持文本内容， 不支持属性引用[attr() ]和图标引用[url(icon)] 函数
+	注意事项：
+		1. 针对 +~ 等选择器组合，IE7/8选择器更新不及时，本周会做一次 最后尝试，希望能解决，这确实是一个比较重要的问题。
+		2. 表单value 相关的选择器，不同浏览器存在差异，不建议试用。
 
+布局(layout):
+	主要修复如下高价值问题, 可选择性的试用,注意避免不兼容的情况：
+	变形增强: 支持 transform 2D功能， 在在translate变换时会导致右侧边距计算错误(可通过设置外容器消除)，在ie6下，变换超出左上margin外边框时，会被裁剪（设置 position:relative 后可消除盖bug）
+	 动画:      部分支持transition动画，需要明确指定动画的属性(transition-property)，不支持 transition-property:all， 不支持与transform组合使用
+   
+	溢出控制: ie6下会有延迟，min,max系列属性本身只支持百分比（width/height 等不受限制）
+	固定定位: ie6下滚动屏幕时有轻微抖动
+	注意问题：ie6 overflow 与标准实现存在差异，本案未作兼容处理
+
+图形(display):
+	主要修复如下高价值问题,可以选择新试用：
+	半透明：支持opacity 半透明
+	支持rgba/hsla?背景色，(rgba增强只能用于背景色(background-color:rabg(255,0,0,0.2)))
+	支持png24 Alpha背景图片(只支持背景图，不支持img元素)(本实现无常见的相对路径问题)
+
+	线性渐变：部分支持，只支持两个颜色，水平和垂直两个方向(不如CSS3强大)
+
+	阴影增强：非常有限的支持（不建议试用），对不能拥有子节点的元素展现阴影会出现严重问题
+
+
+－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+选择器参考：
+
+    选择器功能包括：
+
+    交互选择器: (:hover,:focus,:active)
+    状态选择器: (:target,:enabled,:disabled,:checked)
+    属性选择器: ([attr="value"],[attr^="prefix"],[attr$="postfix"],[attr*="any"],[attr~="word"],)
+    结构选择器: (:empty,:first-child,:last-child,nth-child(nth/odd/even),nth-last-child(nth),nth-of-type(nth),nth-of-last-type(nth)...)
+    选择器组合: (.classA.AndClassB[节点同时具备多个class], P>C, P+N, P~N)
+    排除选择器: (E:not(s))
+    生成内容: (:before, :after, content)
+
+    布局功能包括：
+    溢出控制: (max-width/max-height/min-width/min-height)
+    固定定位: (position:fixed)
+    变形增强: (transform 2D)
+    动画增强: (transition)
+
+		
