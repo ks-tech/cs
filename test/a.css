@@ -1,8 +1,17 @@
-img{
-	transform:rotate(80deg);
-	width:100px;height:2px;
-	display:inline-block;
-	background-color:red;
+@-webkit-keyframes myfirst
+{
+0%   {background:linear-gradient(0deg,white,blue);transform: rotate(30deg);}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
 }
 
-h1.test~p{background:red;}
+h2{opacity:0.2;}
+
+p{
+
+background:linear-gradient(0deg,white,blue);
+transform: rotate(30deg);
+animation: myfirst 5s;
+}
+a{}
