@@ -89,14 +89,7 @@ p:nth-child(odd){
 	margin:2px;
 }
 
-.transition-width{
-	width:10px;
-	transition:width 0.4s;
-	background:red;
-}
-.transition-width:hover{
-	width:100px;
-}
+
 
 .slide span:hover{
 	background:yellow;

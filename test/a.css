@@ -1,17 +1,6 @@
-@-webkit-keyframes myfirst
-{
-0%   {background:linear-gradient(0deg,white,blue);transform: rotate(30deg);}
-25%  {background: yellow;}
-50%  {background: blue;}
-100% {background: green;}
+.tips>p:nth-of-type(1):first-letter{
+background:red;
+font-size:300px;
 }
 
-h2{opacity:0.2;}
 
-p{
-
-background:linear-gradient(0deg,white,blue);
-transform: rotate(30deg);
-animation: myfirst 5s;
-}
-a{}
