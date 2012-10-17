@@ -3,4 +3,16 @@ background:red;
 font-size:300px;
 }
 
+@keyframes myfirst
+{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+
+p
+{
+animation: myfirst 5s;
+}
 
