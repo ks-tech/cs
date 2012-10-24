@@ -1,0 +1,12 @@
+.widget-share {height: 16px; font-size: 12px;}
+.widget-share {position: fixed; z-index: 9; top: 300px; right: 0px; font-size: 12px; background-color: #F3F3F3; -o-border-radius: 4px 0px 0px 4px; height: 190px; width: 46px; padding: 6px 6px 6px 8px; overflow: hidden;}
+.widget-share a {display: block; background: url(./img/share.png); height: 46px; width: 46px;}
+.widget-share a.share-tsina {background-position: 0px 3px;}
+.widget-share a.share-renren {background-position: 0px -48px;}
+.widget-share a.share-tqq {background-position: 0px -97px;}
+.widget-share a.share-qzone {background-position: 0px -142px;}
+.widget-share a.share-tsina:hover {background-position: 0 -215px;}
+.widget-share a.share-renren:hover {background-position: 0 -266px;}
+.widget-share a.share-tqq:hover {background-position: 0 -315px;}
+.widget-share a.share-qzone:hover {background-position: 0 -360px;}
+.sns-share-btn {vertical-align: text-top; display: inline-block; width: 16px; height: 16px; _margin-right: 5px;}

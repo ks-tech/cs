@@ -1,0 +1,11 @@
+.waggle {transition: transform .6s ease-in; animation-duration: 3s; animation-iteration-count: infinite; animation-name: waggle; transition-property: transform; transition-duration: .6s; layout-flow: expression(CS(this,'update'));}
+@keyframes waggle { 
+  0% {transform: translateX(0);} 
+  8% {transform: translateX(-11px) rotate(-5deg);} 
+  16% {transform: translateX(9px) rotate(3deg);} 
+  24% {transform: translateX(-6px) rotate(-3deg);} 
+  32% {transform: translateX(3px) rotate(2deg);} 
+  40% {transform: translateX(-1px) rotate(-1deg);} 
+  48% {transform: translateX(0);} 
+}
+head cs-config {cs-id: 1351088528212;}

@@ -1,0 +1,10 @@
+.waggle {-ms-transition: transform .6s ease-in; -ms-animation-duration: 3s; -ms-animation-iteration-count: infinite; -ms-animation-name: waggle;}
+@-ms-keyframes waggle { 
+  0% {-ms-transform: translateX(0);} 
+  8% {-ms-transform: translateX(-11px) rotate(-5deg);} 
+  16% {-ms-transform: translateX(9px) rotate(3deg);} 
+  24% {-ms-transform: translateX(-6px) rotate(-3deg);} 
+  32% {-ms-transform: translateX(3px) rotate(2deg);} 
+  40% {-ms-transform: translateX(-1px) rotate(-1deg);} 
+  48% {-ms-transform: translateX(0);} 
+}

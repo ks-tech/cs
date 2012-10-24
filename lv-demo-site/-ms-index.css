@@ -1,0 +1,34 @@
+i {font-style: normal; font-size: 11px;}
+body {position: relative; top: 0;}
+li p {margin: 0px; padding: 0px; font-size: 12px;}
+.icon {position: absolute; top: 0px; left: 0;}
+div.icon a:first-child {position: absolute; top: 22px;}
+.spec,.start {position: absolute; top: 2px; right: 0; z-index: 202;}
+.start {top: 32px; z-index: 201;}
+.spec ul,.start ul {background: #EEEEEE; padding: 0 0 0 16px; margin: 0;}
+.spec ul ul li {cursor: pointer;}
+.spec>ul,.start>ul {position: absolute; top: 16px; right: 0; width: 200px; border: solid 2px #DDDDDD;}
+.spec>a ,.start>a {font-size: 12px; font-weight: bold; border: solid 2px #FF0000; padding-top: 1px; border-bottom: solid 6px #FF0000; background: #008000; color: #FFFFFF;}
+.spec a::after {content: '>>';}
+.gitbug-form {top: 60px; right: 1px; z-index: 200;}
+ul.content>li {list-style: none; width: 600px; height: 600px; border: 1px inset #333333; background: #EEEEEE; position: absolute; top: 0; left: 0; z-index: auto; -ms-transition-property: -ms-transform,background-color; -ms-transition-duration: 0.8s; overflow: hidden;}
+ul.content {margin: 0; padding: 0; height: 650px; position: absolute; left: 0; top: 0;}
+ul.content>li h3 {font-size: 42px;}
+ul.content>li:hover h3 {font-size: 22px;}
+body ul.content>li:hover {-ms-transform: none; height: auto; min-height: 640px; border: none; background: #FFFFFF; z-index: 100; overflow: visiable;}
+ul.content>li:nth-child(1) {-ms-transform: translate(-136px,-70px) skewY(-30deg) scale(0.45,0.5);}
+ul.content>li:nth-child(2) {-ms-transform: translate(136px,-70px) skewY(30deg) scale(0.45,0.5);}
+ul.content>li:nth-child(3) {-ms-transform: translate(0px,160px) rotate(45deg) scale(0.5,0.5) skew(-15deg,-15deg);}
+.example-background {position: absolute; top: 120px; right: 10px; z-index: 100; font-size: 28px; opacity: 0.15; -ms-transform: skewY(-10deg);}
+.example-background::after {font-family: courier,monospace; font-weight: -300; line-height: 30px; width: 300px; content: ".no-ie6-hack{\A\
+	width:110px;\A\
+	/* 只对ie6生效*/\A\
+	-ie6-width:120px;\A\
+}\A\
+.myclass{\A\
+	width:110px;\A\
+	/* 默认对所有ie生效*/\A\
+	-ie-width:120px;\A\
+	/* 覆盖支持css3 的 ie9/10*/\A\
+	-ms-width:110px;\A\
+}";}

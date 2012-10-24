@@ -1,0 +1,22 @@
+.page-desc {position: absolute; z-index: 15; left: 0; top: 30px; cs-position-fixed: 1; layout-flow: expression(CS(this,'update'));}
+.page-desc dt {transform: matrix(0.8386705679454241,0.544639035015027,-0.544639035015027,0.8386705679454241,0,0); position: relative; width: 100px; background: #E1E91D; border: 5px solid #FFA500; padding: 3px; cursor: pointer; layout-flow: expression(CS(this,'update')); cs-background-rgba: ;}
+.page-desc dd {background: #FFFFFF; padding: 5px; border: 2px solid; border-radius: 10px; position: relative; z-index: 15; display: none; border-bottom-left-radius: 10px 10px; border-bottom-right-radius: 10px 10px; border-top-right-radius: 10px 10px; border-top-left-radius: 10px 10px; layout-flow: expression(CS(this,'update')); cs-background-rgba: ;}
+.page-desc dd.ref-as-_2Epage_2Ddesc_20dt_2Ehover____,.page-desc dd.hover__ {display: block;}
+.page-desc dt.hover__ {cs-target-as-_2Epage_2Ddesc_20dt_2Ehover__: 1;}
+.page-desc dd {cs-ref: 1; cs-ref-as-_2Epage_2Ddesc_20dt_2Ehover__: 1; layout-flow: expression(CS(this,'update'));}
+.page-desc dd,.page-desc dt {text-kashida-space: expression(CS(this,'dc'));}
+html .page-desc dd *.nth-child_0_1__--ref-child-_2Epage_2Ddesc_20dd__ {color: #008000;}
+.page-desc dd {cs-target-child-_2Epage_2Ddesc_20dd: 1;}
+.page-desc dd *.nth-child_0_1__ {cs-ref: 1; cs-ref-child-_2Epage_2Ddesc_20dd: 1; layout-flow: expression(CS(this,'update'));}
+html .page-desc dd *.nth-child_0_2__--ref-child-_2Epage_2Ddesc_20dd__ {color: #808080;}
+.page-desc dd {cs-target-child-_2Epage_2Ddesc_20dd: 1;}
+.page-desc dd *.nth-child_0_2__ {cs-ref: 1; cs-ref-child-_2Epage_2Ddesc_20dd: 1; layout-flow: expression(CS(this,'update'));}
+html .page-desc dd *.nth-child_0_3__--ref-child-_2Epage_2Ddesc_20dd__ {color: #FFA500;}
+.page-desc dd {cs-target-child-_2Epage_2Ddesc_20dd: 1;}
+.page-desc dd *.nth-child_0_3__ {cs-ref: 1; cs-ref-child-_2Epage_2Ddesc_20dd: 1; layout-flow: expression(CS(this,'update'));}
+html .page-desc dd *.nth-child_0_4__--ref-child-_2Epage_2Ddesc_20dd__ {color: #FF0000;}
+.page-desc dd {cs-target-child-_2Epage_2Ddesc_20dd: 1;}
+.page-desc dd *.nth-child_0_4__ {cs-ref: 1; cs-ref-child-_2Epage_2Ddesc_20dd: 1; layout-flow: expression(CS(this,'update'));}
+.page-desc dd * {cs-update-nth: 1; layout-flow: expression(CS(this,'update'));}
+.page-desc dd *.ref-child-_2Epage_2Ddesc_20dd__ {text-kashida: expression(CS(this,'mc'));}
+head cs-config {cs-id: 1351088527062; muti-classes: nth-child_0_4__--ref-child-_2Epage_2Ddesc_20dd__,nth-child_0_3__--ref-child-_2Epage_2Ddesc_20dd__,nth-child_0_2__--ref-child-_2Epage_2Ddesc_20dd__,nth-child_0_1__--ref-child-_2Epage_2Ddesc_20dd__; nth-classes: child_0_4,child_0_3,child_0_2,child_0_1; ref-classes: child-_2Epage_2Ddesc_20dd,as-_2Epage_2Ddesc_20dt_2Ehover__;}

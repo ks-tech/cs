@@ -1,0 +1,4 @@
+<PUBLIC:COMPONENT>
+<!--<PUBLIC:ATTACH EVENT="ondetach" OMEVENT="CS.remove(this)"/>-->
+<SCRIPT>CS(element,'update')</SCRIPT></PUBLIC:COMPONENT>
+

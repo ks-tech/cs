@@ -1,0 +1,10 @@
+.waggle {-o-transition: transform .6s ease-in; -o-animation-duration: 3s; -o-animation-iteration-count: infinite; -o-animation-name: waggle;}
+@-o-keyframes waggle { 
+  0% {-o-transform: translateX(0);} 
+  8% {-o-transform: translateX(-11px) rotate(-5deg);} 
+  16% {-o-transform: translateX(9px) rotate(3deg);} 
+  24% {-o-transform: translateX(-6px) rotate(-3deg);} 
+  32% {-o-transform: translateX(3px) rotate(2deg);} 
+  40% {-o-transform: translateX(-1px) rotate(-1deg);} 
+  48% {-o-transform: translateX(0);} 
+}

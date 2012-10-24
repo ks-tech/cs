@@ -1,0 +1,21 @@
+.widget-share {height: 16px; font-size: 12px;}
+.widget-share {position: absolute; z-index: 9; top: 300px; right: 0px; font-size: 12px; background-color: #F3F3F3; border-radius: 4px 0px 0px 4px; height: 190px; width: 46px; padding: 6px 6px 6px 8px; overflow: hidden; border-bottom-left-radius: 4px 4px; border-bottom-right-radius: 0px 0px; border-top-right-radius: 0px 0px; border-top-left-radius: 4px 4px; cs-position-fixed: 1; layout-flow: expression(CS(this,'update')); cs-background-rgba: ;}
+.widget-share a {display: block; background: url("./img/share.png#alpha"); height: 46px; width: 46px; cs-png-alpha: 1; layout-flow: expression(CS(this,'update')); cs-background-rgba: ;}
+.widget-share a.share-tsina {background-position: 0px 3px;}
+.widget-share a.share-renren {background-position: 0px -48px;}
+.widget-share a.share-tqq {background-position: 0px -97px;}
+.widget-share a.share-qzone {background-position: 0px -142px;}
+html .widget-share a.hover__--share-tsina {background-position: 0 -215px;}
+.widget-share a.share-tsina {text-kashida: expression(CS(this,'mc'));}
+.widget-share a.share-tsina {text-kashida-space: expression(CS(this,'dc'));}
+html .widget-share a.hover__--share-renren {background-position: 0 -266px;}
+.widget-share a.share-renren {text-kashida: expression(CS(this,'mc'));}
+.widget-share a.share-renren {text-kashida-space: expression(CS(this,'dc'));}
+html .widget-share a.hover__--share-tqq {background-position: 0 -315px;}
+.widget-share a.share-tqq {text-kashida: expression(CS(this,'mc'));}
+.widget-share a.share-tqq {text-kashida-space: expression(CS(this,'dc'));}
+html .widget-share a.hover__--share-qzone {background-position: 0 -360px;}
+.widget-share a.share-qzone {text-kashida: expression(CS(this,'mc'));}
+.widget-share a.share-qzone {text-kashida-space: expression(CS(this,'dc'));}
+.sns-share-btn {vertical-align: text-top; display: inline; width: 16px; height: 16px; _margin-right: 5px; zoom: 1;}
+head cs-config {cs-id: 1351088527024; muti-classes: hover__--share-qzone,hover__--share-tqq,hover__--share-renren,hover__--share-tsina;}

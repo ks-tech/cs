@@ -1,0 +1,10 @@
+.waggle {-moz-transition: transform .6s ease-in; -moz-animation-duration: 3s; -moz-animation-iteration-count: infinite; -moz-animation-name: waggle;}
+@-moz-keyframes waggle { 
+  0% {-moz-transform: translateX(0);} 
+  8% {-moz-transform: translateX(-11px) rotate(-5deg);} 
+  16% {-moz-transform: translateX(9px) rotate(3deg);} 
+  24% {-moz-transform: translateX(-6px) rotate(-3deg);} 
+  32% {-moz-transform: translateX(3px) rotate(2deg);} 
+  40% {-moz-transform: translateX(-1px) rotate(-1deg);} 
+  48% {-moz-transform: translateX(0);} 
+}

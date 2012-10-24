@@ -1,0 +1,20 @@
+#f {width: 100px; height: 100px; background: #FF0000; position: relative; -webkit-animation: mymove 5s infinite;}
+@-webkit-keyframes mymove { 
+  from {left: 0px;} 
+  to {left: 200px;} 
+}
+#button {width: 200px; height: 200px; background: #808080; -webkit-transition: transform .6s ease-in; -webkit-animation-duration: 3s; -webkit-animation-iteration-count: infinite; -webkit-animation-name: waggle;}
+@-webkit-keyframes waggle { 
+  0% {-webkit-transform: translateX(0);} 
+  8% {-webkit-transform: translateX(-11px) rotate(-5deg);} 
+  16% {-webkit-transform: translateX(9px) rotate(3deg);} 
+  24% {-webkit-transform: translateX(-6px) rotate(-3deg);} 
+  32% {-webkit-transform: translateX(3px) rotate(2deg);} 
+  40% {-webkit-transform: translateX(-1px) rotate(-1deg);} 
+  48% {-webkit-transform: translateX(0);} 
+}
+#container {background: #000000;}
+.float {float: left; width: 200px; height: 100px;}
+.clearfix:after {content: "."; display: block; font-size: 0; height: 0; clear: both; visibility: hidden;}
+.hack-box {height: 20px; background: #FFA500; background-color: #808080\9\0; *background-color: #FFFF00; _background-color: #FF0000;}
+.fix-box {display: none; height: 20px; background: #FF0000;}

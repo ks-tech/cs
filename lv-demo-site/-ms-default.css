@@ -1,0 +1,37 @@
+html {text-align: center; font-size: 12px; background: #666666; padding: 20px; margin: 0px;}
+body {width: 780px; min-height: 720px; text-align: left; margin: auto; padding: 8px; background: #FEFEFE; border: 3px double #DDDDDD;}
+p {text-indent: 24px;}
+a.issues {font-size: 8px; line-height: 8px; background: #DDDDDD; border: 1px solid #FF0000;}
+.dev-time {font-style: italic; background: #DDDD00; padding-left: 20px; display: none;}
+a.ms-ref:after {content: '>>ref'; background: #DDDDDD; font-size: 8px;}
+.detail {display: inline; font-size: 11px; cursor: pointer; background: #DDDDDD;}
+.detail div {display: none; background: #DDDDDD;}
+.detail:hover div {border: 1px solid #FFFF00; display: block;}
+.stable,.sandbox,.planning,.none,.native {font-size: 12px; font-weight: bold; padding: 2px; border: inset 1px #FFFF00; margin-right: 10px;}
+b.stable,b.sandbox,b.planning,b.none {font-style: italic; font-weight: normal; color: #333333;}
+.stable {background: #00FF00;}
+.sandbox {background: #00FFFF;}
+.planning {background: #FFFF00;}
+.none {background: #AA6666;}
+.native {color: #0000FF; background: #EEEEEE; padding: 0; border: solid 3px #FF0000; font-style: normal;}
+.support {background-color: #EEEEEE;}
+.support::before {content: '支持情况:'; background: #CCCCCC; font-weight: bold;}
+.back {float: right;}
+.hover-child *,.hover-child-ul ul {cursor: pointer; display: none;}
+.hover-child:hover *,.hover-child-ul:hover ul {display: block;}
+.example * {background-color: #EE33EE; color: #FFFFFF;}
+.gitbug {width: 42px; height: 11px; display: inline-block; margin: 10px 0 0 10px; cursor: pointer; color: #666666; font-weight: bold; font-size: 8px; position: relative;}
+.gitbug a {color: #0000FF;}
+.gitbug strong,.gitbug span {color: #666666; width: 14px; background: #DDDD00; display: inline-block; -ms-border-radius: 2px 0 0 2px; border: 1px outset #DDDD00;}
+.gitbug span {background: #00DD00; -ms-border-radius: 0 2px 2px 0;}
+.gitbug ul,.gitbug:empty ul {background: #FFFFFF; display: none;}
+.gitbug:hover ul {display: block; border: 1px solid #330000; width: 120px; margin: 0; padding: 0;}
+.gitbug li {margin: 0; padding: 0; background: #00DD00; overflow: hidden; text-overflow: ellipsis; height: 12px; word-break: keep-all; border-bottom: 1px solid #FFFFFF;}
+.gitbug li.unclosed {margin: 0; padding: 0; background: #DDDD00;}
+.gitbug li.report {background: #FFFF00; text-align: right; padding-right: 12px;}
+.gitbug-form {position: absolute; top: 100px; right: 1px; width: 180px; z-index: 200; text-align: right;}
+.gitbug-form input {width: 85px;}
+.gitbug-form label {cursor: pointer;}
+.gitbug-form fieldset {display: none;}
+.gitbug-form fieldset input {width: auto;}
+.gitbug-form:hover fieldset {display: block;}

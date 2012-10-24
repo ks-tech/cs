@@ -1,0 +1,36 @@
+i {font-style: normal; font-size: 11px;}
+body {position: relative; top: 0;}
+li p {margin: 0px; padding: 0px; font-size: 12px;}
+.icon {position: absolute; top: 0px; left: 0;}
+div.icon a:first-child {position: absolute; top: 22px;}
+.spec,.start {position: absolute; top: 2px; right: 0; z-index: 202;}
+.start {top: 32px; z-index: 201;}
+.spec ul,.start ul {background: #EEEEEE; padding: 0 0 0 16px; margin: 0; cs-background-rgba: ;}
+.spec ul ul li {cursor: pointer;}
+.spec>ul,.start>ul {position: absolute; top: 16px; right: 0; width: 200px; border: solid 2px #DDDDDD;}
+.spec>a,.start>a {font-size: 12px; font-weight: bold; border: solid 2px #FF0000; padding-top: 1px; border-bottom: solid 6px #FF0000; background: #008000; color: #FFFFFF; cs-background-rgba: ;}
+.spec a {content: '>>';}
+.gitbug-form {top: 60px; right: 1px; z-index: 200;}
+ul.content>li {list-style: none; width: 600px; height: 600px; border: 1px inset #333333; background: #EEEEEE; position: absolute; top: 0; left: 0; z-index: auto; transition-property: none; transition-duration: 0.8s; overflow: hidden; layout-flow: expression(CS(this,'update')); cs-background-rgba: ;}
+ul.content {margin: 0; padding: 0; height: 650px; position: absolute; left: 0; top: 0;}
+ul.content>li h3 {font-size: 42px;}
+ul.content>li:hover h3 {font-size: 22px;}
+body ul.content>li:hover {transform: matrix(1,0,0,1,0,0); height: auto; min-height: 640px; border: none; background: #FFFFFF; z-index: 100; overflow: visiable; layout-flow: expression(CS(this,'update')); cs-background-rgba: ;}
+ul.content>li.nth-child_0_1__ {transform: matrix(0.45,-0.2598076211353311,0,0.5,-136,-70); layout-flow: expression(CS(this,'update'));}
+ul.content>li.nth-child_0_2__ {transform: matrix(0.45,0.259807621135332,0,0.5,136,-70); layout-flow: expression(CS(this,'update'));}
+ul.content>li.nth-child_0_3__ {transform: matrix(0.4482877360840265,0.2588190451025211,-0.4482877360840266,0.2588190451025209,0,160); layout-flow: expression(CS(this,'update'));}
+ul.content>li {cs-update-nth: 1; layout-flow: expression(CS(this,'update'));}
+.example-background {position: absolute; top: 120px; right: 10px; z-index: 100; font-size: 28px; opacity: 0.15; transform: matrix(1,-0.1763269807084645,0,1,0,0); layout-flow: expression(CS(this,'update'));}
+.example-background {font-family: courier,monospace; font-weight: -300; line-height: 30px; width: 300px; content: ".no-ie6-hack{\A\
+	width:110px;\A\
+	/* 只对ie6生效*/\A\
+	-ie6-width:120px;\A\
+}\A\
+.myclass{\A\
+	width:110px;\A\
+	/* 默认对所有ie生效*/\A\
+	-ie-width:120px;\A\
+	/* 覆盖支持css3 的 ie9/10*/\A\
+	-ms-width:110px;\A\
+}";}
+head cs-config {cs-id: 1351088527374; nth-classes: child_0_3,child_0_2,child_0_1;}

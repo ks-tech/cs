@@ -1,0 +1,18 @@
+h1,h2,h3,h4,h5 {margin: 0; font-size: normal; font-style: normal; font-weight: normal;}
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+.w960 {width: 957px; margin: 0 auto;}
+img {border: none; vertical-align: bottom;}
+iframe {display: block;}
+body,p,dl {margin: 0;}
+ul,ol {list-style: none; margin: 0; padding: 0;}
+body {font: normal 12px/1.5 tahoma,arial,宋体,sans-serif; color: #808080; background: none;}
+.clearfix:after {content: "."; display: block; font-size: 0; line-height: 0; height: 0; clear: both; visibility: hidden;}
+.clearfix {*zoom: 1;}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {display: block;}
+audio {display: none;}
+canvas,video {display: inline-block; *display: inline; *zoom: 1;}
+[hidden] {display: none;}
+audio[controls] {display: inline-block; *display: inline; *zoom: 1;}
+mark {background: #FFFF00; color: #000000;}
+head cs-config {cs-id: 1351088528234;}

@@ -1,0 +1,21 @@
+#f {width: 100px; height: 100px; background: #FF0000; position: relative; animation: mymove 5s infinite; cs-background-rgba: ;}
+@keyframes mymove { 
+  from {left: 0px;} 
+  to {left: 200px;} 
+}
+#button {width: 200px; height: 200px; background: #808080; transition: transform .6s ease-in; animation-duration: 3s; animation-iteration-count: infinite; animation-name: waggle; transition-property: transform; transition-duration: .6s; behavior: url(/static/cs.htc); cs-background-rgba: ;}
+@keyframes waggle { 
+  0% {transform: translateX(0);} 
+  8% {transform: translateX(-11px) rotate(-5deg);} 
+  16% {transform: translateX(9px) rotate(3deg);} 
+  24% {transform: translateX(-6px) rotate(-3deg);} 
+  32% {transform: translateX(3px) rotate(2deg);} 
+  40% {transform: translateX(-1px) rotate(-1deg);} 
+  48% {transform: translateX(0);} 
+}
+#container {background: #000000; cs-background-rgba: ;}
+.float {float: left; width: 200px; height: 100px;}
+.clearfix:after {content: "."; display: block; font-size: 0; height: 0; clear: both; visibility: hidden;}
+.hack-box {height: 20px; background: #FFA500; background-color: #808080\9\0; *background-color: #FFFF00; _background-color: #FF0000; cs-background-rgba: ;}
+.fix-box {display: none; height: 20px; background: #008000; cs-background-rgba: ;}
+head cs-config {cs-id: 1351088528122;}

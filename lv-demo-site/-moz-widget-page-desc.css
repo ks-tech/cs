@@ -1,0 +1,9 @@
+.page-desc {position: fixed; z-index: 15; left: 0; top: 30px;}
+.page-desc dt {-moz-transform: rotate(33deg); position: relative; width: 100px; background: #E1E91D; border: 5px solid #FFA500; padding: 3px; cursor: pointer;}
+.page-desc dd {background: #FFFFFF; padding: 5px; border: 2px solid; -moz-border-radius: 10px; position: relative; z-index: 15; display: none;}
+.page-desc dt:hover + dd,
+.page-desc dd:hover {display: block;}
+.page-desc dd > *:nth-child(1) {color: #008000;}
+.page-desc dd > *:nth-child(2) {color: #808080;}
+.page-desc dd > *:nth-child(3) {color: #FFA500;}
+.page-desc dd > *:nth-child(4) {color: #FF0000;}
