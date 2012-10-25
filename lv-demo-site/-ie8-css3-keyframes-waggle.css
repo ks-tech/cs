@@ -1,4 +1,4 @@
-.waggle {transition: transform .6s ease-in; animation-duration: 3s; animation-iteration-count: infinite; animation-name: waggle; transition-property: transform; transition-duration: .6s; behavior: url(/static/cs.htc);}
+.waggle {transition: transform .6s ease-in; animation-duration: 3s; animation-iteration-count: infinite; animation-name: waggle; transition-property: transform; transition-duration: .6s; behavior: url(./static/cs.htc);}
 @keyframes waggle { 
   0% {transform: translateX(0);} 
   8% {transform: translateX(-11px) rotate(-5deg);} 
@@ -8,4 +8,4 @@
   40% {transform: translateX(-1px) rotate(-1deg);} 
   48% {transform: translateX(0);} 
 }
-head cs-config {cs-id: 1351088464951;}
+head cs-config {cs-id: 1351135378481;}

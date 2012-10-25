@@ -22,4 +22,4 @@ html .clearfix {cs-gen-after: "."; layout-flow: expression(CS(this,'update'));}
 .clearfix .ref-child-_2Eclearfix__ {text-kashida: expression(CS(this,'mc'));}
 .hack-box {height: 20px; background: #FFA500; background-color: #808080\9\0; *background-color: #FFFF00; _background-color: #FF0000; cs-background-rgba: ;}
 .fix-box {display: none; height: 20px; background: #FF0000; cs-background-rgba: ;}
-head cs-config {cs-id: 1351088528132; muti-classes: after__--ref-child-_2Eclearfix__; ref-classes: child-_2Eclearfix;}
+head cs-config {cs-id: 1351135518604; muti-classes: after__--ref-child-_2Eclearfix__; ref-classes: child-_2Eclearfix;}

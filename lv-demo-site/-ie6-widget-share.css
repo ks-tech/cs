@@ -18,4 +18,4 @@ html .widget-share a.hover__--share-qzone {background-position: 0 -360px;}
 .widget-share a.share-qzone {text-kashida: expression(CS(this,'mc'));}
 .widget-share a.share-qzone {text-kashida-space: expression(CS(this,'dc'));}
 .sns-share-btn {vertical-align: text-top; display: inline; width: 16px; height: 16px; _margin-right: 5px; zoom: 1;}
-head cs-config {cs-id: 1351088527024; muti-classes: hover__--share-qzone,hover__--share-tqq,hover__--share-renren,hover__--share-tsina;}
+head cs-config {cs-id: 1351135272268; muti-classes: hover__--share-qzone,hover__--share-tqq,hover__--share-renren,hover__--share-tsina;}

@@ -19,4 +19,4 @@
 .clearfix {cs-gen-after: "."; layout-flow: expression(CS(this,'update'));}
 .hack-box {height: 20px; background: #FFA500; background-color: #808080\9\0; *background-color: #FFFF00; _background-color: #FF0000; cs-background-rgba: ;}
 .fix-box {display: none; height: 20px; background: #FFFF00; cs-background-rgba: ;}
-head cs-config {cs-id: 1351088528126;}
+head cs-config {cs-id: 1351135518596;}

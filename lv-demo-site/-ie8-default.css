@@ -22,10 +22,10 @@ b.stable,b.sandbox,b.planning,b.none {font-style: italic; font-weight: normal; c
 .example * {background-color: #EE33EE; color: #FFFFFF; cs-background-rgba: ;}
 .gitbug {width: 42px; height: 11px; display: inline-block; margin: 10px 0 0 10px; cursor: pointer; color: #666666; font-weight: bold; font-size: 8px; position: relative;}
 .gitbug a {color: #0000FF;}
-.gitbug strong,.gitbug span {color: #666666; width: 14px; background: #DDDD00; display: inline-block; border-radius: 2px 0 0 2px; border: 1px outset #DDDD00; border-bottom-left-radius: 2px 2px; border-bottom-right-radius: 0 0; border-top-right-radius: 0 0; border-top-left-radius: 2px 2px; behavior: url(/static/cs.htc); cs-background-rgba: ;}
-.gitbug span {background: #00DD00; border-radius: 0 2px 2px 0; border-bottom-left-radius: 0 0; border-bottom-right-radius: 2px 2px; border-top-right-radius: 2px 2px; border-top-left-radius: 0 0; behavior: url(/static/cs.htc); cs-background-rgba: ;}
+.gitbug strong,.gitbug span {color: #666666; width: 14px; background: #DDDD00; display: inline-block; border-radius: 2px 0 0 2px; border: 1px outset #DDDD00; border-bottom-left-radius: 2px 2px; border-bottom-right-radius: 0 0; border-top-right-radius: 0 0; border-top-left-radius: 2px 2px; behavior: url(./static/cs.htc); cs-background-rgba: ;}
+.gitbug span {background: #00DD00; border-radius: 0 2px 2px 0; border-bottom-left-radius: 0 0; border-bottom-right-radius: 2px 2px; border-top-right-radius: 2px 2px; border-top-left-radius: 0 0; behavior: url(./static/cs.htc); cs-background-rgba: ;}
 .gitbug ul,.gitbug.ref-empty__ ul {background: #FFFFFF; display: none; cs-background-rgba: ;}
-.gitbug {cs-ref-empty: 1; cs-ref: 1; behavior: url(/static/cs.htc);}
+.gitbug {cs-ref-empty: 1; cs-ref: 1; behavior: url(./static/cs.htc);}
 .gitbug:hover ul {display: block; border: 1px solid #330000; width: 120px; margin: 0; padding: 0;}
 .gitbug li {margin: 0; padding: 0; background: #00DD00; overflow: hidden; text-overflow: ellipsis; height: 12px; word-break: keep-all; border-bottom: 1px solid #FFFFFF; cs-background-rgba: ;}
 .gitbug li.unclosed {margin: 0; padding: 0; background: #DDDD00; cs-background-rgba: ;}
@@ -36,4 +36,4 @@ b.stable,b.sandbox,b.planning,b.none {font-style: italic; font-weight: normal; c
 .gitbug-form fieldset {display: none;}
 .gitbug-form fieldset input {width: auto;}
 .gitbug-form:hover fieldset {display: block;}
-head cs-config {cs-id: 1351088528169; ref-classes: empty;}
+head cs-config {cs-id: 1351135518659; ref-classes: empty;}

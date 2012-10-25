@@ -1359,7 +1359,7 @@ var attributePlugin = {
 	config:function(style){
 		addAttriClassesConfig(style.getAttribute('attr-classes'));
 		configListener('attr',attributeUpdaterMap);
-		console.dir(attributeUpdaterMap)
+		//console.dir(attributeUpdaterMap)
 		//console.log('!!!!!!!!',style.getAttribute('attr-classes'))
 	},
 	update:function(el){//可选
